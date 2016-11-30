@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+export TERM=xterm-256color
+
+# Colors
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+purple=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
+orange=`tput setaf 208`
+reset=`tput sgr0`
+
+
+cd ~/sshlogs
+echo " "
+echo "Log files for $1"
+echo ${green}
+ls -hl $1*| awk '{print $10"       "$6}'
+echo " "
+echo ${reset}
+
+read -p "Press [enter] to continue..."
+
+
+echo " "
+echo "Searching for commands issued on $1" 
+echo "========================================================================"
+
+for i in `ls --color=none $1*`
+	do
+		/usr/bin/search $i
+	done | more

@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+export TERM=xterm-256color
+
+# Colors!
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+purple=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
+orange=`tput setaf 208`
+reset=`tput sgr0`
+
+echo " "
+echo "${orange}Commands entered for${reset} ${cyan}$1${reset}"
+echo "${purple}========================================================================${reset}"
+egrep "^\\[|^# |^\\$" $1| sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g" | sed s/[[:cntrl:]]//g
+echo "${purple}========================================================================${reset}"
