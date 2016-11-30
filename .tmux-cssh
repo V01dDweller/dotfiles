@@ -1,0 +1,27 @@
+myvms: -ts myvms -sc centos6-psm -sc centos6-cgw -sc centos6-scm -sc centos6-uid
+
+rti-performance: -ts rti-performance -sc da3t-gen-rti-bkr001 -sc da3t-gen-rti-bkr002 -sc da3t-gen-rti-rlg001 -sc da3t-gen-rti-rlg002 -sc da3t-gen-rti-run001 -sc da3t-gen-rti-run002 -sc da3t-gen-rti-run003 -sc da3t-gen-rti-run004 -sc da3t-gen-rti-run005 -sc da3t-gen-rti-run006 -sc da3t-gen-rti-www001 -sc da3t-gen-rti-www002
+
+uidlab: -ts uidlab -sc "g800959@da3s-chi-uid-web001" -sc "g800959@da3s-chi-uid-web002" -sc "g800959@da3s-dal-uid-web001" -sc "g800959@da3s-dal-uid-web002" -sc "g800959@da3s-chi-cgw-web001" -sc "g800959@da3s-chi-cgw-web002" -sc "g800959@da3s-dal-cgw-web001" -sc "g800959@da3s-dal-cgw-web002" -sc "g800959@da3s-chi-scl-web001" -sc "g800959@da3s-chi-scl-web002" -sc "g800959@da3s-dal-scl-web001" -sc "g800959@da3s-dal-scl-web002" -sc "g800959@da3s-chi-psm-web001" -sc "g800959@da3s-dal-psm-web001"
+
+uidpsm: -ts uidpsm -sc "g800959@da3s-chi-psm-web001" -sc "g800959@da3s-dal-psm-web001"
+uidcgw: -ts uidcgw -sc "g800959@da3s-chi-cgw-web001" -sc "g800959@da3s-chi-cgw-web002" -sc "g800959@da3s-dal-cgw-web001" -sc "g800959@da3s-dal-cgw-web002"
+uidscm: -ts uidscm -sc "g800959@da3s-chi-scl-web001" -sc "g800959@da3s-chi-scl-web002" -sc "g800959@da3s-dal-scl-web001" -sc "g800959@da3s-dal-scl-web002"
+uiduid: -ts uiduid -sc "g800959@da3s-chi-uid-web001" -sc "g800959@da3s-chi-uid-web002" -sc "g800959@da3s-dal-uid-web001" -sc "g800959@da3s-dal-uid-web002" 
+
+uidlab-as-me: -ts  g800959@uidlab -sc "g800959@da3s-chi-uid-web001" -sc "g800959@da3s-chi-uid-web002" -sc "g800959@da3s-dal-uid-web001" -sc "g800959@da3s-dal-uid-web002" -sc "g800959@da3s-chi-cgw-web001" -sc "g800959@da3s-chi-cgw-web002" -sc "g800959@da3s-dal-cgw-web001" -sc "g800959@da3s-dal-cgw-web002" -sc "g800959@da3s-chi-scl-web001" -sc "g800959@da3s-chi-scl-web002" -sc "g800959@da3s-dal-scl-web001" -sc "g800959@da3s-dal-scl-web002" -sc "g800959@da3s-chi-psm-web001" -sc "g800959@da3s-dal-psm-web001"
+
+uidprod: -ts apiprod -sc g800959@da3p-gen-uid-web004 -sc g800959@da3p-gen-uid-web005 -sc g800959@ch3p-gen-uid-web012 -sc g800959@ch3p-gen-uid-web013 -sc g800959@da3p-gen-cgw-web001 -sc g800959@da3p-gen-cgw-web002 -sc g800959@ch3p-gen-cgw-web007 -sc g800959@ch3p-gen-cgw-web008 -sc g800959@da3p-gen-scm-web001 -sc g800959@da3p-gen-scm-web003 -sc g800959@ch3p-gen-scm-web001 -sc g800959@ch3p-gen-scm-web002 -sc g800959@da3p-gen-psm-web001 -sc g800959@ch3p-gen-psm-web001
+
+uidprod-as-me: -ts g800959@apiprod -sc g800959@da3p-gen-uid-web004 -sc g800959@da3p-gen-uid-web005 -sc g800959@ch3p-gen-uid-web012 -sc g800959@ch3p-gen-uid-web013 -sc g800959@da3p-gen-cgw-web001 -sc g800959@da3p-gen-cgw-web002 -sc g800959@ch3p-gen-cgw-web007 -sc g800959@ch3p-gen-cgw-web008 -sc g800959@da3p-gen-scm-web001 -sc g800959@da3p-gen-scm-web003 -sc g800959@ch3p-gen-scm-web001 -sc g800959@ch3p-gen-scm-web002 -sc g800959@da3p-gen-psm-web001
+
+uidqa: -ts user-identity-qa -sc "g800959@da3t-gen-psm-web001" -sc "g800959@da3t-gen-cgw-web002" -sc "g800959@da3t-gen-scm-web002" -sc "g800959@da3t-gen-uid-web003" 
+uidqa-as-me: -ts user-identity-qa -sc "da3t-gen-uid-web003" -sc "da3t-gen-scm-web002" -sc "da3t-gen-psm-web001" -sc "da3t-gen-cgw-web002"
+
+siilab: -ts sii-nsx -sc "da3d-dal-sii-app001" -sc "da3d-chi-sii-app001" -sc "da3d-chi-sii-app004" -sc "da3d-chi-sii-app005" -sc "da3d-dal-sii-app003" -sc "da3d-dal-sii-app004"
+siidev: -ts sii-dev -sc "da3d-gen-sii-app002" -sc "da3t-gen-sii-app001" -sc "da3t-gen-sii-app002" -sc "da3t-gen-sii-mgb018" -sc "da3t-gen-sii-mgb019" -sc "da3t-gen-sii-mgb020" -sc "da3t-gen-sii-mgb021"
+
+siiprod: -ts sii-prod -sc "da3p-gen-sii-app001" -sc "ch3p-gen-sii-app001" -sc "da3p-gen-sii-app006" -sc "da3p-gen-sii-app007" -sc "ch3p-gen-sii-app006" -sc "ch3p-gen-sii-app008"
+
+abalab: -ts abalab -sc "centos7-aba1" -sc "centos7-aba2" -sc "centos7-aba3" -sc "centos7-aba4"
+abasandbox: -ts abasandbox -sc "centos7-aba1" -sc "centos7-aba2" -sc "centos7-aba3" -sc "centos7-aba4"
