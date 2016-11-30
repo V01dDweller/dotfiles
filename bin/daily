@@ -31,5 +31,5 @@ echo "========================================================================"
 
 for i in `ls --color=none $1*`
 	do
-		/usr/bin/search $i
+		search $i
 	done | more

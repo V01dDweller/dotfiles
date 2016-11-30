@@ -35,5 +35,5 @@ echo ${reset}
 
 for i in `ls --color=none $1*`
 	do
-		/usr/bin/search3 $i
+		search3 $i
 	done | more
