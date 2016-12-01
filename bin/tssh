@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+DATE=`/usr/bin/date +%Y-%m-%d`
+LOGDIR="/home/g800959/sshlogs"
+MACHINE=`/usr/bin/hostname`
+if [[ $1 == *"@"* ]]
+then
+ HOST=`echo $1|/usr/bin/cut -d'@' -f 2`
+else
+ HOST=$1
+fi
+
+if [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
+then
+ # Red color scheme: These servers are either in production or dangerous
+ echo -ne "\e]10;255,128,0\a"
+ echo -ne "\e]11;64,0,0\a"
+ echo -ne "\e]12;#00FF00\a"
+elif [[ $HOST == *"da3d"* || $HOST == *"da3t"* || $HOST == *"hw-"* || $HOST == *"vapp"* || $HOST == *"da3s"* ]]
+then
+ # Green color scheme: These servers are for development or testing
+ echo -ne "\e]10;128,255,0\a"
+ echo -ne "\e]11;0,64,64\a"
+ echo -ne "\e]12;#00FF00\a"
+elif [[ $HOST == *"centos"* ]]
+then
+ # Blue color scheme: These servers are local virtial machines
+ echo -ne '\e]10;128,255,255\a'
+ echo -ne '\e]11;0,0,64\a'
+ echo -ne '\e]12;#00FF00\a'
+fi
+
+# Wrap tmux around lssh
+/usr/bin/tmux new -d lssh $HOST
+/usr/bin/tmux attach
+
+# Reset color scheme to default (grey on black)
+echo -ne '\e]10;191,191,191\a';echo -ne '\e]11;0,0,0\a';echo -ne '\e]12;#00FF00\a'
