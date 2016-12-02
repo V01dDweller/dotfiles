@@ -31,3 +31,7 @@ colors elflord
 
 " Toggle AnsiEsc plug-in
 :nnoremap  <F6> :AnsiEsc<CR>
+
+" Disable backup files
+set nobackup
+set nowritebackup

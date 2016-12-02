@@ -216,7 +216,7 @@ alias orange="echo -ne '\e]10;0,0,0\a';echo -ne '\e]11;255,181,106\a';echo -ne '
 alias default="echo -ne '\e]10;191,191,191\a';echo -ne '\e]11;0,0,0\a';echo -ne '\e]12;#00FF00\a'"
 
 # Source company/project-specific aliases
-#source .bash_company
+source .bash_company
 
 # Launch whatever comes after as if one had double-clicked from Windwows
 alias open="cygstart"
