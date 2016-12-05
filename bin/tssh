@@ -29,8 +29,11 @@ then
  echo -ne '\e]12;#00FF00\a'
 fi
 
+# Set Mintty Title
+echo -ne '\e]0;'$HOST'\a'
+
 # Wrap tmux around lssh
-/usr/bin/tmux new -d lssh $HOST
+/usr/bin/tmux new -n "Host: $HOST" -d lssh $HOST
 /usr/bin/tmux attach
 
 # Reset color scheme to default (grey on black)
