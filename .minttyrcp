@@ -4,5 +4,5 @@ AllowBlinking=yes
 CursorType=block
 Transparency=low
 Rows=40
-BackgroundColour=0,0,64
-ForegroundColour=200,255,255
+BackgroundColour=49,20,78
+ForegroundColour=255,200,255
