@@ -11,7 +11,7 @@ set lbr ic autoindent smartindent hlsearch incsearch smartcase ruler nobackup sh
 " set guifont=Monospace\ 11
 
 " Windows Font
-set guifont=Consolas:h11
+set guifont=Lucida_Console:h11
 
 " Turn on line numbers
 set number
@@ -29,7 +29,7 @@ filetype indent on
 
 " Colors
 syntax on
-colors elflord
+colors torte
 
 " Set up tabs to mimic Firefox
 nmap <silent> <C-t> :tabnew<CR>

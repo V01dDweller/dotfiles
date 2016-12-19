@@ -206,15 +206,6 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias tree="tree -C"
 
-# Mintty-only color schemes
-alias grey="echo -ne '\e]10;#000000\a';echo -ne '\e]11;#C0C0C0\a';echo -ne '\e]12;#00FF00\a'"
-alias green="echo -ne '\e]10;128,255,0\a';echo -ne '\e]11;0,64,64\a';echo -ne '\e]12;#00FF00\a'"
-alias red="echo -ne '\e]10;255,128,0\a';echo -ne '\e]11;64,0,0\a';echo -ne '\e]12;#00FF00\a'"
-alias blue="echo -ne '\e]10;128,255,255\a';echo -ne '\e]11;0,0,64\a';echo -ne '\e]12;#00FF00\a'"
-alias white="echo -ne '\e]10;0,0,0\a';echo -ne '\e]11;240,240,240\a';echo -ne '\e]12;#00FF00\a'"
-alias orange="echo -ne '\e]10;0,0,0\a';echo -ne '\e]11;255,181,106\a';echo -ne '\e]12;#00FF00\a'"
-alias default="echo -ne '\e]10;191,191,191\a';echo -ne '\e]11;0,0,0\a';echo -ne '\e]12;#00FF00\a'"
-
 # Source company/project-specific aliases
 source .bash_company
 
@@ -223,6 +214,9 @@ alias open="cygstart"
 
 # Teminal color
 export TERM=xterm-256color
+
+# Mintty color schemes
+source ~/.bash_mintty_colors
 
 #Java
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_73/"

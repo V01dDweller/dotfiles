@@ -1,4 +1,9 @@
 #!/usr/bin/bash
+
+# Get Mintty color schemes
+shopt -s expand_aliases
+source ~/.bash_mintty_colors
+
 DATE=`/usr/bin/date +%Y-%m-%d`
 LOGDIR="/home/g800959/sshlogs"
 MACHINE=`/usr/bin/hostname`
@@ -12,21 +17,15 @@ fi
 if [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
 then
  # Red color scheme: These servers are either in production or dangerous
- echo -ne "\e]10;255,128,0\a"
- echo -ne "\e]11;64,0,0\a"
- echo -ne "\e]12;#00FF00\a"
+ red
 elif [[ $HOST == *"da3d"* || $HOST == *"da3t"* || $HOST == *"hw-"* || $HOST == *"vapp"* || $HOST == *"da3s"* ]]
 then
  # Green color scheme: These servers are for development or testing
- echo -ne "\e]10;128,255,0\a"
- echo -ne "\e]11;0,64,64\a"
- echo -ne "\e]12;#00FF00\a"
+ green
 elif [[ $HOST == *"centos"* ]]
 then
  # Blue color scheme: These servers are local virtial machines
- echo -ne '\e]10;128,255,255\a'
- echo -ne '\e]11;0,0,64\a'
- echo -ne '\e]12;#00FF00\a'
+ blue
 fi
 
 # Set Mintty Title
@@ -37,4 +36,4 @@ echo -ne '\e]0;'$HOST'\a'
 /usr/bin/tmux attach
 
 # Reset color scheme to default (grey on black)
-echo -ne '\e]10;191,191,191\a';echo -ne '\e]11;0,0,0\a';echo -ne '\e]12;#00FF00\a'
+default
