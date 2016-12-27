@@ -20,7 +20,8 @@ hi link ipaddr Identifier
 filetype indent on
 
 " Color Scheme
-colors torte
+color torte
+set background=dark
 :syntax on
 
 " Disable auto-indent

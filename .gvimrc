@@ -29,7 +29,8 @@ filetype indent on
 
 " Colors
 syntax on
-colors torte
+color torte
+set background=dark
 
 " Set up tabs to mimic Firefox
 nmap <silent> <C-t> :tabnew<CR>
