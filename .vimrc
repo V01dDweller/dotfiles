@@ -20,7 +20,7 @@ hi link ipaddr Identifier
 filetype indent on
 
 " Color Scheme
-color torte
+color elflord
 set background=dark
 :syntax on
 
