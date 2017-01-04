@@ -2,8 +2,8 @@ BoldAsFont=no
 FontHeight=10
 AllowBlinking=yes
 CursorType=block
-Transparency=low
-Rows=45
+Transparency=medium
+Rows=35
 
 ForegroundColour=0,0,0
 BackgroundColour=192,192,192

@@ -4,6 +4,7 @@
 shopt -s expand_aliases
 source ~/.bash_mintty_colors
 
+USERNAME=`whoami`
 DATE=`/usr/bin/date +%Y-%m-%d`
 LOGDIR="/home/g800959/sshlogs"
 MACHINE=`/usr/bin/hostname`
@@ -14,18 +15,23 @@ else
  HOST=$1
 fi
 
-if [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
+# Choose a Mintty color scheme based on the hostname
+if [[ $HOST == "da3p-gen-sao-cis001" || $HOST == "da3s-gen-anb-app001" || $HOST == "da3d-gen-mvn-cis001" ]]
+then
+ # Purple for Ansible control machines or Jenkins CI server
+ purple
+elif [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
 then
  # Red color scheme: These servers are either in production or dangerous
- red
+red
 elif [[ $HOST == *"da3d"* || $HOST == *"da3t"* || $HOST == *"hw-"* || $HOST == *"vapp"* || $HOST == *"da3s"* ]]
 then
  # Green color scheme: These servers are for development or testing
- green
+green
 elif [[ $HOST == *"centos"* ]]
 then
  # Blue color scheme: These servers are local virtial machines
- blue
+blue
 fi
 
 # Log ssh client activity via script

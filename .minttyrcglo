@@ -3,6 +3,6 @@ FontHeight=11
 AllowBlinking=yes
 CursorType=block
 Transparency=glass
-Rows=40
+Rows=35
 BackgroundColour=0,0,0
 ForegroundColour=255,128,0

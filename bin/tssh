@@ -4,8 +4,9 @@
 shopt -s expand_aliases
 source ~/.bash_mintty_colors
 
+USERNAME=`whoami`
 DATE=`/usr/bin/date +%Y-%m-%d`
-LOGDIR="/home/g800959/sshlogs"
+LOGDIR="/home/$USERNAME/sshlogs"
 MACHINE=`/usr/bin/hostname`
 if [[ $1 == *"@"* ]]
 then
@@ -14,26 +15,48 @@ else
  HOST=$1
 fi
 
-if [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
+# Choose a Mintty color scheme based on the hostname
+if [[ $HOST == "da3p-gen-sao-cis001" || $HOST == "da3s-gen-anb-app001" || $HOST == "da3d-gen-mvn-cis001" ]]
+then
+ # Purple for Ansible control machines or Jenkins CI server
+ purple
+elif [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
 then
  # Red color scheme: These servers are either in production or dangerous
- red
+red
 elif [[ $HOST == *"da3d"* || $HOST == *"da3t"* || $HOST == *"hw-"* || $HOST == *"vapp"* || $HOST == *"da3s"* ]]
 then
  # Green color scheme: These servers are for development or testing
- green
+green
 elif [[ $HOST == *"centos"* ]]
 then
  # Blue color scheme: These servers are local virtial machines
- blue
+blue
 fi
 
-# Set Mintty Title
-echo -ne '\e]0;'$HOST'\a'
+
+# Clip the hostname from the FQDN, DNS suffx-search will replace, if needed. 
+HOST=`echo $HOST|cut -d'.' -f1`
+
+# Set the label to the hostname
+LABEL="$HOST"
+
+# Set the label based on key hostnames, if I recognize it
+case "$HOST" in
+ da3d-gen-mvn-cis001)
+ 	LABEL="Jenkins CI"
+	;;
+ da3p-gen-sao-cis001)
+     LABEL="Ansible Control"
+	;;
+esac
+
+# Set Mintty title
+echo -ne '\e]0;'$LABEL'\a'
 
 # Wrap tmux around lssh
-/usr/bin/tmux new -n "Host: $HOST" -d lssh $HOST
+/usr/bin/tmux new -n "$LABEL" -d lssh $HOST
 /usr/bin/tmux attach
 
-# Reset color scheme to default (grey on black)
+# Reset Mintty color scheme to default (grey on black)
 default

@@ -1,6 +1,6 @@
 # Mintty-only color schemes
 alias grey="echo -ne '\e]10;#000000\a';echo -ne '\e]11;#C0C0C0\a';echo -ne '\e]12;#00FF00\a'"
-alias green="echo -ne '\e]10;128,255,0\a';echo -ne '\e]11;0,64,64\a';echo -ne '\e]12;#00FF00\a'"
+alias green="echo -ne '\e]10;198,255,140\a';echo -ne '\e]11;0,64,64\a';echo -ne '\e]12;#00FF00\a'"
 alias red="echo -ne '\e]10;255,202,149\a';echo -ne '\e]11;64,0,0\a';echo -ne '\e]12;#00FF00\a'"
 alias blue="echo -ne '\e]10;128,255,255\a';echo -ne '\e]11;0,0,64\a';echo -ne '\e]12;#00FF00\a'"
 alias white="echo -ne '\e]10;0,0,0\a';echo -ne '\e]11;240,240,240\a';echo -ne '\e]12;#00FF00\a'"
