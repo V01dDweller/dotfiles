@@ -2,7 +2,7 @@
 " -------------
 
 " Window size
-set columns=90 lines=50
+set columns=80 lines=35
 set shiftwidth=1
 set ts=5
 set lbr ic autoindent smartindent hlsearch incsearch smartcase ruler nobackup showcmd
@@ -11,7 +11,7 @@ set lbr ic autoindent smartindent hlsearch incsearch smartcase ruler nobackup sh
 " set guifont=Monospace\ 11
 
 " Windows Font
-set guifont=Lucida_Console:h11
+set guifont=Consolas:h11
 
 " Turn on line numbers
 set number
@@ -52,4 +52,20 @@ inoremap <Up> <C-o>gk
 
 " Disable GUI toolbar
 set guioptions=mr
+
+" Remove menu bar
+set guioptions-=m  
+
+"remove right-hand scroll bar
+set guioptions-=r
+
 set clipboard=unnamed
+
+" CTRL-F1 to toggle menu bar
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+" CTRL-F2 to toggle tool bar
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+
+" CTRL-F3 to toggle scrollbar
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>

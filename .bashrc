@@ -200,14 +200,14 @@
 # bash history time stamps
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
+# Set EDITOR
+export EDITOR="/usr/bin/vim"
+
 # Add color to common commands
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias tree="tree -C"
-
-# Source company/project-specific aliases
-source .bash_company
 
 # Launch whatever comes after as if one had double-clicked from Windwows
 alias open="cygstart"
@@ -223,6 +223,10 @@ export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_73/"
 
 ## Fortune with cowsay :^)
 fortune | cowsay -f $(ls /usr/local/share/cows/ | shuf -n1)
+echo ""
+
+# Source company/project-specific aliases
+source .bash_company
 
 ## Fortune with pony :^)
 # fortune | /usr/bin/ponysay -b round
