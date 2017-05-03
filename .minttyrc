@@ -9,3 +9,4 @@ Font=Consolas
 Scrollbar=none
 ScrollMod=alt
 Columns=80
+OpaqueWhenFocused=no
