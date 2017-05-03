@@ -36,3 +36,7 @@ set background=dark
 " Disable backup files
 set nobackup
 set nowritebackup
+
+" For the SVN plug-in
+let g:svnj_custom_statusbar_ops_hide = 1
+let g:svnj_browse_cache_all = 1
