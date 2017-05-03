@@ -6,36 +6,20 @@ source ~/.bash_mintty_colors
 
 USERNAME=`whoami`
 DATE=`/usr/bin/date +%Y-%m-%d`
-LOGDIR="/home/g800959/sshlogs"
+LOGDIR="/home/$USERNAME/sshlogs"
 MACHINE=`/usr/bin/hostname`
 if [[ $1 == *"@"* ]]
 then
- HOST=`echo $1|/usr/bin/cut -d'@' -f 2`
+ FULLHOST=`echo $1|/usr/bin/cut -d'@' -f 2`
 else
- HOST=$1
+ FULLHOST=$1
 fi
 
-# Choose a Mintty color scheme based on the hostname
-if [[ $HOST == "da3p-gen-sao-cis001" || $HOST == "da3s-gen-anb-app001" || $HOST == "da3d-gen-mvn-cis001" ]]
-then
- # Purple for Ansible control machines or Jenkins CI server
- purple
-elif [[ $HOST == *"megatron"* || $HOST == *"da3p"* || $HOST == *"ch3p"* || $HOST == *"dal01p"* || $HOST == *"mdw01p"* ]]
-then
- # Red color scheme: These servers are either in production or dangerous
-red
-elif [[ $HOST == *"da3d"* || $HOST == *"da3t"* || $HOST == *"hw-"* || $HOST == *"vapp"* || $HOST == *"da3s"* ]]
-then
- # Green color scheme: These servers are for development or testing
-green
-elif [[ $HOST == *"centos"* ]]
-then
- # Blue color scheme: These servers are local virtial machines
-blue
-fi
+# Clip the hostname from the FQDN, DNS suffix-search will replace, if needed. 
+HOST=`echo $FULLHOST|cut -d'.' -f1`
 
 # Log ssh client activity via script
 /usr/bin/script -a -q -c "/usr/bin/ssh -X -Y $1" $LOGDIR/$DATE-$MACHINE-$HOST.log
 
 # Reset color scheme to default (grey on black)
-echo -ne '\e]10;191,191,191\a';echo -ne '\e]11;0,0,0\a';echo -ne '\e]12;#00FF00\a'
+default
