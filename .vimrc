@@ -1,6 +1,6 @@
 " Karl's vimrc
 " -------------
-set shiftwidth=1
+set shiftwidth=2
 set ts=5
 set lbr ic autoindent smartindent hlsearch incsearch smartcase ruler nobackup showcmd
 
@@ -33,6 +33,11 @@ set background=dark
 " Toggle AnsiEsc plug-in
 :nnoremap  <F6> :AnsiEsc<CR>
 
+" Netrw  settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.*.swp"
+
 " Disable backup files
 set nobackup
 set nowritebackup
@@ -40,3 +45,7 @@ set nowritebackup
 " For the SVN plug-in
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_browse_cache_all = 1
+
+" Cause new windows to appear below or to the right
+set splitright
+set splitbelow
