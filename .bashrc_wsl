@@ -1,0 +1,22 @@
+# bash history time stamps
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# Set EDITOR
+export EDITOR="/usr/bin/vim"
+
+# Add color to common commands
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias tree="tree -C"
+
+# Teminal color
+export TERM=xterm-256color
+
+## Fortune with cowsay :^)
+fortune | cowsay -f $(ls /usr/share/cowsay/cows/| shuf -n1)
+echo ""
+
+## Fortune with pony :^)
+# fortune | /usr/bin/ponysay -b round
+# fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f mantis -f orangefrog -f owl -f owlowiscious -f raccoon -f rover -f tank
