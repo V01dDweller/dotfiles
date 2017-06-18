@@ -36,7 +36,7 @@ set background=dark
 " Netrw  settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-let g:netrw_list_hide = ".svn,.*.swp"
+let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " Disable backup files
 set nobackup
