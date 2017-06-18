@@ -4,7 +4,7 @@ This is just a small collection of the dotfiles I've accumulated and come to dep
 
 ### Mintty Color Schemes - Windows ###
 
-Combined with a collection of Windows shortcuts and a folder in the Windows PATH, one can summon a Mintty session with a custom color scheme.
+Combined with a collection of Windows shortcuts and a folder in the Windows PATH, one can quickly summon a Mintty session with a custom color scheme.
 
 * .minttyrc
 * .minttyrcb
