@@ -1,6 +1,6 @@
 ## Karl's Humble Dotfile collection ##
 
-This is just small collection of dotfiles I've accumulated oer the years. I use them in a few environments from RHEL/CentOS, Cygwin and occationally WSL/Debian/Ubuntu.
+This is just a small collection of the dotfiles I've accumulated and come to depend on over the years. I use them in a few environments from RHEL/CentOS, Cygwin and occationally WSL/Debian/Ubuntu.
 
 .bash_mintty_colors
 .bash_profile
