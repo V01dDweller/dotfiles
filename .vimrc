@@ -49,3 +49,6 @@ let g:svnj_browse_cache_all = 1
 " Cause new windows to appear below or to the right
 set splitright
 set splitbelow
+
+" Disable Vi compatibility
+set nocp
