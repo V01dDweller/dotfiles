@@ -1,8 +1,8 @@
 " Karl's vimrc
 " -------------
 set shiftwidth=2
-set ts=5
-set lbr ic autoindent smartindent hlsearch incsearch smartcase ruler nobackup showcmd
+set tabstop=5
+set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
 
 " Turn on line numbers
 set number
