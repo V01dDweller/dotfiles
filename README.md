@@ -1,4 +1,4 @@
-## Karl's Humble Dotfile collection ##
+## My Humble Dotfile collection ##
 
 This is just a small collection of the dotfiles I've accumulated and come to depend on over the years. I use them in a few environments from RHEL/CentOS, Cygwin and occationally WSL/Debian/Ubuntu.
 
