@@ -1,5 +1,7 @@
 " Karl's vimrc
 " -------------
+
+" My old settings
 set shiftwidth=2
 set tabstop=5
 set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
