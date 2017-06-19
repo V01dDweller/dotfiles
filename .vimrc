@@ -26,14 +26,20 @@ color elflord
 set background=dark
 :syntax on
 
-" Disable auto-indent
-:nnoremap <F8> :setl noai nocin nosi inde=<CR>
-
-" Toggle scrollbind, this synchronizes scrolling in split Vim
-:nnoremap <F7> :setl scb!<CR>
-
-" Toggle AnsiEsc plug-in
+" Map F6 - Toggle AnsiEsc plug-in
 :nnoremap  <F6> :AnsiEsc<CR>
+
+" Map F7 - Toggle scrollbind 
+nnoremap <F7> :windo setl scb! <CR>
+
+" Map F8 -  Disable auto-indent to F8
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+" Map F9 - colorcolumn=80
+nnoremap <F9> :set colorcolumn=80<CR>
+
+" Map F10 - colorcolumn=""
+nnoremap <F10> :set colorcolumn=""<CR>
 
 " Netrw  settings
 let g:netrw_liststyle = 3

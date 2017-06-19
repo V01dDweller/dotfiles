@@ -52,17 +52,23 @@ inoremap <Up> <C-o>gk
 " Disable GUI toolbar
 set guioptions=mr
 
-" Disable auto-indent
+" Map Toggle AnsiEsc  plug-in to F6
+:nnoremap  <F6> :AnsiEsc<CR>
+
+" Map Toggle scrollbind to F7
+nnoremap <F7> :windo setl scb! <CR>
+
+" Map disable auto-indent to F8
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" Toggle scrollbind, this synchronizes scrolling in split Vim
-nnoremap <F7> :setl scb! <CR>
+" Map colorcolumn=80 to F9
+nnoremap <F9> :set colorcolumn=80<CR>
+
+" Map colorcolumn="" to F10
+nnoremap <F10> :set colorcolumn=""<CR>
 
 " Prevent text from auto-wrapping and adding new lines
 set textwidth=0
-
-" Key-map for AnsiEsc plug-in
-nnoremap <F6> :AnsiEsc<CR>
 
 " Netrw  settings
 let g:netrw_liststyle = 3
