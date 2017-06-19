@@ -9,6 +9,7 @@ set columns=80 lines=40
 set shiftwidth=2
 set ts=4
     
+" My old settings
 set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
 set expandtab 
 
@@ -66,7 +67,7 @@ nnoremap <F6> :AnsiEsc<CR>
 " Netrw  settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-let g:netrw_list_hide = ".svn,.*.swp"
+let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " Selection behaves like Windows
 behave mswin
