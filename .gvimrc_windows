@@ -70,7 +70,7 @@ hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 " Netrw  settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
-let g:netrw_list_hide = ".svn,.git,.*.swp"
+let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
 
 " ******* GVim-only options *********
 " Font
