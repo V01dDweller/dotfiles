@@ -49,19 +49,19 @@ au WinLeave * :setlocal nonumber
 syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 hi link ipaddr Identifier
 
-" Map Toggle AnsiEsc  plug-in to F6
+" F6 - Toggle AnsiEsc plug-in
 nnoremap  <F6> :AnsiEsc<CR>
 
-" Map Toggle scrollbind to F7
+" F7 - Toggle scrollbind for all panes
 nnoremap <F7> :windo setl scb! <CR>
 
-" Map disable auto-indent to F8
+" F8 - Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" Map colorcolumn=80 to F9
+" F9 - Show me column 80
 nnoremap <F9> :set colorcolumn=80<CR>
 
-" Map colorcolumn="" to F10
+" F10 - Stop showing me column 80
 nnoremap <F10> :set colorcolumn=""<CR>
 
 " Netrw  settings
@@ -76,6 +76,24 @@ set guifont=Lucida_Console:h10
 " Window size
 set columns=80 lines=40
     
+" Disable GUI toolbar
+set guioptions=mr
+
+" Remove menu bar
+set guioptions-=m
+
+"remove right-hand scroll bar
+set guioptions-=r
+
+" CTRL-F1 - Toggle menu bar
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+" CTRL-F2 - Toggle tool bar
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+
+" CTRL-F3 - Toggle scrollbar
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
+
 " Set up tabs to mimic Firefox
 nmap <silent> <C-t> :tabnew<CR>
 imap <silent> <C-t> <Esc>:tabnew<CR>
