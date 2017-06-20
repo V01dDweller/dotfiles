@@ -30,7 +30,7 @@ Mintty will respond to escape sequences to change colors on the fly, source this
 * .bashrc_wsl
 
 ### Tmux ###
-A low-key color scheme (with due credit [Hermann Vocke](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf) that is much easier on the eyes the the default CRT green. Also some shortcuts for color schemes, toggling pane sync and clipboard integration, 
+A low-key color scheme (with due credit [Hermann Vocke](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf)) that is much easier on the eyes the the default CRT green. Also some shortcuts for color schemes, toggling pane sync and clipboard integration, 
 
 * .tmux.clipboard24.conf
 * .tmux.clipboard.conf
