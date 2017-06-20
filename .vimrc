@@ -42,29 +42,29 @@ set background=dark
 syntax on
 
 " Line numbers only in active side of split window
-:au WinEnter * :setlocal number
-:au WinLeave * :setlocal nonumber
+au WinEnter * :setlocal number
+au WinLeave * :setlocal nonumber
 
 " Always-on IP address highlighting
 syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 hi link ipaddr Identifier
 
-" Map F6 - Toggle AnsiEsc plug-in
+" F6 - Toggle AnsiEsc plug-in
 nnoremap  <F6> :AnsiEsc<CR>
 
-" Map F7 - Toggle scrollbind 
+" F7 - Toggle scrollbind 
 nnoremap <F7> :windo setl scb! <CR>
 
-" Map F8 -  Disable auto-indent to F8
+" F8 -  Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" Map F9 - colorcolumn=80
+" F9 - Show me column 80
 nnoremap <F9> :set colorcolumn=80<CR>
 
-" Map F10 - colorcolumn=""
+" F10 - Stop showing me column 80
 nnoremap <F10> :set colorcolumn=""<CR>
 
-" Netrw  settings
+" Netrw settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp"
