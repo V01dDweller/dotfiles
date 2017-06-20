@@ -4,6 +4,9 @@
 " Turn on line numbers
 set number
 
+" Highlight current line
+set cursorline
+
 " Show the ruler
 set ruler
 
@@ -12,7 +15,7 @@ set showcmd
 
 " Indentation and tab handling
 set shiftwidth=2
-set tabstop=4
+set softtabstop=4
 set expandtab 
 set autoindent
 
