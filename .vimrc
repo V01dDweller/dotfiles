@@ -1,4 +1,5 @@
 " V01dDweller's vimrc
+" lucan88@msn.com
 " -------------------
 
 " Turn on line numbers
