@@ -53,7 +53,7 @@ hi link ipaddr Identifier
 nnoremap  <F6> :AnsiEsc<CR>
 
 " F7 - Toggle scrollbind 
-nnoremap <F7> :windo setl scb! <CR>
+nnoremap <F7> :windo :1<CR>:windo setl scb! <CR>
 
 " F8 -  Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
