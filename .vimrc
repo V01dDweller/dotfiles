@@ -64,6 +64,9 @@ nnoremap <F9> :set colorcolumn=80<CR>
 " F10 - Stop showing me column 80
 nnoremap <F10> :set colorcolumn=""<CR>
 
+" Make Colorcolumn lightgrey
+hi ColorColumn ctermbg=lightgrey guibg=lightgrey
+
 " Netrw settings
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
