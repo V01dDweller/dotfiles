@@ -1,36 +1,81 @@
-" Karl's gvimrc
-" -------------
-
-" Font
-set guifont=Lucida_Console:h10
-
-" Window size
-set columns=80 lines=40
-set shiftwidth=2
-set ts=4
-    
-" My old settings
-set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
-set expandtab 
+" V01dDweller's gvimrc
+" --------------------
 
 " Turn on line numbers
 set number
+
+" Show the ruler
+set ruler
+
+" Show commands as they are typed in command mode
+set showcmd
+
+" Indentation and tab handling
+set shiftwidth=2
+set tabstop=4
+set expandtab 
+set autoindent
+
+" Filetype indenting
+filetype plugin indent on
+
+" Display breaks long lines at words
+set lbr
+
+" Disable backups
+set nobackup
+set nowritebackup
+
+" Search highlighting
+set hlsearch incsearch 
+
+" Search ignores case
+set ic smartcase 
+
+" Cause new windows to appear below or to the right
+set splitright
+set splitbelow
+
+" Color Scheme
+color elflord
+set background=dark
+syntax on
 
 " Line numbers only in active side of split window
 au WinEnter * :setlocal number
 au WinLeave * :setlocal nonumber
 
-" IP address shighlighting
+" Always-on IP address highlighting
 syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 hi link ipaddr Identifier
 
-" Auto indent
-filetype plugin indent on
+" Map Toggle AnsiEsc  plug-in to F6
+nnoremap  <F6> :AnsiEsc<CR>
 
-" Color scheme
-colors torte
-syntax on
+" Map Toggle scrollbind to F7
+nnoremap <F7> :windo setl scb! <CR>
 
+" Map disable auto-indent to F8
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+" Map colorcolumn=80 to F9
+nnoremap <F9> :set colorcolumn=80<CR>
+
+" Map colorcolumn="" to F10
+nnoremap <F10> :set colorcolumn=""<CR>
+
+" Netrw  settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.git,.*.swp"
+
+" ******* GVim-only options *********
+" Font
+set guifont=Lucida_Console:h10
+
+" Window size
+set columns=80 lines=40
+    
 " Set up tabs to mimic Firefox
 nmap <silent> <C-t> :tabnew<CR>
 imap <silent> <C-t> <Esc>:tabnew<CR>
@@ -51,29 +96,6 @@ inoremap <Up> <C-o>gk
 
 " Disable GUI toolbar
 set guioptions=mr
-
-" Map Toggle AnsiEsc  plug-in to F6
-:nnoremap  <F6> :AnsiEsc<CR>
-
-" Map Toggle scrollbind to F7
-nnoremap <F7> :windo setl scb! <CR>
-
-" Map disable auto-indent to F8
-nnoremap <F8> :setl noai nocin nosi inde=<CR>
-
-" Map colorcolumn=80 to F9
-nnoremap <F9> :set colorcolumn=80<CR>
-
-" Map colorcolumn="" to F10
-nnoremap <F10> :set colorcolumn=""<CR>
-
-" Prevent text from auto-wrapping and adding new lines
-set textwidth=0
-
-" Netrw  settings
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " Selection behaves like Windows
 behave mswin
@@ -110,10 +132,6 @@ if has("gui")
   inoremap <M-Space> <C-O>:simalt ~<CR>
   cnoremap <M-Space> <C-C>:simalt ~<CR>
 endif
-
-" Change window split
-set splitright
-set splitbelow
 
 " Enable the mouse (in help anyway)
 set mouse=a

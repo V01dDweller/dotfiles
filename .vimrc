@@ -1,33 +1,56 @@
-" Karl's vimrc
-" -------------
-
-" My old settings
-set shiftwidth=2
-set tabstop=5
-set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
+" V01dDweller's vimrc
+" -------------------
 
 " Turn on line numbers
 set number
+
+" Show the ruler
+set ruler
+
+" Show commands as they are typed in command mode
+set showcmd
+
+" Indentation and tab handling
+set shiftwidth=2
+set tabstop=4
+set expandtab 
+set autoindent
+
+" Filetype indenting
+filetype indent on
+
+" Display breaks long lines at words
+set lbr
+
+" Disable backups
+set nobackup 
+set nowritebackup
+
+" Search highlighting
+set hlsearch incsearch 
+
+" Search ignores case
+set ic smartcase 
+
+" Cause new windows to appear below or to the right
+set splitright
+set splitbelow
+
+" Color Scheme
+color elflord
+set background=dark
+syntax on
 
 " Line numbers only in active side of split window
 :au WinEnter * :setlocal number
 :au WinLeave * :setlocal nonumber
 
-
-" IP address shighlighting
+" Always-on IP address highlighting
 syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 hi link ipaddr Identifier
-"
-" Auto indent
-filetype indent on
-
-" Color Scheme
-color elflord
-set background=dark
-:syntax on
 
 " Map F6 - Toggle AnsiEsc plug-in
-:nnoremap  <F6> :AnsiEsc<CR>
+nnoremap  <F6> :AnsiEsc<CR>
 
 " Map F7 - Toggle scrollbind 
 nnoremap <F7> :windo setl scb! <CR>
@@ -46,17 +69,10 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
-" Disable backup files
-set nobackup
-set nowritebackup
-
+" ******* Vim-only options *******
 " For the SVN plug-in
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_browse_cache_all = 1
-
-" Cause new windows to appear below or to the right
-set splitright
-set splitbelow
 
 " Disable Vi compatibility
 set nocp
