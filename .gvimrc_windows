@@ -37,7 +37,7 @@ set splitright
 set splitbelow
 
 " Color Scheme
-color elflord
+color torte
 set background=dark
 syntax on
 
@@ -114,9 +114,6 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
-
-" Disable GUI toolbar
-set guioptions=mr
 
 " Selection behaves like Windows
 behave mswin
