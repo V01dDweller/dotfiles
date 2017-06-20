@@ -21,7 +21,7 @@ set expandtab
 set autoindent
 
 " Filetype indenting
-filetype plugin indent on
+filetype indent on
 
 " Display breaks long lines at words
 set lbr
@@ -75,6 +75,9 @@ hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
+
+" Enable plugins
+filetype plugin on
 
 " ******* GVim-only options *********
 " Font

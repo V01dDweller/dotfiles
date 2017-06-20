@@ -76,6 +76,9 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
+" Enable plugins
+filetype plugin on
+
 " ******* Vim-only options *******
 " For the SVN plug-in
 let g:svnj_custom_statusbar_ops_hide = 1
