@@ -77,7 +77,7 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
-" F4 - Open netrw in a 30 column window on the  left
+" F4 - Toggle Lexplore/netrw
 nnoremap <F4> :Lexplore<CR>
 
 " Enable plugins
