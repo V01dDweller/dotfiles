@@ -78,7 +78,7 @@ let g:netrw_banner = 0
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " F4 - Open netrw in a 30 column window on the  left
-nnoremap <F4> :vnew .<CR> <C-w>H :vertical resize 30<CR>
+nnoremap <F4> :Lexplore<CR>
 
 " Enable plugins
 filetype plugin on
