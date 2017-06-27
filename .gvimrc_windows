@@ -76,9 +76,9 @@ nnoremap <F10> :set colorcolumn=""<CR>
 hi ColorColumn ctermbg=lightgreen guibg=lightgreen
 
 " Netrw  settings
-let g:netrw_liststyle = 3                                         " Tree view
-let g:netrw_banner = 0                                            " No banner
-let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"   " Hide these
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
 
 " F4 - Toggle Lexplore/netrw
 nnoremap <F4> :Lexplore<CR>
@@ -93,13 +93,16 @@ set guifont=Lucida_Console:h10
 " Window size
 set columns=80 lines=40
     
-" Disable GUI toolbar
+" Hide GUI toolbar
 set guioptions=mr
 
-" Remove menu bar
+" Enable tear-off menus
+set guioptions+=t
+
+" Hide menu bar
 set guioptions-=m
 
-"remove right-hand scroll bar
+" Hide right-hand scroll bar
 set guioptions-=r
 
 " CTRL-F1 - Toggle menu bar
