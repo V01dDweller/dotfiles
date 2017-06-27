@@ -1,11 +1,14 @@
-" V01dDweller's gvimrc
-" lucan88@msn.com
-" --------------------
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"
+"           V01dDweller's gvimrc
+"             lucan88@msn.com
+"
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
-" Turn on line numbers
+" Line numbers
 set number
 
-" Show the ruler
+" Ruler
 set ruler
 
 " Show commands as they are typed in command mode
@@ -20,35 +23,35 @@ set autoindent
 " Filetype indenting
 filetype indent on
 
-" Display breaks long lines at words
+" break long lines at words (display)
 set lbr
 
 " Disable backups
 set nobackup
 set nowritebackup
 
-" Search highlighting
+" Search highlighting, find while I type
 set hlsearch incsearch 
 
-" Search ignores case
+" Search ignores case, unless mix case
 set ic smartcase 
 
-" Cause new windows to appear below or to the right
+" New windows to appear below or to the right
 set splitright
 set splitbelow
 
 " Color Scheme
 color torte
 set background=dark
-syntax on
+syntax enable
 
 " Highlight current line
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=darkblue
 
 " Line numbers only in active side of split window
-au WinEnter * :setlocal number
-au WinLeave * :setlocal nonumber
+"au WinEnter * :setlocal number
+"au WinLeave * :setlocal nonumber
 
 " Always-on IP address highlighting
 syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
@@ -73,9 +76,9 @@ nnoremap <F10> :set colorcolumn=""<CR>
 hi ColorColumn ctermbg=lightgreen guibg=lightgreen
 
 " Netrw  settings
-let g:netrw_liststyle = 3
-let g:netrw_banner = 0
-let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
+let g:netrw_liststyle = 3                                         " Tree view
+let g:netrw_banner = 0                                            " No banner
+let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"   " Hide these
 
 " F4 - Toggle Lexplore/netrw
 nnoremap <F4> :Lexplore<CR>
