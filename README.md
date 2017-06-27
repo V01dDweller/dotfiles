@@ -39,7 +39,7 @@ A low-key color scheme (with due credit [Hermann Vocke](http://www.hamvocke.com/
 * .tmux-syncon.conf
 
 ### Vim! ###
-Trying (and failing) to keep vim customizations to a minimum, but there are a few I can last long without. My most frequently update files by far.
+Trying (and failing) to keep vim customizations to a minimum, but there are a few I can last long without. My most frequently updated files by far.
 
 * .vimrc
 * .gvimrc_windows
