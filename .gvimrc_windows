@@ -72,7 +72,7 @@ nnoremap <F9> :set colorcolumn=80<CR>
 " F10 - Stop showing me column 80
 nnoremap <F10> :set colorcolumn=""<CR>
 
-" Make Colorcolumn lightgrey
+" Make Colorcolumn lightgreen
 hi ColorColumn ctermbg=lightgreen guibg=lightgreen
 
 " Netrw  settings
