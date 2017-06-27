@@ -76,9 +76,9 @@ nnoremap <F10> :set colorcolumn=""<CR>
 hi ColorColumn ctermbg=lightgreen guibg=lightgreen
 
 " Netrw settings
-let g:netrw_liststyle = 3                    " Tree view
-let g:netrw_banner = 0                       " No banner
-let g:netrw_list_hide = ".svn,.git,.*.swp"   " Hide these
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " F4 - Toggle Lexplore/netrw
 nnoremap <F4> :Lexplore<CR>
