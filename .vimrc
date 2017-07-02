@@ -92,5 +92,8 @@ filetype plugin on
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_browse_cache_all = 1
 
+" Enable the mouse when available
+set mouse=a
+
 " Disable Vi compatibility
 set nocompatible
