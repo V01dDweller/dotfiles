@@ -72,6 +72,9 @@ nnoremap <F9> :set colorcolumn=80<CR>
 " F10 - Stop showing me column 80
 nnoremap <F10> :set colorcolumn=<CR>
 
+" F11 - Toggle cursorline
+nnoremap <F11> :set cursorline!<CR>
+
 " Make Colorcolumn lightgreen
 highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
 
@@ -88,6 +91,10 @@ filetype plugin on
 
 " _/_/_/_/ Vim-only options _/_/_/_/
 "
+
+" Filename in title bar
+set title
+
 " For the SVN plug-in
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_browse_cache_all = 1
