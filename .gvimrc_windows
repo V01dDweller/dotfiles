@@ -154,8 +154,7 @@ if has("clipboard")
     vnoremap <C-C> "+y
     vnoremap <C-Insert> "+y
 
-    " CTRL-V and SHIFT-Insert are Paste
-    map <C-V>        "+gP
+    " SHIFT-Insert is Paste
     map <S-Insert>        "+gP
 
     cmap <C-V>        <C-R>+
