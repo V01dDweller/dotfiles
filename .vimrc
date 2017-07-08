@@ -101,8 +101,24 @@ set title
 let g:svnj_custom_statusbar_ops_hide = 1
 let g:svnj_browse_cache_all = 1
 
-" Enable the mouse when available
-set mouse=a
+" Disable mouse support (**warning conflicts with tmux when enabled!)
+set mouse=
+
+" Function - toggle mouse support
+" Thanks to crater2150 - https://unix.stackexchange.com/questions/156707
+function! ToggleMouse()
+    " check if mouse is enabled
+    if &mouse == 'a'
+        " disable mouse
+        set mouse=
+    else
+        " enable mouse everywhere
+        set mouse=a
+    endif
+endfunc
+
+" F12 - Toggle mouse support
+map <F12> :call ToggleMouse()<CR>
 
 " Disable Vi compatibility
 set nocompatible
