@@ -66,14 +66,14 @@ nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>
 " F8 - Fully disable auto-indent
 nnoremap <F8> :setlocal noautoindent nocindent nosmartindent indentexpr=<CR>
 
-" F9 - Show me column 80
-nnoremap <F9> :set colorcolumn=80<CR>
+" F9 - Stop showing me column 80
+nnoremap <F9> :set colorcolumn=<CR>
 
-" F10 - Stop showing me column 80
-nnoremap <F10> :set colorcolumn=<CR>
+" F10 - Toggle cursorline
+nnoremap <F10> :set cursorline!<CR>
 
-" F11 - Toggle cursorline
-nnoremap <F11> :set cursorline!<CR>
+" F11 - Show me column 80
+nnoremap <F11> :set colorcolumn=80<CR>
 
 " Make Colorcolumn lightgreen
 highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
@@ -89,8 +89,10 @@ nnoremap <F4> :Lexplore<CR>
 " Enable plugins
 filetype plugin on
 
-" _/_/_/_/ GVim-only options _/_/_/_/
-"
+"   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"  _/           GVim-only options        _/
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
 " Font
 set guifont=Lucida_Console:h10
 
@@ -119,47 +121,47 @@ nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
 nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
 
 " Set up tabs to mimic Firefox
-nmap <silent> <C-t> :tabnew<CR>
-imap <silent> <C-t> <Esc>:tabnew<CR>
-nmap <silent> <C-T> :tabnew<CR>
-imap <silent> <C-T> <Esc>:tabnew<CR>
-nmap <silent> <C-Tab> :tabn<CR>
-imap <silent> <C-Tab> <Esc> :tabn<CR>
-nmap <silent> <C-S-Tab> :tabp<CR>
-imap <silent> <C-S-Tab> <Esc> :tabp<CR>
+" nmap <silent> <C-t> :tabnew<CR>
+" imap <silent> <C-t> <Esc>:tabnew<CR>
+" nmap <silent> <C-T> :tabnew<CR>
+" imap <silent> <C-T> <Esc>:tabnew<CR>
+" nmap <silent> <C-Tab> :tabn<CR>
+" imap <silent> <C-Tab> <Esc> :tabn<CR>
+" nmap <silent> <C-S-Tab> :tabp<CR>
+" imap <silent> <C-S-Tab> <Esc> :tabp<CR>
 
 " Set arrow keys to work naturally
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
+" nnoremap <Down> gj
+" nnoremap <Up> gk
+" vnoremap <Down> gj
+" vnoremap <Up> gk
+" inoremap <Down> <C-o>gj
+" inoremap <Up> <C-o>gk
 
 " CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
+" noremap <C-A> gggH<C-O>G
+" inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+" cnoremap <C-A> <C-C>gggH<C-O>G
+" onoremap <C-A> <C-C>gggH<C-O>G
+" snoremap <C-A> <C-C>gggH<C-O>G
+" xnoremap <C-A> <C-C>ggVG
 
 " Windows style cut, copy and paste
-if has("clipboard")
-    " CTRL-X and SHIFT-Del are Cut
-    vnoremap <C-X> "+x
-    vnoremap <S-Del> "+x
-
-    " CTRL-C and CTRL-Insert are Copy
-    vnoremap <C-C> "+y
-    vnoremap <C-Insert> "+y
-
-    " SHIFT-Insert is Paste
-    map <S-Insert>        "+gP
-
-    cmap <C-V>        <C-R>+
-    cmap <S-Insert>        <C-R>+
-endif
+" if has("clipboard")
+"     " CTRL-X and SHIFT-Del are Cut
+"     vnoremap <C-X> "+x
+"     vnoremap <S-Del> "+x
+" 
+"     " CTRL-C and CTRL-Insert are Copy
+"     vnoremap <C-C> "+y
+"     vnoremap <C-Insert> "+y
+" 
+"     " SHIFT-Insert is Paste
+"     map <S-Insert>        "+gP
+" 
+"     cmap <C-V>        <C-R>+
+"     cmap <S-Insert>        <C-R>+
+" endif
 
 " Alt-Space is System menu
 if has("gui")
