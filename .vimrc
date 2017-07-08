@@ -66,14 +66,14 @@ nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>
 " F8 -  Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" F9 - Show me column 80
-nnoremap <F9> :set colorcolumn=80<CR>
+" F9 - Toggle cursorline
+nnoremap <F9> :set cursorline!<CR>
 
-" F10 - Stop showing me column 80
-nnoremap <F10> :set colorcolumn=<CR>
+" F10 - Show me column 80
+nnoremap <F10> :set colorcolumn=80<CR>
 
-" F11 - Toggle cursorline
-nnoremap <F11> :set cursorline!<CR>
+" F11 - Stop showing me column 80
+nnoremap <F11> :set colorcolumn=<CR>
 
 " Make Colorcolumn lightgreen
 highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
@@ -89,8 +89,10 @@ nnoremap <F4> :Lexplore<CR>
 " Enable plugins
 filetype plugin on
 
-" _/_/_/_/ Vim-only options _/_/_/_/
-"
+"   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"  _/        Vim-only options            _/
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
 
 " Filename in title bar
 set title
