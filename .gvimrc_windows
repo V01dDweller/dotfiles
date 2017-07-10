@@ -178,3 +178,9 @@ behave mswin
 
 " Disable undo files
 set noundofile
+
+" If PuTTY is installed, this will allow you to edit remote files
+let g:netrw_cygwin = 0
+let g:netrw_ssh_cmd = '"C:\Program Files\PuTTY\plink.exe" -T -ssh'
+let g:netrw_scp_cmd = '"C:\Program Files\PuTTY\pscp.exe" -q -scp'
+let g:netrw_sftp_cmd = '"C:\Program Files\PuTTY\pscp.exe" -q -sftp'
