@@ -44,7 +44,7 @@ escalation only when necessary.
 
 By default ansible uses ssh to access a host then sudo for privilege
 escalation. Unless otherwise directed, ansible will ssh via the current user's
-Linux account/gid when executing playbooks. Most maintenance and update
+Linux account when executing playbooks. Most maintenance and update
 playbooks should work primarily via functional accounts using the "become" and
 "become_user" directives. Global security policy should ensure that
 developers and testers should be able to run these types of playbooks only in
