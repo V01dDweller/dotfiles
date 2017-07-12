@@ -8,6 +8,7 @@
 * Idempotence
 * Naming conventions
 * Playbook layout
+* YAML Formatting
 * Keep it simple and readable
 * Write playbooks in pairs
 
@@ -209,6 +210,27 @@ its own ansible inventory, e.g.
             └── my_template.ext.j2
 ```
 
+
+## YAML Formatting ##
+
+Prioritize horizontal compactness and readbility via strict yaml formatting. Use the "=" sign only for adhoc ansible commands.
+
+**This**
+```
+- name: My ansible task
+  module:
+    attribute1: "value"
+    attribute2: "value"
+    attribute3: "value"
+  directive: True
+```
+
+**Not This**
+```
+- name: module attribute1=value attribute2=value attribute3=value directive=True
+```
+  
+  
 
 ## Keep it simple and readable ##
 
