@@ -222,4 +222,4 @@ its own ansible inventory, e.g.
   the roles from these may be used during upgrades and rollbacks.
 * Alternatively or in addition to install/uninstalls whenever possible, upgrade
   playbooks should be created with a path for downgrades to ensure smooth
-  rollbacks.  allow downgrades as much as possible.
+  rollbacks.
