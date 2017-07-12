@@ -1,12 +1,12 @@
 # Ansible Best Practices #
 
 * Infrastructure as Code: Portability
-* CI/CD: One playbook, multiple inventories
 * Security: Host access and privilege escalation
 * Unresolved security issues
 * Application Security: ansible-vault
 * Idempotence
 * Naming conventions
+* CI/CD: One playbook, multiple inventories
 * Playbook layout
 * YAML Formatting
 * Keep it simple and readable
@@ -35,22 +35,6 @@ or binary artifacts)
 packages or other binaries as a practical alternative to the "/software"
 directory currently used on some ansible control hosts.
 
-
-## CI/CD: One playbook, multiple inventories ##
-
-As much as possible, ansible playbooks should be developed and refined
-alongside the target application following the continuous integration model.
-This means an application playbook collection should reliably provision,
-configure, deploy and update that app across multiple environments with each
-environment represented by a well-organized ansible inventory and group_vars
-directory structure.
-
-**CI Pipeline:**
-```
-    Developers/Testers/DevOps       |                Devops-only
-Development -> QA -> Performance -> | -> Grinder -> Integration Lab -> Production
-                                    |
-```
 
 ## Security: Host access and privilege escalation ##
 
@@ -154,13 +138,27 @@ e.g.
  - "update_java_preferences" instead of "run_groovy"
 
 
+## CI/CD: One playbook, multiple inventories ##
+
+As much as possible, ansible playbooks should be developed and refined
+alongside the target application following the continuous integration model.
+This means an application playbook collection should reliably provision,
+configure, deploy and update that app across multiple environments with each
+environment represented by a well-organized ansible inventory and group_vars
+directory structure.
+
+**CI Pipeline:**
+```
+    Developers/Testers/DevOps       |                Devops-only
+Development -> QA -> Performance -> | -> Grinder -> Integration Lab -> Production
+                                    |
+```
 
 ## Playbook layout ##
 
-In order to store the fewest number of variables, avoid duplications,
-facilitate portability and modularity, and to foster a familiar design
-language that we all grow to recognize, playbooks should adhere to the
-following layout strategy:
+In order avoid duplicate variable names, support CI/CD, facilitate
+portability/modularity and to foster a familiar design language, playbooks
+should adhere to the following layout strategy:
 
 Each CI stage (which we may use interchangeably with "environment") should have
 its own ansible inventory, e.g.
