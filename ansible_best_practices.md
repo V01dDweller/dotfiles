@@ -209,7 +209,6 @@ its own ansible inventory, e.g.
 
 * Impress with flow, descriptive task names and concise, useful comments
 * Elegance and simplicity trump complexity
-  with minimal effort
 * Avoid empty directories, e.g. templates, files, group_vars and handlers.
 
 
