@@ -92,9 +92,9 @@ production, for example, the attempt will fail due to lack of sudo access.
 
 1. **Functional accounts are set to nologin** - Again, the "nologin" option
    prevents some functional account from using a shell which in turn breaks
-   some ansible modules that need prvilige escalation. Workaounds involve more
+   some ansible modules that need privilege escalation. Workarounds involve more
    complicated playbooks, directly invoking sudo via scripts instead of using
-   modules and disabling Puppet which antuomatically maintains this setting. We
+   modules and disabling Puppet which automatically maintains this setting. We
    are awaiting a reply from GS on our request to remove this restriction.
 
 1. **Continuous Integration functional Accounts needed** - For CI/CD, Jenkins,
@@ -103,8 +103,8 @@ production, for example, the attempt will fail due to lack of sudo access.
    needs ssh access and sudo in the Development, QA and performance stages of
    the CI pipeline the way developers and testers do. Currently, jenkins
    accounts exist only on our build servers, not in AD. Remediation will be to
-   create a jenkins user in the ad.syniverse.com with membership in the
-   api_dev_dev netgroup. This request has not yet been made.
+   create a jenkins user in the Active Directory with membership in the
+   appropriate netgroup. This request has not yet been made.
 
 ### Application Security: ansible-vault ###
 
@@ -123,7 +123,7 @@ are needed then none are made. Ideally, running the same playbook repeatedly
 should not change anything.
 
 * The command, script and raw modules should only be used as a last resort,
-  especially raw which is inherenltly dangerous and non-idempotent. e.g.
+  especially raw which is inherently dangerous and non-idempotent. e.g.
     Instead of a curl script, use the uri module
     Instead of scripting grep or sed, use the lineinfile module
     Instead of scrpting rpm, use the yum module
