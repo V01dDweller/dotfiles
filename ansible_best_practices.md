@@ -170,6 +170,7 @@ its own ansible inventory, e.g.
 │   ├── app1.yml           "all instances of app1"
 │   └── app2.yml           "all instances of app2"
 │ 
+│ 
 ├── hosts                  "Inventories"
 │   ├── development        
 │   │   └── group_vars     "Development-only variables"
@@ -186,7 +187,11 @@ its own ansible inventory, e.g.
 │           ├── all.yml
 │           ├── app1.yml
 │           └── app2.yml
-├── my_playbook.yml        "The actual playbook, named properly"
+│ 
+│ 
+├── my_playbook.yml        "The actual playbook"
+│ 
+│ 
 └── roles                  "Roles are units of functionality"
     ├── role1
     │   ├── files
