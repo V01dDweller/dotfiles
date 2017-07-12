@@ -41,7 +41,7 @@ As much as possible, ansible playbooks should be developed and refined
 alongside the target application following the continuous integration model.
 This means an application playbook collection should reliably provision,
 configure, deploy and update that app across multiple environments with each
-environment represented by a well organized ansible inventory and group_vars
+environment represented by a well-organized ansible inventory and group_vars
 directory structure.
 
 **CI Pipeline:**
