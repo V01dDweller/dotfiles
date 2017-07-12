@@ -169,6 +169,7 @@ its own ansible inventory, e.g.
 │   ├── all.yml            "all apps, all instances"
 │   ├── app1.yml           "all instances of app1"
 │   └── app2.yml           "all instances of app2"
+│ 
 ├── hosts                  "Inventories"
 │   ├── development        
 │   │   └── group_vars     "Development-only variables"
