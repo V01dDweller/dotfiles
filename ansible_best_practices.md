@@ -7,7 +7,7 @@
 * Application Security: ansible-vault
 * Idempotence
 * Naming conventions
-* Syniverse ansible playbook layout
+* Playbook layout
 * Keep it simple and readable
 * Write playbooks in pairs
 
@@ -21,8 +21,8 @@ code according to the following guidelines:
 * Playbooks should be self-contained and portable, easily checked out and run,
   where appropriate, by any developer, tester or DevOps team member
 * As much as practicable, ansible roles should be generic and reusable
-* All binaries and artifacts should be pulled from either a Syniverse
-  artifactory or native repository.
+* All binaries and artifacts should be pulled from either an artifactory or
+  native repository.
 
 **Note** As a temporary stop-gap, symlinks to directories outside the playbook,
 e.g. /software, may be used as long as the link, and not the artifact, is
@@ -61,7 +61,7 @@ By default ansible uses ssh to access a host then sudo for privilege
 escalation. Unless otherwise directed, ansible will ssh via the current user's
 Linux account/gid when executing playbooks. Most maintenance and update
 playbooks should work primarily via functional accounts using the "become" and
-"become_user" directives. Syniverse security policy should ensure that
+"become_user" directives. Global security policy should ensure that
 developers and testers should be able to run these types of playbooks only in
 the following CI pipeline stages:
 
@@ -76,19 +76,19 @@ should be the only ones who run playbooks for:
 * Integration Lab (nee NSX Lab)
 * Production
 
-Syniverse RBAC policy/netgroup membership should enforce this automatically
+RBAC policy/netgroup membership should enforce this automatically
 meaning if developers or testers attempt to execute a playbook against
 production, for example, the attempt will fail due to lack of sudo access.
 
 ## Unresolved security issues ##
 
-1. **Sudo-to-root excludes shell access** - For DevOps, Syniverse security
-   policy explicitly excludes all common command-line shells. This breaks
-   several ansible modules needed for the initial provisioning of a typical
-   application host when the root account is used via the become directive.
-   Workarounds involve either vastly more complicated, labor-intensive,
-   sub-optimal playbooks, or directly accessing the root account. We are
-   awaiting a reply from GS on our request to remove this restriction.
+1. **Sudo-to-root excludes shell access** - For DevOps, security policy
+   explicitly excludes all common command-line shells. This breaks several
+   ansible modules needed for the initial provisioning of a typical application
+   host when the root account is used via the become directive.  Workarounds
+   involve either vastly more complicated, labor-intensive, sub-optimal
+   playbooks, or directly accessing the root account. We are awaiting a reply
+   from GS on our request to remove this restriction.
 
 1. **Functional accounts are set to nologin** - Again, the "nologin" option
    prevents some functional account from using a shell which in turn breaks
@@ -154,7 +154,7 @@ e.g.
 
 
 
-## Syniverse ansible playbook layout ##
+## Playbook layout ##
 
 In order to store the fewest number of variables, avoid duplications,
 facilitate portability and modularity, and to foster a familiar design
