@@ -24,13 +24,13 @@ code according to the following guidelines:
 * All binaries and artifacts should be pulled from either an artifactory or
   native repository.
 
-**Note** As a temporary stop-gap, symlinks to directories outside the playbook,
+**Note:** As a temporary stop-gap, symlinks to directories outside the playbook,
 e.g. /software, may be used as long as the link, and not the artifact, is
 checked into subversion. Again playbooks should absolutely NOT include any
 binaries in their directory structure (packages, tar files or other compressed
 or binary artifacts)
 
-**Note** At least one central generic artifactory will be created for installer
+**Note:** At least one central generic artifactory will be created for installer
 packages or other binaries as a practical alternative to the "/software"
 directory on some ansible control hosts.
 
