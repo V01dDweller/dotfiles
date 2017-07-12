@@ -1,6 +1,6 @@
 # Ansible Best Practices #
 
-* Infrastructure as code: Portability
+* Infrastructure as Code: Portability
 * CI/CD: One playbook, multiple inventories
 * Security: Host access and privilege escalation
 * Unresolved security issues
@@ -9,8 +9,7 @@
 * Naming conventions
 * Syniverse ansible playbook layout
 * Keep it simple and readable
-* Minimal use of tagging
-* Avoid gratuitously using features
+* Write playbooks in pairs
 
 
 ## Infrastructure as Code: Portability ##
