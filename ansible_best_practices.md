@@ -32,7 +32,7 @@ or binary artifacts)
 
 **Note:** At least one central generic artifactory will be created for installer
 packages or other binaries as a practical alternative to the "/software"
-directory on some ansible control hosts.
+directory currently used on some ansible control hosts.
 
 
 ## CI/CD: One playbook, multiple inventories ##
