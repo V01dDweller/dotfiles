@@ -219,15 +219,15 @@ Prioritize horizontal compactness and readbility via strict yaml formatting. Use
 ```
 - name: My ansible task
   module:
-    attribute1: "value"
-    attribute2: "value"
-    attribute3: "value"
+    attribute1: ""value""
+    attribute2: ""value""
+    attribute3: ""value""
   directive: True
 ```
 
 **Not This**
 ```
-- name: module attribute1=value attribute2=value attribute3=value directive=True
+- name: module attribute1="value" attribute2="value" attribute3="value" directive=True
 ```
   
   
