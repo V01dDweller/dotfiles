@@ -1,12 +1,12 @@
 # Ansible Best Practices #
 
 * Infrastructure as Code: Portability
+* CI/CD: One playbook, multiple inventories
 * Security: Host access and privilege escalation
 * Unresolved security issues
 * Application Security: ansible-vault
 * Idempotence
 * Naming conventions
-* CI/CD: One playbook, multiple inventories
 * Playbook layout
 * YAML Formatting
 * Keep it simple and readable
@@ -34,6 +34,22 @@ or binary artifacts)
 **Note:** At least one central generic artifactory will be created for installer
 packages or other binaries as a practical alternative to the "/software"
 directory currently used on some ansible control hosts.
+
+## CI/CD: One playbook, multiple inventories ##
+
+As much as possible, ansible playbooks should be developed and refined
+alongside the target application following the continuous integration model.
+This means an application playbook collection should reliably provision,
+configure, deploy and update that app across multiple environments with each
+environment represented by a well-organized ansible inventory and group_vars
+directory structure.
+
+**CI Pipeline:**
+```
+    Developers/Testers/DevOps       |                Devops-only
+Development -> QA -> Performance -> | -> Grinder -> Integration Lab -> Production
+                                    |
+```
 
 
 ## Security: Host access and privilege escalation ##
@@ -137,22 +153,6 @@ e.g.
  - "sii_bulk_upsert" instead of "sii_prov"
  - "update_java_preferences" instead of "run_groovy"
 
-
-## CI/CD: One playbook, multiple inventories ##
-
-As much as possible, ansible playbooks should be developed and refined
-alongside the target application following the continuous integration model.
-This means an application playbook collection should reliably provision,
-configure, deploy and update that app across multiple environments with each
-environment represented by a well-organized ansible inventory and group_vars
-directory structure.
-
-**CI Pipeline:**
-```
-    Developers/Testers/DevOps       |                Devops-only
-Development -> QA -> Performance -> | -> Grinder -> Integration Lab -> Production
-                                    |
-```
 
 ## Playbook layout ##
 
