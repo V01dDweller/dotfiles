@@ -89,9 +89,9 @@ nnoremap <F4> :Lexplore<CR>
 " Enable plugins
 filetype plugin on
 
-"   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
-"  _/        Vim-only options            _/
-" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+   "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+  "_/        Vim-only options            _/
+ "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
 
 " Filename in title bar
