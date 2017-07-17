@@ -1,0 +1,7 @@
+BoldAsFont=no
+FontHeight=11
+AllowBlinking=yes
+CursorType=block
+Transparency=glass
+Rows=35
+BackgroundColour=0,0,0

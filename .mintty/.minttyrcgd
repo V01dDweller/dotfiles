@@ -1,0 +1,13 @@
+BoldAsFont=no
+FontHeight=11
+AllowBlinking=yes
+CursorType=block
+Transparency=medium
+Rows=35
+BackgroundColour=31,34,54
+Term=xterm-256color
+Font=Consolas
+ForegroundColour=255,236,0
+Scrollbar=none
+ScrollMod=alt
+Columns=80
