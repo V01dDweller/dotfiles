@@ -1,9 +1,0 @@
-BoldAsFont=no
-FontHeight=11
-AllowBlinking=yes
-CursorType=block
-Transparency=medium
-Rows=35
-BackgroundColour=255,255,255
-ForegroundColour=0,0,0
-OpaqueWhenFocused=yes
