@@ -1,0 +1,186 @@
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"
+"           V01dDweller's gvimrc
+"             lucan88@msn.com
+"
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+" Line numbers
+set number
+
+" Ruler
+set ruler
+
+" Show commands as they are typed in command mode
+set showcmd
+
+" Indentation and tab handling
+set shiftwidth=2
+set softtabstop=4
+set expandtab 
+set autoindent
+
+" Filetype indenting
+filetype indent on
+
+" break long lines at words (display)
+set linebreak
+
+" Disable backups
+set nobackup
+set nowritebackup
+
+" Search highlighting, find while I type
+set hlsearch incsearch 
+
+" Search ignores case, unless mix case
+set ignorecase smartcase 
+
+" New windows to appear below or to the right
+set splitright
+set splitbelow
+
+" Color Scheme
+color torte
+set background=dark
+syntax enable
+
+" Highlight current line
+set cursorline
+highlight CursorLine term=bold cterm=bold guibg=darkblue
+
+" Line numbers only in active side of split window
+autocmd WinEnter * :setlocal number
+autocmd WinLeave * :setlocal nonumber
+
+" Always-on IP address highlighting
+syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
+highlight link ipaddr Identifier
+
+" F6 - Toggle AnsiEsc plug-in
+nnoremap  <F6> :AnsiEsc<CR>
+
+" F7 - Toggle scrollbind for all panes
+nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>
+
+" F8 - Fully disable auto-indent
+nnoremap <F8> :setlocal noautoindent nocindent nosmartindent indentexpr=<CR>
+
+" F9 - Stop showing me column 80
+nnoremap <F9> :set colorcolumn=<CR>
+
+" F10 - Toggle cursorline
+nnoremap <F10> :set cursorline!<CR>
+
+" F11 - Show me column 80
+nnoremap <F11> :set colorcolumn=80<CR>
+
+" Make Colorcolumn lightgreen
+highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
+
+" Netrw  settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
+
+" F4 - Toggle Lexplore/netrw
+nnoremap <F4> :Lexplore<CR>
+
+" Enable plugins
+filetype plugin on
+
+"   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"  _/           GVim-only options        _/
+" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+" Font
+set guifont=Lucida_Console:h10
+
+" Window size
+set columns=85 lines=50
+    
+" Hide GUI toolbar
+set guioptions=mr
+
+" Enable tear-off menus
+set guioptions+=t
+
+" Hide menu bar
+set guioptions-=m
+
+" Hide right-hand scroll bar
+set guioptions-=r
+
+" CTRL-F1 - Toggle menu bar
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+" CTRL-F2 - Toggle tool bar
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+
+" CTRL-F3 - Toggle scrollbar
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
+
+" Set up tabs to mimic Firefox
+" nmap <silent> <C-t> :tabnew<CR>
+" imap <silent> <C-t> <Esc>:tabnew<CR>
+" nmap <silent> <C-T> :tabnew<CR>
+" imap <silent> <C-T> <Esc>:tabnew<CR>
+" nmap <silent> <C-Tab> :tabn<CR>
+" imap <silent> <C-Tab> <Esc> :tabn<CR>
+" nmap <silent> <C-S-Tab> :tabp<CR>
+" imap <silent> <C-S-Tab> <Esc> :tabp<CR>
+
+" Set arrow keys to work naturally
+" nnoremap <Down> gj
+" nnoremap <Up> gk
+" vnoremap <Down> gj
+" vnoremap <Up> gk
+" inoremap <Down> <C-o>gj
+" inoremap <Up> <C-o>gk
+
+" CTRL-A is Select all
+" noremap <C-A> gggH<C-O>G
+" inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+" cnoremap <C-A> <C-C>gggH<C-O>G
+" onoremap <C-A> <C-C>gggH<C-O>G
+" snoremap <C-A> <C-C>gggH<C-O>G
+" xnoremap <C-A> <C-C>ggVG
+
+" Windows style cut, copy and paste
+" if has("clipboard")
+"     " CTRL-X and SHIFT-Del are Cut
+"     vnoremap <C-X> "+x
+"     vnoremap <S-Del> "+x
+" 
+"     " CTRL-C and CTRL-Insert are Copy
+"     vnoremap <C-C> "+y
+"     vnoremap <C-Insert> "+y
+" 
+"     " SHIFT-Insert is Paste
+"     map <S-Insert>        "+gP
+" 
+"     cmap <C-V>        <C-R>+
+"     cmap <S-Insert>        <C-R>+
+" endif
+
+" Alt-Space is System menu
+if has("gui")
+  noremap <M-Space> :simalt ~<CR>
+  inoremap <M-Space> <C-O>:simalt ~<CR>
+  cnoremap <M-Space> <C-C>:simalt ~<CR>
+endif
+
+" Enable the mouse (in help anyway)
+set mouse=a
+
+" Mouse selection behaves like Windows
+behave mswin
+
+" Disable undo files
+set noundofile
+
+" If PuTTY is installed, this will allow you to edit remote files
+let g:netrw_cygwin = 0
+let g:netrw_ssh_cmd = '"C:\Program Files\PuTTY\plink.exe" -T -ssh'
+let g:netrw_scp_cmd = '"C:\Program Files\PuTTY\pscp.exe" -q -scp'
+let g:netrw_sftp_cmd = '"C:\Program Files\PuTTY\pscp.exe" -q -sftp'
