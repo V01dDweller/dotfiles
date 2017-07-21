@@ -52,11 +52,6 @@ My bash prompt, aliases, etc..
 ### Tmux ###
 A low-key color scheme (with due credit [Hermann Vocke](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf)) that is much easier on the eyes the the default CRT green. Also some shortcuts for color schemes, toggling pane sync and clipboard integration, 
 
-* .tmux.clipboard24.conf
-* .tmux.clipboard.conf
-* .tmux.conf
-* .tmux-syncoff.conf
-* .tmux-syncon.conf
 
 ### Vim! ###
 Trying (and failing) to keep vim customizations to a minimum, but there are a few I can last long without. My most frequently updated files by far.
