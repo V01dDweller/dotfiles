@@ -10,6 +10,7 @@ dotfiles
 │   ├── .bashrc_debian
 │   ├── .bashrc_mintty
 │   └── .bashrc_wsl
+│ 
 ├── mintty
 │   ├── .minttyrc
 │   ├── .minttyrcb
@@ -23,6 +24,7 @@ dotfiles
 │   ├── .minttyrcp
 │   ├── .minttyrcr
 │   └── .minttyrcw
+│ 
 ├── README.md
 ├── tmux
 │   ├── .tmux.clipboard24.conf
@@ -31,6 +33,7 @@ dotfiles
 │   ├── .tmux-cssh
 │   ├── .tmux-syncoff.conf
 │   └── .tmux-syncon.conf
+│ 
 └── vim
     ├── .gvimrc_windows
     └── .vimrc
@@ -40,23 +43,8 @@ dotfiles
 
 Combined with a collection of Windows shortcuts and a folder in the Windows PATH, one can quickly summon a Mintty session with a custom color scheme.
 
-* .minttyrc
-* .minttyrcb
-* .minttyrc-dark
-* .minttyrcg
-* .minttyrcgd
-* .minttyrcgl
-* .minttyrcglo
-* .minttyrcgr
-* .minttyrco
-* .minttyrcp
-* .minttyrcr
-* .minttyrcw
-
 ### Mintty Color Schemes - bash ###
 Mintty will respond to escape sequences to change colors on the fly, source this file to get bash aliases, e.g. blue, green, red, etc.
-
-* .bash_mintty_colors
 
 ### Bash ###
 * .bash_profile
