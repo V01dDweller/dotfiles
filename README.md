@@ -2,6 +2,40 @@
 
 This is just a small collection of the dotfiles I've accumulated and come to depend on over the years. I use them in a few environments from RHEL/CentOS, Cygwin and occationally WSL/Debian/Ubuntu. Most are self-explanatory. 
 
+```
+dotfiles
+├── bash
+│   ├── .bash_mintty_colors
+│   ├── .bash_profile
+│   ├── .bashrc_debian
+│   ├── .bashrc_mintty
+│   └── .bashrc_wsl
+├── mintty
+│   ├── .minttyrc
+│   ├── .minttyrcb
+│   ├── .minttyrc-dark
+│   ├── .minttyrcg
+│   ├── .minttyrcgd
+│   ├── .minttyrcgl
+│   ├── .minttyrcglo
+│   ├── .minttyrcgr
+│   ├── .minttyrco
+│   ├── .minttyrcp
+│   ├── .minttyrcr
+│   └── .minttyrcw
+├── README.md
+├── tmux
+│   ├── .tmux.clipboard24.conf
+│   ├── .tmux.clipboard.conf
+│   ├── .tmux.conf
+│   ├── .tmux-cssh
+│   ├── .tmux-syncoff.conf
+│   └── .tmux-syncon.conf
+└── vim
+    ├── .gvimrc_windows
+    └── .vimrc
+```
+
 ### Mintty Color Schemes - Windows ###
 
 Combined with a collection of Windows shortcuts and a folder in the Windows PATH, one can quickly summon a Mintty session with a custom color scheme.
