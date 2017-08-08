@@ -1,0 +1,17 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias tree="tree -C"
+alias proxyon="export http_proxy=http://<my-proxy>:8080;export https_proxy=http://<my-proxy>:8080"
+alias proxyoff="unset http_proxy;unset https_proxy"
