@@ -12,6 +12,6 @@ fi
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
-alias tree="tree -C"
+alias tree="tree -C -I '.git|.svn|.pki'"
 alias proxyon="export http_proxy=http://<my-proxy>:8080;export https_proxy=http://<my-proxy>:8080"
 alias proxyoff="unset http_proxy;unset https_proxy"
