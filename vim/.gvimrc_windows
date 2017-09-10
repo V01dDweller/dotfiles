@@ -75,8 +75,8 @@ nnoremap <F10> :set colorcolumn=2,80<CR>
 " F11 - Stop showing me columns 2 and 80
 nnoremap <F11> :set colorcolumn=<CR>
 
-" Make Colorcolumn lightgreen
-highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
+" Make Colorcolumn darkgreen
+highlight ColorColumn ctermbg=darkgreen guibg=darkgreen
 
 " Netrw  settings
 let g:netrw_liststyle = 3
