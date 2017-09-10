@@ -72,7 +72,7 @@ nnoremap <F9> :set cursorline!<CR>
 " F10 - Show me columns 2 and 80
 nnoremap <F10> :set colorcolumn=2,80<CR>
 
-" F11 - Stop showing me column 80
+" F11 - Stop showing me columns 2 and 80
 nnoremap <F11> :set colorcolumn=<CR>
 
 " Make Colorcolumn lightgreen
