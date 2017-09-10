@@ -60,17 +60,17 @@ highlight link ipaddr Identifier
 " F6 - Toggle AnsiEsc plug-in
 nnoremap  <F6> :AnsiEsc<CR>
 
-" F7 - Toggle scrollbind for all panes
+" F7 - Toggle scrollbind, all panes
 nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>
 
 " F8 - Fully disable auto-indent
 nnoremap <F8> :setlocal noautoindent nocindent nosmartindent indentexpr=<CR>
 
-" F9 - Stop showing me column 80
-nnoremap <F9> :set colorcolumn=<CR>
+" F9 - Toggle cursorline
+nnoremap <F9> :set cursorline!<CR>
 
-" F10 - Toggle cursorline
-nnoremap <F10> :set cursorline!<CR>
+" F10 - Stop showing me column 80
+nnoremap <F10> :set colorcolumn=<CR>
 
 " F11 - Show me column 80
 nnoremap <F11> :set colorcolumn=2,80<CR>
