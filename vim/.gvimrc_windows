@@ -97,7 +97,7 @@ filetype plugin on
 set guifont=Lucida_Console:h10
 
 " Window size
-set columns=85 lines=50
+set columns=86 lines=50
     
 " Hide GUI toolbar
 set guioptions=mr
