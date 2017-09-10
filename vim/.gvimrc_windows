@@ -73,7 +73,7 @@ nnoremap <F9> :set colorcolumn=<CR>
 nnoremap <F10> :set cursorline!<CR>
 
 " F11 - Show me column 80
-nnoremap <F11> :set colorcolumn=80<CR>
+nnoremap <F11> :set colorcolumn=2,80<CR>
 
 " Make Colorcolumn lightgreen
 highlight ColorColumn ctermbg=lightgreen guibg=lightgreen
