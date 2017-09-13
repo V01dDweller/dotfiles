@@ -205,8 +205,8 @@ export EDITOR="/usr/bin/vim"
 
 # Add color to common commands
 alias ls="ls --color=auto"
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
+alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
+alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias tree="tree -C -I '.git|.svn|.pki'"
 
 # Launch whatever comes after as if one had double-clicked from Windwows
