@@ -119,6 +119,8 @@ fi
 alias tree="tree -C -I '.git|.svn|.pki'"
 alias tmux="tmux -2"
 alias img2sixel="img2sixel -w 640"
+alias grep="grep --color=always"
+alias less="less -r"
 
 # Mintty color schemes
 source ~/dotfiles/bash/.bash_mintty_colors
@@ -131,3 +133,8 @@ fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f man
 
 umask 077
 export ANSIBLE_NOCOWS=1
+# Get color support for 'less'
+export LESS="--RAW-CONTROL-CHARS"
+
+# Use colors for less, man, etc.
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
