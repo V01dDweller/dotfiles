@@ -47,7 +47,7 @@ set splitright
 set splitbelow
 
 " Color Scheme
-color torte
+color industry
 set background=dark
 syntax enable
 
