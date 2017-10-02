@@ -5,19 +5,25 @@
 "
 " _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
-" Line numbers
+" Turn on line numbers
 set number
 
-" Ruler
+" Turn on the ruler
 set ruler
 
 " Show commands as they are typed in command mode
 set showcmd
 
-" Indentation and tab handling
+" Auto indent shift-width
 set shiftwidth=2
+
+" Tabs at four spaces
 set softtabstop=4
+
+" Change tabs to spaces
 set expandtab 
+
+" Turn on auto indent, disable with <F8>
 set autoindent
 
 " Filetype indenting
@@ -78,12 +84,16 @@ nnoremap <F11> :set colorcolumn=<CR>
 " Make Colorcolumn darkgreen
 highlight ColorColumn ctermbg=darkgreen guibg=darkgreen
 
-" Netrw  settings
+" Netrw tree style
 let g:netrw_liststyle = 3
+
+" Netrw with no banner
 let g:netrw_banner = 0
+
+" Netrw will hide these
 let g:netrw_list_hide = ".svn,.git,.*.swp,NTUSER.DAT*,ntuser.*"
 
-" F4 - Toggle Lexplore/netrw
+" F4 - Toggle Lexplore/netrw (Vim 8.0)
 nnoremap <F4> :Lexplore<CR>
 
 " Enable plugins
