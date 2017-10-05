@@ -30,9 +30,9 @@ dotfiles
 │   ├── .tmux.clipboard24.conf # Windows clipbaord integration, tmux >= 2.4
 │   ├── .tmux.clipboard.conf   # Windows clipbaord integration, tmux <= 2.3
 │   ├── .tmux.conf             # requires .tmux-syncoff.conf and .tmux-syncon.conf
-│   ├── .tmux-cssh             # Changes default ssh command to lssh wrapper
-│   ├── .tmux-syncoff.conf     # Sourced when enabling synchronizing-panes via C-b e
-│   └── .tmux-syncon.conf      # Source  when disabling synchronize-panes via C-b E
+│   ├── .tmux-cssh             # Changes default ssh command to lssh wrapper for tmux-cssh
+│   ├── .tmux-syncoff.conf     # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
+│   └── .tmux-syncon.conf      # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
 └── vim
     ├── .gvimrc_windows        # Happy Vimming in gVim 8.0 on Windows
     └── .vimrc                 # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
