@@ -6,12 +6,12 @@ This is just a small collection of the dotfiles I've accumulated and come to dep
 dotfiles
 ├── bash
 │   ├── .bash_mintty_colors    # source this for Mintty color aliases - red, blue, grey, purple, orange, white, etc.
-│   ├── .bash_profile       
-│   ├── .bashrc_debian
-│   ├── .bashrc_el7
-│   ├── .bashrc_mintty         
-│   ├── .bashrc_wsl
-│   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages
+│   ├── .bash_profile
+│   ├── .bashrc_debian         # Debian/Ubuntu
+│   ├── .bashrc_el7            # CenOS7/RHEL7
+│   ├── .bashrc_mintty         # Cygwin/mintty
+│   ├── .bashrc_wsl            # Windows Subsystem for Linux
+│   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages, needs extra lines in .bashrc, TBA
 ├── mintty
 │   ├── .minttyrc
 │   ├── .minttyrcb
