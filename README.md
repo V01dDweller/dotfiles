@@ -41,14 +41,10 @@ dotfiles
 
 ### Mintty Color Schemes - Windows ###
 
-```
-.bash_mintty_colors
-```
-
 Combined with a collection of Windows shortcuts and a folder in the Windows PATH, one can quickly summon a Mintty session with a custom color scheme.
 
 ### Mintty Color Schemes - bash ###
-Mintty will respond to escape sequences to change colors on the fly, source this file to get bash aliases, e.g. blue, green, red, etc..
+Mintty will respond to escape sequences to change colors on the fly, source `.bash_mintty_colors` to get bash aliases, e.g. blue, green, red, etc..
 
 ### Bash ###
 My bash prompt, aliases, etc. for different environments.
