@@ -231,3 +231,10 @@ source .bash_company
 ## Fortune with pony :^)
 # fortune | /usr/bin/ponysay -b round
 # fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f mantis -f orangefrog -f owl -f owlowiscious -f raccoon -f rover -f tank
+
+
+# Get color support for 'less'
+export LESS="--RAW-CONTROL-CHARS"
+
+# Use colors for less, man, etc.
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP

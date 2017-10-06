@@ -15,3 +15,9 @@ alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias tree="tree -C -I '.git|.svn|.pki'"
 alias proxyon="export http_proxy=http://<my-proxy>:8080;export https_proxy=http://<my-proxy>:8080"
 alias proxyoff="unset http_proxy;unset https_proxy"
+
+# Get color support for 'less'
+export LESS="--RAW-CONTROL-CHARS"
+
+# Use colors for less, man, etc.
+[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
