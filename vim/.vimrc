@@ -5,6 +5,9 @@
 "
 " _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
+" Disable Vi compatibility
+set nocompatible
+
 " Turn on line numbers
 set number
 
@@ -129,6 +132,3 @@ endfunc
 
 " F12 - Toggle mouse support
 map <F12> :call ToggleMouse()<CR>
-
-" Disable Vi compatibility
-set nocompatible
