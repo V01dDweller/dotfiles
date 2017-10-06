@@ -5,6 +5,9 @@
 "
 " _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
+" Disable Vi compatibility
+set nocompatible
+
 " Turn on line numbers
 set number
 
