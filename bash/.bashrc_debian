@@ -121,6 +121,7 @@ alias tmux="tmux -2"
 alias img2sixel="img2sixel -w 640"
 alias grep="grep --color=always"
 alias less="less -r"
+alias w3m="w3m -sixel"
 
 # Mintty color schemes
 source ~/dotfiles/bash/.bash_mintty_colors
