@@ -45,17 +45,25 @@ set hlsearch incsearch
 " Search ignores case, unless mix case
 set ignorecase smartcase 
 
-" New windows to appear below or to the right
-set splitright
+" New windows to appear below
 set splitbelow
+
+" New vertical windows to appear right
+set splitright
 
 " Color Scheme
 color elflord
+
+" Dark background
 set background=dark
+
+" Syntax highlighting
 syntax enable
 
 " Highlight current line
 set cursorline
+
+" Highlight current line options
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 
 " Line numbers only in active side of split window
