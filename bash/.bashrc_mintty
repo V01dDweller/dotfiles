@@ -230,7 +230,7 @@ source .bash_company
 
 ## Fortune with pony :^)
 # fortune | /usr/bin/ponysay -b round
-# fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f mantis -f orangefrog -f owl -f owlowiscious -f raccoon -f rover -f tank
+# fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f mantis -f orangefrog -f owl -f owlowiscious -f raccoon -f rover -f tank -f homer -f burns -f dodo -f parrot -f woody -f trixie -f bender -f zippy -f zoidberg
 
 
 # Get color support for 'less'
