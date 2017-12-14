@@ -52,7 +52,7 @@ set splitbelow
 set splitright
 
 " Color Scheme
-color elflord
+color industry
 
 " Dark background
 set background=dark
@@ -114,8 +114,21 @@ filetype plugin on
 "  _/           GVim-only options        _/
 " _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
-" Font
-set guifont=Lucida_Console:h10
+" GVim fonts
+" Thanks to http://vim.wikia.com/wiki/Setting_the_font_in_the_GUI
+if has("gui_running")
+  if has("gui_gtk2") || has("gui_gtk3")
+    set guifont=Monospace\ Regular\ 10
+  elseif has("gui_photon")
+    set guifont=Monospace\ Regular:s11
+  elseif has("gui_kde")
+    set guifont=Monospace\ Regular/10/-1/5/50/0/0/0/1/0
+  elseif has("x11")
+    set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
+  else
+    set guifont=Lucida_Console:h11:cDEFAULT
+  endif
+endif
 
 " Window size
 set columns=86 lines=50
