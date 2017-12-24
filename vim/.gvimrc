@@ -1,9 +1,9 @@
-"   _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 "
 "           V01dDweller's gvimrc
 "             lucan88@msn.com
 "
-" _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
 " GVim fonts thanks to http://vim.wikia.com/wiki/Setting_the_font_in_the_GUI
 if has("gui_running")
