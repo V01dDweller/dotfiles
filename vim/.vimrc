@@ -8,6 +8,9 @@
 " Disable Vi compatibility
 set nocompatible
 
+" Visual bell
+set vb
+
 " Turn on line numbers
 set number
 
@@ -107,15 +110,9 @@ let g:netrw_list_hide = ".svn,.git,.*.swp"
 " F4 - Toggle Lexplore/netrw (Vim 8.0)
 nnoremap <F4> :Lexplore<CR>
 
-" Enable plugins
-filetype plugin on
-
 " Filename in title bar
 set title
 
-" For the SVN plug-in (Vim 8.0)
-let g:svnj_custom_statusbar_ops_hide = 1
-let g:svnj_browse_cache_all = 1
 
 " Disable mouse support (**warning conflicts with tmux when enabled!)
 set mouse=
@@ -135,3 +132,15 @@ endfunc
 
 " F12 - Toggle mouse support
 map <F12> :call ToggleMouse()<CR>
+
+" Enable plugins
+filetype plugin on
+
+" Plugins for CLI only
+if !has('gui_running')
+  " Load Pathogen plug-in (needed for fugitive)
+  execute pathogen#infect()
+  " For the SVN plug-in (Vim 8.0)
+  let g:svnj_custom_statusbar_ops_hide = 1
+  let g:svnj_browse_cache_all = 1
+endif
