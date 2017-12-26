@@ -34,7 +34,7 @@ dotfiles/
 │   ├── .tmux-syncoff.conf     # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
 │   └── .tmux-syncon.conf      # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
 ├── vim                        
-│   ├── .gvimrc                # Happy Vimming in gVim 7-8
+│   ├── .gvimrc                # Happy Vimming in gVim 7-8 (should be use alongside .vimrc)
 │   └── .vimrc                 # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
 └── .w3m                       
     ├── config                 # w3m browser config
