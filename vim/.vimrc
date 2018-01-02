@@ -137,7 +137,7 @@ map <F12> :call ToggleMouse()<CR>
 filetype plugin on
 
 " Plugins for CLI only
-if !has('gui_running')
+if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen"))
   " Load Pathogen plug-in (needed for fugitive)
   execute pathogen#infect()
   " For the SVN plug-in (Vim 8.0)
