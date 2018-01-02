@@ -70,8 +70,8 @@ set cursorline
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 
 " Line numbers only in active side of split window
-autocmd WinEnter * :setlocal number
-autocmd WinLeave * :setlocal nonumber
+" autocmd WinEnter * :setlocal number
+" autocmd WinLeave * :setlocal nonumber
 
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
