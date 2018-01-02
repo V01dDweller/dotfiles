@@ -9,3 +9,6 @@ Font=Consolas
 Scrollbar=none
 ScrollMod=alt
 Columns=80
+ThemeFile=
+ForegroundColour=0,0,0
+BackgroundColour=255,211,168
