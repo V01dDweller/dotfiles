@@ -21,7 +21,7 @@ set ruler
 set showcmd
 
 " Auto indent shift-width
-set shiftwidth=2
+set shiftwidth=4
 
 " Tabs at four spaces
 set softtabstop=4
