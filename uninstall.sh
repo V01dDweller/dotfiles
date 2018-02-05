@@ -2,7 +2,7 @@
 ########################################################################
 # WARNING! - Use at your own risk
 # In theory, this script should
-# 1. Ask iif you're sure
+# 1. Ask if you're sure
 # 2. Delete all the files install.sh created
 # 3. Restore the originals from ~/dotfile.backups
 ########################################################################
