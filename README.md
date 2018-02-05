@@ -39,8 +39,8 @@ dotfiles/
 │   ├── config                 # w3m browser config
 │   └── .gitignore
 ├── README.md                  # You are here
-├───unnstall.sh                # An attempt to undo all the damage caused by install.sh
-└── install.sh		       # An attempt to install everything relevant, very dangerous, not recommended
+├───unnstall.sh                # Will attempt to undo all the damage caused by install.sh
+└── install.sh		             # Will attempt to install everything relevant, very dangerous, not recommended yet
 
 
 ```
