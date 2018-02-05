@@ -5,7 +5,7 @@ This is just a small collection of the dotfiles I've accumulated and come to dep
 ```
 dotfiles/                      
 ├── bash                       
-│   ├── .bash_mintty_colors    # source for bash Mintty color scheme escapes - red, blue, grey, purple, orange, white, etc.
+│   ├── .bash_mintty_colors    # source for bash Mintty color scheme escapes - red, blue, grey, purple, orange, etc.
 │   ├── .bash_profile          
 │   ├── .bashrc_debian         # Debian/Ubuntu
 │   ├── .bashrc_el7            # CenOS7/RHEL7
