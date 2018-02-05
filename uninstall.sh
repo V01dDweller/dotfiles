@@ -40,7 +40,10 @@ else
     echo ""
 fi
 
+# Restore backed up dotfiles
+echo "Restoring backups"
 for i in `ls -a ~/dotfiles.backup/| egrep -v "^.$|^..$"`
 do
     cp -v ~/dotfiles.backup/$i ~/
 done
+echo ""
