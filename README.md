@@ -5,7 +5,6 @@ This is a small collection of the dotfiles I've accumulated over the years. I us
 ```
 dotfiles/                      
 ├── bash                       
-│   ├── .bash_mintty_colors    # source for bash Mintty color scheme escapes - red, blue, grey, purple, orange, etc.
 │   ├── .bash_profile          
 │   ├── .bashrc_debian         # Debian/Ubuntu
 │   ├── .bashrc_el7            # CenOS7/RHEL7
@@ -13,6 +12,7 @@ dotfiles/
 │   ├── .bashrc_wsl            # Windows Subsystem for Linux
 │   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages, needs extra lines in .bashrc, TBA
 ├── mintty                     # Mintty color schemes for use with Windows shortcuts
+│   ├── .bash_mintty_colors    # source for bash Mintty color scheme escapes - red, blue, grey, purple, orange, etc.
 │   ├── .minttyrc              
 │   ├── .minttyrcb             
 │   ├── .minttyrc-dark         
