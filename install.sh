@@ -6,11 +6,11 @@
 todaysDate=`date +%Y-%m-%d`
 systemInfo=`uname`
 
-bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
+bashFiles=(".bash_profile" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
-backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
+backupFiles=(".bashrc" "${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 
 
 # Check for previous backups dir then create one
@@ -49,8 +49,13 @@ then
     environment="Cygwin"
 fi
 
-# Universal .bash_profile
-cp -v bash/.bash_profile ~/
+# Setting up bash
+echo "Setting up bash"
+for i in "${bashFiles[@]}"
+do
+    cp -v bash/$i ~/
+done
+echo ""
 
 # Set up Bash for Mintty
 echo "Setting up Cygwin bashrc"
@@ -58,7 +63,7 @@ if environment="Cygwin"
 then
     cp -v mintty/.bash_mintty_colors ~/
     cp -v bash/.bashrc_mintty ~/.bashrc
-    cp -v mintty/.minttyc ~/
+    cp -v mintty/.minttyrc ~/
 fi
 echo ""
 
