@@ -56,14 +56,11 @@ cp -v bash/.bash_profile ~/
 echo "Setting up Cygwin bashrc"
 if environment="Cygwin"
 then
-    cp -v bash/.bash_mintty_colors ~/
+    cp -v mintty/.bash_mintty_colors ~/
     cp -v bash/.bashrc_mintty ~/.bashrc
     cp -v mintty/.minttyc ~/
 fi
 echo ""
-
-# Set up mintty
-
 
 # Setup tmux
 if command -v tmux
