@@ -63,7 +63,7 @@ fi
 echo ""
 
 # Setup tmux
-if command -v tmux
+if command -v tmux > /dev/null
 then
     echo "Setting up tmux"
     tmuxVersion=`tmux -V|cut -d'.' -f 2`
@@ -81,7 +81,7 @@ then
 fi
 
 # Setup Vim
-if command -v vim
+if command -v vim > /dev/null
 then
     echo "Setting up Vim"
     for i in ${vimFiles[@]}
