@@ -78,7 +78,7 @@ syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\
 highlight link ipaddr Identifier
 
 " F6 - Toggle AnsiEsc plug-in
-if exists(':SpeedDatingFormat')
+if exists(':AnsiEsc')
     nnoremap  <F6> :AnsiEsc<CR>
 endif
 
