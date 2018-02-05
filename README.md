@@ -1,6 +1,6 @@
 ## My Dotfile collection ##
 
-This is just a small collection of the dotfiles I've accumulated over the years. I use them in a few environments from RHEL/CentOS, Cygwin and WSL/Debian/Ubuntu. Most are self-explanatory. 
+This is a small collection of the dotfiles I've accumulated over the years. I use them in a few environments from RHEL/CentOS, Cygwin and WSL/Debian/Ubuntu. Most are self-explanatory. 
 
 ```
 dotfiles/                      
@@ -12,7 +12,7 @@ dotfiles/
 │   ├── .bashrc_mintty         # Cygwin/mintty
 │   ├── .bashrc_wsl            # Windows Subsystem for Linux
 │   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages, needs extra lines in .bashrc, TBA
-├── mintty                     # Mintty color schemees for use with Windows shortcuts
+├── mintty                     # Mintty color schemes for use with Windows shortcuts
 │   ├── .minttyrc              
 │   ├── .minttyrcb             
 │   ├── .minttyrc-dark         
