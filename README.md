@@ -25,7 +25,6 @@ dotfiles/
 │   ├── .minttyrcp             
 │   ├── .minttyrcr             
 │   └── .minttyrcw             
-├── README.md                  # You are here
 ├── tmux                       
 │   ├── .tmux.clipboard24.conf # Windows clipbaord integration, tmux >= 2.4
 │   ├── .tmux.clipboard.conf   # Windows clipbaord integration, tmux <= 2.3
@@ -36,9 +35,13 @@ dotfiles/
 ├── vim                        
 │   ├── .gvimrc                # Happy Vimming in gVim 7-8 (should be use alongside .vimrc)
 │   └── .vimrc                 # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
-└── .w3m                       
-    ├── config                 # w3m browser config
-    └── .gitignore
+├── .w3m                       
+│   ├── config                 # w3m browser config
+│   └── .gitignore
+├── README.md                  # You are here
+├───unnstall.sh                # An attempt to undo all the damage caused by install.sh
+└── install.sh		       # An attempt to install everything relevant, very dangerous, not recommended
+
 
 ```
 
