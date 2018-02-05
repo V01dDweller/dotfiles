@@ -3,8 +3,11 @@
 # WARNING! - Use at your own risk
 ########################################################################
 
-bashFiles=(".bashrc" ".bash_profile" ".bash_mintty_colors")
-minttyFiles=(".minttyrc")
+todaysDate=`date +%Y-%m-%d`
+systemInfo=`uname`
+
+bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
+minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
 deleteFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")

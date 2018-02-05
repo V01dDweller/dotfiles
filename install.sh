@@ -6,9 +6,8 @@
 todaysDate=`date +%Y-%m-%d`
 systemInfo=`uname`
 
-
-bashFiles=(".bashrc" ".bash_profile")
-minttyFiles=(".minttyrc")
+bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
+minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
 backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
