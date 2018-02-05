@@ -40,7 +40,7 @@ dotfiles/
 │   └── .gitignore
 ├── README.md                  # You are here
 ├───unnstall.sh                # Will attempt to undo all the damage caused by install.sh
-└── install.sh		             # Will attempt to install everything relevant, very dangerous, not recommended yet
+└── install.sh                 # Will attempt to install everything relevant, very dangerous, not recommended yet
 
 
 ```
