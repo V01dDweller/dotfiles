@@ -216,17 +216,26 @@ alias open="cygstart"
 export TERM=xterm-256color
 
 # Mintty color schemes
-source ~/.bash_mintty_colors
+if [ -f "${HOME}/.bash_mintty_colors" ]
+then
+    "source ~/.bash_mintty_colors"
+fi
 
 #Java
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_73/"
 
 ## Fortune with cowsay :^)
-fortune | cowsay -f $(ls /usr/local/share/cows/ | shuf -n1)
-echo ""
+if command -v fortune
+then
+    fortune | cowsay -f $(ls /usr/local/share/cows/ | shuf -n1)
+    echo ""
+fi
 
 # Source company/project-specific aliases
-source .bash_company
+if [ -f "${HOME}/.bash_company" ]
+then
+    source "${HOME}/.bash_company"
+fi
 
 ## Fortune with pony :^)
 # fortune | /usr/bin/ponysay -b round
