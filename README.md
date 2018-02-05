@@ -12,7 +12,7 @@ dotfiles/
 │   ├── .bashrc_mintty         # Cygwin/mintty
 │   ├── .bashrc_wsl            # Windows Subsystem for Linux
 │   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages, needs extra lines in .bashrc, TBA
-├── mintty                     # Mintty color schemees for use with Windows shortcuts
+├── mintty                     # Mintty color schemes for use with Windows shortcuts
 │   ├── .minttyrc              
 │   ├── .minttyrcb             
 │   ├── .minttyrc-dark         
