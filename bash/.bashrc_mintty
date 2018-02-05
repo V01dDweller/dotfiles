@@ -225,7 +225,7 @@ fi
 export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_73/"
 
 ## Fortune with cowsay :^)
-if command -v fortune
+if command -v fortune > /dev/null && command -v cowsay > /dev/null
 then
     fortune | cowsay -f $(ls /usr/local/share/cows/ | shuf -n1)
     echo ""
