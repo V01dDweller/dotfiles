@@ -51,7 +51,7 @@ if has("gui")
   cnoremap <M-Space> <C-C>:simalt ~<CR>
 endif
 
-" Enable the mouse (in help anyway)
+" Enable the mouse
 set mouse=a
 
 " Mouse selection behaves like Windows
