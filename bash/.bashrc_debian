@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
 fi
 
 # My color aliases
-alias tree="tree -C -I '.git|.svn|.pki'"
+alias tree="tree -C -I --dirsfirst'.git|.svn|.pki'"
 alias tmux="tmux -2"
 alias img2sixel="img2sixel -w 640"
 alias grep="grep --color=always"
