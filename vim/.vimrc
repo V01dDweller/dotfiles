@@ -83,7 +83,7 @@ if exists(':AnsiEsc')
 endif
 
 " F7 - Toggle scrollbind, all panes
-nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>:windo setlocal crb! <BR>
+nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>:windo setlocal crb! <CR>
 
 " F8 -  Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
