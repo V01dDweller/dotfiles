@@ -20,6 +20,12 @@ set ruler
 " Show commands as they are typed in command mode
 set showcmd
 
+" Enable wildmenu
+set wildmenu
+
+" Set path auto-complete  to be like bash
+set wildmode=list:longest
+
 " Auto indent shift-width
 set shiftwidth=4
 
