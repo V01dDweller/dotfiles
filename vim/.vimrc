@@ -97,8 +97,8 @@ nnoremap <F8> :setl noai nocin nosi inde=<CR>
 " F9 - Toggle cursorline
 nnoremap <F9> :set cursorline!<CR>
 
-" F10 - Show me columns 2 and 80
-nnoremap <F10> :set colorcolumn=2,80<CR>
+" F10 - Show me columns 2, 4, 6 and 80 (yaml-friendly)
+nnoremap <F10> :set colorcolumn=2,4,6,80<CR>
 
 " F11 - Stop showing me columns 2 and 80
 nnoremap <F11> :set colorcolumn=<CR>
