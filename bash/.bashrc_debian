@@ -124,7 +124,7 @@ alias less="less -r"
 alias w3m="w3m -sixel"
 
 # Mintty color schemes
-source ~/dotfiles/bash/.bash_mintty_colors
+source ~/dotfiles/mintty/.bash_mintty_colors
 
 # Bash prompt
 PS1="\n[\@ \[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]]\n\$ "
