@@ -27,10 +27,10 @@ set wildmenu
 set wildmode=list:longest
 
 " Auto indent shift-width
-set shiftwidth=4
+set shiftwidth=2
 
 " Tabs at four spaces
-set softtabstop=4
+set softtabstop=2
 
 " Change tabs to spaces
 set expandtab 
