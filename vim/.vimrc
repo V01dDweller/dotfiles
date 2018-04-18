@@ -109,12 +109,15 @@ let g:netrw_liststyle = 3
 
 " Netrw with no banner
 let g:netrw_banner = 0
-"
+
 " Netrw will hide these
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
 " F4 - Toggle Lexplore/netrw (Vim 8.0)
 nnoremap <F4> :Lexplore<CR>
+
+" Netrw confined to 35 columns
+let g:netrw_winsize = -35
 
 " Filename in title bar
 set title
