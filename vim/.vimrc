@@ -116,8 +116,8 @@ let g:netrw_list_hide = ".svn,.git,.*.swp"
 " F4 - Toggle Lexplore/netrw (Vim 8.0)
 nnoremap <F4> :Lexplore<CR>
 
-" Netrw confined to 35 columns
-let g:netrw_winsize = -35
+" Netrw confined to 30 columns
+let g:netrw_winsize = -30
 
 " Filename in title bar
 set title
