@@ -1,0 +1,135 @@
+" V01dDweller's old gvimrc
+" ------------------------
+
+" Font
+set guifont=Lucida_Console:h10
+
+" Window size
+set columns=80 lines=40
+set shiftwidth=2
+set ts=4
+    
+" My old settings
+set lbr ic autoindent hlsearch incsearch smartcase ruler nobackup showcmd
+set expandtab 
+
+" Turn on line numbers
+set number
+
+" Line numbers only in active side of split window
+au WinEnter * :setlocal number
+au WinLeave * :setlocal nonumber
+
+" IP address shighlighting
+syn match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
+hi link ipaddr Identifier
+
+" Auto indent
+filetype plugin indent on
+
+" Color scheme
+colors torte
+syntax on
+
+" Set up tabs to mimic Firefox
+nmap <silent> <C-t> :tabnew<CR>
+imap <silent> <C-t> <Esc>:tabnew<CR>
+nmap <silent> <C-T> :tabnew<CR>
+imap <silent> <C-T> <Esc>:tabnew<CR>
+nmap <silent> <C-Tab> :tabn<CR>
+imap <silent> <C-Tab> <Esc> :tabn<CR>
+nmap <silent> <C-S-Tab> :tabp<CR>
+imap <silent> <C-S-Tab> <Esc> :tabp<CR>
+
+" Set arrow keys to work naturally
+nnoremap <Down> gj
+nnoremap <Up> gk
+vnoremap <Down> gj
+vnoremap <Up> gk
+inoremap <Down> <C-o>gj
+inoremap <Up> <C-o>gk
+
+" Disable GUI toolbar
+"set guioptions=mr
+"set guioptions=m
+
+" Disable auto-indent
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+" Toggle scrollbind, this synchronizes scrolling in split Vim
+nnoremap <F7> :setl scb! <CR>
+
+" Prevent text from auto-wrapping and adding new lines
+set textwidth=0
+
+" Key-map for AnsiEsc plug-in
+nnoremap <F6> :AnsiEsc<CR>
+
+" Netrw  settings
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_list_hide = ".svn,.git,.*.swp"
+
+" Selection behaves like Windows
+behave mswin
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+xnoremap <C-A> <C-C>ggVG
+
+" Windows style cut, copy and paste
+if has("clipboard")
+    " CTRL-X and SHIFT-Del are Cut
+    vnoremap <C-X> "+x
+    vnoremap <S-Del> "+x
+
+    " CTRL-C and CTRL-Insert are Copy
+    vnoremap <C-C> "+y
+    vnoremap <C-Insert> "+y
+
+    " CTRL-V and SHIFT-Insert are Paste
+    map <C-V>        "+gP
+    map <S-Insert>        "+gP
+
+    cmap <C-V>        <C-R>+
+    cmap <S-Insert>        <C-R>+
+endif
+
+" Alt-Space is System menu
+if has("gui")
+  noremap <M-Space> :simalt ~<CR>
+  inoremap <M-Space> <C-O>:simalt ~<CR>
+  cnoremap <M-Space> <C-C>:simalt ~<CR>
+endif
+
+" Change window split
+set splitright
+set splitbelow
+
+" Enable the mouse (in help anyway)
+set mouse=a
+
+" Disable undo files
+set noundofile
+
+" Disable GUI toolbar
+set guioptions=mr
+
+" Remove menu bar
+set guioptions-=m
+
+"remove right-hand scroll bar
+set guioptions-=r
+
+" CTRL-F1 - Toggle menu bar
+nnoremap <C-F1> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+" CTRL-F2 - Toggle tool bar
+nnoremap <C-F2> :if &go=~#'T'<Bar>set go-=T<Bar>else<Bar>set go+=T<Bar>endif<CR>
+
+" CTRL-F3 - Toggle scrollbar
+nnoremap <C-F3> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
