@@ -79,6 +79,10 @@ highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 " autocmd WinEnter * :setlocal number
 " autocmd WinLeave * :setlocal nonumber
 
+" Auto-create/auto-load views
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
+
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
@@ -123,7 +127,7 @@ let g:netrw_winsize = -30
 set title
 
 
-" Disable mouse support (**warning conflicts with tmux when enabled!)
+" Disable mouse support
 set mouse=
 
 " Function - toggle mouse support
