@@ -51,6 +51,12 @@ if has("gui")
   cnoremap <M-Space> <C-C>:simalt ~<CR>
 endif
 
+" CTRL-Tab and CTRL-Shift Tab to cycle through tabs
+nmap <silent> <C-Tab> :tabn<CR>
+imap <silent> <C-Tab> <Esc> :tabn<CR>
+nmap <silent> <C-S-Tab> :tabp<CR>
+imap <silent> <C-S-Tab> <Esc> :tabp<CR>
+
 " Enable the mouse
 set mouse=a
 
