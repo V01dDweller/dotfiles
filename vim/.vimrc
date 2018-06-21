@@ -105,15 +105,11 @@ nnoremap <F10> :set colorcolumn=2,4,6,80<CR>
 " F11 - Stop showing me columns 2 and 80
 nnoremap <F11> :set colorcolumn=<CR>
 
-" Set up tabs to mimic Firefox
+" Set up CTRL-T to create new tabs
 nmap <silent> <C-t> :tabnew<CR>
 imap <silent> <C-t> <Esc>:tabnew<CR>
 nmap <silent> <C-T> :tabnew<CR>
 imap <silent> <C-T> <Esc>:tabnew<CR>
-nmap <silent> <C-Tab> :tabn<CR>
-imap <silent> <C-Tab> <Esc> :tabn<CR>
-nmap <silent> <C-S-Tab> :tabp<CR>
-imap <silent> <C-S-Tab> <Esc> :tabp<CR>
 
 " Make Colorcolumn darkgreen
 highlight ColorColumn ctermbg=darkgreen guibg=darkgreen
