@@ -13,3 +13,4 @@ OpaqueWhenFocused=yes
 ThemeFile=
 Locale=en_US
 Charset=UTF-8
+SwitchShortcuts=no
