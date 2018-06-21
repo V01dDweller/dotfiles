@@ -137,8 +137,8 @@ let g:netrw_winsize = -30
 set title
 
 
-" Disable mouse support
-set mouse=
+" Enable mouse support
+set mouse=a
 
 " Function - toggle mouse support
 " Thanks to crater2150 - https://unix.stackexchange.com/questions/156707
