@@ -253,3 +253,20 @@ function title() {
   export PS1="\n[\@ \[\e[1;33m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]]\n\$ "
   echo -ne "\e]0;$1\a"
 }
+
+# Set colors if tput is available
+if hash tput 2> /dev/null
+then
+  red=`tput setaf 1`
+  redbg=`tput setab 197`
+  green=`tput setaf 2`
+  yellow=`tput setaf 3`
+  blue=`tput setaf 4`
+  niceblue=`tput setaf 27`
+  purple=`tput setaf 5`
+  cyan=`tput setaf 6`
+  white=`tput setaf 7`
+  orange=`tput setaf 208`
+  bold=`tput bold`
+  reset=`tput sgr0`
+fi
