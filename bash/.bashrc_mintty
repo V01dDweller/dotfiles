@@ -209,9 +209,6 @@ alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias tree="tree -C -I --dirsfirst'.git|.svn|.pki'"
 
-# Launch whatever comes after as if one had double-clicked from Windwows
-alias open="cygstart"
-
 # Teminal color
 export TERM=xterm-256color
 
