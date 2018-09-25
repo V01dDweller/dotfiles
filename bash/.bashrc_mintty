@@ -207,7 +207,7 @@ export EDITOR="/usr/bin/vim"
 alias ls="ls --color=auto --group-directories-first"
 alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
-alias tree="tree -C -I --dirsfirst'.git|.svn|.pki'"
+alias tree="tree -C --dirsfirst -I '.git|.svn|.pki'"
 
 # Teminal color
 export TERM=xterm-256color
