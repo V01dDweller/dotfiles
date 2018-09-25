@@ -1,6 +1,6 @@
 ## My Dotfile collection ##
 
-This is a small collection of the dotfiles I've accumulated over the years. I use them in a few environments from RHEL/CentOS, Cygwin and WSL/Debian/Ubuntu. Most are self-explanatory. 
+This is a small collection of the dotfiles I've accumulated over the years. I use them in a few environments from RHEL/CentOS, Cygwin, WSL/Debian/Ubuntu and MacOS. Most are self-explanatory. 
 
 ```
 dotfiles/                      
