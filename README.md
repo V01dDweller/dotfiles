@@ -4,43 +4,49 @@ This is a small collection of the dotfiles I've accumulated over the years. I us
 
 ```
 dotfiles/                      
-├── bash                       
-│   ├── .bash_profile          
-│   ├── .bashrc_debian         # Debian/Ubuntu
-│   ├── .bashrc_el7            # CenOS7/RHEL7
-│   ├── .bashrc_mintty         # Cygwin/mintty
-│   ├── .bashrc_wsl            # Windows Subsystem for Linux
-│   └── .LESS_TERMCAP          # Enables colors in the less pager and, by extension, man pages, needs extra lines in .bashrc, TBA
-├── mintty                     # Mintty color schemes for use with Windows shortcuts
-│   ├── .bash_mintty_colors    # source for bash Mintty color scheme escapes - red, blue, grey, purple, orange, etc.
-│   ├── .minttyrc              
-│   ├── .minttyrcb             
-│   ├── .minttyrc-dark         
-│   ├── .minttyrcg             
-│   ├── .minttyrcgd            
-│   ├── .minttyrcgl            # Glass
-│   ├── .minttyrcglo           
-│   ├── .minttyrcgr            
-│   ├── .minttyrco             
-│   ├── .minttyrcp             
-│   ├── .minttyrcr             
-│   └── .minttyrcw             
-├── tmux                       
-│   ├── .tmux.clipboard24.conf # Windows clipbaord integration, tmux >= 2.4
-│   ├── .tmux.clipboard.conf   # Windows clipbaord integration, tmux <= 2.3
-│   ├── .tmux.conf             # requires .tmux-syncoff.conf and .tmux-syncon.conf
-│   ├── .tmux-cssh             # Changes default ssh command to lssh wrapper for tmux-cssh
-│   ├── .tmux-syncoff.conf     # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
-│   └── .tmux-syncon.conf      # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
-├── vim                        
-│   ├── .gvimrc                # Happy Vimming in gVim 7-8 (should be used alongside .vimrc)
-│   └── .vimrc                 # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
-├── .w3m                       
-│   ├── config                 # w3m browser config
-│   └── .gitignore
-├── README.md                  # You are here
-├───unnstall.sh                # Will attempt to undo all the damage caused by install.sh
-└── install.sh                 # Will attempt to install everything relevant, very dangerous, not recommended yet
+├── .w3m                        # The w3m web browser
+│   ├── .gitignore
+│   └── config
+├── bash
+│   ├── .LESS_TERMCAP           # less with colors
+│   ├── .bash_mintty_colors     # Cygwin Mintty
+│   ├── .bash_profile       
+│   ├── .bash_profile_git       # Git-aware bash prompt
+│   ├── .bashrc_debian            (requires jimeh / git-aware-prompt)
+│   ├── .bashrc_el7               (See starred repos)
+│   ├── .bashrc_mintty
+│   └── .bashrc_wsl    
+├── git
+│   └── .gitconfig              # Base git config, starring vimdiff
+├── mintty
+│   ├── .bash_mintty_colors     # Mintty color schemes
+│   ├── .minttyrc
+│   ├── .minttyrc-dark
+│   ├── .minttyrcb
+│   ├── .minttyrcg
+│   ├── .minttyrcgd
+│   ├── .minttyrcgl             # Glass
+│   ├── .minttyrcglo
+│   ├── .minttyrcgr
+│   ├── .minttyrco
+│   ├── .minttyrcp
+│   ├── .minttyrcr
+│   └── .minttyrcw
+├── tmux
+│   ├── .tmux-cssh              # Changes default ssh command to lssh wrapper for tmux-cssh
+│   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
+│   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
+│   ├── .tmux.clipboard.conf    # Windows clipbaord integration, tmux <= 2.3
+│   ├── .tmux.clipboard24.conf  # Windows clipbaord integration, tmux >= 2.4
+│   └── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf
+├── vim
+│   ├── .gvimrc                 # Happy Vimming in gVim 7-8 (requires .vimrc)
+│   ├── .gvimrc.old
+│   └── .vimrc                  # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
+├── .README.md.swp
+├── README.md                   # You are here
+├── install.sh                  # Will attempt to install everything relevant, very dangerous, not recommended yet
+└── uninstall.sh                # Will attempt to undo all the damage caused by install.sh
 
 
 ```
