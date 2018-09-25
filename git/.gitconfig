@@ -1,13 +1,13 @@
 [diff]
 	tool = vimdiff
 [difftool "vimdiff"]
-	path = /usr/local/bin/vimdiff
+	tool = vimdiff
 [difftool]
 	prompt = false
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
 [mergetool "vimdiff"]
-	path = /usr/local/bin/vimdiff
+	tool = vimdiff
 [mergetool]
 	prompt = false
