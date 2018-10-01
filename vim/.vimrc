@@ -123,8 +123,12 @@ let g:netrw_banner = 0
 " Netrw will hide these
 let g:netrw_list_hide = ".svn,.git,.*.swp"
 
-" F4 - Toggle Lexplore/netrw (Vim 8.0)
-nnoremap <F4> :Lexplore<CR>
+" F4 - Toggle netrw viaLexplore (Vim 8) or Vexplore (Vim 7)
+if v:version > 799
+  nnoremap <F4> :Lexplore<CR>
+else
+  nnoremap <F4> :Vexplore<CR>
+endif
 
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
