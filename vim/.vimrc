@@ -121,7 +121,7 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
 " Netrw will hide these
-let g:netrw_list_hide = ".svn,.git,.*.swp"
+let g:netrw_list_hide = ".svn,.git,.*.swp,.DS_Store,.CFUserTextEncoding"
 
 " F4 - Toggle netrw viaLexplore (Vim 8) or Vexplore (Vim 7)
 if v:version > 799
