@@ -21,7 +21,15 @@ set ruler
 set showcmd
 
 " Enable wildmenu
-set wildmenu
+" Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/ 
+if has("wildmenu")
+    set wildignore+=*.a,*.o
+    set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+    set wildignore+=.DS_Store,.git,.hg,.svn
+    set wildignore+=*~,*.swp,*.tmp
+    set wildmenu
+    set wildmode=longest,list
+endif
 
 " Set path auto-complete  to be like bash
 set wildmode=list:longest
@@ -135,7 +143,6 @@ let g:netrw_winsize = -30
 
 " Filename in title bar
 set title
-
 
 " Enable mouse support
 set mouse=a
