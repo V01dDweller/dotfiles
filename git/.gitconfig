@@ -12,7 +12,6 @@
 [mergetool]
 	prompt = false
 [alias]
-[alias]
         log1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
         log2 = log --pretty=format:\"%C(auto)%h%C(bold blue)%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --graph --date short
         log3 = log --pretty=format:\"%C(auto)%h%C(bold blue)%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --date short --name-only
