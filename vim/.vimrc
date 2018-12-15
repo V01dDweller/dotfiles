@@ -37,7 +37,7 @@ set wildmode=list:longest
 " Auto indent shift-width
 set shiftwidth=2
 
-" Tabs at four spaces
+" Tabs at two spaces
 set softtabstop=2
 
 " Change tabs to spaces
