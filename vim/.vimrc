@@ -98,7 +98,7 @@ highlight link ipaddr Identifier
 " F6 - Toggle AnsiEsc plug-in
 nnoremap  <F6> :AnsiEsc<CR>
 
-" F7 - Toggle scrollbind, all panes
+" F7 - Toggle scrollbind and cursorbind for all panes
 nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>:windo setlocal crb! <CR>
 
 " F8 -  Fully disable auto-indent
