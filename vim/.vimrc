@@ -80,7 +80,7 @@ syntax enable
 " Highlight current line
 set cursorline
 
-" Highlight current line options
+" Cursorline decoration - bold on darkblue
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 
 " Line numbers only in active side of split window
