@@ -11,3 +11,6 @@
 	tool = vimdiff
 [mergetool]
 	prompt = false
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg2 = log --pretty=format:\"%C(auto)%h%Cblue%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --graph
