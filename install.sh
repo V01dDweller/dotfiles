@@ -4,7 +4,7 @@
 # In theory, this script should
 # 1. Create ~/dotfile.backups
 # 2. Copy anything that it will replace into that directory
-# 3. Replace you bash, vim, tmux and mintty rc files
+# 3. Replace your bash, vim, tmux and mintty rc files
 ########################################################################
 
 todaysDate=`date +%Y-%m-%d`
