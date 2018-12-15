@@ -110,7 +110,7 @@ nnoremap <F9> :set cursorline!<CR>
 " F10 - Show me columns 2, 4, 6 and 80 (yaml-friendly)
 nnoremap <F10> :set colorcolumn=2,4,6,80<CR>
 
-" F11 - Stop showing me columns 2 and 80
+" F11 - turn off colorcolumn
 nnoremap <F11> :set colorcolumn=<CR>
 
 " Set up CTRL-T to create new tabs
