@@ -5,6 +5,19 @@
 "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
+" Remapped Function Keys
+" ---------------------------------------------------------
+"    F4 - Vexplore ( < Vim 8) or Toggle Lexplore ( > Vim 8)
+"    F6 - Toggle the AnsiEsc plugin
+"    F7 - Toggle syncrhonize panes
+"    F8 - Disable all auto-indenting
+"    F9 - Toggle cursorline highlighting
+"   F10 - Colorcolumn for YAML
+"   F11 - Clear all colorcolumns
+"   F12 - Toggle mouse
+" ---------------------------------------------------------
+
+
 " Disable Vi compatibility
 set nocompatible
 
@@ -67,6 +80,9 @@ set splitbelow
 
 " New vertical windows to appear right
 set splitright
+
+" Minimal number of lines above and below the cursor
+set scrolloff=3
 
 " Color Scheme
 color elflord
