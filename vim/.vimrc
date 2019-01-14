@@ -82,7 +82,7 @@ set splitbelow
 set splitright
 
 " Minimal number of lines above and below the cursor
-set scrolloff=3
+set scrolloff=2
 
 " Color Scheme
 color elflord
@@ -172,6 +172,15 @@ endfunc
 
 " F12 - Toggle mouse support
 map <F12> :call ToggleMouse()<CR>
+
+" Open quickfix window automatically
+" Credit: romainl @ StackExchange
+" URL: https://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
+augroup myvimrc
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l*    lwindow
+augroup END
 
 " Enable plugins
 filetype plugin on
