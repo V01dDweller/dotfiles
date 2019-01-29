@@ -187,8 +187,8 @@ endfunc
 " F12 - Toggle mouse support
 map <F12> :call ToggleMouse()<CR>
 
-" Open quickfix window automatically
-" Credit: romainl @ StackExchange
+" Open Quickfix window automatically
+" Credit: romainl @ StackOverflow
 " URL: https://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
 augroup myvimrc
     autocmd!
