@@ -162,6 +162,9 @@ endif
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
 
+" Netrw buffer settings
+let g:netrw_bufsettings = 'nomodifiable nomodified readonly nobuflisted nowrap nonumber'
+
 " Filename in title bar
 set title
 
