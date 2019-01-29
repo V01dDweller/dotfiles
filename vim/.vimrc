@@ -99,6 +99,9 @@ set cursorline
 " Cursorline decoration - bold on darkblue
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 
+" CursorColumn decoration - bold on darkblue
+highlight CursorColumn ctermbg=darkblue
+
 " Line numbers only in active side of split window
 " autocmd WinEnter * :setlocal number
 " autocmd WinLeave * :setlocal nonumber
