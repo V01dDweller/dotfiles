@@ -4,6 +4,8 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[pager]
+	diff = false
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
