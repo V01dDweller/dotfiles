@@ -108,15 +108,19 @@ hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none g
 hi VertSplit ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
 " Vertical split separator
-set fillchars=vert:│
+if !has("gui_running")
+  set fillchars=vert:│
+endif
 
 " Line numbers only in active side of split window
 " autocmd WinEnter * :setlocal number
 " autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+if !has("gui_running")
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview 
+endif
 
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
