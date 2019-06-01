@@ -12,8 +12,8 @@
 "    F7 - Toggle syncrhonize panes
 "    F8 - Disable all auto-indenting
 "    F9 - Toggle cursorline highlighting
-"   F10 - Colorcolumn for YAML
-"   F11 - Clear all colorcolumns
+"   F10 - Toggle cursorcolumn
+"   F11 - Toggle color columns 2, 4, 6 and 80
 "   F12 - Toggle mouse
 " ---------------------------------------------------------
 
@@ -138,11 +138,21 @@ nnoremap <F8> :setl noai nocin nosi inde=<CR>
 " F9 - Toggle cursorline
 nnoremap <F9> :set cursorline!<CR>
 
-" F10 - Show me columns 2, 4, 6 and 80 (yaml-friendly)
-nnoremap <F10> :set colorcolumn=2,4,6,80<CR>
+" F10 - Toggle cursorcolumn
+nnoremap <F10> :set cursorcolumn!<CR>
 
-" F11 - Turn off colorcolumn
-nnoremap <F11> :set colorcolumn=<CR>
+" F11 - Toggle color columns 2, 4, 6 and 80
+let g:ColorColumnOn = 0
+function! ToggleColorColumn()
+  if g:ColorColumnOn
+    set colorcolumn=""
+    let g:ColorColumnOn=0
+  else
+    set colorcolumn=2,4,6,80
+    let g:ColorColumnOn=1
+  endif
+endfunction
+map <silent> <F11> :call ToggleColorColumn()<CR>
 
 " Make Colorcolumn darkgreen
 highlight ColorColumn ctermbg=darkgreen guibg=darkgreen
