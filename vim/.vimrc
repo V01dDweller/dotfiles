@@ -212,14 +212,16 @@ function! ToggleMouse()
     if &mouse == 'a'
         " disable mouse
         set mouse=
+        echo "Mouse off"
     else
         " enable mouse everywhere
         set mouse=a
+        echo "Mouse on"
     endif
 endfunc
 
 " F12 - Toggle mouse support
-map <F12> :call ToggleMouse()<CR>
+map <silent> <F12> :call ToggleMouse()<CR>
 
 " Open Quickfix window automatically
 " Credit: romainl @ StackOverflow
