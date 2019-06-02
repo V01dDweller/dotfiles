@@ -1,14 +1,25 @@
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 "
 "                       V01dDweller's
-"              __ ___   _(_)_ __ ___  _ __ ___ 
-"             / _` \ \ / / | '_ ` _ \| '__/ __|
-"            | (_| |\ V /| | | | | | | | | (__ 
-"             \__, | \_/ |_|_| |_| |_|_|  \___|
-"             |___/                            
+"                          _                    
+"               __ ___   _(_)_ __ ___  _ __ ___ 
+"              / _` \ \ / / | '_ ` _ \| '__/ __|
+"             | (_| |\ V /| | | | | | | | | (__ 
+"            (_)__, | \_/ |_|_| |_| |_|_|  \___|
+"              |___/                            
 "          https://github.com/V01dDweller/dotfiles
 "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+" Keyboard shortcuts
+" ---------------------------------------------------------
+"     CTRL-F1        - Toggle menu bar
+"     CTRL-F2        - Toggle tool bar
+"     CTRL-F3        - Toggle right-hand scroll bar
+"     CTRL-TAB       - Cycle forward through tabs
+"     CTRL-Shift-Tab - Cycle backwards through tabs
+" ---------------------------------------------------------
+
 
 " GVim fonts thanks to http://vim.wikia.com/wiki/Setting_the_font_in_the_GUI
 if has("gui_running")
