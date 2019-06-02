@@ -6,7 +6,7 @@
 "               \ V /| | | | | | | | | (__ 
 "                \_/ |_|_| |_| |_|_|  \___|
 "                                    
-"        https://github.com/V01dDweller/dotfiles/vim
+"          https://github.com/V01dDweller/dotfiles
 "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 
