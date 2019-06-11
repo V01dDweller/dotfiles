@@ -1,27 +1,27 @@
-"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
-" 
-"                      V01dDweller's
-"                     _                    
-"              __   _(_)_ __ ___  _ __ ___ 
-"              \ \ / / | '_ ` _ \| '__/ __|
-"               \ V /| | | | | | | | | (__ 
-"              (_)_/ |_|_| |_| |_|_|  \___|
-"                                    
-"          https://github.com/V01dDweller/dotfiles
-"
-"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
+"                                                            "
+"                      V01dDweller's                         "
+"                                                            "
+"              __   _(_)_ __ ___  _ __ ___                   "
+"              \ \ / / | '_ ` _ \| '__/ __|                  "
+"               \ V /| | | | | | | | | (__                   "
+"              (_)_/ |_|_| |_| |_|_|  \___|                  "
+"                                                            "
+"          https://github.com/V01dDweller/dotfiles           "
+"                                                            "
+"_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
 
 " Remapped Function Keys
-" ---------------------------------------------------------
-"    F4 - Vexplore ( < Vim 8) or Toggle Lexplore ( > Vim 8)
-"    F6 - Toggle the AnsiEsc plugin
-"    F7 - Toggle syncrhonize panes
-"    F8 - Disable all auto-indenting
-"    F9 - Toggle cursorline highlighting
-"   F10 - Toggle cursorcolumn
-"   F11 - Toggle color columns 2, 4, 6 and 80
-"   F12 - Toggle mouse
-" ---------------------------------------------------------
+" ---------------------------------------------------------"
+"    F4 - Vexplore ( < Vim 8) or Toggle Lexplore ( > Vim 8)"
+"    F6 - Toggle the AnsiEsc plugin                        "
+"    F7 - Toggle syncrhonize panes                         "
+"    F8 - Disable all auto-indenting                       "
+"    F9 - Toggle cursorline highlighting                   "
+"   F10 - Toggle cursorcolumn                              "
+"   F11 - Toggle color columns 2, 4, 6 and 80              "
+"   F12 - Toggle mouse                                     "
+" ---------------------------------------------------------"
 
 
 " Disable Vi compatibility
@@ -40,7 +40,7 @@ set ruler
 set showcmd
 
 " Enable wildmenu
-" Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/ 
+" Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/
 if has("wildmenu")
     set wildignore+=*.a,*.o
     set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
@@ -60,7 +60,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " Change tabs to spaces
-set expandtab 
+set expandtab
 
 " Turn on auto indent, disable with <F8>
 set autoindent
@@ -72,14 +72,14 @@ filetype indent on
 set linebreak
 
 " Disable backups
-set nobackup 
+set nobackup
 set nowritebackup
 
 " Search highlighting, find while I type
-set hlsearch incsearch 
+set hlsearch incsearch
 
 " Search ignores case, unless mix case
-set ignorecase smartcase 
+set ignorecase smartcase
 
 " New windows to appear below
 set splitbelow
@@ -125,7 +125,7 @@ endif
 " Auto-create/auto-load views
 if !has("gui_running")
   autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent loadview 
+  autocmd BufWinEnter *.* silent loadview
 endif
 
 " Always-on IP address highlighting
@@ -172,10 +172,10 @@ let g:netrw_banner = 0
 " Netrw will hide these
 let g:netrw_list_hide = ".svn,.git,.*.swp,.DS_Store,.CFUserTextEncoding"
 
-" Toggle Vexplore with F4
+" Function to toggle netrw for Vim 8+
 " Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
 let g:NetrwIsOpen=0
-function! ToggleNetrw()
+function! ToggleNetrwVim8()
     if g:NetrwIsOpen
         let i = bufnr("$")
         while (i >= 1)
@@ -190,14 +190,30 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
-map <silent> <F4> :call ToggleNetrw()<CR>
 
-" F4 - Toggle netrw viaLexplore (Vim 8) or Vexplore (Vim 7)
-"if v:version > 799
-"  nnoremap <F4> :Lexplore<CR>
-"else
-"  nnoremap <F4> :Vexplore<CR>
-"endif
+" Function to toggle netrw for Vim 7 and older
+function! ToggleNetrwVim7()
+    if g:NetrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i
+            endif
+            let i-=1
+        endwhile
+        let g:NetrwIsOpen=0
+    else
+        let g:NetrwIsOpen=1
+        silent Vexplore
+    endif
+endfunction
+
+" F4 - Toggle netrw
+if v:version > 799
+  map <silent> <F4> :call ToggleNetrwVim8()<CR>
+else
+  map <silent> <F4> :call ToggleNetrwVim7()<CR>
+endif
 
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
