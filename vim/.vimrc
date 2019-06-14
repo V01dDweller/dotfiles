@@ -173,7 +173,7 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
 " Netrw will hide these
-let g:netrw_list_hide = ".svn,.git,.*.swp,.DS_Store,.CFUserTextEncoding"
+let g:netrw_list_hide = "NTUSER.DAT,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
 
 " Function to toggle netrw for Vim 8+
 " Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
