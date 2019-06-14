@@ -50,6 +50,9 @@ if has("wildmenu")
     set wildmode=longest,list
 endif
 
+" Add dictionaty completion when spell is on
+set complete+=kspell
+
 " Set path auto-complete  to be like bash
 set wildmode=list:longest
 
