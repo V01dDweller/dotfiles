@@ -218,9 +218,6 @@ then
     source "${HOME}/.bash_mintty_colors"
 fi
 
-#Java
-export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.8.0_73/"
-
 ## Fortune with cowsay :^)
 if command -v fortune > /dev/null && command -v cowsay > /dev/null
 then
