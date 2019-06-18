@@ -71,6 +71,9 @@ set autoindent
 " Turn on Filetype indenting
 filetype indent on
 
+" Limit autofolding to one level
+set foldnestmax=1
+
 " break long lines at words (display)
 set linebreak
 
