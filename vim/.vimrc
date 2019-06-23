@@ -42,12 +42,12 @@ set showcmd
 " Enable wildmenu
 " Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/
 if has("wildmenu")
-    set wildignore+=*.a,*.o
-    set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-    set wildignore+=.DS_Store,.git,.hg,.svn
-    set wildignore+=*~,*.swp,*.tmp
-    set wildmenu
-    set wildmode=longest,list
+  set wildignore+=*.a,*.o
+  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+  set wildignore+=.DS_Store,.git,.hg,.svn
+  set wildignore+=*~,*.swp,*.tmp
+  set wildmenu
+  set wildmode=longest,list
 endif
 
 " Add dictionaty completion when spell is on
@@ -96,9 +96,6 @@ set splitright
 " Minimal number of lines above and below the cursor
 set scrolloff=2
 
-" Color Scheme
-color elflord
-
 " Dark background
 set background=dark
 
@@ -108,14 +105,8 @@ syntax enable
 " Highlight current line
 set cursorline
 
-" Cursorline decoration - bold on darkblue
-highlight CursorLine term=bold cterm=bold ctermbg=darkblue
-
-" CursorColumn decoration - bold on darkblue
-highlight CursorColumn ctermbg=darkblue
-
 " Dress up split windows
-hi StatusLine   ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
+hi StatusLine ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
 hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 hi VertSplit ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
@@ -125,11 +116,11 @@ if !has("gui_running")
 endif
 
 " Line numbers only in active side of split window
-" autocmd WinEnter * :setlocal number
-" autocmd WinLeave * :setlocal nonumber
+"autocmd WinEnter * :setlocal number
+"autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-if !has("gui_running")
+if !has("gui_running") 
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent loadview
 endif
@@ -182,36 +173,36 @@ let g:netrw_list_hide = "NTUSER.DAT,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.C
 " Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
 let g:NetrwIsOpen=0
 function! ToggleNetrwVim8()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Lexplore
-    endif
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:NetrwIsOpen=0
+  else
+    let g:NetrwIsOpen=1
+    silent Lexplore
+  endif
 endfunction
 
 " Function to toggle netrw for Vim 7 and older
 function! ToggleNetrwVim7()
-    if g:NetrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i
-            endif
-            let i-=1
-        endwhile
-        let g:NetrwIsOpen=0
-    else
-        let g:NetrwIsOpen=1
-        silent Vexplore
-    endif
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:NetrwIsOpen=0
+  else
+    let g:NetrwIsOpen=1
+    silent Vexplore
+  endif
 endfunction
 
 " F4 - Toggle netrw
@@ -236,16 +227,16 @@ set mouse=a
 " Function - toggle mouse support
 " Thanks to crater2150 - https://unix.stackexchange.com/questions/156707
 function! ToggleMouse()
-    " check if mouse is enabled
-    if &mouse == 'a'
-        " disable mouse
-        set mouse=
-        echo "Mouse off"
-    else
-        " enable mouse everywhere
-        set mouse=a
-        echo "Mouse on"
-    endif
+  " check if mouse is enabled
+  if &mouse == 'a'
+    " disable mouse
+    set mouse=
+    echo "Mouse off"
+  else
+    " enable mouse everywhere
+    set mouse=a
+    echo "Mouse on"
+  endif
 endfunc
 
 " F12 - Toggle mouse support
@@ -255,9 +246,9 @@ map <silent> <F12> :call ToggleMouse()<CR>
 " Credit: romainl @ StackOverflow
 " URL: https://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
 augroup myvimrc
-    autocmd!
-    autocmd QuickFixCmdPost [^l]* cwindow
-    autocmd QuickFixCmdPost l*    lwindow
+  autocmd!
+  autocmd QuickFixCmdPost [^l]* cwindow
+  autocmd QuickFixCmdPost l*    lwindow
 augroup END
 
 " Enable plugins
@@ -271,3 +262,17 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:svnj_custom_statusbar_ops_hide = 1
   let g:svnj_browse_cache_all = 1
 endif
+
+" Color Scheme
+if !empty(glob("~/.vim/bundle/vim256-color"))
+  "color marcoloccio
+  color bubblegum-256-dark
+else
+  color elflord
+endif
+
+" Cursorline decoration - bold on darkblue
+highlight CursorLine term=bold cterm=bold ctermbg=darkgray
+
+" CursorColumn decoration - bold on darkgray
+highlight CursorColumn ctermbg=darkgray
