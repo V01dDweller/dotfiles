@@ -256,9 +256,9 @@ filetype plugin on
 
 " Plugins for CLI only
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
-  " Load Pathogen plug-in (needed for fugitive)
+  " Load Pathogen, if it's there
   execute pathogen#infect()
-  " For the SVN plug-in (Vim 8.0)
+  " For SVNJ plug-in (Vim 8.0)
   let g:svnj_custom_statusbar_ops_hide = 1
   let g:svnj_browse_cache_all = 1
 endif
