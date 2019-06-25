@@ -254,9 +254,15 @@ augroup END
 " Enable plugins
 filetype plugin on
 
-" Load Pathogen, if it's there
+" Load Pathogen, if this is the cli and it's there
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   execute pathogen#infect()
+endif
+
+" svnj settings
+if (glob("~/.vim/bundle/svnj.vim")
+  let g:svnj_custom_statusbar_ops_hide = 1
+  let g:svnj_browse_cache_all = 1
 endif
 
 " Color Scheme
