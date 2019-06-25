@@ -260,7 +260,7 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
 endif
 
 " svnj settings
-if (glob("~/.vim/bundle/svnj.vim")
+if !empty(glob("~/.vim/bundle/svnj.vim"))
   let g:svnj_custom_statusbar_ops_hide = 1
   let g:svnj_browse_cache_all = 1
 endif
