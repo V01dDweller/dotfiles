@@ -31,7 +31,7 @@ else
 fi
 
 # Install plug-ins
-export PLUGINS="juneedahamed/svnj.vim w0rp/ale terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive"
+export PLUGINS="w0rp/ale terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim"
 
 if [ -d ~/.vim/bundle ]
 then
