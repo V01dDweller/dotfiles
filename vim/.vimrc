@@ -265,14 +265,16 @@ endif
 
 " Color Scheme
 if !empty(glob("~/.vim/bundle/vim256-color"))
-  "color marcoloccio
-  color bubblegum-256-dark
+  "color flattr
+  "color atom-dark-256
+  color xoria256
+  "color cobalt2
 else
   color elflord
 endif
 
 " Cursorline decoration - bold on darkblue
-highlight CursorLine term=bold cterm=bold ctermbg=darkgray
+highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 
-" CursorColumn decoration - bold on darkgray
-highlight CursorColumn ctermbg=darkgray
+" CursorColumn decoration - bold on darkblue
+highlight CursorColumn ctermbg=darkblue
