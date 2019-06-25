@@ -9,15 +9,16 @@
 #  vim-ps1              - https://github.com/PProvost/vim-ps1              
 
 # Install pathogen
-if [ ! -d ~/.vim/autoload ]
-then
-  mkdir -pv ~/.vim/autoload
-fi 
-
-if [ ! -d ~/.vim/bundle ]
-then
-  mkdir -pv ~/.vim/bundle
-fi
+export PATHOGEN_DIRS="autoload bundle"
+for i in $PATHOGEN_DIRS
+do
+  if [ ! -d ~/.vim/$i ]
+  then
+    export DIR=~/.vim/$i
+    echo "Creating" $DIR
+    mkdir $DIR
+  fi
+done
 
 if [ ! -f ~/.vim/autoload/pathogen.vim ]
 then
