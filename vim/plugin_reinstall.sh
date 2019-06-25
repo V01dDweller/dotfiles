@@ -19,8 +19,6 @@ then
   mkdir -pv ~/.vim/bundle
 fi
 
-export PLUGINS="w0rp/ale terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive"
-
 if [ ! -f ~/.vim/autoload/pathogen.vim ]
 then
   echo "Installing pathogen"
@@ -31,6 +29,9 @@ else
   echo " "
 fi
 
+# Install plug-ins
+export PLUGINS="juneedahamed/svnj.vim w0rp/ale terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive"
+
 if [ -d ~/.vim/bundle ]
 then
   cd ~/.vim/bundle
@@ -39,7 +40,9 @@ then
     export PLUGIN_DIR="`echo $i | cut -d '/' -f 2`"
     if [ ! -d $PLUGIN_DIR ];then
       echo "Installing" $PLUGIN_DIR
-      git clone https://github.com/$i.git
+      export URL=https://github.com/$i.git
+      echo $URL
+      git clone $URL
       echo " "
     else
       echo "Updating " $PLUGIN_DIR
