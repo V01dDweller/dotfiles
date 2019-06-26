@@ -8,7 +8,8 @@ No longer a vim purist, I now rely on rather lengthy rc files, pathogen and a sm
 1. [svnj.vim](https://github.com/juneedahamed/svnj.vim) - Subverision Integration 
 1. [vim-minimap](https://github.com/dpc/vim-minimap) - A cool minimap (Sublime envy)
 1. [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) - Multiple cursors (ditto) 
-1. [vim-ps1](https://github.com/PProvost/vim-ps1) - Windows Powershell syntax 
+1. [vim-ps1](https://github.com/PProvost/vim-ps1) - Windows Powershell syntax
+1. [vim-256-colors](https://github.com/noah/vim256-color) - Way too many color schemes
 
 #### Installation ####
 
