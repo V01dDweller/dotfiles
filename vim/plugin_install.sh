@@ -30,8 +30,8 @@ else
   echo " "
 fi
 
-# Install plug-ins
-export PLUGINS="w0rp/ale terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim"
+# Install/Update plug-ins
+export PLUGINS="w0rp/ale pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim"
 
 if [ -d ~/.vim/bundle ]
 then
@@ -53,9 +53,10 @@ then
       echo " "
     fi
   done
+  # Install vim256-color colorschemes separately
   if [ ! -d ~/.vim/bundle/vim256-color ]
   then
-    echo "Installing vim256-color, this could take a minute..."
+    echo "Installing vim256-color, this will take a minute..."
     git clone --recursive git://github.com/noah/vim256-color.git
     echo ""
   else
