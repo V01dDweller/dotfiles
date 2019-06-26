@@ -20,7 +20,7 @@ e.g.
 
 ```shell
 cd
-git clone https://github.com/V01dDweller/dotfiles
+git clone https://github.com/V01dDweller/dotfiles.git
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.gvimrc
 ./dotfiles/vim/plugin_install.sh
