@@ -13,6 +13,7 @@
 
 " Remapped Function Keys
 " ---------------------------------------------------------"
+"    F3 - Toggle line numbers
 "    F4 - Vexplore ( < Vim 8) or Toggle Lexplore ( > Vim 8)"
 "    F6 - Toggle the AnsiEsc plugin                        "
 "    F7 - Toggle syncrhonize panes                         "
@@ -31,7 +32,7 @@ set nocompatible
 set vb
 
 " Turn on line numbers
-set number
+"set number
 
 " Turn on the ruler
 set ruler
@@ -204,6 +205,9 @@ function! ToggleNetrwVim7()
     silent Vexplore
   endif
 endfunction
+
+" F4 - Toggle linue numbers
+map <silent> <F3> :set nu!<CR>
 
 " F4 - Toggle netrw
 if v:version > 799
