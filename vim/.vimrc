@@ -13,8 +13,9 @@
 
 " Remapped Function Keys
 " ---------------------------------------------------------"
-"    F3 - Toggle line numbers
-"    F4 - Vexplore ( < Vim 8) or Toggle Lexplore ( > Vim 8)"
+"    F2 - Toggle line numbers                              "
+"    F3 - Toggle Minimap                                   "
+"    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)"
 "    F6 - Toggle the AnsiEsc plugin                        "
 "    F7 - Toggle syncrhonize panes                         "
 "    F8 - Disable all auto-indenting                       "
@@ -206,8 +207,15 @@ function! ToggleNetrwVim7()
   endif
 endfunction
 
-" F4 - Toggle linue numbers
-map <silent> <F3> :set nu!<CR>
+" F2 - Toggle linue numbers
+map <silent> <F2> :set nu!<CR>
+imap <silent> <F2> <Esc> :set nu!<CR>
+
+" F3 - Toggle Miniman
+if !empty(glob("~/.vim/bundle/vim-minimap"))
+  map <silent> <F3> :MinimapToggle<CR>
+  imap <silent> <F3> <Esc> :MinimapToggle<CR>i
+endif
 
 " F4 - Toggle netrw
 if v:version > 799
@@ -270,7 +278,7 @@ if !empty(glob("~/.vim/bundle/svnj.vim"))
 endif
 
 " Color Scheme
-if !empty(glob("~/.vim/bundle/vim256-color"))
+if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   "color flattr
   "color atom-dark-256
   color xoria256
