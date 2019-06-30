@@ -233,9 +233,9 @@ fi
 
 ## Fortune with pony :^)
 #if command -v fortune > /dev/null && command -v ponysay > /dev/null
-then
+#then
 # fortune | ponysay -b round -f basil -f bear -f cerberus -f cow -f discord -f mantis -f orangefrog -f owl -f owlowiscious -f raccoon -f rover -f tank -f homer -f burns -f dodo -f parrot -f woody -f trixie -f bender -f zippy -f zoidberg
-fi
+#fi
 
 # Get color support for 'less'
 export LESS="--RAW-CONTROL-CHARS"
