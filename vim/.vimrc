@@ -122,10 +122,10 @@ endif
 "autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-if !has("gui_running") 
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent loadview
-endif
+"if !has("gui_running") 
+"  autocmd BufWinLeave *.* mkview
+"  autocmd BufWinEnter *.* silent loadview
+"endif
 
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
@@ -158,9 +158,6 @@ function! ToggleColorColumn()
   endif
 endfunction
 map <silent> <F11> :call ToggleColorColumn()<CR>
-
-" Make Colorcolumn darkgreen
-highlight ColorColumn ctermbg=darkgreen guibg=darkgreen
 
 " Netrw tree style
 let g:netrw_liststyle = 3
@@ -211,10 +208,9 @@ endfunction
 map <silent> <F2> :set nu!<CR>
 imap <silent> <F2> <Esc> :set nu!<CR>
 
-" F3 - Toggle Miniman
+" F3 - Toggle Minimap
 if !empty(glob("~/.vim/bundle/vim-minimap"))
-  map <silent> <F3> :MinimapToggle<CR>
-  imap <silent> <F3> <Esc> :MinimapToggle<CR>i
+  map <silent> <F3> :silent MinimapToggle<CR>
 endif
 
 " F4 - Toggle netrw
@@ -277,18 +273,20 @@ if !empty(glob("~/.vim/bundle/svnj.vim"))
   let g:svnj_browse_cache_all = 1
 endif
 
-" Color Scheme
+" Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   "color flattr
   "color atom-dark-256
-  color xoria256
   "color cobalt2
+  " Xoria
+  color xoria256
+  highlight CursorLine term=bold cterm=bold ctermbg=235
+  highlight CursorColumn ctermbg=235
+  highlight ColorColumn ctermbg=53
 else
+  " Elflord with matching Cursorline and CursorColumn
   color elflord
+  highlight CursorLine term=bold cterm=bold ctermbg=darkblue
+  highlight CursorColumn ctermbg=darkblue
+  highlight ColorColumn ctermbg=darkgreen
 endif
-
-" Cursorline decoration - bold on darkblue
-highlight CursorLine term=bold cterm=bold ctermbg=darkblue
-
-" CursorColumn decoration - bold on darkblue
-highlight CursorColumn ctermbg=darkblue
