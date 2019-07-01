@@ -135,7 +135,7 @@ highlight link ipaddr Identifier
 nnoremap  <F6> :AnsiEsc<CR>
 
 " F7 - Toggle scrollbind and cursorbind for all panes
-nnoremap <F7> :windo :1<CR>:windo setlocal scb! <CR>:windo setlocal crb! <CR>
+nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
 
 " F8 -  Fully disable auto-indent
 nnoremap <F8> :setl noai nocin nosi inde=<CR>
@@ -282,9 +282,9 @@ if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   color xoria256
   highlight CursorLine term=bold cterm=bold ctermbg=235
   highlight CursorColumn ctermbg=235
-  highlight ColorColumn ctermbg=53
+  highlight ColorColumn ctermbg=236
 else
-  " Elflord with matching Cursorline and CursorColumn
+  " Elflord
   color elflord
   highlight CursorLine term=bold cterm=bold ctermbg=darkblue
   highlight CursorColumn ctermbg=darkblue
