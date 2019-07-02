@@ -1,10 +1,16 @@
 #!/bin/bash
 ########################################################################
 # WARNING! - Use at your own risk
+#
 # In theory, this script should
-# 1. Create ~/dotfile.backups
+#
+# 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
 # 2. Copy anything that it will replace into that directory
-# 3. Replace your bash, vim, tmux and mintty rc files
+# 3. Create a ~/.bash directory (for a git-aware prompt)
+# 4. Clone git://github.com/jimeh/git-aware-prompt.git in it 
+# 5. Replace or create all .bash, .vim and .tmux rc files
+# 6. Run ~/dotfiles/vim/plugin_install.sh
+#
 ########################################################################
 
 # Check for git
@@ -70,8 +76,8 @@ do
 done
 echo ""
 
-# Check environment **Current tested on Cygwwins
-# Linux/WSL and MacOS are TBA
+# Check environment **Current tested on Cygwin and EL7
+# More Linux distros and MacOS are TBA
 #if echo $systemInfo | grep -q CYGWIN
 #then
 #  environment="Cygwin"
