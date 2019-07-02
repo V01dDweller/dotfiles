@@ -117,3 +117,6 @@ then
   done
   echo ""
 fi
+
+# Install Vim plug-ins
+~/dotfiles/vim/plugin_install.sh
