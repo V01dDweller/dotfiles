@@ -7,85 +7,103 @@
 # 3. Replace your bash, vim, tmux and mintty rc files
 ########################################################################
 
-todaysDate=`date +%Y-%m-%d`
+# Check for git
+gitStatus=`command -v git`
+
+if [ -z "$gitStatus" ]
+then
+  echo "========================================================="
+  echo "   Git is not install or is not in your \$PATH"
+  echo "   Please install git or fix your \$PATH and try again"
+  echo "========================================================="
+  echo ""
+  exit 0
+fi
+
+# Setup for a bash git-aware prompt
+if [ -d ~/.bash ]
+then
+  echo "Found ~/.bash directory, checking for ~/.bash/git-aware-prompt"
+  if [ -d ~/.bash/git-aware-prompt ]
+  then
+    echo "Found ~/.bash/git-aware-prompt, updating..."
+    cd ~/.bash/git-aware-prompt
+    git pull
+    cd
+    echo ""
+  else
+    echo "Didn't find git-aware-prompt,"
+    echo "Cloning git://github.com/jimeh/git-aware-prompt.git"
+    cd ~/.bash
+    git clone git://github.com/jimeh/git-aware-prompt.git
+    echo ""
+    cd
+  fi
+else
+  echo "No ~/.bash found, creating one..."
+  mkdir ~/.bash
+  cd ~/.bash
+  git clone git://github.com/jimeh/git-aware-prompt.git
+  echo ""
+  cd
+fi
+exit 0
+  
+currentDate=`date +%Y-%m-%d_%H%M-%S`
 systemInfo=`uname`
 
-bashFiles=(".bash_profile" ".LESS_TERMCAP")
+bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
-backupFiles=(".bashrc" "${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
+backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
+backupDirectory="dotfile_backup.${currentDate}"
 
+mkdir ~/$backupDirectory
 
-# Check for previous backups dir then create one
-if [ -d ~/dotfiles.backup ]
-then
-  until [[ $overwriteBackup =~ ^[YyNn]$ ]]
-  do
-    read -n 1 -p "Previous backup found, overwrite? (y/n): " overwriteBackup
-    echo ""
-  done
-else
-  mkdir ~/dotfiles.backup
-fi
-
-# Backup (or overwrite) dotfiles, or quit, per the above response
-if [[ $overwriteBackup =~ ^[Nn]$ ]]
-then
-  echo "Quitting"
-  echo ""
-  exit
-else
-  echo "Backing up current dotfiles..."
-  for i in "${backupFiles[@]}"
-  do
-    if [ -f ~/$i ]
-    then
-      cp -pv ~/$i ~/dotfiles.backup/
-    fi
-  done
-  echo ""
-fi
-
-# Check environment (will add Linux later)
-if echo $systemInfo | grep -q CYGWIN
-then
-  environment="Cygwin"
-fi
-
-# Setting up bash
-echo "Setting up bash"
-for i in "${bashFiles[@]}"
+echo "Backing up current dotfiles..."
+for i in "${backupFiles[@]}"
 do
-  cp -v bash/$i ~/
+  if [ -f ~/$i ]
+  then
+    cp -pv ~/$i ~/$backupDirectory
+  fi
 done
 echo ""
 
-# Set up Bash for Mintty
-echo "Setting up Cygwin bashrc"
-if environment="Cygwin"
-then
-  cp -v mintty/.bash_mintty_colors ~/
-  cp -v bash/.bashrc_mintty ~/.bashrc
-  cp -v mintty/.minttyrc ~/
-fi
+# Check environment **Current tested on Cygwwins
+# Linux/WSL and MacOS are TBA
+#if echo $systemInfo | grep -q CYGWIN
+#then
+#  environment="Cygwin"
+#fi
+
+# Setting up bash
+echo "Setting up bash"
+echo "Creating ~/.bash_profile"
+cp -v dotfiles/bash/.bash_profile_git ~/.bash_profile
+echo ""
+echo "Creating ~/.bashrc"
+cp -v dotfiles/bash/.bashrc_mintty ~/.bashrc
+echo ""
+echo "Creating ~/.LESS_TERMCAP"
+cp -v dotfiles/bash/.LESS_TERMCAP ~/
 echo ""
 
-# Setup tmux
+# Setup tmux (**Note: Does not wrk with tmux > 3 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
-  tmuxVersion=`tmux -V|cut -d'.' -f 2`
-  if [ $tmuxVersion -gt 4 ]
+  tmuxVersion=`tmux -V|cut -d'.' -f 1`
+  if [ $tmuxVersion -gt 2 ]
   then
-    cp -v tmux/.tmux.clipboard24.conf ~/.tmux.clipboard.conf
+    echo "Tmux 3.x not supported yet"
   else
-    cp -v tmux/.tmux.clipboard.conf ~/.tmux.clipboard.conf
+    for i in ${tmuxFiles}
+    do 
+      cp -v ~/dotfiles/tmux/$i ~/$i
+    done
   fi
-  for i in .tmux.conf .tmux-syncon.conf .tmux-syncoff.conf
-  do
-    cp -v tmux/$i ~/$i
-  done
   echo ""
 fi
 
