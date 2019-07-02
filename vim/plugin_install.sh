@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Re-install my favorite plug-ins via pathogen
+# Install/update my favorite plug-ins via pathogen
 #  ale                  - https://github.com/w0rp/ale                      
 #  vim256-color         - https://github.com/noah/vim256-color             
 #  vim-fugitive         - https://github.com/tpope/vim-fugitive
