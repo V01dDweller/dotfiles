@@ -81,13 +81,13 @@ echo ""
 # Setting up bash
 echo "Setting up bash"
 echo "Creating ~/.bash_profile"
-cp -v dotfiles/bash/.bash_profile_git ~/.bash_profile
+cp -v ~/dotfiles/bash/.bash_profile_git ~/.bash_profile
 echo ""
 echo "Creating ~/.bashrc"
-cp -v dotfiles/bash/.bashrc_mintty ~/.bashrc
+cp -v ~/dotfiles/bash/.bashrc_mintty ~/.bashrc
 echo ""
 echo "Creating ~/.LESS_TERMCAP"
-cp -v dotfiles/bash/.LESS_TERMCAP ~/
+cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
 echo ""
 
 # Setup tmux (**Note: Does not wrk with tmux > 3 or < 2.4)
@@ -103,6 +103,7 @@ then
     do 
       cp -v ~/dotfiles/tmux/$i ~/$i
     done
+    echo "** Reminder: Uncomment the section of ~/.tmux.clipboard.conf for your OS"
   fi
   echo ""
 fi
@@ -113,7 +114,7 @@ then
   echo "Setting up Vim"
   for i in ${vimFiles[@]}
   do
-    cp -v vim/$i ~/$i
+    cp -v ~/dotfiles/vim/$i ~/$i
   done
   echo ""
 fi
