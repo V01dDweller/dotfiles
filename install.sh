@@ -19,7 +19,7 @@ gitStatus=`command -v git`
 if [ -z "$gitStatus" ]
 then
   echo "========================================================="
-  echo "   Git is not install or is not in your \$PATH"
+  echo "   Git is not installed or is not in your \$PATH"
   echo "   Please install git or fix your \$PATH and try again"
   echo "========================================================="
   echo ""
@@ -76,8 +76,8 @@ do
 done
 echo ""
 
-# Check environment **Current tested on Cygwin and EL7
-# More Linux distros and MacOS are TBA
+# Check environment **Currently tested on Cygwin and EL7
+# More Linux distros and MacOS are TBA (should work though)
 #if echo $systemInfo | grep -q CYGWIN
 #then
 #  environment="Cygwin"
@@ -95,12 +95,12 @@ echo "Creating ~/.LESS_TERMCAP"
 cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
 echo ""
 
-# Setup tmux (**Note: Does not wrk with tmux > 3 or < 2.4)
+# Setup tmux (**Note: Does not wrk with tmux >= 3 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
-  tmuxVersion=`tmux -V|cut -d'.' -f 1`
-  if [ $tmuxVersion -gt 2 ]
+  tmuxMajorVersion=`tmux -V|cut -d'.' -f 1`
+  if [ $tmuxMajorVersion -gt 2 ]
   then
     echo "Tmux 3.x not supported yet"
   else
@@ -122,7 +122,6 @@ then
     cp -v ~/dotfiles/vim/$i ~/$i
   done
   echo ""
+  # Install Vim plug-ins
+  ~/dotfiles/vim/plugin_install.sh
 fi
-
-# Install Vim plug-ins
-~/dotfiles/vim/plugin_install.sh
