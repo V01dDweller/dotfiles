@@ -7,7 +7,7 @@
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
 # 2. Copy anything that it will replace into that directory
 # 3. Create a ~/.bash directory (for a git-aware prompt)
-# 4. Clone git://github.com/jimeh/git-aware-prompt.git in it 
+# 4. Clone git://github.com/jimeh/git-aware-prompt.git into it 
 # 5. Replace or create all .bash, .vim and .tmux rc files
 # 6. Run ~/dotfiles/vim/plugin_install.sh
 #
