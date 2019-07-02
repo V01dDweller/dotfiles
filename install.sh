@@ -47,8 +47,7 @@ else
   echo ""
   cd
 fi
-exit 0
-  
+
 currentDate=`date +%Y-%m-%d_%H%M-%S`
 systemInfo=`uname`
 
