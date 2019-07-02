@@ -8,7 +8,7 @@
 #  vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursors  
 #  vim-ps1              - https://github.com/PProvost/vim-ps1              
 
-# Install pathogen
+# Install the Pathogen plug-in manager
 export PATHOGEN_DIRS="autoload bundle"
 for i in $PATHOGEN_DIRS
 do
@@ -31,6 +31,15 @@ else
 fi
 
 # Install/Update plug-ins
+#  ALE               - Asynchronous Linting Engine
+#  ansible-vim       - Ansible syntax highlighting
+#  multiple-cursors  - Multiple curors
+#  Minimap           - Self explanatory
+#  PS1               - PowerShell syntax highlighting
+#  Fugutive          - Git integration
+#  SVNJ              - SVN integration
+#  Delview           - Delete saved views
+
 export PLUGINS="w0rp/ale pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
 
 if [ -d ~/.vim/bundle ]
@@ -53,7 +62,7 @@ then
       echo " "
     fi
   done
-  # Install vim256-color colorschemes separately
+  # Install vim256-color colorschemes
   if [ ! -d ~/.vim/bundle/vim256-color ]
   then
     echo "Installing vim256-color, this will take a minute..."
