@@ -40,7 +40,7 @@ fi
 #  SVNJ              - SVN integration
 #  Delview           - Delete saved views
 
-export PLUGINS="w0rp/ale pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
+export PLUGINS="vim-scripts/AnsiEsc.vim w0rp/ale pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
 
 if [ -d ~/.vim/bundle ]
 then
