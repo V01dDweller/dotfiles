@@ -1,12 +1,18 @@
 #!/bin/bash
 
-# Install/update my favorite plug-ins via pathogen
-#  ale                  - https://github.com/w0rp/ale                      
-#  vim256-color         - https://github.com/noah/vim256-color             
-#  vim-fugitive         - https://github.com/tpope/vim-fugitive
-#  vim-minimap          - https://github.com/dpc/vim-minimap.git           
-#  vim-multiple-cursors - https://github.com/terryma/vim-multiple-cursors  
-#  vim-ps1              - https://github.com/PProvost/vim-ps1              
+# Install/update my favorite plug-ins via pathogen/git
+
+#  ALE               - Asynchronous Linting Engine    - https://github.com/w0rp/ale                    
+#  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
+#  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
+#  multiple-cursors  - Multiple curors                - https://github.com/terryma/vim-multiple-cursors
+#  Minimap           - Self explanatory               - https://github.com/dpc/vim-minimap.git         
+#  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
+#  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
+#  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
+#  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
+#  vim256-color      - Too many color schemes         - https://github.com/noah/vim256-color
+
 
 # Install the Pathogen plug-in manager
 export PATHOGEN_DIRS="autoload bundle"
@@ -31,16 +37,7 @@ else
 fi
 
 # Install/Update plug-ins
-#  ALE               - Asynchronous Linting Engine
-#  ansible-vim       - Ansible syntax highlighting
-#  multiple-cursors  - Multiple curors
-#  Minimap           - Self explanatory
-#  PS1               - PowerShell syntax highlighting
-#  Fugutive          - Git integration
-#  SVNJ              - SVN integration
-#  Delview           - Delete saved views
-
-export PLUGINS="w0rp/ale pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
+export PLUGINS="w0rp/ale vim-scripts/AnsiEsc.vim pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
 
 if [ -d ~/.vim/bundle ]
 then
