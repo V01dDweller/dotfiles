@@ -276,9 +276,14 @@ endif
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   "color flattr
+  "highlight CursorLine term=bold cterm=bold ctermbg=235
+  "highlight CursorColumn ctermbg=235
+  "highlight ColorColumn ctermbg=236
   "color atom-dark-256
+  "highlight CursorLine term=bold cterm=bold ctermbg=235
+  "highlight CursorColumn ctermbg=235
+  "highlight ColorColumn ctermbg=236
   "color cobalt2
-  " Xoria
   color xoria256
   highlight CursorLine term=bold cterm=bold ctermbg=235
   highlight CursorColumn ctermbg=235
