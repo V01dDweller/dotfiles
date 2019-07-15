@@ -5,6 +5,7 @@
 #  ALE               - Asynchronous Linting Engine    - https://github.com/w0rp/ale                    
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
+#  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer.git
 #  multiple-cursors  - Multiple curors                - https://github.com/terryma/vim-multiple-cursors
 #  Minimap           - Self explanatory               - https://github.com/dpc/vim-minimap.git         
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
@@ -37,7 +38,16 @@ else
 fi
 
 # Install/Update plug-ins
-export PLUGINS="w0rp/ale vim-scripts/AnsiEsc.vim pearofducks/ansible-vim terryma/vim-multiple-cursors dpc/vim-minimap PProvost/vim-ps1 tpope/vim-fugitive juneedahamed/svnj.vim vim-scripts/delview"
+export PLUGINS="\
+  w0rp/ale \
+  vim-scripts/AnsiEsc.vim \
+  chrisbra/Colorizer \
+  pearofducks/ansible-vim \
+  terryma/vim-multiple-cursors \
+  dpc/vim-minimap PProvost/vim-ps1 \
+  tpope/vim-fugitive juneedahamed/svnj.vim \
+  vim-scripts/delview \
+  "
 
 if [ -d ~/.vim/bundle ]
 then
