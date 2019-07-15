@@ -16,7 +16,7 @@
 "    F2 - Toggle line numbers                              "
 "    F3 - Toggle Minimap                                   "
 "    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)"
-"    F5 - Toggle Color Colorizer                           "
+"    F5 - Toggle Colorizer                           "
 "    F6 - Toggle the AnsiEsc plugin                        "
 "    F7 - Toggle syncrhonize panes                         "
 "    F8 - Disable all auto-indenting                       "
