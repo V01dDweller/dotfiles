@@ -16,6 +16,7 @@
 "    F2 - Toggle line numbers                              "
 "    F3 - Toggle Minimap                                   "
 "    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)"
+"    F5 - Toggle Color Colorizer                           "
 "    F6 - Toggle the AnsiEsc plugin                        "
 "    F7 - Toggle syncrhonize panes                         "
 "    F8 - Disable all auto-indenting                       "
@@ -33,7 +34,7 @@ set nocompatible
 set vb
 
 " Turn on line numbers
-"set number
+set number
 
 " Turn on the ruler
 set ruler
@@ -131,8 +132,11 @@ endif
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
 
+" F5 - Toggle Colorizer
+nnoremap <F5> :ColorToggle<CR>
+
 " F6 - Toggle AnsiEsc plug-in
-nnoremap  <F6> :AnsiEsc<CR>
+nnoremap <F6> :AnsiEsc<CR>
 
 " F7 - Toggle scrollbind and cursorbind for all panes
 nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
