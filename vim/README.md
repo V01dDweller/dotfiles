@@ -5,7 +5,7 @@ rc files, pathogen and a small collection of plug-ins:
 1. [ale](https://github.com/w0rp/ale) - Asynchronous Linting Engine 
 1. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Converts ascii color escapes back into color
 1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorizes HTML color codes
-1. [ansible-vim](https://github.com/pearofducks/ansible-vim) - Better syntax highlighting for Anible files
+1. [ansible-vim](https://github.com/pearofducks/ansible-vim) - Better syntax highlighting for Ansible files
 1. [vim-fugitive](https://github.com/tpope/vim-fugitive) - Git Integration 
 1. [svnj.vim](https://github.com/juneedahamed/svnj.vim) - Subverision Integration 
 1. [vim-minimap](https://github.com/dpc/vim-minimap) - A cool minimap (Sublime envy)
