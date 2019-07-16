@@ -1,6 +1,6 @@
 ### Vim/Gvim ###
 
-No longer a vim purist, I now rely on rather lengthy rc files, pathogen and a small collection of plug-ins:
+rc files, pathogen and a small collection of plug-ins:
 
 1. [ale](https://github.com/w0rp/ale) - Asynchronous Linting Engine 
 1. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Converts ascii color escapes back into color
