@@ -6,7 +6,7 @@
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer.git
-#  multiple-cursors  - Multiple curors                - https://github.com/terryma/vim-multiple-cursors
+#  multiple-cursors  - Multiple cursors               - https://github.com/terryma/vim-multiple-cursors
 #  Minimap           - Self explanatory               - https://github.com/dpc/vim-minimap.git         
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
