@@ -34,7 +34,7 @@ set nocompatible
 set vb
 
 " Turn on line numbers
-set number
+"set number
 
 " Turn on the ruler
 set ruler
