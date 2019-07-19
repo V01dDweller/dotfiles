@@ -30,7 +30,8 @@ done
 if [ ! -f ~/.vim/autoload/pathogen.vim ]
 then
   echo "Installing pathogen"
-  curl -LSso ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+  cd ~/.vim/autoload
+  curl -O https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
   echo " "
 else
   echo "Pathogen is already installed"
