@@ -111,6 +111,8 @@ then
     echo "** Reminder: Uncomment the section of ~/.tmux.clipboard.conf for your OS"
   fi
   echo ""
+  # Instal tmux plugins
+  ~/dotfiles/tmux/plugin_install.s
 fi
 
 # Setup Vim
