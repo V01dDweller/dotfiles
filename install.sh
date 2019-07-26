@@ -99,7 +99,9 @@ echo ""
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
-  tmuxMajorVersion=`tmux -V|cut -d'.' -f 1`
+  tmuxMajorVersion=`tmux -V|cut -d' ' -f 2|cut -d'.' -f 1`
+  echo "tmux major version: " $tmuxMajorVersion
+
   if [ $tmuxMajorVersion -gt 2 ]
   then
     echo "Tmux 3.x not supported yet"
@@ -111,6 +113,8 @@ then
     echo "** Reminder: Uncomment the section of ~/.tmux.clipboard.conf for your OS"
   fi
   echo ""
+  # Instal tmux plugins
+  ~/dotfiles/tmux/plugin_install.sh
 fi
 
 # Setup Vim
