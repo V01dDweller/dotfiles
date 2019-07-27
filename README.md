@@ -39,13 +39,22 @@ dotfiles/
 │   └── .minttyrcw
 │
 ├── tmux
-│   ├── plugin_install.sh*      # **WARNING** Work-in-progress! Installs Tmux Plugin Manager and tmc
-│   ├── .tmux-cssh              # Changes default ssh command to lssh wrapper for tmux-cssh
-│   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
-│   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
-│   ├── .tmux.clipboard.conf    # Windows clipbaord integration, tmux <= 2.3
-│   ├── .tmux.clipboard24.conf  # Windows clipbaord integration, tmux >= 2.4
-│   └── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf
+│   ├── plugin_install.sh       # Install Tmux Plugin Manager (tpm) and tmc for clusterssh
+│   ├── .tmux-cssh              ## This is missing!## - optional, used to change tmc ssh command
+│   ├── .tmux.clipboard.conf    # Cliboard integration for Cygwin, Linux and MacOS
+│   ├── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf 
+│   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e 
+│   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E  
+│   └── themes
+│       ├── green
+│       │   ├── .tmux.conf
+│       │   └── .tmux-syncoff.conf
+│       ├── original
+│       │   ├── .tmux.conf
+│       │   └── .tmux-syncoff.conf
+│       └── yellow
+│           ├── .tmux.conf
+│           └── .tmux-syncoff.conf
 │
 ├── vim
 │   ├── plugin_install.sh       # Installs pathogen and all my plugins from Github
@@ -54,9 +63,9 @@ dotfiles/
 │   └── .vimrc                  # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
 │
 ├── README.md                   # You are here
-├── install.sh                  # **WARNING** Work-in-progress! - Attempts to set up git-aware bash and vim
-│
-└── uninstall.sh                # *WARNING** - Not yet updated to match the install re-write, do not use
+├── install.sh                  # Copies bash, tmux, mintty and vim dotfiles then
+│                                 runs tmux/plugin_install.sh and vim/plugin_install.sh
+└── uninstall.sh                # *WARNING** - Not yet updated to match the install.sh
 
 
 ```
