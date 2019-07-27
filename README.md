@@ -4,7 +4,7 @@ This is a small collection of the dotfiles I've accumulated over the
 years. I use them in a few environments from RHEL/CentOS, Cygwin,
 WSL/Debian/Ubuntu and MacOS. Most are self-explanatory.
 
-```
+```console
 dotfiles/
 ├── .w3m                        # The w3m web browser
 │   ├── .gitignore
