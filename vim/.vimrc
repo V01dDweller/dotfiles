@@ -123,10 +123,10 @@ endif
 "autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-"if !has("gui_running") 
-"  autocmd BufWinLeave *.* mkview
-"  autocmd BufWinEnter *.* silent loadview
-"endif
+if !has("gui_running") 
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview
+endif
 
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
