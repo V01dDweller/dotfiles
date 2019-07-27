@@ -76,13 +76,6 @@ do
 done
 echo ""
 
-# Check environment **Currently tested on Cygwin and EL7
-# More Linux distros and MacOS are TBA (should work though)
-#if echo $systemInfo | grep -q CYGWIN
-#then
-#  environment="Cygwin"
-#fi
-
 # Setting up bash
 echo "Setting up bash"
 echo "Creating ~/.bash_profile"
@@ -115,6 +108,20 @@ then
   echo ""
   # Instal tmux plugins
   ~/dotfiles/tmux/plugin_install.sh
+fi
+
+# Tmux theme for Linux or WSL
+if [ "$OSTYPE" == "linux-gnu" ]
+then
+  # Linux
+  if grep -q Microsoft /proc/version
+  then
+    # WSL detected - yellow
+    cp -v ~/dotfiles/tmux/themes/yellow/.tmux* ~/
+  else
+    # This really is Linux - original
+    cp -v ~/dotfiles/tmux/themes/original/.tmux* ~/
+  fi
 fi
 
 # Setup Vim
