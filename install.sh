@@ -57,6 +57,7 @@ fi
 currentDate=`date +%Y-%m-%d_%H%M-%S`
 systemInfo=`uname`
 
+# Dotfile lists
 bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
