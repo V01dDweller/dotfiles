@@ -17,9 +17,36 @@ HISTFILESIZE=10000000
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
+export TERM=xterm-256color
+umask 027
+
 # Git-aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
-PS1="[\@ \[$txtylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-export TERM=xterm-256color
-umask 027
+
+# OS prompt colors
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Linux
+  if grep -q Microsoft /proc/version; then
+    # WSL detected
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+  else
+    # This really is Linux
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+  fi
+elif [[ "$OSTYPE" == "darwin" ]]; then
+  # Mac OSX
+  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+  # Cygwin
+  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+elif [[ "$OSTYPE" == "msys" ]]; then
+  # Gitbash/MinGW
+  echo "MinGW"
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+  # FreeBSD
+  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+else
+  # Unknown.
+  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+fi
