@@ -89,7 +89,7 @@ echo "Creating ~/.bash_profile"
 cp -v ~/dotfiles/bash/.bash_profile_git ~/.bash_profile
 echo ""
 echo "Creating ~/.bashrc"
-cp -v ~/dotfiles/bash/.bashrc_mintty ~/.bashrc
+cp -v ~/dotfiles/bash/.bashrc ~/.bashrc
 echo ""
 echo "Creating ~/.LESS_TERMCAP"
 cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
