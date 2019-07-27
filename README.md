@@ -97,6 +97,5 @@ Creates my .vimrc and .gvimrc files, installs pathogen and a list of plugins.
 ### Installation ###
 ```console
 git clone https://github.com/V01dDweller/dotfiles.git
-cd dotfiles
-./install.sh
+./dotfiles/install.sh
 ```
