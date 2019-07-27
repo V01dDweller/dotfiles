@@ -64,6 +64,7 @@ tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboar
 backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 backupDirectory="dotfile_backup.${currentDate}"
 
+# Dotfile backup
 mkdir ~/$backupDirectory
 
 echo "Backing up current dotfiles..."
