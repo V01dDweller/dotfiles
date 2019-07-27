@@ -101,10 +101,7 @@ then
   then
     echo "Tmux 3.x not supported yet"
   else
-    for i in ${tmuxFiles}
-    do 
-      cp -v ~/dotfiles/tmux/$i ~/$i
-    done
+    cp -v ~/dotfiles/tmux/.t* ~/
     echo "** Reminder: Uncomment the section of ~/.tmux.clipboard.conf for your OS"
   fi
   echo ""
@@ -130,10 +127,7 @@ fi
 if command -v vim > /dev/null
 then
   echo "Setting up Vim"
-  for i in ${vimFiles[@]}
-  do
-    cp -v ~/dotfiles/vim/$i ~/$i
-  done
+  cp -v ~/dotfiles/vim/{.vimrc,.gvimrc} ~/
   echo ""
   # Install Vim plug-ins
   ~/dotfiles/vim/plugin_install.sh
