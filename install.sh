@@ -89,7 +89,7 @@ echo "Creating ~/.LESS_TERMCAP"
 cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
 echo ""
 
-# Setup tmux (**Note: Does not work with tmux >= 3 or < 2.4)
+# Setup tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
