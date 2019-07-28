@@ -2,7 +2,7 @@
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+  . ~/.bashrc
 fi
 
 # User specific environment and startup programs
@@ -24,29 +24,36 @@ umask 027
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-# OS prompt colors
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-  # Linux
-  if grep -q Microsoft /proc/version; then
-    # WSL detected
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-  else
-    # This really is Linux
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-  fi
-elif [[ "$OSTYPE" == "darwin" ]]; then
-  # Mac OSX
-  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-elif [[ "$OSTYPE" == "cygwin" ]]; then
-  # Cygwin
-  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-elif [[ "$OSTYPE" == "msys" ]]; then
-  # Gitbash/MinGW
-  echo "MinGW"
-elif [[ "$OSTYPE" == "freebsd"* ]]; then
-  # FreeBSD
-  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-else
-  # Unknown.
-  PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-fi
+# OS Prompt colors
+case $OSTYPE in
+  linux-gnu)
+    if grep -q Microsoft /proc/version
+    then
+      # WSL detected
+      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    else
+      # Linux
+      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    fi
+    ;;
+  darwin)
+    # MacOS
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    ;;
+  cygwin)
+    # Cygwin
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    ;;
+  msys)
+    # Gitbasg/MinGW
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    ;;
+  freebsd)
+    # FreeBSD
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    ;;
+  *)
+    # Everything else
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    ;;
+esac
