@@ -70,7 +70,6 @@ then
                       -f chrysalis\
                       -f cow\
                       -f discord\
-                      -f dodo\
                       -f fido\
                       -f gildastand\
                       -f greta\
@@ -84,7 +83,6 @@ then
                       -f owl\
                       -f owlowiscious\
                       -f parasprite\
-                      -f parrot\
                       -f raccoon\
                       -f rover\
                       -f stevemagnet\
