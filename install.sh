@@ -2,14 +2,15 @@
 ########################################################################
 # WARNING! - Use at your own risk
 #
-# In theory, this script should
+# This script will:
 #
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
-# 2. Copy anything that it will replace into that directory
-# 3. Create a ~/.bash directory (for a git-aware prompt)
+# 2. Copy any dot file it will replace into that directory
+# 3. Create a ~/.bash directory for a git-aware prompt
 # 4. Clone git://github.com/jimeh/git-aware-prompt.git into it 
-# 5. Replace or create all .bash, .vim and .tmux rc files
-# 6. Run ~/dotfiles/vim/plugin_install.sh
+# 5. Replace or create certain .bash, .vim and .tmux rc files
+# 6. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
+# 7. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
 #
 ########################################################################
 

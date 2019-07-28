@@ -91,7 +91,11 @@ that is much easier on the eyes than the default CRT green. Also some
 shortcuts for color schemes, toggling pane sync and Cygwin/Windows
 clipboard integration.
 
-### Vim! ###
-Trying (and failing) to keep vim customizations to a minimum, but there
-are a few I can last long without. My most frequently updated files so
-far.
+### Vim ###
+Creates my .vimrc and .gvimrc files, installs pathogen and a list of plugins.
+
+### Installation ###
+```console
+git clone https://github.com/V01dDweller/dotfiles.git
+./dotfiles/install.sh
+```
