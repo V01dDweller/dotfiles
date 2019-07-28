@@ -54,8 +54,9 @@ else
   cd
 fi
 
+
+# Time-stamp
 currentDate=`date +%Y-%m-%d_%H%M-%S`
-systemInfo=`uname`
 
 # Dotfile lists
 bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
