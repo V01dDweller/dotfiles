@@ -29,7 +29,7 @@ case $OSTYPE in
     # AIX
     PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtblu\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
     ;;
-  bsd | freebsd)
+  bsd|freebsd)
     # BSD, FreeBSD
     PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
     ;;
@@ -52,7 +52,7 @@ case $OSTYPE in
     fi
     ;;
   msys)
-    # Gitbash/MinGW
+    # MinGW/GitBash
     PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
     ;;
   solaris)
