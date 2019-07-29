@@ -18,32 +18,32 @@ deleteFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles
 
 until [[ $deleteAll =~ ^[YyNn]$ ]]
 do
-    read -n 1 -p "Are you sure you want to delete all dotfiles? (y/n): " deleteAll
-    echo ""
+  read -n 1 -p "Are you sure you want to delete all dotfiles? (y/n): " deleteAll
+  echo ""
 done
 
 # Delete dotfiles and restore backups
 if [[ $deleteAll =~ ^[Nn]$ ]]
 then
-    echo "Quitting"
-    echo ""
-    exit
+  echo "Quitting"
+  echo ""
+  exit
 else
-    echo "Deleting current dotfiles..."
-    for i in "${deleteFiles[@]}"
-    do
-        if [ -f ~/$i ]
-        then
-            rm -vf ~/$i
-        fi
-    done
-    echo ""
+  echo "Deleting current dotfiles..."
+  for i in "${deleteFiles[@]}"
+  do
+    if [ -f ~/$i ]
+    then
+      rm -vf ~/$i
+    fi
+  done
+  echo ""
 fi
 
 # Restore backed up dotfiles
 echo "Restoring backups"
 for i in `ls -a ~/dotfiles.backup/| egrep -v "^.$|^..$"`
 do
-    cp -v ~/dotfiles.backup/$i ~/
+  cp -v ~/dotfiles.backup/$i ~/
 done
 echo ""
