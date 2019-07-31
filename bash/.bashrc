@@ -8,7 +8,12 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export EDITOR="/usr/bin/vim"
 
 # Add color to common commands
-alias ls="ls --color=auto --group-directories-first"
+if [ $OSTYPE == "darwin18" ]
+then
+  alias ls="ls -G"
+else
+  alias ls="ls --color=auto --group-directories-first"
+fi
 alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias tree="tree -C --dirsfirst -I '.git|.svn|.pki'"
@@ -103,3 +108,4 @@ then
      echo ""
   fi
 fi
+alias python=/usr/local/bin/python3.7
