@@ -2,13 +2,13 @@
 
 # Install/update my favorite plug-ins via pathogen/git
 
-#  ALE               - Asynchronous Linting Engine    - https://github.com/w0rp/ale                    
+#  ALE               - Asynchronous Linting Engine    - https://github.com/w0rp/ale
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 #  multiple-cursors  - Multiple cursors               - https://github.com/terryma/vim-multiple-cursors
-#  Minimap           - Self explanatory               - https://github.com/dpc/vim-minimap.git         
+#  Minimap           - Self explanatory               - https://github.com/severin-lemaignan/vim-minimap.git
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
 #  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
@@ -47,7 +47,8 @@ export PLUGINS="\
   chrisbra/Colorizer \
   airblade/vim-gitgutter \
   terryma/vim-multiple-cursors \
-  dpc/vim-minimap PProvost/vim-ps1 \
+  severin-lemaignan/vim-minimap \
+  PProvost/vim-ps1 \
   tpope/vim-fugitive juneedahamed/svnj.vim \
   vim-scripts/delview \
   "
