@@ -8,7 +8,7 @@
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 #  Goyo              - Distraction-free mode          - https://github.com/junegunn/goyo.vim
-# Limelight          - Local highlighting             - https://github.com/junegunn/limelight.vim
+#  Limelight         - Local highlighting             - https://github.com/junegunn/limelight.vim
 #  Minimap           - Self explanatory               - https://github.com/severin-lemaignan/vim-minimap.git
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
