@@ -76,7 +76,7 @@ then
     git clone --recursive git://github.com/noah/vim256-color.git
     echo ""
   else
-    echo "Updating vim2560color"
+    echo "Updating vim256-color"
     cd vim256-color
     git pull
     cd ..
