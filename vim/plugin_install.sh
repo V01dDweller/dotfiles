@@ -22,7 +22,7 @@ do
   then
     export DIR=~/.vim/$i
     echo "Creating" $DIR
-    mkdir -p $DIR
+    mkdir -p "$DIR"
   fi
 done
 
