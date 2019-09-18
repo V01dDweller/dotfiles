@@ -14,6 +14,10 @@
 #  vim256-color      - Too many color schemes         - https://github.com/noah/vim256-color
 
 
+# Bash scripting tweaks credit:
+#   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
+set -Eeuxo pipefail
+
 # Install the Pathogen plug-in manager
 export PATHOGEN_DIRS="autoload bundle"
 for i in $PATHOGEN_DIRS
