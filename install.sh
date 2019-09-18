@@ -7,12 +7,17 @@
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
 # 2. Copy any dot file it will replace into that directory
 # 3. Create a ~/.bash directory for a git-aware prompt
-# 4. Clone git://github.com/jimeh/git-aware-prompt.git into it 
+# 4. Clone git://github.com/jimeh/git-aware-prompt.git into it
 # 5. Replace or create certain .bash, .vim and .tmux rc files
 # 6. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
 # 7. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
 #
+#
 ########################################################################
+
+# Bash scripting tweaks credit:
+#   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
+set -Eeuxo pipefail
 
 # Check for git
 gitStatus=`command -v git`
@@ -80,7 +85,7 @@ do
 done
 echo ""
 
-# Setting up bash
+# Set up bash
 echo "Setting up bash"
 echo "Creating ~/.bash_profile"
 cp -v ~/dotfiles/bash/.bash_profile_git ~/.bash_profile
@@ -92,7 +97,7 @@ echo "Creating ~/.LESS_TERMCAP"
 cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
 echo ""
 
-# Setup tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
+# Set up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
@@ -104,7 +109,7 @@ then
     echo "Tmux 3.x not supported yet"
   else
     cp -v ~/dotfiles/tmux/.t* ~/
-    echo "** Reminder: Uncomment the section of ~/.tmux.clipboard.conf for your OS"
+    echo "** Reminder: Uncomment ~/.tmux.clipboard.conf for your OS"
   fi
   echo ""
   # Instal tmux plugins
@@ -125,12 +130,19 @@ then
   fi
 fi
 
-# Setup Vim
+# Set up Vim
 if command -v vim > /dev/null
 then
+  # Copy .vimrc, .gvimrc
   echo "Setting up Vim"
   cp -v ~/dotfiles/vim/{.vimrc,.gvimrc} ~/
   echo ""
   # Install Vim plug-ins
   ~/dotfiles/vim/plugin_install.sh
+fi
+
+# Set up w3m
+if command -v w3m > /dev/null
+then
+  cp -vr ~/dotfiles/.w3m ~/
 fi
