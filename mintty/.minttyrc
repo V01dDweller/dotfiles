@@ -1,4 +1,4 @@
-BoldAsFont=yes
+BoldAsFont=no
 FontHeight=12
 AllowBlinking=yes
 CursorType=block
