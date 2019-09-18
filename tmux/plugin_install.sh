@@ -1,4 +1,19 @@
 #!/bin/bash
+########################################################################
+# WARNING! - Use at your own risk
+#
+# This script will:
+#
+# 1. Create a ~/.tmux/plugins directory
+# 2. Install tpm (TMux Plugin Manager) via github
+# 3. Install the tmc plugin for Tmux clusters
+#
+########################################################################
+
+
+# Bash scripting tweaks credit:
+#   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
+set -Eeuxo pipefail
 
 # Install Tmux Plugin Manager
 
