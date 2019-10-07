@@ -16,7 +16,7 @@
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
-set -Eeuxo pipefail
+set -Eeuo pipefail
 
 # Install the Pathogen plug-in manager
 export PATHOGEN_DIRS="autoload bundle"
@@ -74,16 +74,34 @@ then
     fi
   done
   # Install vim256-color colorschemes
-  if [ ! -d ~/.vim/bundle/vim256-color ]
-  then
-    echo "Installing vim256-color, this will take a minute..."
-    git clone --recursive git://github.com/noah/vim256-color.git
+  while [[ ! $colors =~ ([YyNn]) ]]
+  do
     echo ""
-  else
-    echo "Updating vim256-color"
-    cd vim256-color
-    git pull
-    cd ..
-    echo " "
-  fi
+    read -n 1 -p "Install Vim color schemes (warning, this takes a while) ? (y/n)" colors
+    case $colors in
+      [Yy]* )
+        echo ""
+        echo "Got it, installing color schemes"
+        if [ ! -d ~/.vim/bundle/vim256-color ]
+        then
+          echo "Installing vim256-color, this will take a minute..."
+          git clone --recursive git://github.com/noah/vim256-color.git
+          echo ""
+        else
+          echo "Updating vim256-color"
+          cd vim256-color
+          git pull
+          cd ..
+          echo " "
+        fi
+        ;;
+      [Nn]* )
+        echo ""
+        echo "No problem, maybe later"
+        ;;
+      *)
+        echo ""
+        echo "Press 'y' or 'n'"
+    esac
+  done
 fi
