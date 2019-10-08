@@ -7,6 +7,7 @@
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
+*  Minimap           - A Sublime-like minimap         - https://github.com/dpc/vim-minimap
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
 #  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
@@ -48,6 +49,7 @@ export PLUGINS="\
   pearofducks/ansible-vim \
   chrisbra/Colorizer \
   airblade/vim-gitgutter \
+  dpc/vim-minimap \
   PProvost/vim-ps1 \
   tpope/vim-fugitive juneedahamed/svnj.vim \
   vim-scripts/delview \
