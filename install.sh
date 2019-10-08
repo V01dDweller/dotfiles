@@ -17,7 +17,7 @@
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
-set -Eeuxo pipefail
+set -Eeuo pipefail
 
 # Check for git
 gitStatus=`command -v git`
