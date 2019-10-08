@@ -73,12 +73,13 @@ then
       echo " "
     fi
   done
+
   # Install vim256-color colorschemes
   export colors=""
   while [[ ! $colors =~ ([YyNn]) ]]
   do
     echo ""
-    read -n 1 -p "Install Vim color schemes (warning, this takes a while) ? (y/n)" colors
+    read -n 1 -p "Install Vim color schemes? (hint: skip if you're in a hurry) (y/n): " colors
     case $colors in
       [Yy]* )
         echo ""
