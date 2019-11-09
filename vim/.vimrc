@@ -14,7 +14,7 @@
 " Function Keys
 " ---------------------------------------------------------"
 "    F2 - Toggle line numbers                              "
-"    F3 - Toggle Minimap                                   "
+"    F3 - Toggle line wrapping
 "    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)"
 "    F5 - Toggle Colorizer plugin                          "
 "    F6 - Toggle the AnsiEsc plugin                        "
@@ -212,10 +212,9 @@ endfunction
 map <silent> <F2> :set nu!<CR>
 imap <silent> <F2> <Esc> :set nu!<CR>
 
-" F3 - Toggle Minimap
-if !empty(glob("~/.vim/bundle/vim-minimap"))
-  map <silent> <F3> :silent MinimapToggle<CR>
-endif
+" F3 - Toggle line wrapping
+nmap <silent> <F3> :set wrap!<CR>
+imap <silent> <F3> <Esc> :set wrap!<CR>
 
 " F4 - Toggle netrw
 if v:version > 799
