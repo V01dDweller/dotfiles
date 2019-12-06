@@ -10,9 +10,9 @@ PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/lib:$PATH
 export PATH
 
 # History setttins
-HISTTIMEFORMAT="%m/%d/%y %T "
-HISTSIZE=10000000
-HISTFILESIZE=10000000
+export HISTTIMEFORMAT="%m/%d/%y %T "
+export HISTSIZE=10000000
+export HISTFILESIZE=10000000
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
