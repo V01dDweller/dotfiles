@@ -9,7 +9,7 @@
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 #  Minimap           - A Sublime-like minimap         - https://github.com/dpc/vim-minimap
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
-#  Fugutive          - Git integration                - https://github.com/tpope/vim-fugitive
+#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
 #  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
 #  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
 #  Vinegar           - Better netrw?                  - https://github.com/tpope/vim-vinegar
