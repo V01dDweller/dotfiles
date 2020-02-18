@@ -298,3 +298,8 @@ else
   highlight CursorColumn ctermbg=darkblue
   highlight ColorColumn ctermbg=darkgreen
 endif
+
+" Vim mouse support in tmux
+" found here: https://unix.stackexchange.com/questions/50733/cant-use-mouse-properly-when-running-vim-in-tmux
+set ttymouse=xterm2
+set mouse=a
