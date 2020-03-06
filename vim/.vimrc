@@ -208,7 +208,7 @@ function! ToggleNetrwVim7()
   endif
 endfunction
 
-" F2 - Toggle linue numbers
+" F2 - Toggle line numbers
 map <silent> <F2> :set nu!<CR>
 imap <silent> <F2> <Esc> :set nu!<CR>
 
