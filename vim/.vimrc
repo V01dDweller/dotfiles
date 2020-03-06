@@ -328,3 +328,6 @@ endfunction
 " found here: https://unix.stackexchange.com/questions/50733/cant-use-mouse-properly-when-running-vim-in-tmux
 set ttymouse=xterm2
 set mouse=a
+
+" Turn spell check on for these file types
+autocmd FileType markdown,text,html,man,manual :set spell
