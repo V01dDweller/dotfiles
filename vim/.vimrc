@@ -282,17 +282,7 @@ if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   highlight CursorLine term=bold cterm=bold ctermbg=235
   highlight CursorColumn ctermbg=235
   highlight ColorColumn ctermbg=236
-  "color atom-dark-256
-  "highlight CursorLine term=bold cterm=bold ctermbg=235
-  "highlight CursorColumn ctermbg=235
-  "highlight ColorColumn ctermbg=236
-  "color cobalt2
-  "color xoria256
-  "highlight CursorLine term=bold cterm=bold ctermbg=235
-  "highlight CursorColumn ctermbg=235
-  "highlight ColorColumn ctermbg=236
 else
-  " Elflord
   color elflord
   highlight CursorLine term=bold cterm=bold ctermbg=darkblue
   highlight CursorColumn ctermbg=darkblue
