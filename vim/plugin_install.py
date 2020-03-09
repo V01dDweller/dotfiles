@@ -19,17 +19,19 @@
 import os
 import urllib.request
 
-# Thanks to https://ozzmaker.com/add-colour-to-text-in-python/
+# Thanks to
+#    http://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
+
 # Output Colors
-BLACK = '\033[0;30;40m'
-RED = '\033[0;31;40m'
-GREEN = '\033[0;32;40m'
-YELLOW = '\033[0;33;40m'
-BLUE = '\033[0;34;40m'
-PURPLE = '\033[0;35;40m'
-CYAN = '\033[0;36;40m'
-WHITE = '\033[0;37;40m'
-RESET = '\033[0;37;40m'
+BLACK='\u001b[30m'
+RED='\u001b[31m'
+GREEN='\u001b[32m'
+YELLOW='\u001b[33m'
+BLUE='\u001b[34m'
+MAGENTA='\u001b[35m'
+CYAN='\u001b[36m'
+WHITE='\u001b[37m'
+RESET='\u001b[0m'
 
 # Creating ~/.vim
 HOME_DIR = os.environ['HOME']
