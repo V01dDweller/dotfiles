@@ -79,7 +79,7 @@ then
     fi
   done
 
- # Install vim256-color colorschemes
+# Install vim256-color colorschemes
   export colors=""
   while [[ ! $colors =~ ([YyNn]) ]]
   do
