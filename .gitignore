@@ -7,3 +7,7 @@ desktop.ini
 
 # MacOS .DS_Store
 .DS_Store
+
+# Vagrant
+Vagrantfile
+.vagrant
