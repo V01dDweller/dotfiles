@@ -100,3 +100,4 @@ Creates my .vimrc and .gvimrc files, installs pathogen and a list of plugins.
 git clone https://github.com/V01dDweller/dotfiles.git
 ./dotfiles/install.sh
 ```
+
