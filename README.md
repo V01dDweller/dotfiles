@@ -58,6 +58,7 @@ dotfiles/
 │
 ├── vim
 │   ├── plugin_install.sh       # Installs pathogen and all my plugins from Github
+│   ├── plugin_install.py       # Python version of the above
 │   ├── .gvimrc                 # Happy Vimming in gVim 7-8 (requires .vimrc)
 │   ├── .gvimrc.old
 │   └── .vimrc                  # Happy Vimming in vim 7-8 on Linux, Solaris and Cygwin
