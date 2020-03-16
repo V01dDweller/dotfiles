@@ -24,10 +24,10 @@ set -Eeuo pipefail
 export PATHOGEN_DIRS="autoload bundle"
 for i in $PATHOGEN_DIRS
 do
-  if [ ! -d ~/.vim/$i ]
+  if [ ! -d ~/.vim/"$i" ]
   then
     export DIR=~/.vim/$i
-    echo "Creating" $DIR
+    echo "Creating" "$DIR"
     mkdir -p "$DIR"
   fi
 done
@@ -63,16 +63,18 @@ then
   cd ~/.vim/bundle
   for i in $PLUGINS
   do
-    export PLUGIN_DIR="`echo $i | cut -d '/' -f 2`"
-    if [ ! -d $PLUGIN_DIR ];then
-      echo "Installing" $PLUGIN_DIR
-      export URL=https://github.com/$i.git
-      echo $URL
-      git clone $URL
+    PLUGIN_DIR=$(echo "$i" | cut -d '/' -f 2)
+    export PLUGIN_DIR
+    if [ ! -d "$PLUGIN_DIR" ];then
+      echo "Installing" "$PLUGIN_DIR"
+      URL=https://github.com/"$i".git
+      export URL
+      echo "$URL"
+      git clone "$URL"
       echo " "
     else
-      echo "Updating " $PLUGIN_DIR
-      cd $PLUGIN_DIR
+      echo "Updating " "$PLUGIN_DIR"
+      cd "$PLUGIN_DIR"
       git pull
       cd ..
       echo " "
@@ -84,7 +86,7 @@ then
   while [[ ! $colors =~ ([YyNn]) ]]
   do
     echo ""
-    read -n 1 -p "Install Vim color schemes? (hint: skip if you're in a hurry) (y/n): " colors
+    read -r -n 1 -p "Install Vim color schemes? (hint: skip if you're in a hurry) (y/n): " colors
     case $colors in
       [Yy]* )
         echo ""

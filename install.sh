@@ -20,7 +20,7 @@
 set -Eeuo pipefail
 
 # Check for git
-gitStatus=`command -v git`
+gitStatus=$(command -v git)
 
 if [ -z "$gitStatus" ]
 then
@@ -62,7 +62,7 @@ fi
 
 
 # Time-stamp
-currentDate=`date +%Y-%m-%d_%H%M-%S`
+currentDate=$(date +%Y-%m-%d_%H%M-%S)
 
 # Dotfile lists
 bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
@@ -73,14 +73,14 @@ backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles
 backupDirectory="dotfile_backup.${currentDate}"
 
 # Dotfile backup
-mkdir ~/$backupDirectory
+mkdir ~/"$backupDirectory"
 
 echo "Backing up current dotfiles..."
 for i in "${backupFiles[@]}"
 do
-  if [ -f ~/$i ]
+  if [ -f ~/"$i" ]
   then
-    cp -pv ~/$i ~/$backupDirectory
+    cp -pv ~/"$i" ~/"$backupDirectory"
   fi
 done
 echo ""
@@ -101,10 +101,10 @@ echo ""
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
-  tmuxMajorVersion=`tmux -V|cut -d' ' -f 2|cut -d'.' -f 1`
-  echo "tmux major version: " $tmuxMajorVersion
+  tmuxMajorVersion=""$(tmux"" -V|cut -d' ' -f 2|cut -d'.' -f 1)
+  echo "tmux major version: " "$tmuxMajorVersion"
 
-  if [ $tmuxMajorVersion -gt 2 ]
+  if [ "$tmuxMajorVersion" -gt 2 ]
   then
     echo "Tmux 3.x not supported yet"
   else
