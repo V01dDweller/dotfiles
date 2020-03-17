@@ -41,40 +41,40 @@ source "${GITAWAREPROMPT}/main.sh"
 case $OSTYPE in
   aix)
     # AIX
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtblu\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtblu\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   bsd|freebsd)
     # BSD, FreeBSD
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   cygwin)
     # Cygwin
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   darwin)
     # MacOS
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   linux-gnu)
     if grep -q Microsoft /proc/version
     then
       # WSL detected
-      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     else
       # Linux
-      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     fi
     ;;
   msys)
     # MinGW/GitBash
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   solaris)
     # Solaris
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
   *)
     # Anything else
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
     ;;
 esac
