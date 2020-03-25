@@ -123,9 +123,12 @@ endif
 "autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-if !has("gui_running") 
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent loadview
+if !has("gui_running")
+  let current_file = expand('%')
+  if !empty(current_file)
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent loadview
+  endif
 endif
 
 " Always-on IP address highlighting
