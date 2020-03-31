@@ -94,3 +94,5 @@ export hostcolor=$bldcyn
 if [[ $EUID -eq 0 ]]; then
    usercolor=$bldred
 fi
+
+PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
