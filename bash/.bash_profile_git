@@ -41,40 +41,56 @@ source "${GITAWAREPROMPT}/main.sh"
 case $OSTYPE in
   aix)
     # AIX
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtblu\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$txtblu
     ;;
   bsd|freebsd)
     # BSD, FreeBSD
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$txtgrn
     ;;
   cygwin)
     # Cygwin
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$txtgrn
     ;;
   darwin)
     # MacOS
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$txtgrn
     ;;
   linux-gnu)
     if grep -q Microsoft /proc/version
     then
       # WSL detected
-      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldylw\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+      export usercolor=$bldylw
+      export hostcolor=$bldylw
     else
       # Linux
-      PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldcyn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+      export usercolor=$bldylw
+      export hostcolor=$bldcyn
     fi
     ;;
   msys)
     # MinGW/GitBash
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$bldgrn
     ;;
   solaris)
     # Solaris
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$bldred\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$bldred
     ;;
   *)
     # Anything else
-    PS1="[\@ \[$bldylw\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$bldblu\]\W\[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$"
+    export usercolor=$bldylw
+    export hostcolor=$txtgrn
     ;;
 esac
+
+export usercolor=$bldylw
+export hostcolor=$bldcyn
+
+if [[ $EUID -eq 0 ]]; then
+   usercolor=$bldred
+fi
