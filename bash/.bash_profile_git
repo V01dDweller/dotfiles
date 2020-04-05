@@ -88,9 +88,6 @@ case $OSTYPE in
     ;;
 esac
 
-export usercolor=$bldylw
-export hostcolor=$bldcyn
-
 if [[ $EUID -eq 0 ]]; then
    usercolor=$bldred
 fi
