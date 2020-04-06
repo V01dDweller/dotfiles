@@ -5,7 +5,7 @@ The plugin_install scripts install Pathogen and a collection of plug-ins that I 
 1. [ALE](https://github.com/w0rp/ale) - Asynchronous Linting Engine
 1. [ansible](https://github.com/pearofducks/ansible-vim) - Ansible syntax highlighting
 1. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Convert ASCII escapes to color
-1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML color codes
+1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
 1. [git](https://github.com/airblade/vim-gitgutter) - Shows a git diff in the gutter
 1. [Minimap](https://github.com/dpc/vim-minimap) - A Sublime-like minimap
 1. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
@@ -28,5 +28,10 @@ cd
 git clone https://github.com/V01dDweller/dotfiles.git
 ln -s dotfiles/.vimrc
 ln -s dotfiles/.gvimrc
+```
+
+...or...
+
+```
 ./dotfiles/vim/plugin_install.sh
 ```
