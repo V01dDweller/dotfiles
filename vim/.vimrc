@@ -114,7 +114,7 @@ hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none g
 hi VertSplit ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
 
 " Vertical split separator
-if !has("gui_running")
+if !has("gui_running") && v:version > 799
   set fillchars=vert:│
 endif
 
