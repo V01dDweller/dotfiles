@@ -12,19 +12,19 @@
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
 
 " Function Keys
-" ---------------------------------------------------------"
-"    F2 - Toggle line numbers                              "
-"    F3 - Toggle line wrapping
-"    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)"
-"    F5 - Toggle Colorizer plugin                          "
-"    F6 - Toggle the AnsiEsc plugin                        "
-"    F7 - Toggle scrollbind/cursorbind                     "
-"    F8 - Disable all auto-indenting                       "
-"    F9 - Toggle cursorline                                "
-"   F10 - Toggle cursorcolumn                              "
-"   F11 - Toggle colorcolumns 2, 4, 6 and 80               "
-"   F12 - Toggle mouse                                     "
-" ---------------------------------------------------------"
+" -----------------------------------------------------------"
+"    F2 - Toggle line numbers                                "
+"    F3 - Toggle line wrapping                               "
+"    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
+"    F5 - Toggle Colorizer plugin                            "
+"    F6 - Toggle the AnsiEsc plugin                          "
+"    F7 - Toggle scrollbind/cursorbind                       "
+"    F8 - Disable all auto-indenting                         "
+"    F9 - Toggle cursorline                                  "
+"   F10 - Toggle cursorcolumn                                "
+"   F11 - Toggle colorcolumns 2, 4, 6 and 80                 "
+"   F12 - Toggle mouse                                       "
+" -----------------------------------------------------------"
 
 
 " Disable Vi compatibility/allow Vim features not in Vi
