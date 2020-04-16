@@ -267,13 +267,13 @@ endif
 
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
-  color xoria256
+  color elflord
   highlight CursorLine term=bold cterm=bold ctermbg=238
   highlight CursorColumn ctermbg=238
   highlight ColorColumn ctermbg=236
   highlight CursorLineNr term=bold cterm=bold  gui=bold
 else
-  color elflord
+  color xoria256
   highlight CursorLine term=bold cterm=bold ctermbg=darkblue
   highlight CursorColumn ctermbg=darkblue
   highlight ColorColumn ctermbg=darkgreen
@@ -317,3 +317,29 @@ autocmd FileType markdown,text,html,man,manual :set spell
 "  https://vi.stackexchange.com/questions/18650/how-to-make-netrw-start-with-dotfiles-hidden
 let ghregex='\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_list_hide=ghregex
+
+" ALE Settings
+if !empty(glob("~/.vim/bundle/ale"))
+  let g:ale_sign_error = '▶▶'
+  let g:ale_sign_warning = '◆◆'
+endif
+
+" GitGutter settings
+if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+  if (colors_name == "xoria256")
+    let g:gitgutter_override_sign_column_highlight = 1
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=233
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=233
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=233
+  elseif (colors_name == "southernlights")
+    let g:gitgutter_override_sign_column_highlight = 1
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=240
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=240
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=240
+  elseif (colors_name == "elflord")
+    let g:gitgutter_override_sign_column_highlight = 1
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=3
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+  endif
+endif
