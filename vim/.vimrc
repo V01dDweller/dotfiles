@@ -27,22 +27,19 @@
 " ---------------------------------------------------------"
 
 
-" Disable Vi compatibility
+" Disable Vi compatibility/allow Vim features not in Vi
 set nocompatible
 
 " Visual bell
 set vb
 
-" Turn on line numbers
-"set number
-
 " Turn on the ruler
 set ruler
 
-" Show commands as they are typed in command mode
+" Show commands as they are typed
 set showcmd
 
-" Enable wildmenu
+" Use tab for path auto-complete like bash
 " Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/
 if has("wildmenu")
   set wildignore+=*.a,*.o
@@ -59,25 +56,14 @@ set complete+=kspell
 " Set path auto-complete to be like bash
 set wildmode=list:longest
 
-" Auto indent shift-width
-set shiftwidth=2
+" Tabs and indentation
+set shiftwidth=2        " Auto indent shift-width
+set softtabstop=2       " Tabs at two spaces
+set expandtab           " convert tabs to spaces
+set autoindent          " self explanatory, disable with <F8>
+filetype indent on      " Filetype indenting
 
-" Tabs at two spaces
-set softtabstop=2
-
-" Change tabs to spaces
-set expandtab
-
-" Turn on auto indent, disable with <F8>
-set autoindent
-
-" Turn on Filetype indenting
-filetype indent on
-
-" Limit autofolding to one level
-set foldnestmax=1
-
-" break long lines at words (display)
+" Wrapping breaks at words
 set linebreak
 
 " Disable backups
