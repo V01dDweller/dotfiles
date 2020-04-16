@@ -2,7 +2,7 @@
 
 # Install/update my favorite plug-ins via pathogen/git
 
-#  ALE               - Asynchronous Linting Engine    - https://github.com/w0rp/ale
+#  ALE               - Asynchronous Linting Engine    - https://github.com/dense-analysis/ale
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
@@ -45,7 +45,7 @@ fi
 
 # Install/Update plug-ins
 export PLUGINS="\
-  w0rp/ale \
+  dense-analysis/ale \
   vim-scripts/AnsiEsc.vim \
   pearofducks/ansible-vim \
   chrisbra/Colorizer \
