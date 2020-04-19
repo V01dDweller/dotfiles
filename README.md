@@ -89,8 +89,7 @@ My git-aware bash prompt, aliases, etc. for different environments.
 A low-key color scheme (with due credit to [Hermann
 Vocke](http://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf))
 that is much easier on the eyes than the default CRT green. Also some
-shortcuts for color schemes, toggling pane sync and Cygwin/Windows
-clipboard integration.
+shortcuts for color schemes, toggling pane sync and clipboard integration.
 
 ### Vim ###
 Creates my .vimrc and .gvimrc files, installs pathogen and a list of plugins.
