@@ -325,8 +325,12 @@ let g:netrw_list_hide=ghregex
 
 " ALE Settings
 if !empty(glob("~/.vim/bundle/ale"))
-  let g:ale_sign_error = '✗▶'
-  let g:ale_sign_warning = '△▶'
+  let g:ale_sign_error = '✗>'
+  let g:ale_sign_warning = '△>'
+  let g:ale_set_highlights = 1
+  highlight ALEWarning ctermbg=Blue
+  nnoremap <C-n> :ALENext<CR>
+  nnoremap <C-p> :ALEPrevious<CR>
 endif
 
 " GitGutter settings
