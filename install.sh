@@ -19,6 +19,9 @@
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
 set -Eeuo pipefail
 
+START_PATH=$(pwd)
+REPO_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+
 # Check for git
 gitStatus=$(command -v git)
 
@@ -33,31 +36,31 @@ then
 fi
 
 # Setup for a bash git-aware prompt
-if [ -d ~/.bash ]
+if [ -d "$HOME/.bash" ]
 then
-  echo "Found ~/.bash directory, checking for ~/.bash/git-aware-prompt"
-  if [ -d ~/.bash/git-aware-prompt ]
+  echo Found "$HOME/.bash directory, checking for $HOME/.bash/git-aware-prompt"
+  if [ -d "$HOME"/.bash/git-aware-prompt ]
   then
-    echo "Found ~/.bash/git-aware-prompt, updating..."
-    cd ~/.bash/git-aware-prompt
+    echo "Found $HOME/.bash/git-aware-prompt, updating..."
+    cd "$HOME"/.bash/git-aware-prompt
     git pull
-    cd
+    cd "$START_PATH"
     echo ""
   else
     echo "Didn't find git-aware-prompt,"
     echo "Cloning git://github.com/jimeh/git-aware-prompt.git"
-    cd ~/.bash
+    cd "$HOME/.bash"
     git clone git://github.com/jimeh/git-aware-prompt.git
     echo ""
-    cd
+    cd "$START_PATH"
   fi
 else
-  echo "No ~/.bash found, creating one..."
-  mkdir ~/.bash
-  cd ~/.bash
+  echo "No $HOME/.bash found, creating one..."
+  mkdir "$HOME/.bash"
+  cd "$HOME/.bash"
   git clone git://github.com/jimeh/git-aware-prompt.git
   echo ""
-  cd
+  cd "$START_PATH"
 fi
 
 
@@ -73,47 +76,50 @@ backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles
 backupDirectory="dotfile_backup.${currentDate}"
 
 # Dotfile backup
-mkdir ~/"$backupDirectory"
+mkdir "$HOME/$backupDirectory"
 
 echo "Backing up current dotfiles..."
 for i in "${backupFiles[@]}"
 do
-  if [ -f ~/"$i" ]
+  if [ -f "$HOME/$i" ]
   then
-    cp -pv ~/"$i" ~/"$backupDirectory"
+    cp -pv "$HOME/$i"  "$HOME/$backupDirectory"
   fi
 done
 echo ""
 
 # Set up bash
-echo "Setting up bash"
-echo "Creating ~/.bash_profile"
-cp -v ~/dotfiles/bash/.bash_profile_git ~/.bash_profile
+echo Setting up bash
+echo Creating "$HOME/.bash_profile"
+cp -v "$REPO_PATH/bash/.bash_profile_git"  "$HOME/.bash_profile"
 echo ""
-echo "Creating ~/.bashrc"
-cp -v ~/dotfiles/bash/.bashrc ~/.bashrc
+echo "Creating $HOME/.bashrc"
+cp -v "$REPO_PATH/bash/.bashrc" "$HOME/.bashrc"
 echo ""
-echo "Creating ~/.LESS_TERMCAP"
-cp -v ~/dotfiles/bash/.LESS_TERMCAP ~/
+echo Creating "$HOME/.LESS_TERMCAP"
+cp -v "$REPO_PATH/bash/.LESS_TERMCAP" "$HOME/"
 echo ""
 
 # Set up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
-  tmuxMajorVersion=""$(tmux"" -V|cut -d' ' -f 2|cut -d'.' -f 1)
-  echo "tmux major version: " "$tmuxMajorVersion"
+  tmuxMajorVersion=$(tmux -V|cut -d' ' -f 2|cut -d'.' -f 1)
+  echo "tmux major version: $tmuxMajorVersion"
 
   if [ "$tmuxMajorVersion" -gt 2 ]
   then
     echo "Tmux 3.x not supported yet"
   else
-    cp -v ~/dotfiles/tmux/.t* ~/
-    echo "** Reminder: Uncomment ~/.tmux.clipboard.conf for your OS"
+    for i in "${tmuxFiles[@]}"
+    do
+      cp -v "$REPO_PATH/tmux/$i" "$HOME/"
+    done
+    echo "** Reminder: Uncomment $HOME/.tmux.clipboard.conf for your OS"
   fi
   echo ""
-  # Instal tmux plugins
-  ~/dotfiles/tmux/plugin_install.sh
+  # Install tmux plugins
+  "$REPO_PATH/tmux/plugin_install.sh"
 fi
 
 # Tmux theme for Linux or WSL
@@ -123,26 +129,30 @@ then
   if grep -q Microsoft /proc/version
   then
     # WSL detected - yellow
-    cp -v ~/dotfiles/tmux/themes/yellow/.tmux* ~/
+    COLOR_SCHEME="yellow"
   else
     # This really is Linux - original
-    cp -v ~/dotfiles/tmux/themes/original/.tmux* ~/
+    COLOR_SCHEME="original"
   fi
 fi
+cp -v "$REPO_PATH/tmux/themes/$COLOR_SCHEME/"{.tmux.conf,.tmux-syncoff.conf} "$HOME/"
 
 # Set up Vim
 if command -v vim > /dev/null
 then
   # Copy .vimrc, .gvimrc
   echo "Setting up Vim"
-  cp -v ~/dotfiles/vim/{.vimrc,.gvimrc} ~/
+  cp -v "$REPO_PATH/vim/"{.vimrc,.gvimrc} "$HOME/"
   echo ""
   # Install Vim plug-ins
-  ~/dotfiles/vim/plugin_install.sh
+  "$REPO_PATH/vim/plugin_install.sh"
 fi
 
 # Set up w3m
 if command -v w3m > /dev/null
 then
-  cp -vr ~/dotfiles/.w3m ~/
+  cp -vr "$REPO_PATH/.w3m" "$HOME/"
 fi
+
+# Return to the start
+cd "$START_PATH"
