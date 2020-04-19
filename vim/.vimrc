@@ -31,7 +31,7 @@
 set nocompatible
 
 " Visual bell
-set vb
+set visualbell
 
 " Turn on the ruler
 set ruler
@@ -111,7 +111,7 @@ endif
 " Auto-create/auto-load views
 if !has("gui_running")
   let current_file = expand('%')
-  if !empty(current_file)
+  if !empty(current_file) || stridx(current_file, "NetrwTreeListing") == -1
     autocmd BufWinLeave *.* mkview
     autocmd BufWinEnter *.* silent loadview
   endif
@@ -159,7 +159,12 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 
 " Netrw will hide these
-let g:netrw_list_hide = "NTUSER.DAT,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
+let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
+
+" Netrw, stop complaining about unsaved hidden buffers
+" Thanks Brian Tiffin @ StackExchange:
+" https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
+autocmd FileType netrw setlocal bufhidden=delete
 
 " Function to toggle netrw for Vim 8+
 " Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
@@ -267,7 +272,7 @@ endif
 
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
-  color elflord
+  color xoria256
   highlight CursorLine term=bold cterm=bold ctermbg=238
   highlight CursorColumn ctermbg=238
   highlight ColorColumn ctermbg=236
@@ -329,7 +334,7 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
   if (colors_name == "xoria256")
     let g:gitgutter_override_sign_column_highlight = 1
     highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=233
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=233
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=4 ctermbg=233
     highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=233
   elseif (colors_name == "southernlights")
     let g:gitgutter_override_sign_column_highlight = 1
