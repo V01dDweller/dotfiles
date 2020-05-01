@@ -336,19 +336,16 @@ endif
 " GitGutter settings
 if !empty(glob("~/.vim/bundle/vim-gitgutter"))
   if (colors_name == "xoria256")
-    let g:gitgutter_override_sign_column_highlight = 1
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=233
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=4 ctermbg=233
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=233
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=233 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=233 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=233 " red _
   elseif (colors_name == "southernlights")
-    let g:gitgutter_override_sign_column_highlight = 1
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=240
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=3 ctermbg=240
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=240
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=240 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=240 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=240 " red _
   elseif (colors_name == "elflord")
-    let g:gitgutter_override_sign_column_highlight = 1
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=3
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 " red _
   endif
 endif
