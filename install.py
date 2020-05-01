@@ -4,8 +4,8 @@
 
     *** WARNING! - Use at your own risk ***
 
-    This script will install my dotfiles for bash, Vim, MinTTy Tmux, if it find
-    them. Backup files will be places in ~/dotfile_backups+date
+    This script will install my dotfiles for bash, Vim, MinTTy Tmux, if it
+    finds them. Backup files will be places in ~/dotfile_backups+date
 
     1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
     2. Copy any dot file it will replace into that directory
