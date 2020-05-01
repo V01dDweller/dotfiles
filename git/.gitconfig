@@ -1,21 +1,24 @@
 [diff]
-	tool = vimdiff
+        tool = vimdiff
 [difftool "vimdiff"]
-	tool = vimdiff
+        tool = vimdiff
 [difftool]
-	prompt = false
+        prompt = false
 [pager]
-	diff = false
+        diff = false
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+        tool = vimdiff
+        conflictstyle = diff3
 [mergetool "vimdiff"]
-	tool = vimdiff
+        tool = vimdiff
 [mergetool]
-	prompt = false
+        prompt = false
 [alias]
         log1 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
         log2 = log --pretty=format:\"%C(auto)%h%C(bold blue)%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --graph --date short
         log3 = log --pretty=format:\"%C(auto)%h%C(bold blue)%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --date short --name-only
         log4 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
         log5 = log --pretty=format:\"%C(auto)%h%C(bold blue)%x09%an%x09%Creset%ad%x09%Cgreen%s\" --decorate --graph --date short -p
+        # Thanks to
+        # https://superuser.com/questions/699094/how-can-i-visualize-git-flow-branches
+        lg = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
