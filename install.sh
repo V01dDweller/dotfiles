@@ -28,8 +28,8 @@ gitStatus=$(command -v git)
 if [ -z "$gitStatus" ]
 then
   echo "========================================================="
-  echo "   Git is not installed or is not in your \$PATH"
-  echo "   Please install git or fix your \$PATH and try again"
+  echo "   Git is not installed or is not in your $PATH"
+  echo "   Please install git or fix your $PATH and try again"
   echo "========================================================="
   echo ""
   exit 0
