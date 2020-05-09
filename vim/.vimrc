@@ -333,6 +333,9 @@ if !empty(glob("~/.vim/bundle/ale"))
   nnoremap <C-p> :ALEPrevious<CR>
 endif
 
+" Disable linting for Java
+let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
+
 " GitGutter settings
 if !empty(glob("~/.vim/bundle/vim-gitgutter"))
   if (colors_name == "xoria256")
