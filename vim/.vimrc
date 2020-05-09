@@ -360,3 +360,6 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     highlight GitGutterDelete guifg=#ff2222 ctermfg=1 " red _
   endif
 endif
+
+" Vagrantfiles need ruby syntax
+au BufRead,BufNewFile Vagrantfile setfiletype ruby
