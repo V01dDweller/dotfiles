@@ -342,6 +342,14 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=233 " green +
     highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=233 " cyan ~
     highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=233 " red _
+  elseif (colors_name == "atom-dark-256")
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=235 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=235 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=235 " red _
+  elseif (colors_name == "hybrid")
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=234 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=234 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=234 " red _
   elseif (colors_name == "southernlights")
     highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=240 " green +
     highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=240 " cyan ~
