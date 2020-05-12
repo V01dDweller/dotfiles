@@ -8,6 +8,7 @@
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 #  Minimap           - A Sublime-like minimap         - https://github.com/dpc/vim-minimap
+#  nginx.vim.        - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
 #  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
@@ -56,6 +57,7 @@ export PLUGINS="\
   tpope/vim-vinegar\
   juneedahamed/svnj.vim \
   vim-scripts/delview \
+  chr4/nginx.vim \
   "
 
 if [ -d ~/.vim/bundle ]
