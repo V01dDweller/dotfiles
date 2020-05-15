@@ -33,6 +33,11 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export TERM=xterm-256color
 umask 027
 
+# Colors
+
+gray=`tput setaf 8`
+reset=`tput sgr0`
+
 # Git-aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
@@ -105,5 +110,5 @@ function myprompt() {
   do
     HR="${HR}─"
   done
-  PS1="$HR\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
+  PS1="$gray$HR$reset\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 }
