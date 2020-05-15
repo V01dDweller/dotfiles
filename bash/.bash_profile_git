@@ -92,4 +92,14 @@ if [[ $EUID -eq 0 ]]; then
    usercolor=$bldred
 fi
 
-PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+#PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+
+# Fancy prompt
+PROMPT_COMMAND=myprompt
+function myprompt() {
+  HR=""
+  for (( i=1; i<=COLUMNS; i++ ))
+  do
+    HR="${HR}─"
+  done
+  PS1="$HR\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
