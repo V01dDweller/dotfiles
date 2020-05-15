@@ -108,7 +108,7 @@ function myprompt() {
   HR=""
   for (( i=1; i<=COLUMNS; i++ ))
   do
-    HR="${HR}─"
+    HR="${HR}┄"
   done
   PS1="$gray$HR$reset\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 }
