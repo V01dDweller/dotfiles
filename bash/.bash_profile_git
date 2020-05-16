@@ -101,14 +101,15 @@ pathcolor=$bldblu
 
 # My old prompt
 #PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+PS1="\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 
 # Fancy prompt
-PROMPT_COMMAND="myprompt;$PROMPT_COMMAND"
-function myprompt() {
-  HR=""
-  for (( i=1; i<=COLUMNS; i++ ))
-  do
-    HR="${HR}┄"
-  done
-  PS1="$gray$HR$reset\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
-}
+#PROMPT_COMMAND="myprompt;$PROMPT_COMMAND"
+#function myprompt() {
+#  HR=""
+#  for (( i=1; i<=COLUMNS; i++ ))
+#  do
+#    HR="${HR}┄"
+#  done
+#  PS1="$gray$HR$reset\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
+#}
