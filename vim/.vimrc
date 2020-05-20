@@ -432,10 +432,10 @@ au BufRead,BufNewFile Vagrantfile setfiletype ruby
 
 " Auto-folding
 " Credit - https://www.reddit.com/r/vim/comments/7boh5s/dyk_folds_can_automatically_open_and_close/
-set foldclose=all
-set foldcolumn=1
-set foldenable
-set foldlevel=0
-set foldmethod=syntax
-set foldnestmax=1
-set foldopen=all
+" set foldclose=all
+" set foldcolumn=1
+" set foldenable
+" set foldlevel=0
+" set foldmethod=syntax
+" set foldnestmax=1
+" set foldopen=all
