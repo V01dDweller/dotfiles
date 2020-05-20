@@ -273,7 +273,6 @@ endif
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
   color southernlights
-
   highlight CursorLine term=bold cterm=bold ctermbg=238
   highlight CursorColumn ctermbg=238
   highlight ColorColumn ctermbg=236
@@ -326,8 +325,8 @@ let g:netrw_list_hide=ghregex
 
 " ALE Icons and highlights
 if !empty(glob("~/.vim/bundle/ale"))
-  let g:ale_sign_error = '●▐'
-  let g:ale_sign_warning = '▲▐'
+  let g:ale_sign_error = '●'
+  let g:ale_sign_warning = '▲'
   let g:ale_set_highlights = 1
   nnoremap <C-n> :ALENext<CR>
   nnoremap <C-p> :ALEPrevious<CR>
@@ -390,6 +389,7 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=239 " red _
     highlight CursorLine term=bold cterm=bold ctermbg=234
     highlight CursorColumn ctermbg=234
+    hi Folded ctermbg=235 ctermfg=gray
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
@@ -429,3 +429,13 @@ endif
 
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
+
+" Auto-folding
+" Credit - https://www.reddit.com/r/vim/comments/7boh5s/dyk_folds_can_automatically_open_and_close/
+set foldclose=all
+set foldcolumn=1
+set foldenable
+set foldlevel=0
+set foldmethod=syntax
+set foldnestmax=1
+set foldopen=all
