@@ -7,29 +7,26 @@
 # 3. Restore the originals from ~/dotfile.backups
 ########################################################################
 
-todaysDate=`date +%Y-%m-%d`
-systemInfo=`uname`
-
 bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
 deleteFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 
-export last_backup=`ls -rd ~/dotfile_backup* 2>/dev/null| head -n 1`
+last_backup=$(find ~ type d -iname "dotfile_backup*" | head -n 1)
 if [ -z "$last_backup" ]
 then
   echo "No backups found"
 else
-  export last_backup=`basename $last_backup`
-  export backup_date=`echo $last_backup|cut -d'.' -f 2|cut -d'_' -f 1`
+  last_backup=$(basename "$last_backup")
+  backup_date=$(echo "$last_backup" | cut -d'.' -f 2|cut -d'_' -f 1)
   echo "Restore backups from $backup_date?"
 fi
 exit 0
 
 until [[ $deleteAll =~ ^[YyNn]$ ]]
 do
-  read -n 1 -p "Are you sure you want to delete all dotfiles? (y/n): " deleteAll
+  read -rn 1 -p "Are you sure you want to delete all dotfiles? (y/n): " deleteAll
   echo ""
 done
 
@@ -43,9 +40,9 @@ else
   echo "Deleting current dotfiles..."
   for i in "${deleteFiles[@]}"
   do
-    if [ -f ~/$i ]
+    if [ -f ~/"$i" ]
     then
-      rm -vf ~/$i
+      rm -vf ~/"$i"
     fi
   done
   echo ""
@@ -53,8 +50,8 @@ fi
 
 # Restore backed up dotfiles
 echo "Restoring backups"
-for i in `ls -a ~/dotfiles.backup/| egrep -v "^.$|^..$"`
+for i in $(ls -a ~/dotfiles.backup/| egrep -v "^.$|^..$")
 do
-  cp -v ~/dotfiles.backup/$i ~/
+  cp -v ~/dotfiles.backup/"$i" ~/
 done
 echo ""
