@@ -339,7 +339,8 @@ if !empty(glob("~/.vim/bundle/ale"))
 endif
 
 " Disable linting for Java
-let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
+" Recommend installing checkstyle, otherwise java linting gets weird
+"let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
 
 " Match GitGutter and ALE colors to active color scheme
 if !empty(glob("~/.vim/bundle/vim-gitgutter"))
