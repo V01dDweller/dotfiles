@@ -388,6 +388,7 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=239 " cyan ~
     highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=239 " red _
     highlight CursorLine term=bold cterm=bold ctermbg=234
+    highlight CursorLineNr term=bold cterm=bold ctermfg=yellow gui=bold
     highlight CursorColumn ctermbg=234
     hi Folded ctermbg=235 ctermfg=gray
     if !empty(glob("~/.vim/bundle/ale"))
