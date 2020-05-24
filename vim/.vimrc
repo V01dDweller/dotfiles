@@ -264,6 +264,11 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   execute pathogen#infect()
 endif
 
+" Fugitive statusline
+if !empty(glob("~/.vim/bundle/vim-fugitive"))
+  set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
+endif
+
 " svnj settings
 if !empty(glob("~/.vim/bundle/svnj.vim"))
   let g:svnj_custom_statusbar_ops_hide = 1
