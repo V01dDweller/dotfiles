@@ -262,6 +262,7 @@ filetype plugin on
 " Load Pathogen, if this is the cli and it's there
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   execute pathogen#infect()
+  Helptags
 endif
 
 " Fugitive statusline
