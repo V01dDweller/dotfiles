@@ -21,6 +21,15 @@ alias tree="tree -C --dirsfirst -I '.git|.svn|.pki'"
 # Teminal color
 export TERM=xterm-256color
 
+# Fuzzy finder with bat preview
+if command -v fzf > /dev/null
+then
+  if command -v bat > /dev/null
+  then
+    alias fzf="fzf --preview 'bat --style=numbers --color=always {} | head -500'"
+  fi
+fi
+
 # Mintty color schemes
 if [ -f "${HOME}/.bash_mintty_colors" ]
 then
