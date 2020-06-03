@@ -59,10 +59,10 @@ case $OSTYPE in
     export usercolor=$bldylw
     export hostcolor=$txtgrn
     ;;
-  darwin)
+  darwin19.4.0)
     # MacOS
-    export usercolor=$bldylw
-    export hostcolor=$txtgrn
+    export usercolor=$txtcyn
+    export hostcolor=$txtpur
     ;;
   linux-gnu)
     if grep -q Microsoft /proc/version
