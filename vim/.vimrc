@@ -50,7 +50,7 @@ if has("wildmenu")
   set wildmode=longest,list
 endif
 
-" Add dictionaty completion when spell is on
+" Add dictionary completion when spell is on
 set complete+=kspell
 
 " Set path auto-complete to be like bash
@@ -277,7 +277,7 @@ if !empty(glob("~/.vim/bundle/svnj.vim"))
 endif
 
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
-if !has('gui_running') && !empty(glob("~/.vim/bundle/vim256-color"))
+if !has('gui_running') && !empty(glob("~/.vim/colors/southernlights.vim"))
   color southernlights
   highlight CursorLine term=bold cterm=bold ctermbg=238
   highlight CursorColumn ctermbg=238
