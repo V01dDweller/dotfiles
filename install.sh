@@ -122,6 +122,7 @@ then
   "$REPO_PATH/tmux/plugin_install.sh"
 fi
 
+COLOR_SCHEME="original"
 # Tmux theme for Linux or WSL
 if [ "$OSTYPE" == "linux-gnu" ]
 then
