@@ -112,7 +112,7 @@ COLOR_SCHEMES = [
     '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
     ]
 
-print (MAGENTA + 'Downloading color schemes' + RESET)
+print (MAGENTA + 'Updating color schemes' + RESET)
 for i in COLOR_SCHEMES:
     COLOR_FILE = os.path.basename(i)
     COLOR_PATH = (COLOR_DIR + '/' + COLOR_FILE)
