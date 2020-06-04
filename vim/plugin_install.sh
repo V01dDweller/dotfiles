@@ -6,12 +6,12 @@
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
+#  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
+#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
 #  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 #  nginx.vim         - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 #  numbertoggle       - Autoswitch number modes        - https://github.com/jeffkreeftmeijer/vim-numbertoggle
 #  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
-#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
-#  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
 #  Vinegar           - Better netrw?                  - https://github.com/tpope/vim-vinegar
 
 # Bash scripting tweaks credit:
@@ -88,13 +88,13 @@ then
 fi
 
 COLOR_SCHEMES=(
-  "/vim-scripts/xoria256.vim/master/colors/xoria256.vim"
-  "/jalvesaq/southernlights/master/colors/southernlights.vim"
-  "/dracula/vim/master/colors/dracula.vim"
-  "/morhetz/gruvbox/master/colors/gruvbox.vim"
-  "/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim"
   "/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim"
+  "/dracula/vim/master/colors/dracula.vim"
+  "/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim"
+  "/jalvesaq/southernlights/master/colors/southernlights.vim"
   "/micke/vim-hybrid/master/colors/hybrid.vim"
+  "/morhetz/gruvbox/master/colors/gruvbox.vim"
+  "/vim-scripts/xoria256.vim/master/colors/xoria256.vim"
   )
 
 for i in "${COLOR_SCHEMES[@]}"
