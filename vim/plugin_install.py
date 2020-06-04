@@ -7,14 +7,13 @@
 #  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 #  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
 #  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
-#  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
-#  Minimap           - A Sublime-like minimap         - https://github.com/dpc/vim-minimap
-#  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
-#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
-#  SVNJ              - SVN integration                - https://github.com/juneedahamed/svnj.vim
 #  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
+#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
+#  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
+#  nginx.vim         - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
+#  numbertoggle       - Autoswitch number modes        - https://github.com/jeffkreeftmeijer/vim-numbertoggle
+#  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 #  Vinegar           - Better netrw?                  - https://github.com/tpope/vim-vinegar
-#  vim256-color      - Too many color schemes         - https://github.com/noah/vim256-color
 
 import os
 import urllib.request
@@ -69,12 +68,12 @@ VIM_PLUGINS = [
         'pearofducks/ansible-vim',
         'chrisbra/Colorizer',
         'airblade/vim-gitgutter',
-        'dpc/vim-minimap',
         'PProvost/vim-ps1',
         'tpope/vim-fugitive',
         'tpope/vim-vinegar',
-        'juneedahamed/svnj.vim',
-        'vim-scripts/delview'
+        'chr4/nginx.vim',
+        'vim-scripts/delview',
+        'jeffkreeftmeijer/vim-numbertoggle'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())
@@ -97,25 +96,27 @@ if os.path.exists(BUNDLE_DIR):
             print(' ')
     os.chdir(START_DIR)
 
-# Install vim256-color colorschemes
-COLOR_DIR = (BUNDLE_DIR + '/vim256-color')
-DESIRE_COLORS = ''
-PROMT_FOR_COLOR = 'Install Vim color schemes?  (skip if you\'re in a hurry) (y/n): '
-while DESIRE_COLORS not in ('Y', 'y', 'N', 'n'):
-    DESIRE_COLORS = input(YELLOW + PROMT_FOR_COLOR + RESET)
-    if DESIRE_COLORS in ('Y', 'y'):
-        os.chdir(BUNDLE_DIR)
-        print('Yay! Color!\n')
-        if not os.path.exists(COLOR_DIR):
-            print('Cloning color schemes, this will take some time...')
-            os.system('git clone --recursive git://github.com/noah/vim256-color.git ')
-        else:
-            print('Colors already installed, updating...')
-            os.chdir(COLOR_DIR)
-            os.system('git pull')
-    elif DESIRE_COLORS in ('N', 'n'):
-        print('Another time, perhaps')
-        break
-    else:
-        print(YELLOW + 'Please answer "y" or "n"' + RESET)
-    os.chdir(START_DIR)
+# Install colorschemes from Github
+COLOR_DIR = (VIM_DIR + '/colors')
+if not os.path.exists(COLOR_DIR):
+    print('Creating ' + CYAN + COLOR_DIR + RESET + '\n')
+    os.mkdir(COLOR_DIR)
+
+COLOR_SCHEMES = [
+    '/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim',
+    '/dracula/vim/master/colors/dracula.vim',
+    '/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim',
+    '/jalvesaq/southernlights/master/colors/southernlights.vim',
+    '/micke/vim-hybrid/master/colors/hybrid.vim',
+    '/morhetz/gruvbox/master/colors/gruvbox.vim',
+    '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
+    ]
+
+print (MAGENTA + 'Downloading color schemes' + RESET)
+for i in COLOR_SCHEMES:
+    COLOR_FILE = os.path.basename(i)
+    COLOR_PATH = (COLOR_DIR + '/' + COLOR_FILE)
+    if not os.path.exists(COLOR_PATH):
+        print('Downloading ' + GREEN + COLOR_FILE + RESET )
+        COLOR_URL = ('https://raw.githubusercontent.com'+i)
+        urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
