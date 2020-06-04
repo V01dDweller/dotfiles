@@ -391,9 +391,9 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
       highlight ALEErrorSign ctermbg=234 ctermfg=Red
     endif
   elseif (colors_name == "southernlights")
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=239 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=239 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=239 " red _
+    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=240 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=240 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=240 " red _
     highlight CursorLine term=bold cterm=bold ctermbg=234
     highlight CursorLineNr term=bold cterm=bold ctermfg=yellow gui=bold
     highlight CursorColumn ctermbg=234
