@@ -109,6 +109,7 @@ COLOR_SCHEMES = [
     '/jalvesaq/southernlights/master/colors/southernlights.vim',
     '/micke/vim-hybrid/master/colors/hybrid.vim',
     '/morhetz/gruvbox/master/colors/gruvbox.vim',
+    '/tomasr/molokai/master/colors/molokai.vim',
     '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
     ]
 
