@@ -21,13 +21,13 @@ Plug-ins
 Color Schemes
 -------------
 
+1. atom-dark-256
 1. bubblegum-256-dark
 1. dracula
-1. atom-dark-256
-1. southernlights
-1. hybrid
 1. gruvbox
+1. hybrid
 1. molokai
+1. southernlights
 1. xoria256
 
 #### Installation ####
