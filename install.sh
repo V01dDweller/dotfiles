@@ -22,15 +22,15 @@ START_PATH=$(pwd)
 REPO_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Colors
-red=`tput setaf 1`
-green=`tput setaf 2`
-yellow=`tput setaf 3`
-blue=`tput setaf 4`
-purple=`tput setaf 5`
-cyan=`tput setaf 6`
-white=`tput setaf 7`
-orange=`tput setaf 208`
-reset=`tput sgr0`
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+purple=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+orange=$(tput setaf 208)
+reset=$(tput sgr0)
 
 # Check for git
 gitStatus=$(command -v git)
