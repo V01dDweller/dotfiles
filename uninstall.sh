@@ -7,16 +7,31 @@
 # 3. Restore the originals from ~/dotfile.backups
 ########################################################################
 
+# Bash scripting tweaks credit:
+#   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
+set -Eeuo pipefail
+
+# Colors
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+yellow=$(tput setaf 3)
+blue=$(tput setaf 4)
+purple=$(tput setaf 5)
+cyan=$(tput setaf 6)
+white=$(tput setaf 7)
+orange=$(tput setaf 208)
+reset=$(tput sgr0)
+
 bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
 deleteFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 
-last_backup=$(find ~ type d -iname "dotfile_backup*" | head -n 1)
+last_backup=$(find ~ -type d -iname "dotfile_backup*" | head -n 1)
 if [ -z "$last_backup" ]
 then
-  echo "No backups found"
+  echo "$green"No backups found"$reset"
 else
   last_backup=$(basename "$last_backup")
   backup_date=$(echo "$last_backup" | cut -d'.' -f 2|cut -d'_' -f 1)
@@ -26,7 +41,9 @@ exit 0
 
 until [[ $deleteAll =~ ^[YyNn]$ ]]
 do
+  echo "$red"
   read -rn 1 -p "Are you sure you want to delete all dotfiles? (y/n): " deleteAll
+  echo "$reset"
   echo ""
 done
 
