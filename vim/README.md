@@ -29,7 +29,7 @@ Color Schemes
 1. gruvbox
 1. molokai
 1. xoria256
-1. 
+
 #### Installation ####
 
 1. Clone this repo
