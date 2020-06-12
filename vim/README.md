@@ -30,7 +30,8 @@ Color Schemes
 1. southernlights
 1. xoria256
 
-#### Installation ####
+Installation
+------------
 
 1. Clone this repo
 1. Copy (or link) the rc files
