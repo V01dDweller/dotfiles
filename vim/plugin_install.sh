@@ -2,17 +2,18 @@
 
 # Install/update my favorite plug-ins via pathogen/git
 
-#  ALE               - Asynchronous Linting Engine    - https://github.com/dense-analysis/ale
-#  ansible-vim       - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
-#  AnsiEsc           - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
-#  Colorizer         - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
-#  Delview           - Delete saved views             - https://github.com/vim-scripts/delview
-#  Fugitive          - Git integration                - https://github.com/tpope/vim-fugitive
-#  git-gutter        - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
-#  nginx.vim         - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
-#  numbertoggle       - Autoswitch number modes        - https://github.com/jeffkreeftmeijer/vim-numbertoggle
-#  PS1               - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
-#  Vinegar           - Better netrw?                  - https://github.com/tpope/vim-vinegar
+# - Asynchronous Linting Engine    - https://github.com/dense-analysis/ale
+# - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
+# - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
+# - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
+# - Delete saved views             - https://github.com/vim-scripts/delview
+# - Git integration                - https://github.com/tpope/vim-fugitive
+# - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
+# - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
+# - Autoswitch number modes        - https://github.com/jeffkreeftmeijer/vim-numbertoggle
+# - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
+# - Better netrw?                  - https://github.com/tpope/vim-vinegar
+# - Dracula color scheme           - https://github.com/dracula/vim
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
@@ -54,6 +55,7 @@ export PLUGINS="\
   vim-scripts/delview \
   chr4/nginx.vim \
   jeffkreeftmeijer/vim-numbertoggle \
+  dracula/vim \
   "
 
 if [ -d ~/.vim/bundle ]
@@ -89,7 +91,6 @@ fi
 
 COLOR_SCHEMES=(
   "/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim"
-  "/dracula/vim/master/colors/dracula.vim"
   "/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim"
   "/jalvesaq/southernlights/master/colors/southernlights.vim"
   "/micke/vim-hybrid/master/colors/hybrid.vim"
