@@ -17,13 +17,13 @@ Plug-ins
 1. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
 1. [vim256](https://github.com/noah/vim256-color) - Too many color schemes
 1. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
+1. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
 
 Color Schemes
 -------------
 
 1. atom-dark-256
 1. bubblegum-256-dark
-1. dracula
 1. gruvbox
 1. hybrid
 1. molokai
