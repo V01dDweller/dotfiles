@@ -401,8 +401,8 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=239 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=239 ctermfg=Red
+      highlight ALEWarningSign ctermbg=240 ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=240 ctermfg=Red
     endif
   elseif (colors_name == "dracula")
     highlight CursorLine term=bold cterm=bold ctermbg=234
