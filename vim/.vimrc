@@ -270,12 +270,6 @@ if !empty(glob("~/.vim/bundle/vim-fugitive"))
   set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
 endif
 
-" svnj settings
-if !empty(glob("~/.vim/bundle/svnj.vim"))
-  let g:svnj_custom_statusbar_ops_hide = 1
-  let g:svnj_browse_cache_all = 1
-endif
-
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/colors/southernlights.vim"))
   color southernlights
