@@ -114,11 +114,11 @@ COLOR_SCHEMES = [
     '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
     ]
 
-print (MAGENTA + 'Updating color schemes' + RESET)
+print(MAGENTA + 'Updating color schemes' + RESET)
 for i in COLOR_SCHEMES:
     COLOR_FILE = os.path.basename(i)
     COLOR_PATH = (COLOR_DIR + '/' + COLOR_FILE)
     if not os.path.exists(COLOR_PATH):
-        print('Downloading ' + GREEN + COLOR_FILE + RESET )
+        print('Downloading ' + GREEN + COLOR_FILE + RESET)
         COLOR_URL = ('https://raw.githubusercontent.com'+i)
         urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
