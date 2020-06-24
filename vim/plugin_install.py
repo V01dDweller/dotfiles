@@ -74,7 +74,8 @@ VIM_PLUGINS = [
         'tpope/vim-vinegar',
         'chr4/nginx.vim',
         'vim-scripts/delview',
-        'jeffkreeftmeijer/vim-numbertoggle'
+        'jeffkreeftmeijer/vim-numbertoggle',
+        'dracula/vim'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())
