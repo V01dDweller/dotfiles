@@ -11,7 +11,6 @@
 # - Git integration                - https://github.com/tpope/vim-fugitive
 # - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
-# - Autoswitch number modes        - https://github.com/jeffkreeftmeijer/vim-numbertoggle
 # - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
 # - Dracula color scheme           - https://github.com/dracula/vim
@@ -74,7 +73,6 @@ VIM_PLUGINS = [
         'tpope/vim-vinegar',
         'chr4/nginx.vim',
         'vim-scripts/delview',
-        'jeffkreeftmeijer/vim-numbertoggle',
         'dracula/vim'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
