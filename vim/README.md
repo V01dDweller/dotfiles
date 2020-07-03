@@ -1,4 +1,4 @@
-Vim/Gvim
+Vim/GVim
 ========
 
 The plugin\_install script installs the Pathogen plug-in manager, a collection
