@@ -101,12 +101,12 @@ if not os.path.exists(COLOR_DIR):
     os.mkdir(COLOR_DIR)
 
 COLOR_SCHEMES = [
-    '/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim',
     '/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim',
-    '/jalvesaq/southernlights/master/colors/southernlights.vim',
-    '/micke/vim-hybrid/master/colors/hybrid.vim',
+    '/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim',
     '/morhetz/gruvbox/master/colors/gruvbox.vim',
+    '/micke/vim-hybrid/master/colors/hybrid.vim',
     '/tomasr/molokai/master/colors/molokai.vim',
+    '/jalvesaq/southernlights/master/colors/southernlights.vim',
     '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
     ]
 
