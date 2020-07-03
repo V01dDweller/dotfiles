@@ -4,11 +4,11 @@
 
 # - Asynchronous Linting Engine    - https://github.com/dense-analysis/ale
 # - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
-# - Convert ASCII escapes to color - https://github.com/vim-scripts/AnsiEsc.vim
+# - AnsiEsc                        - https://github.com/vim-scripts/AnsiEsc.vim
 # - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
 # - Delete saved views             - https://github.com/vim-scripts/delview
-# - Git integration                - https://github.com/tpope/vim-fugitive
-# - Shows a git diff in the gutter - https://github.com/airblade/vim-gitgutter
+# - Fugitive                       - https://github.com/tpope/vim-fugitive
+# - Git Gutter                     - https://github.com/airblade/vim-gitgutter
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 # - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
