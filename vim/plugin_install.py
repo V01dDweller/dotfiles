@@ -12,6 +12,7 @@
 # - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
 # - Dracula color scheme           - https://github.com/dracula/vim
+# - Vim airline                    - https://github.com/vim-airline/vim-airline
 
 import os
 import urllib.request
@@ -71,7 +72,8 @@ VIM_PLUGINS = [
         'tpope/vim-vinegar',
         'chr4/nginx.vim',
         'vim-scripts/delview',
-        'dracula/vim'
+        'dracula/vim',
+        'vim-airline/vim-airline'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())

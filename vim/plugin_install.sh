@@ -13,6 +13,7 @@
 # - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
 # - Dracula color scheme           - https://github.com/dracula/vim
+# - Vim airline                    - https://github.com/vim-airline/vim-airline
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
@@ -54,6 +55,7 @@ export PLUGINS="\
   vim-scripts/delview \
   chr4/nginx.vim \
   dracula/vim \
+  vim-airline/vim-airline \
   "
 
 if [ -d ~/.vim/bundle ]
