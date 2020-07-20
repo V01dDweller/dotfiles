@@ -426,3 +426,6 @@ endif
 
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
+
+" Vim-airline replace file encoding info with buffer number
+:let g:airline_section_y = 'bn: %{bufnr("%")}'
