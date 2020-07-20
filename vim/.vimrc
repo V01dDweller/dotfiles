@@ -265,11 +265,6 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   Helptags
 endif
 
-" Fugitive statusline
-if !empty(glob("~/.vim/bundle/vim-fugitive"))
-  set statusline=%<%f\ %h%m%r%{FugitiveStatusline()}%=%-14.(%l,%c%V%)\ %P
-endif
-
 " Color Scheme with matching Cursorline CursorColumn and colorcolumn
 if !has('gui_running') && !empty(glob("~/.vim/colors/southernlights.vim"))
   color southernlights
