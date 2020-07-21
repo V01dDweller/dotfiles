@@ -53,6 +53,9 @@ endif
 " Add dictionary completion when spell is on
 set complete+=kspell
 
+" Use US English for spell check
+set spelllang=en_us
+
 " Set path auto-complete to be like bash
 set wildmode=list:longest
 
