@@ -65,6 +65,7 @@ VIM_PLUGINS = [
         'dense-analysis/ale',
         'vim-scripts/AnsiEsc.vim',
         'pearofducks/ansible-vim',
+        'vim-airline/vim-airline',
         'chrisbra/Colorizer',
         'airblade/vim-gitgutter',
         'PProvost/vim-ps1',
@@ -72,8 +73,7 @@ VIM_PLUGINS = [
         'tpope/vim-vinegar',
         'chr4/nginx.vim',
         'vim-scripts/delview',
-        'dracula/vim',
-        'vim-airline/vim-airline'
+        'dracula/vim'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())

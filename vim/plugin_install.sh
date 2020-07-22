@@ -47,6 +47,7 @@ export PLUGINS="\
   dense-analysis/ale \
   vim-scripts/AnsiEsc.vim \
   pearofducks/ansible-vim \
+  vim-airline/vim-airline \
   chrisbra/Colorizer \
   airblade/vim-gitgutter \
   PProvost/vim-ps1 \
@@ -55,7 +56,6 @@ export PLUGINS="\
   vim-scripts/delview \
   chr4/nginx.vim \
   dracula/vim \
-  vim-airline/vim-airline \
   "
 
 if [ -d ~/.vim/bundle ]
