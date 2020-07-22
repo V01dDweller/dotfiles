@@ -43,9 +43,9 @@ dotfiles/
 │   ├── plugin_install.sh       # Install Tmux Plugin Manager (tpm) and tmc for clusterssh
 │   ├── .tmux-cssh              ## This is missing!## - optional, used to change tmc ssh command
 │   ├── .tmux.clipboard.conf    # Cliboard integration for Cygwin, Linux and MacOS
-│   ├── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf 
-│   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e 
-│   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E  
+│   ├── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf
+│   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
+│   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
 │   └── themes
 │       ├── green
 │       │   ├── .tmux.conf
@@ -111,4 +111,3 @@ Installation
 git clone https://github.com/V01dDweller/dotfiles.git
 ./dotfiles/install.sh
 ```
-
