@@ -10,14 +10,15 @@ Plug-ins
  1. [ALE](https://github.com/w0rp/ale) - Asynchronous Linting Engine
  2. [ansible](https://github.com/pearofducks/ansible-vim) - Ansible syntax highlighting
  3. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Convert ASCII escapes to color
- 4. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
- 5. [Delview](https://github.com/vim-scripts/delview) - Delete saved views
- 6. [Fugitive](https://github.com/tpope/vim-fugitive) - Git integration
- 7. [git-gutter](https://github.com/airblade/vim-gitgutter) - Shows git changes in the gutter
- 8. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
- 9. [vim256](https://github.com/noah/vim256-color) - Too many color schemes
-10. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
-11. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
+ 4. [Airline](https://github.com/vim-airline/vim-airline) - Enhanced always on-status line
+ 5. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
+ 6. [Delview](https://github.com/vim-scripts/delview) - Delete saved views
+ 7. [Fugitive](https://github.com/tpope/vim-fugitive) - Git integration
+ 8. [git-gutter](https://github.com/airblade/vim-gitgutter) - Shows git changes in the gutter
+ 9. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
+10. [vim256](https://github.com/noah/vim256-color) - Too many color schemes
+11. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
+12. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
 
 Color Schemes
 -------------
