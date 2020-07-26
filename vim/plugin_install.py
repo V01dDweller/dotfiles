@@ -13,6 +13,8 @@
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Vim airline                    - https://github.com/vim-airline/vim-airline
+# - tmuxline                       - https://github.com/edkolev/tmuxline.vim
+# - promptline                     - https://github.com/edkolev/promptline.vim
 
 import os
 import urllib.request
@@ -74,6 +76,8 @@ VIM_PLUGINS = [
         'chr4/nginx.vim',
         'vim-scripts/delview',
         'dracula/vim'
+        'edkolev/tmuxline.vim',
+        'edkolev/promptline.vim'
         ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())

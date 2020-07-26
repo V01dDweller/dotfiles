@@ -14,6 +14,8 @@
 # - Better netrw?                  - https://github.com/tpope/vim-vinegar
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Vim airline                    - https://github.com/vim-airline/vim-airline
+# - tmuxline                       - https://github.com/edkolev/tmuxline.vim
+# - promptline                     - https://github.com/edkolev/promptline.vim
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
@@ -56,6 +58,8 @@ export PLUGINS="\
   vim-scripts/delview \
   chr4/nginx.vim \
   dracula/vim \
+  edkolev/tmuxline.vim \
+  edkolev/promptline.vim
   "
 
 if [ -d ~/.vim/bundle ]
