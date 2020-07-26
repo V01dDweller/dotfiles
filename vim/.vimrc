@@ -401,14 +401,14 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     highlight CursorColumn ctermbg=234
     highlight ColorColumn ctermbg=241
     highlight CursorLineNr term=bold cterm=bold  gui=bold
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=black " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=black " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=black " red _
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=236 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=236 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=236 " red _
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=black ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=black ctermfg=Red
+      highlight ALEWarningSign ctermbg=236 ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=236 ctermfg=Red
     endif
   elseif (colors_name == "elflord")
     highlight CursorLine term=bold cterm=bold ctermbg=darkblue
