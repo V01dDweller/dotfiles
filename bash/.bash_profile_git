@@ -1,4 +1,4 @@
-# .bash_profile
+#!/usr/bin/env bash
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
@@ -46,50 +46,50 @@ source "${GITAWAREPROMPT}/main.sh"
 case $OSTYPE in
   aix)
     # AIX
-    export usercolor=$bldylw
-    export hostcolor=$txtblu
+    usercolor=$bldylw
+    hostcolor=$txtblu
     ;;
   bsd|freebsd)
     # BSD, FreeBSD
-    export usercolor=$bldylw
-    export hostcolor=$txtgrn
+    usercolor=$bldylw
+    hostcolor=$txtgrn
     ;;
   cygwin)
     # Cygwin
-    export usercolor=$bldylw
-    export hostcolor=$txtgrn
+    usercolor=$bldylw
+    hostcolor=$txtgrn
     ;;
   darwin19.4.0)
     # MacOS
-    export usercolor=$txtcyn
-    export hostcolor=$txtpur
+    usercolor=$txtcyn
+    hostcolor=$txtpur
     ;;
   linux-gnu)
     if grep -q Microsoft /proc/version
     then
       # WSL detected
-      export usercolor=$bldylw
-      export hostcolor=$bldylw
+      usercolor=$bldylw
+      hostcolor=$bldylw
     else
       # Linux
-      export usercolor=$bldylw
-      export hostcolor=$bldcyn
+      usercolor=$bldylw
+      hostcolor=$bldcyn
     fi
     ;;
   msys)
     # MinGW/GitBash
-    export usercolor=$bldylw
-    export hostcolor=$bldgrn
+    usercolor=$bldylw
+    hostcolor=$bldgrn
     ;;
   solaris)
     # Solaris
-    export usercolor=$bldylw
-    export hostcolor=$bldred
+    usercolor=$bldylw
+    hostcolor=$bldred
     ;;
   *)
     # Anything else
-    export usercolor=$bldylw
-    export hostcolor=$txtgrn
+    usercolor=$bldylw
+    hostcolor=$txtgrn
     ;;
 esac
 
@@ -99,17 +99,14 @@ fi
 
 pathcolor=$bldblu
 
-# My old prompt
+# Non-git-aware prompt
 #PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
+
+# Gitaware prompt
 PS1="\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 
-# Fancy prompt
-#PROMPT_COMMAND="myprompt;$PROMPT_COMMAND"
-#function myprompt() {
-#  HR=""
-#  for (( i=1; i<=COLUMNS; i++ ))
-#  do
-#    HR="${HR}┄"
-#  done
-#  PS1="$gray$HR$reset\n\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
-#}
+# If promptline.vim was used then create airline prompt
+if [ -f $HOME/.promptline.sh ]
+then
+  source ~/.promptline.sh
+fi
