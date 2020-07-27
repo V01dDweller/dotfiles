@@ -78,7 +78,7 @@ fi
 currentDate=$(date +%Y-%m-%d_%H%M-%S)
 
 # Dotfile lists
-bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP" ".promptline.sh")
+bashFiles=(".bashrc" ".bash_profile" ".bash_prompt.sh" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf" ".tmux-status.conf")

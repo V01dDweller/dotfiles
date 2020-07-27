@@ -108,5 +108,5 @@ PS1="\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W
 # If promptline.vim was used then create airline prompt
 if [ -f $HOME/.promptline.sh ]
 then
-  source ~/.promptline.sh
+  source ~/.bash_prompt.sh
 fi
