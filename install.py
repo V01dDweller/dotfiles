@@ -58,7 +58,8 @@ TIME_STAMP = NOW.strftime('%Y-%m-%d_%H:%M:%S')
 BASH_FILES = [
         '.bashrc',
         '.bash_profile',
-        '.LESS_TERMCAP'
+        '.LESS_TERMCAP',
+        '.promptline.sh'
         ]
 MINTTY_FILES = [
         '.minttyrc',
@@ -72,7 +73,8 @@ TMUX_FILES = [
         '.tmux.conf',
         '.tmux-syncoff.conf',
         '.tmux-syncon.conf',
-        '.tmux.clipboard.conf'
+        '.tmux.clipboard.conf',
+        '.tmux-status.conf'
         ]
 BACKUP_FILES = BASH_FILES + MINTTY_FILES + VIM_FILES + TMUX_FILES
 BACKUP_DIRECTORY = HOME_DIR + '/dotfile_backup_' + TIME_STAMP
