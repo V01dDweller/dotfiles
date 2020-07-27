@@ -22,7 +22,7 @@ white=$(tput setaf 7)
 orange=$(tput setaf 208)
 reset=$(tput sgr0)
 
-bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP")
+bashFiles=(".bashrc" ".bash_profile" ".LESS_TERMCAP" ".bash_prompt.sh")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
 tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf")
