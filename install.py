@@ -58,8 +58,8 @@ TIME_STAMP = NOW.strftime('%Y-%m-%d_%H:%M:%S')
 BASH_FILES = [
         '.bashrc',
         '.bash_profile',
-        '.LESS_TERMCAP',
-        '.promptline.sh'
+        '.bash_prompt.sh',
+        '.LESS_TERMCAP'
         ]
 MINTTY_FILES = [
         '.minttyrc',
