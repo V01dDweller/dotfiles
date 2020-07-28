@@ -106,7 +106,7 @@ pathcolor=$bldblu
 PS1="\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 
 # If promptline.vim was used then create airline prompt
-if [ -f $HOME/.promptline.sh ]
+if [ -f $HOME/.bash_prompt.sh ]
 then
   source ~/.bash_prompt.sh
 fi
