@@ -98,19 +98,15 @@ do
 done
 echo ""
 
-# Set up bash
-echo Setting up bash
-echo Creating "$HOME/.bash_profile"
-cp -v "$REPO_PATH/bash/.bash_profile_git"  "$HOME/.bash_profile"
-echo ""
-echo "Creating $HOME/.bashrc"
-cp -v "$REPO_PATH/bash/.bashrc" "$HOME/.bashrc"
-echo ""
-echo Creating "$HOME/.LESS_TERMCAP"
-cp -v "$REPO_PATH/bash/.LESS_TERMCAP" "$HOME/"
+# Setting up bash
+for i in "${bashFiles[@]}"
+do
+  echo Creating "$HOME/$i"
+  cp -v "$REPO_PATH/bash/$i" "$HOME/$i"
+done
 echo ""
 
-# Set up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
+# Setting up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
 if command -v tmux > /dev/null
 then
   echo "Setting up tmux"
@@ -132,7 +128,7 @@ then
   "$REPO_PATH/tmux/plugin_install.sh"
 fi
 
-COLOR_SCHEME="original"
+COLOR_SCHEME="airline_original"
 # Tmux theme for Linux or WSL
 if [ "$OSTYPE" == "linux-gnu" ]
 then
@@ -143,10 +139,10 @@ then
     COLOR_SCHEME="yellow"
   else
     # This really is Linux - original
-    COLOR_SCHEME="original"
+    COLOR_SCHEME="airline_original"
   fi
 fi
-cp -v "$REPO_PATH/tmux/themes/$COLOR_SCHEME/"{.tmux.conf,.tmux-syncoff.conf} "$HOME/"
+cp -v "$REPO_PATH/tmux/themes/$COLOR_SCHEME/"* "$HOME/"
 
 # Set up Vim
 if command -v vim > /dev/null
