@@ -44,6 +44,7 @@ dotfiles/
 │   ├── .tmux-cssh              ## This is missing!## - optional, used to change tmc ssh command
 │   ├── .tmux.clipboard.conf    # Cliboard integration for Cygwin, Linux and MacOS
 │   ├── .tmux.conf              # requires .tmux-syncoff.conf and .tmux-syncon.conf
+│   ├── .tmux-status.conf       # As created by tmuxline.vim
 │   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
 │   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
 │   └── themes
