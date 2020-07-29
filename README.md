@@ -47,15 +47,24 @@ dotfiles/
 │   ├── .tmux-syncoff.conf      # Sourced by tmux for color changes when enabling synchronizing-panes via C-b e
 │   ├── .tmux-syncon.conf       # Sourced by tmux for color changes when disabling synchronize-panes via C-b E
 │   └── themes
-│       ├── green
-│       │   ├── .tmux.conf
-│       │   └── .tmux-syncoff.conf
+│       ├── airline_dracula
+│       │   ├── .tmux-status.conf
+│       │   ├── .tmux-syncoff.conf
+│       │   └── .tmux-syncon.conf
+│       ├── airline_original
+│       │   ├── .tmux-status.conf
+│       │   ├── .tmux-syncoff.conf
+│       │   ├── .tmux-syncon.conf
+│       │   └── .tmux.conf
+│       ├── green
+│       │   ├── .tmux-syncoff.conf
+│       │   └── .tmux.conf
 │       ├── original
-│       │   ├── .tmux.conf
-│       │   └── .tmux-syncoff.conf
+│       │   ├── .tmux-syncoff.conf
+│       │   └── .tmux.conf
 │       └── yellow
-│           ├── .tmux.conf
-│           └── .tmux-syncoff.conf
+│           ├── .tmux-syncoff.conf
+│           └── .tmux.conf
 │
 ├── vim
 │   ├── plugin_install.sh       # Installs pathogen and all my plugins from Github
