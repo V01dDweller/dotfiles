@@ -67,9 +67,7 @@ dotfiles/
 ├── README.md                   # You are here
 ├── install.sh                  # Copies bash, tmux, mintty and vim dotfiles then
 │                                 runs tmux/plugin_install.sh and vim/plugin_install.sh
-└── uninstall.sh                # *WARNING** - Not yet updated to match the install.sh
-
-
+└── uninstall.sh                # **WARNING** - Not yet updated to match the install.sh
 ```
 
 Mintty Color Schemes - Windows
