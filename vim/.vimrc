@@ -443,7 +443,7 @@ endif
 " Update ~/.promptline.sh with:
 "     :PromptlineSnapshot ~/.promptline.sh airline
 let g:promptline_preset = {
-      \'a'    : [ '\A' ],
+      \'a'    : [ '\A', '\h' ],
       \'b'    : [ '\u' ],
       \'c'    : [ '\W' ],
       \'y'    : [ promptline#slices#vcs_branch() ],
