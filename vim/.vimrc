@@ -436,16 +436,16 @@ let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 let g:airline_powerline_fonts = 1
 
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
-  let g:airline_theme='dracula'
+  let g:airline_theme='dark'
 endif
 
 " Promptline settings
 " Update ~/.promptline.sh with:
 "     :PromptlineSnapshot ~/.promptline.sh airline
 let g:promptline_preset = {
-      \'a'    : [ '\A', '\h' ],
-      \'b'    : [ '\u' ],
+      \'a'    : [ '\A' ],
+      \'b'    : [ '\u@\h' ],
       \'c'    : [ '\W' ],
       \'y'    : [ promptline#slices#vcs_branch() ],
-      \'warn' : [ promptline#slices#last_exit_code(), '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "*";fi)' ]}
-let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
+      \'warn' : [ promptline#slices#last_exit_code(), '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "⚡";fi)'] }
+"let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
