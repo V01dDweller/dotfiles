@@ -74,7 +74,7 @@ then
       URL=https://github.com/"$i".git
       export URL
       echo "$URL"
-      git clone "$URL"
+      git clone --depth 1 "$URL"
       echo " "
     else
       echo "Updating " "$PLUGIN_DIR"

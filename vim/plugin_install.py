@@ -91,7 +91,7 @@ if os.path.exists(BUNDLE_DIR):
         if not os.path.exists(REPO_PARTS[1]):
             PLUGIN_REPO = ('https://github.com/'+i+'.git')
             print('Checking out ' + GREEN + PLUGIN_REPO + RESET)
-            os.system('git clone ' + PLUGIN_REPO)
+            os.system('git clone --depth 1 ' + PLUGIN_REPO)
             print(" ")
         else:
             print('Checking for updates to ' + GREEN + REPO_PARTS[1] + RESET)
