@@ -19,6 +19,7 @@ from datetime import datetime
 
 # Setup for a bash git-aware prompt
 START_DIR = (os.getcwd())
+REPO_PATH = (os.path.dirname(os.path.realpath(__file__)))
 HOME_DIR = os.environ['HOME']
 BASH_PATH = (HOME_DIR + './bash')
 GITAWARE_PATH = (BASH_PATH + '/git-aware-prompt')
