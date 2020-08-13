@@ -51,7 +51,7 @@ else:
 NOW = datetime.now()
 TIME_STAMP = NOW.strftime('%Y-%m-%d_%H:%M:%S')
 
-# Dotfile lists
+# The dotfiles
 BASH_FILES = [
         '.bashrc',
         '.bash_profile',
