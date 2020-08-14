@@ -447,5 +447,5 @@ let g:promptline_preset = {
       \'b'    : [ '\u', '\h' ],
       \'c'    : [ '\W' ],
       \'y'    : [ promptline#slices#vcs_branch() ],
-      \'warn' : [ promptline#slices#last_exit_code(), '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$txtred*";fi)' ]}
+      \'warn' : [ '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$txtred*";fi)', promptline#slices#last_exit_code() ]}
 "let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
