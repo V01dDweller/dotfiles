@@ -89,3 +89,6 @@ for i in BACKUP_FILES:
 
 # Setting up bash
 print('Setting up bash')
+for i in BASH_FILES:
+    print('Creating ' + HOME_DIR + "/" + i)
+    os.system('cp -v ' + REPO_PATH + '/bash/' + i + " " + HOME_DIR + '/' + i)
