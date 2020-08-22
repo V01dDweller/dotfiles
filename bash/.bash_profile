@@ -37,6 +37,7 @@ umask 027
 
 gray=`tput setaf 8`
 reset=`tput sgr0`
+lemon="$(tput setaf 190 2>/dev/null || echo '\e[0;37m')"  # Lemon yellow
 
 # Git-aware prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
@@ -72,8 +73,8 @@ case $OSTYPE in
       hostcolor=$bldylw
     else
       # Linux
-      usercolor=$bldylw
-      hostcolor=$bldcyn
+      usercolor=$bldcyn
+      hostcolor=$bldpur
     fi
     ;;
   msys)
