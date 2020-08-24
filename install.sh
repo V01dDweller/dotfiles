@@ -2,7 +2,8 @@
 ########################################################################
 # WARNING! - Use at your own risk
 #
-# This script will:
+#   This installs my dotfiles for bash, Vim, MinTTy &  Tmux, if &  it finds
+#   them. Backup files will be placed in ~/dotfile_backups+date
 #
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
 # 2. Copy any dot file it will replace into that directory
@@ -60,7 +61,7 @@ then
     echo "Didn't find git-aware-prompt,"
     echo "Cloning git://github.com/jimeh/git-aware-prompt.git"
     cd "$HOME/.bash"
-    git clone git://github.com/jimeh/git-aware-prompt.git
+    git clone --depth 1 git://github.com/jimeh/git-aware-prompt.git
     echo ""
     cd "$START_PATH"
   fi
@@ -68,7 +69,7 @@ else
   echo "No $HOME/.bash found, creating one..."
   mkdir "$HOME/.bash"
   cd "$HOME/.bash"
-  git clone git://github.com/jimeh/git-aware-prompt.git
+  git clone --depth 1 git://github.com/jimeh/git-aware-prompt.git
   echo ""
   cd "$START_PATH"
 fi
@@ -77,7 +78,7 @@ fi
 # Time-stamp
 currentDate=$(date +%Y-%m-%d_%H%M-%S)
 
-# Dotfile lists
+# The dotfiles
 bashFiles=(".bashrc" ".bash_profile" ".bash_prompt.sh" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
