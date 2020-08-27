@@ -153,7 +153,7 @@ function __promptline {
       __promptline_ps1
     fi
   else
-    PS1="$(__promptline_ps1)\n$txtlem$txtrst "
+    PS1="$(__promptline_ps1)"
   fi
 }
 
