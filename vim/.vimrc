@@ -435,6 +435,7 @@ let g:airline_section_y = '♯%{bufnr("%")}'
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
 
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline_theme='dark'
