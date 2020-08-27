@@ -434,6 +434,7 @@ au BufRead,BufNewFile Vagrantfile setfiletype ruby
 let g:airline_section_y = '♯%{bufnr("%")}'
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline_theme='dark'
@@ -443,9 +444,9 @@ endif
 " Update ~/.promptline.sh with:
 "     :PromptlineSnapshot ~/.promptline.sh airline
 let g:promptline_preset = {
-      \'a'    : [ '\A' ],
-      \'b'    : [ '\u', '\h' ],
+      \'a'    : [ '\u' ],
+      \'b'    : [ '\h' ],
       \'c'    : [ '\W' ],
       \'y'    : [ promptline#slices#vcs_branch() ],
-      \'warn' : [ promptline#slices#last_exit_code(), '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$txtred*";fi)' ]}
-"let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
+      \'warn' : [ '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$bldylw*";fi)', promptline#slices#last_exit_code() ] }
+let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
