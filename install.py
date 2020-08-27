@@ -18,7 +18,8 @@ import os
 from datetime import datetime
 
 # Setup for a bash git-aware prompt
-START_DIR = (os.getcwd())
+START_PATH = (os.getcwd())
+REPO_PATH = (os.path.dirname(os.path.realpath(__file__)))
 HOME_DIR = os.environ['HOME']
 BASH_PATH = (HOME_DIR + './bash')
 GITAWARE_PATH = (BASH_PATH + '/git-aware-prompt')
@@ -31,13 +32,13 @@ if os.path.exists(BASH_PATH):
         os.chdir(GITAWARE_PATH)
         os.system('git pull')
         print(' ')
-        os.chdir(START_DIR)
+        os.chdir(START_PATH)
     else:
         print('Didn\'t find git-aware-prompt,')
         print('Cloning it now')
         os.chdir(BASH_PATH)
         os.system('git clone --depth 1' + GITAWARE_REPO)
-        os.chdir(START_DIR)
+        os.chdir(START_PATH)
         print(' ')
 else:
     print('Didn\'t find ~/.bash, creating it now...')
@@ -45,7 +46,7 @@ else:
     os.chdir(BASH_PATH)
     os.system('git clone --depth 1' + GITAWARE_REPO)
     print(' ')
-    os.chdir(START_DIR)
+    os.chdir(START_PATH)
 
 # Current date and time
 NOW = datetime.now()
@@ -88,3 +89,6 @@ for i in BACKUP_FILES:
 
 # Setting up bash
 print('Setting up bash')
+for i in BASH_FILES:
+    print('Creating ' + HOME_DIR + "/" + i)
+    os.system('cp -v ' + REPO_PATH + '/bash/' + i + " " + HOME_DIR + '/' + i)
