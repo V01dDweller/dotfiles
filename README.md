@@ -5,6 +5,16 @@ This is a small collection of the dotfiles I've accumulated over the
 years. I use them in a few environments from RHEL/CentOS, Cygwin,
 WSL/Debian/Ubuntu and MacOS. Most are self-explanatory.
 
+Installation
+------------
+
+```
+git clone https://github.com/V01dDweller/dotfiles.git
+./dotfiles/install.sh
+```
+
+Backups will be created in `~/dotfile_backup_<date_time>`
+
 ```
 dotfiles/
 ├── .w3m                        # The w3m web browser
