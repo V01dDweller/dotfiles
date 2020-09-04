@@ -453,5 +453,5 @@ let g:promptline_preset = {
       \'b'    : [ '\h' ],
       \'c'    : [ promptline#slices#cwd({ 'dir_limit': 2 }) ],
       \'y'    : [ promptline#slices#vcs_branch() ],
-      \'warn' : [ '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$bldylw*";fi)', promptline#slices#last_exit_code() ] }
+      \'warn' : [ '$(if [ "$(git status --porcelain 2> /dev/null | wc -l)" -gt "0" ];then echo "$bldredw*";fi)', promptline#slices#last_exit_code() ] }
 "let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
