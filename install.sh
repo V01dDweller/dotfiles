@@ -1,8 +1,9 @@
 #!/bin/bash
+
 ########################################################################
 # WARNING! - Use at your own risk
 #
-#   This installs my dotfiles for bash, Vim, MinTTy &  Tmux, if &  it finds
+#   This installs my dotfiles for bash, Vim, MinTTy & Tmux, if & it finds
 #   them. Backup files will be placed in ~/dotfile_backups+date
 #
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
