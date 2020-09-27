@@ -25,11 +25,11 @@ The install.sh script will back up then replace the files below, if they exist:
 
 **bash**
 01. .bashrc
-02. .bash_profile
-03. .bash_prompt.sh
-04. .LESS_TERMCAP)
+02. .bash\_profile
+03. .bash\_prompt.sh
+04. .LESS\_TERMCAP)
 05. .minttyrc
-06. .bash_mintty_colors
+06. .bash\_mintty\_colors
 07. .vimrc
 08. .gvimrc
 09. .tmux.conf
