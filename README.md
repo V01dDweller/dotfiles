@@ -8,10 +8,35 @@ WSL/Debian/Ubuntu and MacOS. Most are self-explanatory.
 Installation
 ------------
 
+1. Clone this repo
+
 ```
 git clone https://github.com/V01dDweller/dotfiles.git
 ./dotfiles/install.sh
 ```
+
+2. Run the install shell script
+
+```
+./dotfiles/install.sh
+```
+
+The install.sh script will back up then replace the files below, if they exist:
+
+**bash**
+01. .bashrc
+02. .bash\_profile
+03. .bash\_prompt.sh
+04. .LESS\_TERMCAP)
+05. .minttyrc
+06. .bash\_mintty\_colors
+07. .vimrc
+08. .gvimrc
+09. .tmux.conf
+10. .tmux-syncoff.conf
+11. .tmux-syncon.conf
+12. .tmux.clipboard.conf
+13. .tmux-status.conf
 
 Backups will be created in `~/dotfile_backup_<date_time>`
 
