@@ -112,7 +112,7 @@ endif
 "autocmd WinLeave * :setlocal nonumber
 
 " Auto-create/auto-load views
-if !has("gui_running")
+if !has("gui_running") && isdirectory("~/.vim")
   let current_file = expand('%')
   if !empty(current_file) || stridx(current_file, "NetrwTreeListing") == -1
     autocmd BufWinLeave *.* mkview
@@ -260,7 +260,9 @@ augroup myvimrc
 augroup END
 
 " Enable plugins
-filetype plugin on
+if isdirectory("~/.vim/bundle")
+  filetype plugin on
+endif
 
 " Load Pathogen, if this is the cli and it's there
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
