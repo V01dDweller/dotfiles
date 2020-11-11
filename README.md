@@ -62,6 +62,9 @@ dotfiles/
 ├── git
 │   └── .gitconfig              # Base git config, starring vimdiff
 │
+├── iterm
+│   └── com.googlecode.iterm2.plist
+│
 ├── mintty
 │   ├── .bash_mintty_colors     # Mintty color schemes
 │   ├── .minttyrc
