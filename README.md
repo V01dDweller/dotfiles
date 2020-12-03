@@ -1,9 +1,30 @@
 My Dotfile collection
 =====================
+This is a small collection of the dotfiles I've accumulated over the years. The
+priotiy is integration between Git, Bash, Vim and Tmux, then dress them up a
+little with Powerline fonts. I use them in a few environments from RHEL/CentOS,
+Cygwin, WSL/Debian/Ubuntu and MacOS. 
 
-This is a small collection of the dotfiles I've accumulated over the
-years. I use them in a few environments from RHEL/CentOS, Cygwin,
-WSL/Debian/Ubuntu and MacOS. Most are self-explanatory.
+Primary Apps
+------------
+Dotfiles for the apps below are installed (and backuped up) by the install
+scripts. 
+
+* vim
+* bash
+* less
+* tmux
+* mintty
+
+Secondary Apps
+--------------
+These are "secondary" only because their dotfiles are not replaced by the
+install scripts.
+
+* Git
+* W3m
+* iTerm
+* htop
 
 Installation
 ------------
