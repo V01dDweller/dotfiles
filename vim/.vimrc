@@ -413,21 +413,27 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
       highlight ALEErrorSign ctermbg=236 ctermfg=Red
     endif
   elseif (colors_name == "elflord")
+    highlight SignColumn ctermbg=NONE
     highlight CursorLine term=bold cterm=bold ctermbg=darkblue
     highlight CursorColumn ctermbg=darkblue
     highlight ColorColumn ctermbg=darkgreen
     highlight CursorLineNr term=bold cterm=bold  gui=bold
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=242 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=242 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=242 " red _
+    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=NONE " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=NONE " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=NONE " red -
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=242 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=242 ctermfg=Red
+      highlight ALEWarningSign ctermbg=NONE ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=NONE ctermfg=Red
     endif
   endif
 endif
+
+" GitGutter
+let g:gitgutter_sign_added              = '+▐'
+let g:gitgutter_sign_modified           = '~▐'
+let g:gitgutter_sign_removed            = '_▐'
 
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
