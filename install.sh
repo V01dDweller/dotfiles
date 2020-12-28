@@ -24,15 +24,15 @@ START_PATH=$(pwd)
 REPO_PATH="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
 # Colors
-red=$(tput setaf 1)
-green=$(tput setaf 2)
-yellow=$(tput setaf 3)
-blue=$(tput setaf 4)
-purple=$(tput setaf 5)
-cyan=$(tput setaf 6)
-white=$(tput setaf 7)
-orange=$(tput setaf 208)
-reset=$(tput sgr0)
+red=$(tput setaf 1); export red
+green=$(tput setaf 2); export green
+yellow=$(tput setaf 3); export yellow
+blue=$(tput setaf 4); export blue
+purple=$(tput setaf 5); export purple
+cyan=$(tput setaf 6); export cyan
+white=$(tput setaf 7); export white
+orange=$(tput setaf 208); export orange
+reset=$(tput sgr0); export reset
 
 # Check for git
 gitStatus=$(command -v git)
@@ -95,7 +95,7 @@ for i in "${backupFiles[@]}"
 do
   if [ -f "$HOME/$i" ]
   then
-    cp -pv "$HOME/$i"  "$HOME/$backupDirectory"
+    cp -pv "$HOME/$i" "$HOME/$backupDirectory"
   fi
 done
 echo ""
