@@ -135,7 +135,7 @@ COLOR_SCHEME="airline_original"
 if [ "$OSTYPE" == "linux-gnu" ]
 then
   # Linux
-  if grep -q Microsoft /proc/version
+  if grep -qi Microsoft /proc/version
   then
     # WSL detected - yellow
     COLOR_SCHEME="yellow"
