@@ -111,7 +111,7 @@ echo ""
 # Setting up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
 if command -v tmux > /dev/null
 then
-  echo "Setting up tmux"
+  echo "Copying tmux dot files"
   tmuxMajorVersion=$(tmux -V|cut -d' ' -f 2|cut -d'.' -f 1)
   echo "tmux major version: $tmuxMajorVersion"
 
