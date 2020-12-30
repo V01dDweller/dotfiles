@@ -146,7 +146,7 @@ then
 fi
 cp -v "$REPO_PATH/tmux/themes/$COLOR_SCHEME/"{.tmux.conf,.tmux-status.conf,.tmux-syncoff.conf,.tmux-syncon.conf} "$HOME/"
 
-# Copy vim dot files
+# Copying vim dot files
 if command -v vim > /dev/null
 then
   # Copy .vimrc, .gvimrc
