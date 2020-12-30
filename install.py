@@ -17,8 +17,14 @@
 """
 
 import os
+import platform
 import subprocess
 from datetime import datetime
+
+# Lance saya "try Pathlib" for OS agnostic PATHs
+# from Pathlib import Path
+# curdir  = path.cwd()
+# e.g.
 
 
 class color:
@@ -30,6 +36,9 @@ class color:
     CYAN = '\u001b[36;1m'
     WHITE = '\u001b[37;1m'
     RESET = '\u001b[0m'
+
+# OS detection
+OSTYPE = platform.system()
 
 # Setup for a bash git-aware prompt
 START_PATH = (os.getcwd())
@@ -54,7 +63,7 @@ if os.path.exists(BASH_PATH):
         print(color.YELLOW + 'Didn\'t find git-aware-prompt,' + color.RESET)
         print('Cloning it now')
         os.chdir(BASH_PATH)
-        os.system('git clone --depth 1' + GITAWARE_REPO)
+        os.system('git clone --depth 1 ' + GITAWARE_REPO)
         os.chdir(START_PATH)
         print(' ')
 else:
@@ -95,7 +104,7 @@ TMUX_FILES = [
 BACKUP_FILES = BASH_FILES + MINTTY_FILES + VIM_FILES + TMUX_FILES
 BACKUP_DIRECTORY = HOME_DIR + '/dotfile_backup_' + TIME_STAMP
 
-# Dotfile backup
+# Backing up existing dot files
 print(color.GREEN + 'Creating ' + BACKUP_DIRECTORY + color.RESET)
 os.mkdir(BACKUP_DIRECTORY)
 for i in BACKUP_FILES:
@@ -105,13 +114,14 @@ for i in BACKUP_FILES:
         os.system('cp -v ' + CURRENT_FILE + ' ' + BACKUP_DIRECTORY)
     print(' ')
 
-# Setting up bash
-print(color.GREEN + 'Setting up bash' + color.RESET)
+# Copying bash dot files
+print(color.GREEN + 'Copying bash dot files' + color.RESET)
 for i in BASH_FILES:
     print(color.GREEN + 'Creating ' + HOME_DIR + '/' + i + color.RESET)
     os.system('cp -v ' + REPO_PATH + '/bash/' + i + ' ' + HOME_DIR + '/' + i)
+print (' ')
 
-# Setting up tmux
+# Copying tmux dot files
 tmux_check = subprocess.getstatusoutput('which tmux')
 if (tmux_check[0] == 0):
     print(color.GREEN + 'Copying tmux dot files' + color.RESET)
@@ -122,3 +132,32 @@ if (tmux_check[0] == 0):
     print (' ')
     print(color.YELLOW + '** Reminder: Uncomment the appropriate block in ' +
           HOME_DIR + '/.tmux.conf for clipboard integration' + color.RESET)
+    print (' ')
+
+# Tmux theme files for Linux vs WSL
+COLOR_SCHEME = "airline_original"
+if (OSTYPE == 'Linux'):
+    with open('/proc/version', 'r') as OSVER:
+        for line in OSVER:
+            if ('windows' in line.lower()):
+                print('This is Widows Subsystem for Linux')
+                COLOR_SCHEME = "yellow"
+            else:
+                COLOR_SCHEME = "airline_original"
+
+os.system('cp -v ' + REPO_PATH + '/tmux/themes/' + COLOR_SCHEME +
+          '/.tmux* ' + HOME_DIR + '/')
+
+# Copying vim dot files
+vim_check = subprocess.getstatusoutput('which vim')
+if (vim_check[0] == 0):
+    print(color.GREEN + 'Copying vim dot files' + color.RESET)
+    for i in VIM_FILES:
+        os.system('cp -v ' + REPO_PATH + '/vim/' + i + ' ' +
+                  HOME_DIR + '/' + i)
+
+# Copying w3m dot files
+w3m_check = subprocess.getstatusoutput('which w3m')
+if (w3m_check[0] == 0):
+    print(color.GREEN + 'Copying w3m dot file' + color.RESET)
+    os.system('cp -vr' + REPO_PATH + '/w3m' + HOME_DIR)
