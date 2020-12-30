@@ -87,7 +87,7 @@ tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboar
 backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 backupDirectory="dotfile_backup.${currentDate}"
 
-# Dotfile backup
+# Backing up existing dot files
 mkdir "$HOME/$backupDirectory"
 
 echo "Backing up current dotfiles..."
@@ -100,7 +100,7 @@ do
 done
 echo ""
 
-# Setting up bash
+# Copying bash dot files
 for i in "${bashFiles[@]}"
 do
   echo Creating "$HOME/$i"
@@ -108,7 +108,7 @@ do
 done
 echo ""
 
-# Setting up tmux (**Note: Does not work with tmux >= 2.9 or < 2.4)
+# Copying tmux dot files
 if command -v tmux > /dev/null
 then
   echo "Copying tmux dot files"
@@ -146,7 +146,7 @@ then
 fi
 cp -v "$REPO_PATH/tmux/themes/$COLOR_SCHEME/"{.tmux.conf,.tmux-status.conf,.tmux-syncoff.conf,.tmux-syncon.conf} "$HOME/"
 
-# Set up Vim
+# Copy vim dot files
 if command -v vim > /dev/null
 then
   # Copy .vimrc, .gvimrc
@@ -157,7 +157,7 @@ then
   "$REPO_PATH/vim/plugin_install.sh"
 fi
 
-# Set up w3m
+# Copying w3m dot files
 if command -v w3m > /dev/null
 then
   cp -vr "$REPO_PATH/.w3m" "$HOME/"
