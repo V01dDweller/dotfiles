@@ -21,11 +21,6 @@ import platform
 import subprocess
 from datetime import datetime
 
-# Lance saya "try Pathlib" for OS agnostic PATHs
-# from Pathlib import Path
-# curdir  = path.cwd()
-# e.g.
-
 
 class color:
     RED = '\u001b[31;1m'
@@ -37,16 +32,68 @@ class color:
     WHITE = '\u001b[37;1m'
     RESET = '\u001b[0m'
 
+
+# Store starting directory and repo directory
+HOME_DIR = os.environ['HOME']
+START_PATH = (os.getcwd())
+REPO_PATH = (os.path.dirname(os.path.realpath(__file__)))
+
 # OS detection
 OSTYPE = platform.system()
 
-# Setup for a bash git-aware prompt
-START_PATH = (os.getcwd())
-REPO_PATH = (os.path.dirname(os.path.realpath(__file__)))
-HOME_DIR = os.environ['HOME']
+# Current date and time
+NOW = datetime.now()
+TIME_STAMP = NOW.strftime('%Y-%m-%d_%H:%M:%S')
+
+# The dotfiles
+BASH_FILES = [
+    '.bashrc',
+    '.bash_profile',
+    '.bash_prompt.sh',
+    '.LESS_TERMCAP'
+    ]
+MINTTY_FILES = [
+    '.minttyrc',
+    '.bash_mintty_colors'
+    ]
+VIM_FILES = [
+    '.vimrc',
+    '.gvimrc'
+    ]
+TMUX_FILES = [
+    '.tmux.conf',
+    '.tmux-syncoff.conf',
+    '.tmux-syncon.conf',
+    '.tmux.clipboard.conf',
+    '.tmux-status.conf'
+    ]
+
+# Backups
+print (color.CYAN + '-------' + color.RESET)
+print (color.CYAN + 'Backups' + color.RESET)
+print (color.CYAN + '-------' + color.RESET)
+BACKUP_FILES = BASH_FILES + MINTTY_FILES + VIM_FILES + TMUX_FILES
+BACKUP_DIRECTORY = HOME_DIR + '/dotfile_backup_' + TIME_STAMP
+
+# Backing up existing dot files
+os.mkdir(BACKUP_DIRECTORY)
+for i in BACKUP_FILES:
+    CURRENT_FILE = HOME_DIR + '/' + i
+    if os.path.exists(CURRENT_FILE):
+        os.system('cp -v ' + CURRENT_FILE + ' ' + BACKUP_DIRECTORY)
+    print(' ')
+
+#
+# Bash
+#
+print(color.CYAN + '----' + color.RESET)
+print(color.CYAN + 'Bash' + color.RESET)
+print(color.CYAN + '----' + color.RESET)
+
+# Setup for a basic bash git-aware prompt
 BASH_PATH = (HOME_DIR + '/.bash')
 GITAWARE_PATH = (BASH_PATH + '/git-aware-prompt')
-GITAWARE_REPO = 'git://github.com/jimeh/git-aware-prompt.git'
+GITAWARE_REPO = 'https://github.com/jimeh/git-aware-prompt.git'
 
 if os.path.exists(BASH_PATH):
     print(color.GREEN +
@@ -75,58 +122,20 @@ else:
     print(' ')
     os.chdir(START_PATH)
 
-# Current date and time
-NOW = datetime.now()
-TIME_STAMP = NOW.strftime('%Y-%m-%d_%H:%M:%S')
-
-# The dotfiles
-BASH_FILES = [
-    '.bashrc',
-    '.bash_profile',
-    '.bash_prompt.sh',
-    '.LESS_TERMCAP'
-    ]
-MINTTY_FILES = [
-    '.minttyrc',
-    '.bash_mintty_colors'
-    ]
-VIM_FILES = [
-    '.vimrc',
-    '.gvimrc'
-    ]
-TMUX_FILES = [
-    '.tmux.conf',
-    '.tmux-syncoff.conf',
-    '.tmux-syncon.conf',
-    '.tmux.clipboard.conf',
-    '.tmux-status.conf'
-    ]
-BACKUP_FILES = BASH_FILES + MINTTY_FILES + VIM_FILES + TMUX_FILES
-BACKUP_DIRECTORY = HOME_DIR + '/dotfile_backup_' + TIME_STAMP
-
-# Backing up existing dot files
-print(color.GREEN + 'Creating ' + BACKUP_DIRECTORY + color.RESET)
-os.mkdir(BACKUP_DIRECTORY)
-for i in BACKUP_FILES:
-    if os.path.exists(HOME_DIR + '/' + i):
-        CURRENT_FILE = HOME_DIR + '/' + i
-        print(color.GREEN + 'Backing up ' + i + color.RESET)
-        os.system('cp -v ' + CURRENT_FILE + ' ' + BACKUP_DIRECTORY)
-    print(' ')
-
 # Copying bash dot files
 print(color.GREEN + 'Copying bash dot files' + color.RESET)
 for i in BASH_FILES:
-    print(color.GREEN + 'Creating ' + HOME_DIR + '/' + i + color.RESET)
     os.system('cp -v ' + REPO_PATH + '/bash/' + i + ' ' + HOME_DIR + '/' + i)
 print (' ')
 
 # Copying tmux dot files
-tmux_check = subprocess.getstatusoutput('which tmux')
-if (tmux_check[0] == 0):
+print(color.CYAN + '----' + color.RESET)
+print(color.CYAN + 'Tmux' + color.RESET)
+print(color.CYAN + '----' + color.RESET)
+TMUX_CHECK = subprocess.getstatusoutput('which tmux')
+if (TMUX_CHECK[0] == 0):
     print(color.GREEN + 'Copying tmux dot files' + color.RESET)
     for i in TMUX_FILES:
-        print(color.GREEN + 'Creating ' + HOME_DIR + '/' + i + color.RESET)
         os.system('cp -v ' + REPO_PATH + '/tmux/' + i + ' ' +
                   HOME_DIR + '/' + i)
     print (' ')
@@ -152,6 +161,9 @@ os.system('cp -v ' + REPO_PATH + '/tmux/themes/' + COLOR_SCHEME +
           '/.tmux* ' + HOME_DIR + '/')
 
 # Copying vim dot files
+print(color.CYAN + '---' + color.RESET)
+print(color.CYAN + 'Vim' + color.RESET)
+print(color.CYAN + '---' + color.RESET)
 vim_check = subprocess.getstatusoutput('which vim')
 if (vim_check[0] == 0):
     print(color.GREEN + 'Copying vim dot files' + color.RESET)
