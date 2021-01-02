@@ -318,6 +318,9 @@ set mouse=a
 " Turn spell check on for these file types
 autocmd FileType markdown,text,html,man,manual :set spell
 
+" Python 3 Omnicomplete
+autocmd FileType python set omnifunc=python3complete#Complete
+
 " Hide dotfiles in netrw with gh to toggle, thanks to
 "  https://vi.stackexchange.com/questions/18650/how-to-make-netrw-start-with-dotfiles-hidden
 let ghregex='\(^\|\s\s\)\zs\.\S\+'
