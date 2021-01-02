@@ -132,6 +132,9 @@ if (tmux_check[0] == 0):
     print (' ')
     print(color.YELLOW + '** Reminder: Uncomment the appropriate block in ' +
           HOME_DIR + '/.tmux.conf for clipboard integration' + color.RESET)
+    # Install tmux plugins
+    print('Installing tmux plugins')
+    os.system('python3 ' + REPO_PATH + '/tmux/plugin_install.py')
     print (' ')
 
 # Tmux theme files for Linux vs WSL
@@ -155,6 +158,7 @@ if (vim_check[0] == 0):
     for i in VIM_FILES:
         os.system('cp -v ' + REPO_PATH + '/vim/' + i + ' ' +
                   HOME_DIR + '/' + i)
+    os.system(REPO_PATH + '/vim/plugin_install.py')
 
 # Copying w3m dot files
 w3m_check = subprocess.getstatusoutput('which w3m')
