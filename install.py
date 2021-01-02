@@ -121,7 +121,6 @@ else:
     os.system('git clone --depth 1 ' + GITAWARE_REPO)
     print(' ')
     os.chdir(START_PATH)
-quit()
 
 # Copying bash dot files
 print(color.GREEN + 'Copying bash dot files' + color.RESET)
