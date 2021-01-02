@@ -33,6 +33,8 @@ TPM_DIR = (TMUX_DIR + '/plugins/tpm')
 if not os.path.exists(TPM_DIR):
     os.system('git clone --depth 1 ' + TPM_REPO_URL + ' ' + TPM_DIR)
 else:
+    START_DIR = (os.getcwd())
     print('Repo already cloned, pulling updates\n')
     os.chdir(TPM_DIR)
     os.system('git pull')
+    os.chdir(START_DIR)
