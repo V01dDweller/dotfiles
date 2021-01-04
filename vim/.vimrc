@@ -352,14 +352,14 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
       highlight ALEErrorSign ctermbg=242 ctermfg=Red
     endif
   elseif (colors_name == "bubblegum-256-dark")
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=236 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=236 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=236 " red _
+    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=237 " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=237 " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=237 " red _
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=236 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=236 ctermfg=Red
+      highlight ALEWarningSign ctermbg=237 ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=237 ctermfg=Red
     endif
   elseif (colors_name == "atom-dark-256")
     " Black background
@@ -416,19 +416,19 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
       highlight ALEErrorSign ctermbg=236 ctermfg=Red
     endif
   elseif (colors_name == "elflord")
-    highlight SignColumn ctermbg=NONE
+    highlight SignColumn ctermbg=darkgray
     highlight CursorLine term=bold cterm=bold ctermbg=darkblue
     highlight CursorColumn ctermbg=darkblue
     highlight ColorColumn ctermbg=darkgreen
     highlight CursorLineNr term=bold cterm=bold  gui=bold
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=NONE " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=NONE " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=NONE " red -
+    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=darkgray " green +
+    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=darkgray " cyan ~
+    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=darkgray " red -
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=NONE ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=NONE ctermfg=Red
+      highlight ALEWarningSign ctermbg=darkgray ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=darkgray ctermfg=Red
     endif
   endif
 endif
