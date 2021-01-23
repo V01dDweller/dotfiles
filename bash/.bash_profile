@@ -31,7 +31,7 @@ shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 export TERM=xterm-256color
-umask 027
+umask 022
 
 # Colors
 
