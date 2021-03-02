@@ -18,7 +18,7 @@ icons and other decorations are added via
 [Powerline](https://github.com/powerline/fonts) fonts.
 
 Powerline fonts are a separate install for now but an update that installs them
-on supported systems is coming. MacOS iTerm users can enable the "Draw
+on supported systems is coming. MacOS iTerm users can enable "Draw
 Powerline Glyphs" and skip the Powerline font install.
 
 The install scripts will first back up any existing bash, MinTTY (Cygwin only),
@@ -28,14 +28,14 @@ From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and
 [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in
 managers ([pathogen](https://github.com/tpope/vim-pathogen) and
 [tpm](https://github.com/tmux-plugins/tpm) respectively) are installed along
-with my favorite vim plug-ins and color schemes along with  one Tmux plug-in.
-See the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and
-[Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for
+with my favorite vim plug-ins and color schemes. Only one Tmux plug-in is
+installed. See the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim)
+and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for
 more.
 
-Everything is installed directly from github, so it is a good idea to re-run
-the install scripts or the Vim or tmux plugin_install scripts to pull
-the latest versions of everything.
+Everything is installed directly from github, so it is a good idea to periodically
+re-run the install scripts or the individual Vim or tmux plugin_install scripts to
+pull the latest versions of all the plug-ins.
 
 The uninstall.sh script is a work-in-progress that was never finished but
 backing this out should be very easy: Simply restore the contents of the most
