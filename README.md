@@ -216,4 +216,5 @@ one of my favorites.
 
 Vim
 ---
-Creates my .vimrc and .gvimrc files, installs pathogen and a list of plugins.
+This installs my extensive .vimrc and .gvimrc files, the  pathogen plug-in
+manager and a list of plugins.
