@@ -121,3 +121,6 @@ then
      echo ""
   fi
 fi
+
+# Pygments alias
+alias pygmentize="pygmentize -f terminal"
