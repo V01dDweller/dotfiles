@@ -80,7 +80,6 @@ Installation
 
 ```
 git clone https://github.com/V01dDweller/dotfiles.git
-./dotfiles/install.sh
 ```
 
 2. Run the install shell script
