@@ -190,13 +190,13 @@ dotfiles
 ```
 
 Mintty Color Schemes - (Cygwin/Windows-only)
-------------------------------
+--------------------
 Combined with a collection of Windows shortcuts and a folder in the
 Windows PATH, one can quickly summon a Mintty session with a custom
 color scheme.
 
-Mintty Color Schemes - bash
----------------------------
+Mintty Color Schemes - (WSL/Windows - only)
+--------------------
 Mintty and WSLtty will respond to escape sequences to change colors on
 the fly, source `.bash_mintty_colors` to get bash aliases, e.g. blue,
 green, red, etc..
