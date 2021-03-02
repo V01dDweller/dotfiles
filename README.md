@@ -63,7 +63,7 @@ scripts.
 Secondary Apps
 --------------
 These are "secondary" only because their dotfiles are not replaced by the
-install scripts.
+install scripts. The dotfiles for these may be copied manually.
 
 * Git
 * w3m
