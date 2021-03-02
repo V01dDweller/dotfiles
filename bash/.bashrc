@@ -8,7 +8,7 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export EDITOR="/usr/bin/vim"
 
 # Add color to common commands
-if [ $OSTYPE == "darwin18" ]
+if [ "$OSTYPE" == "darwin18" ]
 then
   alias ls="ls -G"
 else
@@ -58,18 +58,18 @@ function title() {
 # Set colors if tput is available
 if hash tput 2> /dev/null
 then
-  red=`tput setaf 1`
-  redbg=`tput setab 197`
-  green=`tput setaf 2`
-  yellow=`tput setaf 3`
-  blue=`tput setaf 4`
-  niceblue=`tput setaf 27`
-  purple=`tput setaf 5`
-  cyan=`tput setaf 6`
-  white=`tput setaf 7`
-  orange=`tput setaf 208`
-  bold=`tput bold`
-  reset=`tput sgr0`
+  red=$(tput setaf 1);export red
+  redbg=$(tput setab 197);export redbg
+  green=$(tput setaf 2);export green
+  yellow=$(tput setaf 3);export yellow
+  blue=$(tput setaf 4);export blue
+  niceblue=$(tput setaf 27);export niceblue
+  purple=$(tput setaf 5);export purple
+  cyan=$(tput setaf 6);export cyan
+  white=$(tput setaf 7);export white
+  orange=$(tput setaf 208);export orange
+  bold=$(tput bold);export bold
+  reset=$(tput sgr0);export reset
 fi
 
 ## Wise ponies or cows
@@ -104,15 +104,15 @@ then
                       -f tank"
     if [ -d ~/custom_ponies ]
     then
-      for i in `ls ~/custom_ponies/*pony`
+      for i in $(ls ~/custom_ponies/*pony)
       do
         export pony_list="-f $i $pony_list"
       done
     fi
-    fortune | ponysay -b round $pony_list
+    fortune | ponysay -b round "$pony_list"
   elif command -v cowsay > /dev/null
    then
-     fortune | cowsay -f $(ls /usr/local/share/cows/ | shuf -n1)
+     fortune | cowsay -f "$(ls /usr/local/share/cows/ | shuf -n1)"
    else
      fortune
      echo ""
