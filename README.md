@@ -56,7 +56,7 @@ git clone https://github.com/V01dDweller/dotfiles.git
 Primary Apps
 ------------
 Dotfiles for the apps below are installed (and backed up) by the install
-scripts. 
+scripts, if the apps are present.
 
 * vim
 * bash
