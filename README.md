@@ -66,7 +66,7 @@ These are "secondary" only because their dotfiles are not replaced by the
 install scripts.
 
 * Git
-* W3m
+* w3m
 * iTerm
 * htop
 
