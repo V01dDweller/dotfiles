@@ -189,7 +189,7 @@ dotfiles
 └── uninstall.sh                # **WARNING** - Not yet updated to match the install.sh
 ```
 
-Mintty Color Schemes - Windows
+Mintty Color Schemes - (Cygwin/Windows-only)
 ------------------------------
 Combined with a collection of Windows shortcuts and a folder in the
 Windows PATH, one can quickly summon a Mintty session with a custom
