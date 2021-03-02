@@ -15,7 +15,7 @@ the lightweight [vim-airline](https://github.com/vim-airline/vim-airline),
 [tmuxline](https://github.com/edkolev/tmuxline.vim) and
 [promptline](https://github.com/edkolev/promptline.vim) vim plug-in trio. Git
 icons and other decorations are added via
-[Powerline](https://github.com/powerline/fonts) fonts.
+[Powerline](https://github.com/powerline/fonts) fonts. Powerline fonts are a separate install but an update that installs them on supported systems is coming.
 
 The install scripts will first back up any existing bash, MinTTY (Cygwin only),
 Vim or Tmux dotfiles then replace them with the ones from this repo.
