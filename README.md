@@ -189,13 +189,13 @@ dotfiles
 └── uninstall.sh                # **WARNING** - Not yet updated to match the install.sh
 ```
 
-Mintty Color Schemes - (Cygwin/Windows-only)
+Mintty Color Schemes - (Cygwin/Windows)
 --------------------
 Combined with a collection of Windows shortcuts and a folder in the
 Windows PATH, one can quickly summon a Mintty session with a custom
 color scheme.
 
-Mintty Color Schemes - (WSL/Windows - only)
+Mintty Color Schemes - (Cygwin/WSL/Windows)
 --------------------
 Mintty and WSLtty will respond to escape sequences to change colors on
 the fly, source `.bash_mintty_colors` to get bash aliases, e.g. blue,
