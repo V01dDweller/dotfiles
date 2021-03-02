@@ -76,7 +76,6 @@ install scripts. The dotfiles for these may be copied manually.
 
 Installation
 ------------
-
 1. Clone this repo
 
 ```
