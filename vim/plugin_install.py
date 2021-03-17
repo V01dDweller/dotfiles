@@ -15,6 +15,7 @@
 # - Vim airline                    - https://github.com/vim-airline/vim-airline
 # - tmuxline                       - https://github.com/edkolev/tmuxline.vim
 # - promptline                     - https://github.com/edkolev/promptline.vim
+# - vim-surround                   - https://github.com/tpope/vim-surround
 
 import os
 import urllib.request
@@ -78,7 +79,8 @@ VIM_PLUGINS = [
     'vim-scripts/delview',
     'dracula/vim'
     'edkolev/tmuxline.vim',
-    'edkolev/promptline.vim'
+    'edkolev/promptline.vim',
+    'tpope/vim-surround'
     ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())
