@@ -16,6 +16,7 @@
 # - Vim airline                    - https://github.com/vim-airline/vim-airline
 # - tmuxline                       - https://github.com/edkolev/tmuxline.vim
 # - promptline                     - https://github.com/edkolev/promptline.vim
+# - vim-surround                   - https://github.com/tpope/vim-surround
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
@@ -59,7 +60,8 @@ export PLUGINS="\
   chr4/nginx.vim \
   dracula/vim \
   edkolev/tmuxline.vim \
-  edkolev/promptline.vim
+  edkolev/promptline.vim \
+  tpope/vim-surround
   "
 
 if [ -d ~/.vim/bundle ]
