@@ -19,6 +19,7 @@ Plug-ins
 10. [vim256](https://github.com/noah/vim256-color) - Too many color schemes
 11. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
 12. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
+13. [vim-surround](https://github.com/tpope/vim-surround) - Quickly change "surroundings"
 
 Color Schemes
 -------------
