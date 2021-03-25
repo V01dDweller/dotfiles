@@ -1,9 +1,14 @@
 " .vrimc-lite
 
-set nocp ic nu lbr hlsearch incsearch
+set nocompatible " Abandon Vi compatibility
+set ignorecase   " Case-insensitive search
+set number       " Line numbers
+set linebreak    " Visual line wrapping at wne of word
+set hlsearch     " Highlight searches
+set incsearch    " Jump to search match as it is typed
+
 syntax on
 color elflord
-
 
 " F2 - Toggle line numbers
 map <silent> <F2> :set nu!<CR>
@@ -30,6 +35,27 @@ if v:version > 799
 else
   map <silent> <F4> :call ToggleNetrwVim7()<CR>
 endif
+
+" F7 - Toggle scrollbind and cursorbind for all panes
+nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
+
+" F8 -  Fully disable auto-indent
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+" F9 - Toggle cursorline
+nnoremap <F9> :set cursorline!<CR>
+
+" F10 - Toggle cursorcolumn
+nnoremap <F10> :set cursorcolumn!<CR>
+
+" Netrw tree style
+let g:netrw_liststyle = 3
+
+" Netrw with no banner
+let g:netrw_banner = 0
+
+" Netrw will hide these
+let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
 
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
@@ -69,29 +95,9 @@ function! ToggleNetrwVim8()
     silent Vexplore
   endif
 endfunction
-" F7 - Toggle scrollbind and cursorbind for all panes
-nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
-
-" F8 -  Fully disable auto-indent
-nnoremap <F8> :setl noai nocin nosi inde=<CR>
-
-" F9 - Toggle cursorline
-nnoremap <F9> :set cursorline!<CR>
-
-" F10 - Toggle cursorcolumn
-nnoremap <F10> :set cursorcolumn!<CR>
-
-" Netrw tree style
-let g:netrw_liststyle = 3
-
-" Netrw with no banner
-let g:netrw_banner = 0
-
-" Netrw will hide these
-let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
 
 " Cursorline colors
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 highlight CursorColumn ctermbg=darkblue
 highlight ColorColumn ctermbg=darkgreen
-highlight CursorLineNr term=bold cterm=bold  gui=bold
+highlight CursorLineNr term=bold cterm=bold gui=bold
