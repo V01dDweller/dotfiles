@@ -1,0 +1,97 @@
+" .vrimc-lite
+
+set nocp ic nu lbr hlsearch incsearch
+syntax on
+color elflord
+
+
+" F2 - Toggle line numbers
+map <silent> <F2> :set nu!<CR>
+imap <silent> <F2> <Esc> :set nu!<CR>
+
+" F3 - Toggle line wrapping
+nmap <silent> <F3> :set wrap!<CR>
+imap <silent> <F3> <Esc> :set wrap!<CR>
+
+" Netrw confined to 30 columns
+let g:netrw_winsize = -30
+
+" F2 - Toggle line numbers
+map <silent> <F2> :set nu!<CR>
+imap <silent> <F2> <Esc> :set nu!<CR>
+
+" F3 - Toggle line wrapping
+nmap <silent> <F3> :set wrap!<CR>
+imap <silent> <F3> <Esc> :set wrap!<CR>
+
+" F4 - Toggle netrw
+if v:version > 799
+  map <silent> <F4> :call ToggleNetrwVim8()<CR>
+else
+  map <silent> <F4> :call ToggleNetrwVim7()<CR>
+endif
+
+" Netrw confined to 30 columns
+let g:netrw_winsize = -30
+
+" Function to toggle netrw for Vim 7 and older
+function! ToggleNetrwVim7()
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:NetrwIsOpen=0
+  else
+    let g:NetrwIsOpen=1
+    silent Vexplore
+  endif
+endfunction
+
+" Function to toggle netrw for Vim 8+
+" Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
+let g:NetrwIsOpen=0
+function! ToggleNetrwVim8()
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:NetrwIsOpen=0
+  else
+    let g:NetrwIsOpen=1
+    silent Vexplore
+  endif
+endfunction
+" F7 - Toggle scrollbind and cursorbind for all panes
+nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
+
+" F8 -  Fully disable auto-indent
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
+
+" F9 - Toggle cursorline
+nnoremap <F9> :set cursorline!<CR>
+
+" F10 - Toggle cursorcolumn
+nnoremap <F10> :set cursorcolumn!<CR>
+
+" Netrw tree style
+let g:netrw_liststyle = 3
+
+" Netrw with no banner
+let g:netrw_banner = 0
+
+" Netrw will hide these
+let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
+
+" Cursorline colors
+highlight CursorLine term=bold cterm=bold ctermbg=darkblue
+highlight CursorColumn ctermbg=darkblue
+highlight ColorColumn ctermbg=darkgreen
+highlight CursorLineNr term=bold cterm=bold  gui=bold
