@@ -3,7 +3,7 @@
 set nocompatible " Abandon Vi compatibility
 set ignorecase   " Case-insensitive search
 set number       " Line numbers
-set linebreak    " Visual line wrapping at wne of word
+set linebreak    " Visual line wrap at word end
 set hlsearch     " Highlight searches
 set incsearch    " Jump to search match as it is typed
 
