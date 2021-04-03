@@ -455,10 +455,11 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
 endif
 
 let g:tmuxline_preset = {
+    \'a'       : '#S',
     \'win'     : '#I #W',
     \'cwin'    : '#I #W',
-    \'x'       : '%b %d',
-    \'y'       : '%a \ue0b3 %R',
+    \'x'       : '%a',
+    \'y'       : '%b %d \ue0b3 %I:%M %p',
     \'z'       : '#H',
     \'options' : {'status-justify' : 'left'}}
 
