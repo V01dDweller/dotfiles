@@ -454,6 +454,14 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline_theme='dark'
 endif
 
+let g:tmuxline_preset = {
+    \'win'     : '#I #W',
+    \'cwin'    : '#I #W',
+    \'x'       : '%a, %b %d',
+    \'y'       : '%R',
+    \'z'       : '#H',
+    \'options' : {'status-justify' : 'left'}}
+
 " Promptline settings
 " Update ~/.promptline.sh with:
 "     :PromptlineSnapshot ~/.promptline.sh airline
