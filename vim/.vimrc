@@ -456,10 +456,10 @@ endif
 
 let g:tmuxline_preset = {
     \'a'       : '#H',
-    \'win'     : '#I #W',
-    \'cwin'    : '#I #W',
+    \'win'     : '#I \ue0b1 #W',
+    \'cwin'    : '#I \ue0b1 #W',
     \'x'       : '%a',
-    \'y'       : '%b %d \ue0b3 %I:%M %p',
+    \'y'       : '%b %d \ue0b3 %I:%M%P',
     \'z'       : '#S',
     \'options' : {'status-justify' : 'left'}}
 
