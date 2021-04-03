@@ -27,12 +27,12 @@ Color Schemes
 -------------
 
 1. atom-dark-256
-2. bubblegum-256-dark
-3. gruvbox
-4. hybrid
-5. molokai
-6. southernlights
-7. xoria256
+1. bubblegum-256-dark
+1. gruvbox
+1. hybrid
+1. molokai
+1. southernlights
+1. xoria256
 
 Installation
 ------------
