@@ -455,12 +455,12 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
 endif
 
 let g:tmuxline_preset = {
-    \'a'       : '#S',
+    \'a'       : '#H',
     \'win'     : '#I #W',
     \'cwin'    : '#I #W',
     \'x'       : '%a',
     \'y'       : '%b %d \ue0b3 %I:%M %p',
-    \'z'       : '#H',
+    \'z'       : '#S',
     \'options' : {'status-justify' : 'left'}}
 
 " Promptline settings
