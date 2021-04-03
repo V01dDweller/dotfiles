@@ -5,15 +5,16 @@
 import os
 
 
-class color:
-    RED = '\u001b[31;1m'
-    GREEN = '\u001b[32;1m'
-    YELLOW = '\u001b[33;1m'
-    BLUE = '\u001b[34;1m'
-    MAGENTA = '\u001b[35;1m'
-    CYAN = '\u001b[36;1m'
-    WHITE = '\u001b[37;1m'
-    RESET = '\u001b[0m'
+COLOR = {
+    "red": "\u001b[31;1m",
+    "green": "\u001b[32;1m",
+    "yellow": "\u001b[33;1m",
+    "blue": "\u001b[34;1m",
+    "magenta": "\u001b[35;1m",
+    "cyan": "\u001b[36;1m",
+    "white": "\u001b[37;1m",
+    "reset": "\u001b[0m"
+    }
 
 HOME_DIR = os.environ['HOME']
 TMUX_DIR = (HOME_DIR + '/.tmux')
