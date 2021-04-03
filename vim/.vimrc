@@ -463,8 +463,8 @@ let g:tmuxline_preset = {
     \'options' : {'status-justify' : 'left'}}
 
 " Promptline settings
-" Update ~/.promptline.sh with:
-"     :PromptlineSnapshot ~/.promptline.sh airline
+" Update ~/.bash_promptline.sh with:
+"     :PromptlineSnapshot ~/.bash_prompt.sh airline
 let g:promptline_symbols = {
     \ 'dir_sep'        : '/'}
 let g:promptline_preset = {
