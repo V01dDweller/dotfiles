@@ -51,19 +51,19 @@ print('Creating Pathogen directories')
 for i in PATHOGEN_DIRS:
     PLUGIN_PATH = (VIM_DIR + '/' + i)
     if not os.path.exists(PLUGIN_PATH):
-        print('Creating ' + color.CYAN + PLUGIN_PATH + color.RESET)
+        print('Creating ' + COLOR["cyan"] + PLUGIN_PATH + COLOR["reset"])
         os.mkdir(PLUGIN_PATH)
     else:
-        print(color.CYAN + PLUGIN_PATH + color.RESET +
-              ' already exists\n' + color.RESET)
+        print(COLOR["cyan"] + PLUGIN_PATH + COLOR["reset"] +
+              ' already exists\n' + COLOR["reset"])
 
 if not os.path.exists(PATHOGEN_PLUGIN_FILE):
     print('Installing Pathogen to ' +
-          color.CYAN + PATHOGEN_PLUGIN_FILE + color.RESET)
+          COLOR["cyan"] + PATHOGEN_PLUGIN_FILE + COLOR["reset"])
     urllib.request.urlretrieve(PATHOGEN_URL, PATHOGEN_PLUGIN_FILE)
 else:
-    print(color.CYAN + PATHOGEN_PLUGIN_FILE + color.RESET +
-          ' already downloaded\n' + color.RESET)
+    print(COLOR["cyan"] + PATHOGEN_PLUGIN_FILE + COLOR["reset"] +
+          ' already downloaded\n' + COLOR["reset"])
 
 # Installing/Updating plug-ins
 VIM_PLUGINS = [
@@ -86,8 +86,8 @@ VIM_PLUGINS = [
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())
 
-print('Plugins will be installed in ' + color.CYAN +
-      BUNDLE_DIR + '\n' + color.RESET)
+print('Plugins will be installed in ' + COLOR["cyan"] +
+      BUNDLE_DIR + '\n' + COLOR["reset"])
 
 if os.path.exists(BUNDLE_DIR):
     for i in VIM_PLUGINS:
@@ -95,12 +95,12 @@ if os.path.exists(BUNDLE_DIR):
         os.chdir(BUNDLE_DIR)
         if not os.path.exists(REPO_PARTS[1]):
             PLUGIN_REPO = ('https://github.com/'+i+'.git')
-            print('Checking out ' + color.GREEN + PLUGIN_REPO + color.RESET)
+            print('Checking out ' + COLOR["green"] + PLUGIN_REPO + COLOR["reset"])
             os.system('git clone --depth 1 ' + PLUGIN_REPO)
             print(" ")
         else:
-            print('Checking for updates to ' + color.GREEN +
-                  REPO_PARTS[1] + color.RESET)
+            print('Checking for updates to ' + COLOR["green"] +
+                  REPO_PARTS[1] + COLOR["reset"])
             os.chdir(REPO_PARTS[1])
             os.system('git pull')
             print(' ')
@@ -109,7 +109,7 @@ if os.path.exists(BUNDLE_DIR):
 # Install colorschemes from Github
 COLOR_DIR = (VIM_DIR + '/colors')
 if not os.path.exists(COLOR_DIR):
-    print('Creating ' + color.CYAN + COLOR_DIR + color.RESET + '\n')
+    print('Creating ' + COLOR["cyan"] + COLOR_DIR + COLOR["reset"] + '\n')
     os.mkdir(COLOR_DIR)
 
 COLOR_SCHEMES = [
@@ -122,11 +122,11 @@ COLOR_SCHEMES = [
     '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
     ]
 
-print(color.MAGENTA + 'Updating color schemes' + color.RESET)
+print(COLOR["magenta"] + 'Updating color schemes' + COLOR["reset"])
 for i in COLOR_SCHEMES:
     COLOR_FILE = os.path.basename(i)
     COLOR_PATH = (COLOR_DIR + '/' + COLOR_FILE)
     if not os.path.exists(COLOR_PATH):
-        print('Downloading ' + color.GREEN + COLOR_FILE + color.RESET)
+        print('Downloading ' + COLOR["green"] + COLOR_FILE + COLOR["reset"])
         COLOR_URL = ('https://raw.githubusercontent.com'+i)
         urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
