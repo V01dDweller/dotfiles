@@ -13,7 +13,6 @@
     5. Replace or create .bash, .vim and .tmux rc files from the lists below
     6. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
     7. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
-
 """
 
 import os
