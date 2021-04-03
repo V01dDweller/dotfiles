@@ -2,21 +2,21 @@
 
 # Install/update my favorite plug-ins via pathogen/git
 
-# - Asynchronous Linting Engine    - https://github.com/dense-analysis/ale
-# - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
+# - ALE                            - https://github.com/dense-analysis/ale
+# - Airline                        - https://github.com/vim-airline/vim-airline
 # - AnsiEsc                        - https://github.com/vim-scripts/AnsiEsc.vim
-# - Colorize HTML color codes      - https://github.com/chrisbra/Colorizer
-# - Delete saved views             - https://github.com/vim-scripts/delview
+# - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
+# - Colorizer                      - https://github.com/chrisbra/Colorizer
+# - Delview                        - https://github.com/vim-scripts/delview
+# - Dracula color scheme           - https://github.com/dracula/vim
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
-# - PowerShell syntax highlighting - https://github.com/PProvost/vim-ps1
-# - Better netrw?                  - https://github.com/tpope/vim-vinegar
-# - Dracula color scheme           - https://github.com/dracula/vim
-# - Vim airline                    - https://github.com/vim-airline/vim-airline
-# - tmuxline                       - https://github.com/edkolev/tmuxline.vim
-# - promptline                     - https://github.com/edkolev/promptline.vim
-# - vim-surround                   - https://github.com/tpope/vim-surround
+# - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
+# - Promptline                     - https://github.com/edkolev/promptline.vim
+# - Surround.vim                   - https://github.com/tpope/vim-surround
+# - Tmuxline                       - https://github.com/edkolev/tmuxline.vim
+# - Vinegar                        - https://github.com/tpope/vim-vinegar
 
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
