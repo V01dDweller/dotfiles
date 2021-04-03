@@ -457,8 +457,8 @@ endif
 let g:tmuxline_preset = {
     \'win'     : '#I #W',
     \'cwin'    : '#I #W',
-    \'x'       : '%a, %b %d',
-    \'y'       : '%R',
+    \'x'       : '%b %d',
+    \'y'       : '%a \ue0b3 %R',
     \'z'       : '#H',
     \'options' : {'status-justify' : 'left'}}
 
