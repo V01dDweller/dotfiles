@@ -21,24 +21,25 @@ import os
 import urllib.request
 
 
-class color:
-    RED = '\u001b[31;1m'
-    GREEN = '\u001b[32;1m'
-    YELLOW = '\u001b[33;1m'
-    BLUE = '\u001b[34;1m'
-    MAGENTA = '\u001b[35;1m'
-    CYAN = '\u001b[36;1m'
-    WHITE = '\u001b[37;1m'
-    RESET = '\u001b[0m'
+COLOR = {
+    "red": "\u001b[31;1m",
+    "green": "\u001b[32;1m",
+    "yellow": "\u001b[33;1m",
+    "blue": "\u001b[34;1m",
+    "magenta": "\u001b[35;1m",
+    "cyan": "\u001b[36;1m",
+    "white": "\u001b[37;1m",
+    "reset": "\u001b[0m"
+    }
 
 # Creating ~/.vim
 HOME_DIR = os.environ['HOME']
 VIM_DIR = (HOME_DIR + '/.vim')
 if not os.path.exists(VIM_DIR):
-    print('Creating ' + color.CYAN + VIM_DIR + color.RESET + '\n')
+    print('Creating ' + COLOR["cyan"] + VIM_DIR + COLOR["reset"] + '\n')
     os.mkdir(VIM_DIR)
 else:
-    print(color.CYAN + VIM_DIR + color.RESET + ' already exists\n')
+    print(COLOR["cyan"] + VIM_DIR + COLOR["reset"] + ' already exists\n')
 
 # Installing the Pathogen plugn-in manager
 PATHOGEN_DIRS = ['autoload', 'bundle']
