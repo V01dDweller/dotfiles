@@ -69,9 +69,9 @@ TMUX_FILES = [
     ]
 
 # Backups
-print (color.CYAN + '-------' + color.RESET)
-print (color.CYAN + 'Backups' + color.RESET)
-print (color.CYAN + '-------' + color.RESET)
+print(COLOR["cyan"] + '-------' + COLOR["reset"])
+print(COLOR["cyan"] + 'Backups' + COLOR["reset"])
+print(COLOR["cyan"] + '-------' + COLOR["reset"])
 BACKUP_FILES = BASH_FILES + MINTTY_FILES + VIM_FILES + TMUX_FILES
 BACKUP_DIRECTORY = HOME_DIR + '/dotfile_backup_' + TIME_STAMP
 
@@ -86,9 +86,9 @@ for i in BACKUP_FILES:
 #
 # Bash
 #
-print(color.CYAN + '----' + color.RESET)
-print(color.CYAN + 'Bash' + color.RESET)
-print(color.CYAN + '----' + color.RESET)
+print(COLOR["cyan"] + '----' + COLOR["reset"])
+print(COLOR["cyan"] + 'Bash' + COLOR["reset"])
+print(COLOR["cyan"] + '----' + COLOR["reset"])
 
 # Setup for a basic bash git-aware prompt
 BASH_PATH = (HOME_DIR + '/.bash')
@@ -96,26 +96,26 @@ GITAWARE_PATH = (BASH_PATH + '/git-aware-prompt')
 GITAWARE_REPO = 'https://github.com/jimeh/git-aware-prompt.git'
 
 if os.path.exists(BASH_PATH):
-    print(color.GREEN +
+    print(COLOR["green"] +
           'Found ~/.bash, checking for ~/.bash/git-aware-prompt...' +
-          color.RESET)
+          COLOR["reset"])
     if os.path.exists(GITAWARE_PATH):
-        print(color.GREEN + 'Found the git-aware-prompt, updating...' +
-              color.RESET)
+        print(COLOR["green"] + 'Found the git-aware-prompt, updating...' +
+              COLOR["reset"])
         os.chdir(GITAWARE_PATH)
         os.system('git pull')
         print(' ')
         os.chdir(START_PATH)
     else:
-        print(color.YELLOW + 'Didn\'t find git-aware-prompt,' + color.RESET)
+        print(COLOR["yellow"] + 'Didn\'t find git-aware-prompt,' + COLOR["reset"])
         print('Cloning it now')
         os.chdir(BASH_PATH)
         os.system('git clone --depth 1 ' + GITAWARE_REPO)
         os.chdir(START_PATH)
         print(' ')
 else:
-    print(color.YELLOW + 'Didn\'t find ~/.bash, creating it now...' +
-          color.RESET)
+    print(COLOR["yellow"] + 'Didn\'t find ~/.bash, creating it now...' +
+          COLOR["reset"])
     os.mkdir(BASH_PATH)
     os.chdir(BASH_PATH)
     os.system('git clone --depth 1 ' + GITAWARE_REPO)
@@ -123,35 +123,35 @@ else:
     os.chdir(START_PATH)
 
 # Copying bash dot files
-print(color.GREEN + 'Copying bash dot files' + color.RESET)
+print(COLOR["green"] + 'Copying bash dot files' + COLOR["reset"])
 for i in BASH_FILES:
     os.system('cp -v ' + REPO_PATH + '/bash/' + i + ' ' + HOME_DIR + '/' + i)
-print (' ')
+print(' ')
 
 # Copying tmux dot files
-print(color.CYAN + '----' + color.RESET)
-print(color.CYAN + 'Tmux' + color.RESET)
-print(color.CYAN + '----' + color.RESET)
+print(COLOR["cyan"] + '----' + COLOR["reset"])
+print(COLOR["cyan"] + 'Tmux' + COLOR["reset"])
+print(COLOR["cyan"] + '----' + COLOR["reset"])
 TMUX_CHECK = subprocess.getstatusoutput('which tmux')
-if (TMUX_CHECK[0] == 0):
-    print(color.GREEN + 'Copying tmux dot files' + color.RESET)
+if TMUX_CHECK[0] == 0:
+    print(COLOR["green"] + 'Copying tmux dot files' + COLOR["reset"])
     for i in TMUX_FILES:
         os.system('cp -v ' + REPO_PATH + '/tmux/' + i + ' ' +
                   HOME_DIR + '/' + i)
-    print (' ')
-    print(color.YELLOW + '** Reminder: Uncomment the appropriate block in ' +
-          HOME_DIR + '/.tmux.conf for clipboard integration' + color.RESET)
+    print(' ')
+    print(COLOR["yellow"] + '** Reminder: Uncomment the appropriate block in ' +
+          HOME_DIR + '/.tmux.conf for clipboard integration' + COLOR["reset"])
     # Install tmux plugins
     print('Installing tmux plugins')
     os.system('python3 ' + REPO_PATH + '/tmux/plugin_install.py')
-    print (' ')
+    print(' ')
 
 # Tmux theme files for Linux vs WSL
 COLOR_SCHEME = "airline_original"
-if (OSTYPE == 'Linux'):
+if OSTYPE == 'Linux':
     with open('/proc/version', 'r') as OSVER:
         for line in OSVER:
-            if ('windows' in line.lower()):
+            if 'windows' in line.lower():
                 print('This is Widows Subsystem for Linux')
                 COLOR_SCHEME = "yellow"
             else:
@@ -161,19 +161,19 @@ os.system('cp -v ' + REPO_PATH + '/tmux/themes/' + COLOR_SCHEME +
           '/.tmux* ' + HOME_DIR + '/')
 
 # Copying vim dot files
-print(color.CYAN + '---' + color.RESET)
-print(color.CYAN + 'Vim' + color.RESET)
-print(color.CYAN + '---' + color.RESET)
-vim_check = subprocess.getstatusoutput('which vim')
-if (vim_check[0] == 0):
-    print(color.GREEN + 'Copying vim dot files' + color.RESET)
+print(COLOR["cyan"] + '---' + COLOR["reset"])
+print(COLOR["cyan"] + 'Vim' + COLOR["reset"])
+print(COLOR["cyan"] + '---' + COLOR["reset"])
+VIM_CHECK = subprocess.getstatusoutput('which vim')
+if VIM_CHECK[0] == 0:
+    print(COLOR["green"] + 'Copying vim dot files' + COLOR["reset"])
     for i in VIM_FILES:
         os.system('cp -v ' + REPO_PATH + '/vim/' + i + ' ' +
                   HOME_DIR + '/' + i)
     os.system(REPO_PATH + '/vim/plugin_install.py')
 
 # Copying w3m dot files
-w3m_check = subprocess.getstatusoutput('which w3m')
-if (w3m_check[0] == 0):
-    print(color.GREEN + 'Copying w3m dot file' + color.RESET)
+W3M_CHECK = subprocess.getstatusoutput('which w3m')
+if W3M_CHECK[0] == 0:
+    print(COLOR["green"] + 'Copying w3m dot file' + COLOR["reset"])
     os.system('cp -vr' + REPO_PATH + '/w3m' + HOME_DIR)
