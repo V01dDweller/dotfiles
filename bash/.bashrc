@@ -124,3 +124,6 @@ fi
 
 # Pygments alias
 alias pygmentize="pygmentize -f terminal"
+
+# Markdown reading with pandc + lynx
+md() { pandoc "$1" | lynx -stdin; }
