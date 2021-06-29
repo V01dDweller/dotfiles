@@ -458,7 +458,7 @@ let g:tmuxline_preset = {
     \'a'       : '#H',
     \'win'     : '#I \ue0b1 #W',
     \'cwin'    : '#I \ue0b1 #W',
-    \'x'       : '\ue0b3 %a %b %e',
+    \'x'       : '%a %b %d',
     \'y'       : '%I:%M %p',
     \'z'       : '#S',
     \'options' : {'status-justify' : 'left'}}
