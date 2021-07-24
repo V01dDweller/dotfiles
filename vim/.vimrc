@@ -469,7 +469,7 @@ let g:tmuxline_preset = {
 let g:promptline_symbols = {
     \ 'dir_sep'        : '/'}
 let g:promptline_preset = {
-      \'a'    : [ '\u' ],
+      \'a'    : [ '\@' ],
       \'b'    : [ '\h' ],
       \'c'    : [ promptline#slices#cwd({ 'dir_limit': 2 }) ],
       \'y'    : [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
