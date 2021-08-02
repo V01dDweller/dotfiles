@@ -215,9 +215,9 @@ imap <silent> <F3> <Esc> :set wrap!<CR>
 
 " F5 - Toggle netrw
 if v:version > 799
-  map <silent> <F4> :call ToggleNetrwVim8()<CR>
+  map <silent> <F5> :call ToggleNetrwVim8()<CR>
 else
-  map <silent> <F4> :call ToggleNetrwVim7()<CR>
+  map <silent> <F5> :call ToggleNetrwVim7()<CR>
 endif
 
 " Netrw confined to 30 columns
