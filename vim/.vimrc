@@ -475,3 +475,16 @@ let g:promptline_preset = {
       \'y'    : [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
       \'warn' : [ promptline#slices#last_exit_code() ] }
 "let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
+
+" NERDTree
+
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+" Thicker NERDTree arrows
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
