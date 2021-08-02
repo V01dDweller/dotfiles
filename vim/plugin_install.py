@@ -10,6 +10,7 @@
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
+# - NERDTree                       - https://github.com/preservim/nerdtree
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 # - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
 # - Promptline                     - https://github.com/edkolev/promptline.vim
@@ -78,7 +79,8 @@ VIM_PLUGINS = [
     'tpope/vim-vinegar',
     'chr4/nginx.vim',
     'vim-scripts/delview',
-    'dracula/vim'
+    'dracula/vim',
+    'preservim/nerdtree',
     'edkolev/tmuxline.vim',
     'edkolev/promptline.vim',
     'tpope/vim-surround'
