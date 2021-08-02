@@ -16,8 +16,8 @@
 "    F2 - Toggle line numbers                                "
 "    F3 - Toggle line wrapping                               "
 "    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
-"    F5 - Toggle Colorizer plugin                            "
-"    F6 - Toggle the AnsiEsc plugin                          "
+"    F5 - Toggle NERDTree plugin                             "
+"    F6 - Toggle Colorizer plugin                            "
 "    F7 - Toggle scrollbind/cursorbind                       "
 "    F8 - Disable all auto-indenting                         "
 "    F9 - Toggle cursorline                                  "
@@ -124,11 +124,11 @@ endif
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
 
-" F5 - Toggle Colorizer
-nnoremap <F5> :ColorToggle<CR>
+" F5 - Toggle NERDTree
+nnoremap <F5> :NERDTreeToggle<CR>
 
-" F6 - Toggle AnsiEsc plug-in
-nnoremap <F6> :AnsiEsc<CR>
+" F6 - Toggle Colorizer
+nnoremap <F5> :ColorToggle<CR>
 
 " F7 - Toggle scrollbind and cursorbind for all panes
 nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
