@@ -128,7 +128,7 @@ highlight link ipaddr Identifier
 nnoremap <F5> :NERDTreeToggle<CR>
 
 " F6 - Toggle Colorizer
-nnoremap <F5> :ColorToggle<CR>
+nnoremap <F6> :ColorToggle<CR>
 
 " F7 - Toggle scrollbind and cursorbind for all panes
 nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
