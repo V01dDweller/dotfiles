@@ -481,6 +481,9 @@ let g:promptline_preset = {
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
+" NERDTree minimal UI
+let NERDTreeMinimalUI=1
+
 " Thicker NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
