@@ -15,8 +15,8 @@
 " -----------------------------------------------------------"
 "    F2 - Toggle line numbers                                "
 "    F3 - Toggle line wrapping                               "
-"    F4 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
-"    F5 - Toggle NERDTree plugin                             "
+"    F4 - Toggle NERDTree plugin                             "
+"    F5 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
 "    F6 - Toggle Colorizer plugin                            "
 "    F7 - Toggle scrollbind/cursorbind                       "
 "    F8 - Disable all auto-indenting                         "
@@ -124,8 +124,8 @@ endif
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
 
-" F5 - Toggle NERDTree
-nnoremap <F5> :NERDTreeToggle<CR>
+" F4 - Toggle NERDTree
+nnoremap <F4> :NERDTreeToggle<CR>
 
 " F6 - Toggle Colorizer
 nnoremap <F6> :ColorToggle<CR>
@@ -213,7 +213,7 @@ imap <silent> <F2> <Esc> :set nu!<CR>
 nmap <silent> <F3> :set wrap!<CR>
 imap <silent> <F3> <Esc> :set wrap!<CR>
 
-" F4 - Toggle netrw
+" F5 - Toggle netrw
 if v:version > 799
   map <silent> <F4> :call ToggleNetrwVim8()<CR>
 else
