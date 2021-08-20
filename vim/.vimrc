@@ -427,8 +427,8 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Blue
       highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=darkgray ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=darkgray ctermfg=Red
+      highlight ALEWarningSign ctermbg=237 ctermfg=Yellow
+      highlight ALEErrorSign ctermbg=237 ctermfg=Red
     endif
   endif
 endif
