@@ -240,3 +240,4 @@ Vim
 ---
 This installs my .vimrc and .gvimrc files, the  pathogen plug-in manager and a
 list of plugins.
+
