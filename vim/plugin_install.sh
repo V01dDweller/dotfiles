@@ -4,6 +4,7 @@
 
 # - ALE                            - https://github.com/dense-analysis/ale
 # - Airline                        - https://github.com/vim-airline/vim-airline
+# - Airline Themes                 - https://github.com/vim-airline/vim-airline-themes
 # - AnsiEsc                        - https://github.com/vim-scripts/AnsiEsc.vim
 # - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
 # - Colorizer                      - https://github.com/chrisbra/Colorizer
@@ -52,6 +53,7 @@ export PLUGINS="\
   vim-scripts/AnsiEsc.vim \
   pearofducks/ansible-vim \
   vim-airline/vim-airline \
+  vim-airline/vim-airline-themes \
   chrisbra/Colorizer \
   airblade/vim-gitgutter \
   PProvost/vim-ps1 \
