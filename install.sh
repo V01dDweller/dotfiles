@@ -83,7 +83,7 @@ currentDate=$(date +%Y-%m-%d_%H%M-%S)
 bashFiles=(".bashrc" ".bash_profile" ".bash_prompt.sh" ".LESS_TERMCAP")
 minttyFiles=(".minttyrc" ".bash_mintty_colors" )
 vimFiles=(".vimrc" ".gvimrc")
-tmuxFiles=(".tmux.conf" ".tmux-syncoff.conf" ".tmux-syncon.conf" ".tmux.clipboard.conf" ".tmux-status.conf")
+tmuxFiles=(".tmux.conf"  ".tmux.clipboard.conf" ".tmux-status.conf")
 backupFiles=("${bashFiles[@]}" "${minttyFiles[@]}" "${vimFiles[@]}" "${tmuxFiles[@]}")
 backupDirectory="dotfile_backup.${currentDate}"
 
