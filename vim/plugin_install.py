@@ -16,6 +16,7 @@
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 # - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
 # - Promptline                     - https://github.com/edkolev/promptline.vim
+# - Repeat                         - https://github.com/tpope/vim-repeat
 # - Surround.vim                   - https://github.com/tpope/vim-surround
 # - Tmuxline                       - https://github.com/edkolev/tmuxline.vim
 # - Vinegar                        - https://github.com/tpope/vim-vinegar
@@ -87,6 +88,7 @@ VIM_PLUGINS = [
     'preservim/nerdtree',
     'edkolev/tmuxline.vim',
     'edkolev/promptline.vim',
+    'tpope/vim-repeat',
     'tpope/vim-surround'
     ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
