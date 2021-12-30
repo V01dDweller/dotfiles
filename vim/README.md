@@ -21,6 +21,7 @@ Plug-ins
 1. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
 1. [Promptline](https://github.com/edkolev/promptline.vim) - Bash prompt sync with Airline
 1. [Surround.vim](https://github.com/tpope/vim-surround) - Quickly change "surroundings"
+1. [Repeat](https://github.com/tpope/vim-repeat) - Repeat plug-in remaps like Vim-Surround
 1. [Tmuxline](https://github.com/edkolev/tmuxline.vim) - Tmux theme sync with Airline
 1. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
 
