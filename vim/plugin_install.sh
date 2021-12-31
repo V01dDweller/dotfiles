@@ -13,6 +13,8 @@
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
 # - Jenkinsfile syntax.            - https://github.com/martinda/Jenkinsfile-vim-syntax
+# - Lion                           - https://github.com/tommcdo/vim-lion
+# - Loupe                          - https://github.com/wincent/loupe
 # - NERDTree                       - https://github.com/preservim/nerdtree
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 # - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
@@ -65,6 +67,8 @@ export PLUGINS="\
   vim-scripts/delview \
   chr4/nginx.vim \
   dracula/vim \
+  tommcdo/vim-lion \
+  wincent/loupe \
   preservim/nerdtree \
   edkolev/tmuxline.vim \
   edkolev/promptline.vim \

@@ -16,6 +16,8 @@ Plug-ins
 1. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
 1. [Fugitive](https://github.com/tpope/vim-fugitive) - Git integration
 1. [Git-Gutter](https://github.com/airblade/vim-gitgutter) - Shows git changes in the gutter
+1. [Lion](https://github.com/tommcdo/vim-lion.git) - Aligning text by a character
+1. [Loupe](https://github.com/wincent/loupe) - Search enhancement
 1. [NERDTree](https://github.com/preservim/nerdtree) - Filesystem Explorer
 1. [Nginx.vim](https://github.com/chr4/nginx.vim) - Nginx conf file syntax
 1. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
