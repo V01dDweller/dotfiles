@@ -13,7 +13,6 @@
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
 # - Jenkinsfile syntax             - https://github.com/martinda/Jenkinsfile-vim-syntax
 # - Lion                           - https://github.com/tommcdo/vim-lion
-# - Loupe                          - https://github.com/wincent/loupe
 # - NERDTree                       - https://github.com/preservim/nerdtree
 # - Nginx conf file syntax         - https://github.com/chr4/nginx.vim
 # - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
@@ -87,7 +86,6 @@ VIM_PLUGINS = [
     'chr4/nginx.vim',
     'vim-scripts/delview',
     'tommcdo/vim-lion',
-    'wincent/loupe',
     'dracula/vim',
     'preservim/nerdtree',
     'edkolev/tmuxline.vim',
