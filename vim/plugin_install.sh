@@ -12,6 +12,7 @@
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
+# - HCL                            - https://github.com/jvirtanen/vim-hcl
 # - Jenkinsfile syntax.            - https://github.com/martinda/Jenkinsfile-vim-syntax
 # - Lion                           - https://github.com/tommcdo/vim-lion
 # - NERDTree                       - https://github.com/preservim/nerdtree
@@ -59,6 +60,7 @@ export PLUGINS="\
   vim-airline/vim-airline-themes \
   chrisbra/Colorizer \
   airblade/vim-gitgutter \
+  jvirtanen/vim-hcl \
   martinda/Jenkinsfile-vim-syntax \
   PProvost/vim-ps1 \
   tpope/vim-fugitive\
