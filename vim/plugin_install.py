@@ -131,7 +131,9 @@ COLOR_SCHEMES = [
     '/micke/vim-hybrid/master/colors/hybrid.vim',
     '/tomasr/molokai/master/colors/molokai.vim',
     '/jalvesaq/southernlights/master/colors/southernlights.vim',
-    '/vim-scripts/xoria256.vim/master/colors/xoria256.vim'
+    '/vim-scripts/xoria256.vim/master/colors/xoria256.vim',
+    '/wadackel/vim-dogrun/main/colors/dogrun.vim',
+    '/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim'
     ]
 
 print(COLOR["magenta"] + 'Updating color schemes' + COLOR["reset"])
