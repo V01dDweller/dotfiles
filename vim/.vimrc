@@ -441,56 +441,58 @@ let g:gitgutter_sign_removed            = '_▐'
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
 
-" Vim-airline replace file encoding info with buffer number
-let g:airline_section_y = '♯%{bufnr("%")}'
-let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_min_count = 2
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#branch#format = 1
-
+" Airline, Powerline, Tmuxline options for CLI only
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
+  " Vim-airline replace file encoding info with buffer number
+  let g:airline_section_y = '♯%{bufnr("%")}'
+  let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#tab_min_count = 2
+  let g:airline#extensions#tabline#show_buffers = 0
+  let g:airline#extensions#branch#format = 1
+
   let g:airline_theme='dark'
+
+  let g:tmuxline_preset = {
+      \'a'       : '#H',
+      \'win'     : '#I \ue0b1 #W',
+      \'cwin'    : '#I \ue0b1 #W',
+      \'x'       : '%a %b %d',
+      \'y'       : '%I:%M %p',
+      \'z'       : '#S',
+      \'options' : {'status-justify' : 'left'}}
+
+  " Promptline settings
+  " Update ~/.bash_promptline.sh with:
+  "     :PromptlineSnapshot ~/.bash_prompt.sh airline
+  let g:promptline_symbols = {
+      \ 'dir_sep'        : '/'}
+  let g:promptline_preset = {
+        \'a'    : [ '\@' ],
+        \'b'    : [ '\h' ],
+        \'c'    : [ '\W' ],
+        \'y'    : [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+        \'warn' : [ promptline#slices#last_exit_code() ] }
+  let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
 endif
 
-let g:tmuxline_preset = {
-    \'a'       : '#H',
-    \'win'     : '#I \ue0b1 #W',
-    \'cwin'    : '#I \ue0b1 #W',
-    \'x'       : '%a %b %d',
-    \'y'       : '%I:%M %p',
-    \'z'       : '#S',
-    \'options' : {'status-justify' : 'left'}}
-
-" Promptline settings
-" Update ~/.bash_promptline.sh with:
-"     :PromptlineSnapshot ~/.bash_prompt.sh airline
-let g:promptline_symbols = {
-    \ 'dir_sep'        : '/'}
-let g:promptline_preset = {
-      \'a'    : [ '\@' ],
-      \'b'    : [ '\h' ],
-      \'c'    : [ '\W' ],
-      \'y'    : [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
-      \'warn' : [ promptline#slices#last_exit_code() ] }
-let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
-
 " NERDTree
+if !has('gui_running')
+  " Open the existing NERDTree on each new tab.
+  autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+  " NERDTree minimal UI
+  let NERDTreeMinimalUI=1
 
-" NERDTree minimal UI
-let NERDTreeMinimalUI=1
+  " Thicker NERDTree arrows
+  let g:NERDTreeDirArrowExpandable = '▶'
+  let g:NERDTreeDirArrowCollapsible = '▼'
+  let NERDTreeIgnore=['\.vim$', '\.swp$', '.git*', '\~$']
 
-" Thicker NERDTree arrows
-let g:NERDTreeDirArrowExpandable = '▶'
-let g:NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore=['\.vim$', '\.swp$', '.git*', '\~$']
+  " Exit Vim if NERDTree is the only window remaining in the only tab.
+  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
-" Exit Vim if NERDTree is the only window remaining in the only window.
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+  " Exit Vim if NERDTree is the only window remaining in the only window.
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+endif
