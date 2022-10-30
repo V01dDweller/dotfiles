@@ -93,5 +93,7 @@ endif
 
 " Different colors for Windows GUI
 if has('WIN32')
-  color industry
+  set background=light
+  color PaperColor
+endif
 endif
