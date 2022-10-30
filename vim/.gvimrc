@@ -32,14 +32,14 @@ if has("gui_running")
     set guifont=Monospace\ Regular/10/-1/5/50/0/0/0/1/0
   elseif has("x11")
     set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-  else
-    set guifont=Lucida_Console:h11:cDEFAULT
+  elseif has("win32")
+    set guifont=DejaVu_Sans_Mono_for_Powerline:h10,Lucida_Console:h11:cDEFAUL
   endif
 endif
 
 " Window size
 set columns=86 lines=45
-    
+
 " Hide GUI toolbar
 set guioptions=mr
 
