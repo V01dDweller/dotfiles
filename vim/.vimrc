@@ -272,19 +272,11 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   Helptags
 endif
 
-" Color Scheme with matching Cursorline CursorColumn and colorcolumn
-if !has('gui_running') && !empty(glob("~/.vim/colors/southernlights.vim"))
-  color southernlights
-  highlight CursorLine term=bold cterm=bold ctermbg=238
-  highlight CursorColumn ctermbg=238
-  highlight ColorColumn ctermbg=236
-  highlight CursorLineNr term=bold cterm=bold  gui=bold
+" Color Scheme
+if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
+  color PaperColor
 else
   color elflord
-  highlight CursorLine term=bold cterm=bold ctermbg=darkblue
-  highlight CursorColumn ctermbg=darkblue
-  highlight ColorColumn ctermbg=darkgreen
-  highlight CursorLineNr term=bold cterm=bold  gui=bold
 endif
 
 " Found the following here:
@@ -340,100 +332,6 @@ endif
 " Disable linting for Java
 " Recommend installing checkstyle, otherwise java linting gets weird
 "let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
-
-" Match GitGutter and ALE colors to active color scheme
-if !empty(glob("~/.vim/bundle/vim-gitgutter"))
-  if (colors_name == "xoria256")
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46 ctermbg=242 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51 ctermbg=242 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=242 " red _
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=242 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=242 ctermfg=Red
-    endif
-  elseif (colors_name == "bubblegum-256-dark")
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=237 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=237 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=237 " red _
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=237 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=237 ctermfg=Red
-    endif
-  elseif (colors_name == "atom-dark-256")
-    " Black background
-    highlight Normal ctermfg=grey ctermbg=black
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=235 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=235 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=235 " red _
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=242 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=242 ctermfg=Red
-    endif
-  elseif (colors_name == "hybrid")
-    " Black background
-    highlight Normal ctermfg=grey ctermbg=black
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=234 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=234 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=234 " red _
-    highlight CursorLine term=bold cterm=bold ctermbg=234
-    highlight CursorColumn ctermbg=234
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=234 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=234 ctermfg=Red
-    endif
-  elseif (colors_name == "southernlights")
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=240 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=240 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=240 " red _
-    highlight CursorLine term=bold cterm=bold ctermbg=234
-    highlight CursorLineNr term=bold cterm=bold ctermfg=yellow gui=bold
-    highlight CursorColumn ctermbg=234
-    hi Folded ctermbg=235 ctermfg=gray
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=240 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=240 ctermfg=Red
-    endif
-  elseif (colors_name == "dracula")
-    highlight CursorLine term=bold cterm=bold ctermbg=234
-    highlight CursorColumn ctermbg=234
-    highlight ColorColumn ctermbg=241
-    highlight CursorLineNr term=bold cterm=bold  gui=bold
-    highlight GitGutterAdd    guifg=#009900 ctermfg=2 ctermbg=236 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=6 ctermbg=236 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=1 ctermbg=236 " red _
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=236 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=236 ctermfg=Red
-    endif
-  elseif (colors_name == "elflord")
-    highlight SignColumn ctermbg=237
-    highlight CursorLine term=bold cterm=bold ctermbg=darkblue
-    highlight CursorColumn ctermbg=darkblue
-    highlight ColorColumn ctermbg=darkgreen
-    highlight CursorLineNr term=bold cterm=bold  gui=bold
-    highlight GitGutterAdd    guifg=#009900 ctermfg=46  ctermbg=237 " green +
-    highlight GitGutterChange guifg=#bbbb00 ctermfg=51  ctermbg=237 " cyan ~
-    highlight GitGutterDelete guifg=#ff2222 ctermfg=197 ctermbg=237 " red -
-    if !empty(glob("~/.vim/bundle/ale"))
-      highlight ALEWarning ctermbg=Blue
-      highlight ALEError ctermbg=Red
-      highlight ALEWarningSign ctermbg=237 ctermfg=Yellow
-      highlight ALEErrorSign ctermbg=237 ctermfg=Red
-    endif
-  endif
-endif
 
 " GitGutter
 let g:gitgutter_sign_added              = '+▐'
