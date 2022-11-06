@@ -454,7 +454,7 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline#extensions#tabline#show_buffers = 0
   let g:airline#extensions#branch#format = 1
 
-  let g:airline_theme='dark'
+  let g:airline_theme='minimalist'
 
   let g:tmuxline_preset = {
       \'a'       : '#H',
