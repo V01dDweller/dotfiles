@@ -17,8 +17,8 @@ respectivly. Note that these plug-ins get their default settings from the
 
 By default, each of these will use
 [Powerline](https://github.com/powerline/fonts) fonts which must be either
-installed separately or disabled by updating `.vimrc`.  MacOS iTerm users can
-enable "Draw Powerline Glyphs".
+installed separately or disabled by updating then sourcing
+`.vimrc`.  MacOS iTerm users can enable "Draw Powerline Glyphs".
 
 The install scripts will back up existing bash, MinTTY (Cygwin only), Vim or
 Tmux dotfiles before replacing them.
