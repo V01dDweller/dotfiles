@@ -247,8 +247,6 @@ function! ToggleMouse()
   endif
 endfunc
 
-" F12 - Toggle mouse support
-map <silent> <F12> :call ToggleMouse()<CR>
 "......................  Netrw Settings  ...................."
 " Netrw tree style
 let g:netrw_liststyle = 3
