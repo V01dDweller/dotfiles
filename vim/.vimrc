@@ -80,11 +80,6 @@ syntax enable
 " Highlight current line
 set cursorline
 
-" Dress up split windows
-hi StatusLine ctermfg=15  guifg=#ffffff ctermbg=239 guibg=#4e4e4e cterm=bold gui=bold
-hi StatusLineNC ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-hi VertSplit ctermfg=249 guifg=#b2b2b2 ctermbg=237 guibg=#3a3a3a cterm=none gui=none
-
 " Vertical split separator
 if !has("gui_running") && v:version > 799
   set fillchars=vert:│
