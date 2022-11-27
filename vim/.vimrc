@@ -385,9 +385,13 @@ if !empty(glob("~/.vim/bundle/ale"))
   nnoremap <C-p> :ALEPrevious<CR>
 endif
 
-" Disable linting for Java
-" Recommend installing checkstyle, otherwise java linting gets weird
-"let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
+" Enable ALE for Java only if checkstyle is present,
+" otherwise java linting gets weird
+if executable("checkstyle")
+  let g:ale_pattern_options = {'\.java$': {'ale_enabled': 1}}
+else
+  let g:ale_pattern_options = {'\.java$': {'ale_enabled': 0}}
+endif
 
 " GitGutter
 let g:gitgutter_sign_added              = '+▐'
