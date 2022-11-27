@@ -148,7 +148,7 @@ function! ToggleShade()
   else
     set background="light"
     let g:LightsOn = 1
-    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match 
+    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match
       highlight ALEWarning ctermbg=Yellow
       highlight ALEError ctermbg=Lightred
       highlight ALEWarningSign ctermfg=Darkyellow
@@ -326,7 +326,7 @@ if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
     let g:LightsOn = 0
     if !empty(glob("~/.vim/bundle/ale"))
       highlight ALEWarning ctermbg=Yellow ctermfg=Black
-      highlight ALEError ctermbg=Red ctermfg=Black 
+      highlight ALEError ctermbg=Red ctermfg=Black
       highlight ALEWarningSign ctermfg=Yellow
       highlight ALEErrorSign ctermfg=Red
     endif
