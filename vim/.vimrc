@@ -337,8 +337,13 @@ else
   color elflord
 endif
 
-" Found the following here:
+" Use 'z/' to toggle auto-highlight word under cursor
+" Credit - mosh @ Vim Wiki
+" URL: https://vim.fandom.com/wiki/Auto_highlight_current_word_when_idle
+"
+" Originally found on StackOverflow:
 "     https://stackoverflow.com/questions/3431184/highlight-all-occurrence-of-a-selected-word
+"
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
 " Type z/ to toggle highlighting on/off.
