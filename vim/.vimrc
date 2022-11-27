@@ -131,9 +131,35 @@ if !has('gui_running')
   nnoremap <F4> :NERDTreeToggle<CR>
 endif
 
+" F6 - Switch between light and dark background
+function! ToggleShade()
+  if g:LightsOn
+    set background=dark
+    let g:LightsOn = 0
+    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match
+      highlight ALEWarning ctermbg=Darkyellow ctermfg=Black
+      highlight ALEError ctermbg=DarkRed
+      highlight ALEWarningSign ctermfg=Yellow
+      highlight ALEErrorSign ctermfg=Red
+    endif
+    if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+      highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
+    endif
   else
+    set background="light"
+    let g:LightsOn = 1
+    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match 
+      highlight ALEWarning ctermbg=Yellow
+      highlight ALEError ctermbg=Lightred
+      highlight ALEWarningSign ctermfg=Darkyellow
+      highlight ALEErrorSign ctermfg=Darkred
+    endif
+    if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+      highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
+    endif
   endif
 endfunction
+map <silent> <F6> :call ToggleShade()<CR>
 
 " Netrw, stop complaining about unsaved hidden buffers
 " Thanks Brian Tiffin @ StackExchange:
