@@ -6,7 +6,7 @@ to get my often git-centric workflow going quickly on a new system whether that
 system is running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu)
 distributions.
 
-![WSLtty 3-way split with Vim and bash](/screenshot_01.png?raw=true
+![WSLtty 3-way split with Vim and bash](/screenshot_02.png?raw=true
 "Vim/bash/tmux nerdvada")
 
 Once installed, the bash prompt and Vim (Vim 8.x recommended) become "git
