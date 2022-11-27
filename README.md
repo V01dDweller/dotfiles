@@ -8,17 +8,20 @@ running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu) distributions.
 ![WSLtty 3-way split with Vim and bash](/screenshot_02.png?raw=true
 "Vim/bash/tmux nerdvada")
 
-The priorities are Vim, Tmux and bash which are visually themed via the Vim
-[Airline](https://github.com/vim-airline/vim-airline),
-[Promptline](https://github.com/edkolev/promptline.vim) and
-[Tmuxline](https://github.com/edkolev/tmuxline.vim) plugins. 
+The priorities are Vim, Tmux, and bash which are visually themed/coordinated
+via the Vim [Airline](https://github.com/vim-airline/vim-airline),
+[Tmuxline](https://github.com/edkolev/tmuxline.vim) and
+[Promptline](https://github.com/edkolev/promptline.vim) vim plugins
+respectivly. Note that these plug-ins get their default settings from the
+`.vimrc` file.
 
-The defaults use [Powerline](https://github.com/powerline/fonts) fonts which
-must be either installed separately or disabled by updating `.vimrc`. MacOS
-iTerm users can enable "Draw Powerline Glyphs".
+By default, each of these will use
+[Powerline](https://github.com/powerline/fonts) fonts which must be either
+installed separately or disabled by updating `.vimrc`.  MacOS iTerm users can
+enable "Draw Powerline Glyphs".
 
-The install scripts will back up any existing bash, MinTTY (Cygwin only), Vim
-or Tmux dotfiles before replacing them.
+The install scripts will back up existing bash, MinTTY (Cygwin only), Vim or
+Tmux dotfiles before replacing them.
 
 From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and
 [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in
@@ -30,16 +33,17 @@ and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for
 more.
 
 Everything is installed directly from github, so it is a good idea to
-periodically re-run the install scripts or the individual Vim or tmux
-plugin_install scripts to pull the latest versions of all the plug-ins.
+periodically pull and re-run the project, then re-run the install script(or
+the individual Vim or tmux plugin_install scripts) to update all the plug-ins
+and color schemes.
 
-The uninstall.sh script is a work-in-progress that was never finished but
-backing this out should be very easy: Simply restore the contents of the most
-recent `dotfile_backup` directory and delete the `~/.vim/bundle` and
-`~/.tmux/plugins` directory contents.
+The `uninstall.sh` script was never finished and should be avoided for now, but
+backing this out should be as simple as restoring the contents of the most
+recent `dotfile_backup` directory then deleting the `~/.vim/bundle` and
+`~/.tmux/plugins` directories.
 
-I test theses fairly often on MacOS, WSL/WSL 2, Cygwin, RHEL/CentoS 7 & 8 and
-Ubuntu. Results may vary, *use at your own risk.*
+These are tested fairly often on MacOS, WSL, Cygwin, and Linux but results may
+vary, **use at your own risk.**
 
 Quick Install
 --------------
