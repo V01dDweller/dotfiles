@@ -117,52 +117,34 @@ highlight link ipaddr Identifier
 "   F12 - Toggle mouse                                       "
 "............................................................"
 
+" F2 - Toggle line numbers
+map <silent> <F2> :set nu!<CR>
+imap <silent> <F2> <Esc> :set nu!<CR>
+
+" F3 - Toggle line wrapping
+nmap <silent> <F3> :set wrap!<CR>
+imap <silent> <F3> <Esc> :set wrap!<CR>
+
+" F4 - Toggle NERDTree
 if !has('gui_running')
   " F4 - Toggle NERDTree
   nnoremap <F4> :NERDTreeToggle<CR>
 endif
 
-" F6 - Toggle Colorizer
-nnoremap <F6> :ColorToggle<CR>
-
-" F7 - Toggle scrollbind and cursorbind for all panes
-nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
-
-" F8 -  Fully disable auto-indent
-nnoremap <F8> :setl noai nocin nosi inde=<CR>
-
-" F9 - Toggle cursorline
-nnoremap <F9> :set cursorline!<CR>
-
-" F10 - Toggle cursorcolumn
-nnoremap <F10> :set cursorcolumn!<CR>
-
-" F11 - Toggle color columns 2, 4, 6 and 80
-let g:ColorColumnOn = 0
-function! ToggleColorColumn()
-  if g:ColorColumnOn
-    set colorcolumn=""
-    let g:ColorColumnOn=0
   else
-    set colorcolumn=2,4,6,80
-    let g:ColorColumnOn=1
   endif
 endfunction
-map <silent> <F11> :call ToggleColorColumn()<CR>
-
-" Netrw tree style
-let g:netrw_liststyle = 3
-
-" Netrw with no banner
-let g:netrw_banner = 0
-
-" Netrw will hide these
-let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
 
 " Netrw, stop complaining about unsaved hidden buffers
 " Thanks Brian Tiffin @ StackExchange:
 " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
 autocmd FileType netrw setlocal bufhidden=delete
+" F5 - Toggle netrw
+if v:version > 799
+  map <silent> <F5> :call ToggleNetrwVim8()<CR>
+else
+  map <silent> <F5> :call ToggleNetrwVim7()<CR>
+endif
 
 " Function to toggle netrw for Vim 8+
 " Thanks to: https://vi.stackexchange.com/questions/10988/toggle-explorer-window
@@ -200,32 +182,40 @@ function! ToggleNetrwVim7()
   endif
 endfunction
 
-" F2 - Toggle line numbers
-map <silent> <F2> :set nu!<CR>
-imap <silent> <F2> <Esc> :set nu!<CR>
+" F7 - Toggle scrollbind and cursorbind, all panes
+nnoremap <F7> :windo setlocal scrollbind! cursorbind!<CR>
 
-" F3 - Toggle line wrapping
-nmap <silent> <F3> :set wrap!<CR>
-imap <silent> <F3> <Esc> :set wrap!<CR>
+" F8 -  Fully disable auto-indent
+nnoremap <F8> :setl noai nocin nosi inde=<CR>
 
-" F5 - Toggle netrw
-if v:version > 799
-  map <silent> <F5> :call ToggleNetrwVim8()<CR>
-else
-  map <silent> <F5> :call ToggleNetrwVim7()<CR>
-endif
+" F9 - Toggle cursorline
+nnoremap <F9> :set cursorline!<CR>
 
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
 
 " Netrw buffer settings
 let g:netrw_bufsettings = 'nomodifiable nomodified readonly nobuflisted nowrap nonumber'
+" F10 - Toggle cursorcolumn
+nnoremap <F10> :set cursorcolumn!<CR>
 
 " Filename in title bar
 set title
+" F11 - Toggle color columns 2, 4, 6 and 80
+let g:ColorColumnOn = 0
+function! ToggleColorColumn()
+  if g:ColorColumnOn
+    set colorcolumn=""
+    let g:ColorColumnOn=0
+  else
+    set colorcolumn=2,4,6,80
+    let g:ColorColumnOn=1
+  endif
+endfunction
+map <silent> <F11> :call ToggleColorColumn()<CR>
 
-" Enable mouse support
-set mouse=a
+" F12 - Toggle mouse support
+map <silent> <F12> :call ToggleMouse()<CR>
 
 " Function - toggle mouse support
 " Thanks to crater2150 - https://unix.stackexchange.com/questions/156707
