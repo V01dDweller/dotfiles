@@ -112,8 +112,6 @@ highlight link ipaddr Identifier
 "    F2 - Toggle line numbers                                "
 "    F3 - Toggle line wrapping                               "
 "    F4 - Toggle NERDTree plugin                             "
-"    F5 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
-"    F6 - Toggle Colorizer plugin                            "
 "    F5 - Toggle netrw left-navigation                       "
 "    F6 - Toggle dark/light background                       "
 "    F7 - Toggle scrollbind/cursorbind                       "
