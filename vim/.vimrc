@@ -161,10 +161,6 @@ function! ToggleShade()
 endfunction
 map <silent> <F6> :call ToggleShade()<CR>
 
-" Netrw, stop complaining about unsaved hidden buffers
-" Thanks Brian Tiffin @ StackExchange:
-" https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
-autocmd FileType netrw setlocal bufhidden=delete
 " F5 - Toggle netrw
 if v:version > 799
   map <silent> <F5> :call ToggleNetrwVim8()<CR>
@@ -217,16 +213,9 @@ nnoremap <F8> :setl noai nocin nosi inde=<CR>
 " F9 - Toggle cursorline
 nnoremap <F9> :set cursorline!<CR>
 
-" Netrw confined to 30 columns
-let g:netrw_winsize = -30
-
-" Netrw buffer settings
-let g:netrw_bufsettings = 'nomodifiable nomodified readonly nobuflisted nowrap nonumber'
 " F10 - Toggle cursorcolumn
 nnoremap <F10> :set cursorcolumn!<CR>
 
-" Filename in title bar
-set title
 " F11 - Toggle color columns 2, 4, 6 and 80
 let g:ColorColumnOn = 0
 function! ToggleColorColumn()
@@ -260,6 +249,37 @@ endfunc
 
 " F12 - Toggle mouse support
 map <silent> <F12> :call ToggleMouse()<CR>
+"......................  Netrw Settings  ...................."
+" Netrw tree style
+let g:netrw_liststyle = 3
+
+" Netrw with no banner
+let g:netrw_banner = 0
+
+" Netrw will hide these
+let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFUserTextEncoding"
+
+" Netrw, stop complaining about unsaved hidden buffers
+" Thanks Brian Tiffin @ StackExchange:
+" https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
+autocmd FileType netrw setlocal bufhidden=delete
+
+" Netrw confined to 30 columns
+let g:netrw_winsize = -30
+
+" Netrw buffer settings
+let g:netrw_bufsettings = 'nomodifiable nomodified readonly nobuflisted nowrap nonumber'
+
+" Filename in title bar
+set title
+
+" Enable mouse support
+set mouse=a
+
+" Hide dotfiles in netrw with gh to toggle, thanks to
+"  https://vi.stackexchange.com/questions/18650/how-to-make-netrw-start-with-dotfiles-hidden
+let ghregex='\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_list_hide=ghregex
 
 " Open Quickfix window automatically
 " Credit: romainl @ StackOverflow
@@ -352,11 +372,6 @@ autocmd FileType markdown,text,html,man,manual :set spell
 
 " Python 3 Omnicomplete
 autocmd FileType python set omnifunc=python3complete#Complete
-
-" Hide dotfiles in netrw with gh to toggle, thanks to
-"  https://vi.stackexchange.com/questions/18650/how-to-make-netrw-start-with-dotfiles-hidden
-let ghregex='\(^\|\s\s\)\zs\.\S\+'
-let g:netrw_list_hide=ghregex
 
 " ALE Icons and highlights
 if !empty(glob("~/.vim/bundle/ale"))
