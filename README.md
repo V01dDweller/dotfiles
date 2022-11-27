@@ -1,35 +1,31 @@
 My Dotfiles and Plug-Ins
 ========================
 This project installs a collection of dotfiles and plug-ins that I've come to
-depend on over the years. It is set up to be installed in one step. The goal is
-to get my often git-centric workflow going quickly on a new system whether that
-system is running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu)
-distributions.
+depend on over the years. It is set up to be installed in one step. The goal
+is to get my workflow going quickly on a new system whether that system is
+running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu) distributions.
 
 ![WSLtty 3-way split with Vim and bash](/screenshot_02.png?raw=true
 "Vim/bash/tmux nerdvada")
 
-Once installed, the bash prompt and Vim (Vim 8.x recommended) become "git
-aware" and visually synchronized with tmux (Tmux 3.x recommended), thanks to
-the lightweight [vim-airline](https://github.com/vim-airline/vim-airline),
-[tmuxline](https://github.com/edkolev/tmuxline.vim) and
-[promptline](https://github.com/edkolev/promptline.vim) vim plug-in trio. Git
-icons and other decorations are added via
-[Powerline](https://github.com/powerline/fonts) fonts.
+The priorities are Vim, Tmux and bash which are visually themed via the Vim
+[Airline](https://github.com/vim-airline/vim-airline),
+[Promptline](https://github.com/edkolev/promptline.vim) and
+[Tmuxline](https://github.com/edkolev/tmuxline.vim) plugins. 
 
-Powerline fonts are a separate install for now but an update that installs them
-on supported systems is coming. MacOS iTerm users can enable "Draw
-Powerline Glyphs" and skip the Powerline font install.
+The defaults use [Powerline](https://github.com/powerline/fonts) fonts which
+must be either installed separately or disabled by updating `.vimrc`. MacOS
+iTerm users can enable "Draw Powerline Glyphs".
 
-The install scripts will first back up any existing bash, MinTTY (Cygwin only),
-Vim or Tmux dotfiles then replace them with the ones from this repo.
+The install scripts will back up any existing bash, MinTTY (Cygwin only), Vim
+or Tmux dotfiles before replacing them.
 
 From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and
 [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in
 managers ([pathogen](https://github.com/tpope/vim-pathogen) and
 [tpm](https://github.com/tmux-plugins/tpm) respectively) are installed along
-with my favorite vim plug-ins and color schemes. Only one Tmux plug-in is
-installed. See the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim)
+with vim plug-ins and color schemes. Only one Tmux plug-in is installed. See
+the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim)
 and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for
 more.
 
