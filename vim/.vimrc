@@ -394,9 +394,12 @@ else
 endif
 
 " GitGutter
-let g:gitgutter_sign_added              = '+▐'
-let g:gitgutter_sign_modified           = '~▐'
-let g:gitgutter_sign_removed            = '_▐'
+if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+  let g:gitgutter_sign_added              = '+▐'
+  let g:gitgutter_sign_modified           = '~▐'
+  let g:gitgutter_sign_removed            = '-▐'
+  highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
+endif
 
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
