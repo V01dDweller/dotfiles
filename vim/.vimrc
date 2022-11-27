@@ -26,6 +26,7 @@
 "   F12 - Toggle mouse                                       "
 " -----------------------------------------------------------"
 
+".....................   Basic Settings  ...................."
 
 " Disable Vi compatibility/allow Vim features not in Vi
 set nocompatible
