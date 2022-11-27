@@ -11,21 +11,6 @@
 "                                                            "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
 
-" Function Keys
-" -----------------------------------------------------------"
-"    F2 - Toggle line numbers                                "
-"    F3 - Toggle line wrapping                               "
-"    F4 - Toggle NERDTree plugin                             "
-"    F5 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
-"    F6 - Toggle Colorizer plugin                            "
-"    F7 - Toggle scrollbind/cursorbind                       "
-"    F8 - Disable all auto-indenting                         "
-"    F9 - Toggle cursorline                                  "
-"   F10 - Toggle cursorcolumn                                "
-"   F11 - Toggle colorcolumns 2, 4, 6 and 80                 "
-"   F12 - Toggle mouse                                       "
-" -----------------------------------------------------------"
-
 ".....................   Basic Settings  ...................."
 
 " Disable Vi compatibility/allow Vim features not in Vi
@@ -121,6 +106,21 @@ endif
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
+
+"...................... Function keys ......................."
+"                                                            "
+"    F2 - Toggle line numbers                                "
+"    F3 - Toggle line wrapping                               "
+"    F4 - Toggle NERDTree plugin                             "
+"    F5 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
+"    F6 - Toggle Colorizer plugin                            "
+"    F7 - Toggle scrollbind/cursorbind                       "
+"    F8 - Disable all auto-indenting                         "
+"    F9 - Toggle cursorline                                  "
+"   F10 - Toggle cursorcolumn                                "
+"   F11 - Toggle colorcolumns 2, 4, 6 and 80                 "
+"   F12 - Toggle mouse                                       "
+"............................................................"
 
 if !has('gui_running')
   " F4 - Toggle NERDTree
