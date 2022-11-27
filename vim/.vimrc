@@ -114,6 +114,8 @@ highlight link ipaddr Identifier
 "    F4 - Toggle NERDTree plugin                             "
 "    F5 - Toggle Lexplore ( > Vim 8) or Vexplore ( < Vim 8)  "
 "    F6 - Toggle Colorizer plugin                            "
+"    F5 - Toggle netrw left-navigation                       "
+"    F6 - Toggle dark/light background                       "
 "    F7 - Toggle scrollbind/cursorbind                       "
 "    F8 - Disable all auto-indenting                         "
 "    F9 - Toggle cursorline                                  "
