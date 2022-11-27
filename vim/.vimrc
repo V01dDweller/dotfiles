@@ -88,9 +88,6 @@ set splitright
 " Minimal number of lines above and below the cursor
 set scrolloff=2
 
-" Dark background
-set background=dark
-
 " Syntax highlighting
 syntax enable
 
@@ -273,8 +270,37 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
 endif
 
 " Color Scheme
+let g:LightsOn = 0
 if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   color PaperColor
+  " Set background to 'light' between 6am and 6pm, otherwise
+  " set to 'dark' with " coordinated ALE colors.
+  "
+  " See also mapping for F6 to toggl
+  "
+  " Thanks to Tan Wei Hao:
+  " https://medium.com/@bentanweihao/switch-between-solarized-light-dark-in-vim-auto-magically-18ed5a8ff88f
+  let hour = strftime("%H")
+  if 6 <= hour && hour < 18
+    set background=light
+    let g:LightsOn = 1
+    " Set ALE colors and highlights
+    if !empty(glob("~/.vim/bundle/ale"))
+      highlight ALEWarning ctermbg=Yellow
+      highlight ALEError ctermbg=Lightred
+      highlight ALEWarningSign ctermfg=Darkyellow
+      highlight ALEErrorSign ctermfg=Darkred
+    endif
+  else
+    set background=dark
+    let g:LightsOn = 0
+    if !empty(glob("~/.vim/bundle/ale"))
+      highlight ALEWarning ctermbg=Yellow ctermfg=Black
+      highlight ALEError ctermbg=Red ctermfg=Black 
+      highlight ALEWarningSign ctermfg=Yellow
+      highlight ALEErrorSign ctermfg=Red
+    endif
+  endif
 else
   color elflord
 endif
