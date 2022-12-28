@@ -42,9 +42,6 @@ set complete+=kspell
 " Use US English for spell check
 set spelllang=en_us
 
-" Set path auto-complete to be like bash
-set wildmode=list:longest
-
 " Tabs and indentation
 set shiftwidth=2        " Auto indent shift-width
 set softtabstop=2       " Tabs at two spaces
