@@ -414,6 +414,8 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline#extensions#tabline#tab_min_count = 2
   let g:airline#extensions#tabline#show_buffers = 0
   let g:airline#extensions#branch#format = 1
+  " Remove paths from tab names, add modification status
+  let g:airline#extensions#tabline#fnamemod = ':t: %M.'
 
   let g:airline_theme='minimalist'
 
