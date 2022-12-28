@@ -103,7 +103,7 @@ The install script will back up then replace the files below, if they exist:
 01. .bashrc
 02. .bash\_profile
 03. .bash\_prompt.sh
-04. .LESS\_TERMCAP)
+04. .LESS\_TERMCAP
 05. .minttyrc
 06. .bash\_mintty\_colors
 07. .vimrc
