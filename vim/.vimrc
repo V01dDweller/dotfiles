@@ -410,6 +410,8 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline_section_y = '♯%{bufnr("%")}'
   let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
   let g:airline_powerline_fonts = 1
+  let g:tmuxline_powerline_separators = 1
+  let g:promptline_powerline_symbols = 1
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#tab_min_count = 2
   let g:airline#extensions#tabline#show_buffers = 0
