@@ -5,7 +5,7 @@ depend on over the years. It is set up to be installed in one step. The goal
 is to get my workflow going quickly on a new system whether that system is
 running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu) distributions.
 
-![WSLtty 3-way split with Vim and bash](/screenshot_02.png?raw=true
+![WSLtty 3-way split with Vim and bash](/screenshot_03.png?raw=true
 "Vim/bash/tmux nerdvada")
 
 The priorities are Vim, Tmux, and bash which are visually themed/coordinated
