@@ -1,10 +1,11 @@
 My Dotfiles and Plug-Ins
 ========================
 
-This project installs a collection of dotfiles and plug-ins that I've come to
-depend on over the years. It is set up to be installed in one step. The goal
-is to get my workflow going quickly on a new system whether that system is
-running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu) distributions.
+This project installs a collection of dotfiles and Vim plug-ins that I've come
+to depend on over the years. It is set up to be installed in one step. The
+goal is to get my workflow going quickly on a new system whether that system
+is running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu)
+distributions.
 
 ![WSLtty 3-way split with Vim and bash](/screenshot_03.png?raw=true
 "Vim/bash/tmux nerdvada")
