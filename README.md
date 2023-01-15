@@ -256,3 +256,4 @@ Vim
 This installs my .vimrc and .gvimrc files, the  pathogen plug-in manager and a
 list of plugins.
 
+[modeline]: # ( vi: set number textwidth=78 colorcolumn=80 nowrap: )
