@@ -11,7 +11,14 @@
 "                                                            "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
 
-".....................   Basic Settings  ...................."
+"...................... Basic Settings ......................"
+
+" Filename in title bar
+set title
+
+" Enable mouse support
+set mouse=a
+set ttymouse=xterm2
 
 " Disable Vi compatibility/allow Vim features not in Vi
 set nocompatible
@@ -98,6 +105,60 @@ endif
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
 highlight link ipaddr Identifier
+
+" Open Quickfix window automatically
+" Credit: romainl @ StackOverflow
+" URL: https://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
+augroup myvimrc
+  autocmd!
+  autocmd QuickFixCmdPost [^l]* cwindow
+  autocmd QuickFixCmdPost l*    lwindow
+augroup END
+
+"...................... Highlight All ......................."
+" Allows 'z/' to toggle auto-higlighting all occurences of
+" word under cursor
+"
+" Credit - mosh @ Vim Wiki
+" URL: https://vim.fandom.com/wiki/Auto_highlight_current_word_when_idle
+"
+" Originally found on StackOverflow:
+"     https://stackoverflow.com/questions/3431184/highlight-all-occurrence-of-a-selected-word
+"
+" Highlight all instances of word under cursor, when idle.
+" Useful when studying strange source code.
+" Type z/ to toggle highlighting on/off.
+nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
+function! AutoHighlightToggle()
+   let @/ = ''
+   if exists('#auto_highlight')
+     au! auto_highlight
+     augroup! auto_highlight
+     setl updatetime=4000
+     echo 'Highlight current word: off'
+     return 0
+  else
+    augroup auto_highlight
+    au!
+    au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
+    augroup end
+    setl updatetime=500
+    echo 'Highlight current word: ON'
+  return 1
+ endif
+endfunction
+
+
+".................... File Type Settings ...................."
+" Turn spell check on for these file types
+autocmd FileType markdown,text,html,man,manual :set spell
+
+" Python 3 Omnicomplete
+autocmd FileType python set omnifunc=python3complete#Complete
+
+" Vagrantfiles need ruby syntax
+au BufRead,BufNewFile Vagrantfile setfiletype ruby
+
 
 "...................... Function keys ......................."
 "                                                            "
@@ -244,7 +305,7 @@ function! ToggleMouse()
   endif
 endfunc
 
-"......................  Netrw Settings  ...................."
+".......................... NetRW ..........................."
 " Netrw tree style
 let g:netrw_liststyle = 3
 
@@ -265,38 +326,12 @@ let g:netrw_winsize = -30
 " Netrw buffer settings
 let g:netrw_bufsettings = 'nomodifiable nomodified readonly nobuflisted nowrap nonumber'
 
-" Filename in title bar
-set title
-
-" Enable mouse support
-set mouse=a
-
 " Hide dotfiles in netrw with gh to toggle, thanks to
 "  https://vi.stackexchange.com/questions/18650/how-to-make-netrw-start-with-dotfiles-hidden
 let ghregex='\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_list_hide=ghregex
 
-" Open Quickfix window automatically
-" Credit: romainl @ StackOverflow
-" URL: https://stackoverflow.com/questions/39009792/vimgrep-pattern-and-immediately-open-quickfix-in-split-mode
-augroup myvimrc
-  autocmd!
-  autocmd QuickFixCmdPost [^l]* cwindow
-  autocmd QuickFixCmdPost l*    lwindow
-augroup END
-
-" Enable plugins
-if isdirectory("~/.vim/bundle")
-  filetype plugin on
-endif
-
-" Load Pathogen, if this is the cli and it's there
-if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
-  execute pathogen#infect()
-  Helptags
-endif
-
-" Color Scheme
+"....................... Color Scheme ......................."
 let g:LightsOn = 0
 if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   color PaperColor
@@ -332,46 +367,17 @@ else
   color elflord
 endif
 
-" Use 'z/' to toggle auto-highlight word under cursor
-" Credit - mosh @ Vim Wiki
-" URL: https://vim.fandom.com/wiki/Auto_highlight_current_word_when_idle
-"
-" Originally found on StackOverflow:
-"     https://stackoverflow.com/questions/3431184/highlight-all-occurrence-of-a-selected-word
-"
-" Highlight all instances of word under cursor, when idle.
-" Useful when studying strange source code.
-" Type z/ to toggle highlighting on/off.
-nnoremap z/ :if AutoHighlightToggle()<Bar>set hls<Bar>endif<CR>
-function! AutoHighlightToggle()
-   let @/ = ''
-   if exists('#auto_highlight')
-     au! auto_highlight
-     augroup! auto_highlight
-     setl updatetime=4000
-     echo 'Highlight current word: off'
-     return 0
-  else
-    augroup auto_highlight
-    au!
-    au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
-    augroup end
-    setl updatetime=500
-    echo 'Highlight current word: ON'
-  return 1
- endif
-endfunction
+"......................... Plugins .........................."
+" Enable plugins
+if isdirectory("~/.vim/bundle")
+  filetype plugin on
+endif
 
-" Vim mouse support in tmux
-" found here: https://unix.stackexchange.com/questions/50733/cant-use-mouse-properly-when-running-vim-in-tmux
-set ttymouse=xterm2
-set mouse=a
-
-" Turn spell check on for these file types
-autocmd FileType markdown,text,html,man,manual :set spell
-
-" Python 3 Omnicomplete
-autocmd FileType python set omnifunc=python3complete#Complete
+" Load Pathogen, if this is the cli and it's there
+if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
+  execute pathogen#infect()
+  Helptags
+endif
 
 " ALE Icons and highlights
 if !empty(glob("~/.vim/bundle/ale"))
@@ -397,9 +403,6 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
   let g:gitgutter_sign_removed            = '-▐'
   highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
 endif
-
-" Vagrantfiles need ruby syntax
-au BufRead,BufNewFile Vagrantfile setfiletype ruby
 
 " Airline, Powerline, Tmuxline options for CLI only
 if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
