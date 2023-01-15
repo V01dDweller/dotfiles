@@ -1,5 +1,6 @@
 My Dotfiles and Plug-Ins
 ========================
+
 This project installs a collection of dotfiles and plug-ins that I've come to
 depend on over the years. It is set up to be installed in one step. The goal
 is to get my workflow going quickly on a new system whether that system is
