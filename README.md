@@ -12,9 +12,8 @@ running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu) distributions.
 The priorities are Vim, Tmux, and bash which are visually themed/coordinated
 via the Vim [Airline](https://github.com/vim-airline/vim-airline),
 [Tmuxline](https://github.com/edkolev/tmuxline.vim) and
-[Promptline](https://github.com/edkolev/promptline.vim) vim plugins
-respectivly. Note that these plug-ins get their default settings from the
-`.vimrc` file.
+[Promptline](https://github.com/edkolev/promptline.vim) plugins respectivly.
+Note that these plug-ins get their default settings from the `.vimrc` file.
 
 By default, each of these will use
 [Powerline](https://github.com/powerline/fonts) fonts which must be either
