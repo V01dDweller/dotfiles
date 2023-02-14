@@ -49,6 +49,15 @@ set complete+=kspell
 " Use US English for spell check
 set spelllang=en_us
 
+" Don't count acronyms / abbreviations as spelling errors
+" (all upper-case letters, at least three characters)
+" Also will not count acronym with 's' at the end a spelling error
+" Also will not count numbers that are part of this
+" Recognizes the following as correct:
+" Credit: http://www.panozzaj.com/blog/2016/03/21/ignore-urls-and-acroynms-while-spell-checking-vim/
+
+syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
+
 " Tabs and indentation
 set shiftwidth=2        " Auto indent shift-width
 set softtabstop=2       " Tabs at two spaces
@@ -151,7 +160,7 @@ endfunction
 
 ".................... File Type Settings ...................."
 " Turn spell check on for these file types
-autocmd FileType markdown,text,html,man,manual :set spell
+autocmd FileType markdown,text,html,man,manual :set spell | syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
 
 " Python 3 Omnicomplete
 autocmd FileType python set omnifunc=python3complete#Complete
