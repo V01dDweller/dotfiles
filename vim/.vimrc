@@ -90,6 +90,9 @@ set scrolloff=2
 " Syntax highlighting
 syntax enable
 
+" Syntax highlighting in markdown code block
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ps1' ]
+
 " Highlight current line
 set cursorline
 
