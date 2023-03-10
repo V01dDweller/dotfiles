@@ -11,6 +11,7 @@ Plug-ins
 1. [Airline](https://github.com/vim-airline/vim-airline) - Enhanced always on-status line
 1. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Convert ASCII escapes to color
 1. [Ansible](https://github.com/pearofducks/ansible-vim) - Ansible syntax highlighting
+1. [Autosave](https://github.com/907th/vim-auto-save) - Auto save
 1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
 1. [Delview](https://github.com/vim-scripts/delview) - Delete saved views
 1. [Dracula](https://github.com/dracula/vim) - Dracula color scheme

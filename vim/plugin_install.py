@@ -6,6 +6,7 @@
 # - Airline Themes                 - https://github.com/vim-airline/vim-airline-themes
 # - AnsiEsc                        - https://github.com/vim-scripts/AnsiEsc.vim
 # - Ansible syntax highlighting    - https://github.com/pearofducks/ansible-vim
+# - Autosave                       - https://github.com/907th/vim-auto-save
 # - Colorizer                      - https://github.com/chrisbra/Colorizer
 # - Delview                        - https://github.com/vim-scripts/delview
 # - Dracula color scheme           - https://github.com/dracula/vim
@@ -93,7 +94,8 @@ VIM_PLUGINS = [
     'edkolev/tmuxline.vim',
     'edkolev/promptline.vim',
     'tpope/vim-repeat',
-    'tpope/vim-surround'
+    'tpope/vim-surround',
+    '907th/vim-auto-save'
     ]
 BUNDLE_DIR = (VIM_DIR + '/bundle')
 START_DIR = (os.getcwd())
