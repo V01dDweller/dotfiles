@@ -18,17 +18,6 @@ imap <silent> <F2> <Esc> :set nu!<CR>
 nmap <silent> <F3> :set wrap!<CR>
 imap <silent> <F3> <Esc> :set wrap!<CR>
 
-" Netrw confined to 30 columns
-let g:netrw_winsize = -30
-
-" F2 - Toggle line numbers
-map <silent> <F2> :set nu!<CR>
-imap <silent> <F2> <Esc> :set nu!<CR>
-
-" F3 - Toggle line wrapping
-nmap <silent> <F3> :set wrap!<CR>
-imap <silent> <F3> <Esc> :set wrap!<CR>
-
 " F4 - Toggle netrw
 if v:version > 799
   map <silent> <F4> :call ToggleNetrwVim8()<CR>
@@ -47,6 +36,9 @@ nnoremap <F9> :set cursorline!<CR>
 
 " F10 - Toggle cursorcolumn
 nnoremap <F10> :set cursorcolumn!<CR>
+
+" Netrw confined to 30 columns
+let g:netrw_winsize = -30
 
 " Netrw tree style
 let g:netrw_liststyle = 3
