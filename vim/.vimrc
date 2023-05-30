@@ -87,6 +87,10 @@ set splitright
 " Minimal number of lines above and below the cursor
 set scrolloff=2
 
+" Speed up updates, defaults to 4000ms. Affects a few things including
+" GitGutter updates
+set updatetime=100
+
 " Syntax highlighting
 syntax enable
 
@@ -146,7 +150,7 @@ function! AutoHighlightToggle()
    if exists('#auto_highlight')
      au! auto_highlight
      augroup! auto_highlight
-     setl updatetime=4000
+     setl updatetime=100
      echo 'Highlight current word: off'
      return 0
   else
@@ -465,8 +469,8 @@ if !has('gui_running')
   let NERDTreeMinimalUI=1
 
   " Thicker NERDTree arrows
-  let g:NERDTreeDirArrowExpandable = '▶'
-  let g:NERDTreeDirArrowCollapsible = '▼'
+  let g:NERDTreeDirArrowExpandable = '▷'
+  let g:NERDTreeDirArrowCollapsible = '▽'
   let NERDTreeIgnore=['\.vim$', '\.swp$', '.git*', '\~$']
 
   " Exit Vim if NERDTree is the only window remaining in the only tab.
