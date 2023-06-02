@@ -18,7 +18,7 @@ set title
 
 " Enable mouse support
 set mouse=a
-set ttymouse=xterm2
+"set ttymouse=xterm2
 
 " Disable Vi compatibility/allow Vim features not in Vi
 set nocompatible
