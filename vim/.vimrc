@@ -95,7 +95,7 @@ set updatetime=100
 syntax enable
 
 " Syntax highlighting in markdown code block
-let g:markdown_fenced_languages = [ 'bash=sh', 'bat=winbatch', 'c', 'cpp', 'css', 'dockerfile', 'fstab', 'html', 'Jenkinsfile', 'javascript', 'jinja2', 'ini=dosini', 'java', 'json', 'php', 'passwd', 'ps1', 'python', 'ruby', 'sh', 'sshconfig', 'sshdconfig', 'sudoers', 'systemd=dosini', 'tmux', 'vb', 'vim', 'xml', 'yaml', ]
+let g:markdown_fenced_languages = [ 'ansible=yaml.ansible', 'bash=sh', 'bat=winbatch', 'c', 'cpp', 'css', 'dockerfile', 'fstab', 'html', 'Jenkinsfile', 'javascript', 'jinja2', 'ini=dosini', 'java', 'json', 'php', 'passwd', 'ps1', 'python', 'ruby', 'shell=sh', 'sh', 'sshconfig', 'sshdconfig', 'sudoers', 'systemd=dosini', 'tmux', 'vb', 'vim', 'xml', 'yaml', 'yaml.ansible']
 
 " Highlight current line
 set cursorline
