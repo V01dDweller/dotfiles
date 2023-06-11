@@ -127,3 +127,15 @@ alias pygmentize="pygmentize -f terminal"
 
 # Markdown reading with pandc + lynx
 md() { pandoc "$1" | lynx -stdin; }
+
+# Change Git Bash Window Title
+GITVERSION=$(git --version)
+if [[ $GITVERSION == *"windows"* ]]; then
+  echo -ne "\e]0;Git Bash\a"
+fi
+
+# Change Cygwin Window Title
+GITVERSION=$(uname -a)
+if [[ $GITVERSION == *"CYGWIN"* ]]; then
+  echo -ne "\e]0;Cygwin\a"
+fi
