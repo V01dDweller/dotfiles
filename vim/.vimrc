@@ -488,3 +488,34 @@ if !has('gui_running')
   " Exit Vim if NERDTree is the only window remaining in the only window.
   autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | echo feedkeys("ZZ") | endif
 endif
+
+" Center a selection
+" Reference: https://stackoverflow.com/questions/26137838/vim-centering-text-within-selection
+function! GetVisual()
+    try
+        let v_save = @v
+        normal! gv"vy
+        return @v
+    finally
+        let @v = v_save
+    endtry
+endfunction
+
+fun! CenterMe()
+    let v = GetVisual()
+    "let l = getline('.')
+    let lre = '^\zs\s*\ze\S'
+    let rre = '\s*$'
+    let sp= matchstr(v,lre)
+    let sp .= matchstr(v,rre)
+    let ln=len(sp)
+    let v = substitute(v,lre,sp[:ln/2-1],'')
+    let v = substitute(v,rre,sp[ln/2:],'')
+    let ve_save = &virtualedit
+    let v_save = @v
+    let &virtualedit = 'all'
+    call setreg('v', v,visualmode())
+    normal! gvx"vP
+    let @v = v_save
+    let &virtualedit = ve_save
+endf
