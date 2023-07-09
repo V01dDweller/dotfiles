@@ -519,3 +519,5 @@ fun! CenterMe()
     let @v = v_save
     let &virtualedit = ve_save
 endf
+
+" vim: nospell number
