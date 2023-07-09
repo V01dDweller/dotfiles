@@ -478,8 +478,8 @@ if !has('gui_running')
   let NERDTreeMinimalUI=1
 
   " Thicker NERDTree arrows
-  let g:NERDTreeDirArrowExpandable = '▶'
-  let g:NERDTreeDirArrowCollapsible = '▼'
+  let g:NERDTreeDirArrowExpandable = '▷'
+  let g:NERDTreeDirArrowCollapsible = '▽'
   let NERDTreeIgnore=['\.vim$', '\.swp$', '.git*', '\~$']
 
   " Exit Vim if NERDTree is the only window remaining in the only tab.
