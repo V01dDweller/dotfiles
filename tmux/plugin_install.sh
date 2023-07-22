@@ -46,4 +46,11 @@ else
   git pull
   echo " "
 fi
+
+# Creating "$HOME"/.local/bin directory, if needed
+if [ ! -d "$HOME"/.local/bin ]
+then
+  echo "Creating $HOME/.local/bin directory"
+  mkdir -pv "$HOME"/.local/bin
+fi
 fi
