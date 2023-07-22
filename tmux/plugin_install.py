@@ -39,3 +39,10 @@ else:
     os.chdir(TPM_DIR)
     os.system('git pull')
     os.chdir(START_DIR)
+
+# Create $HOME/.local/bin
+LOCAL_BIN_DIR = HOME_DIR + '/.local/bin'
+if not os.path.exists(LOCAL_BIN_DIR):
+    print('Creating ' + LOCAL_BIN_DIR + '\n')
+    os.mkdir(LOCAL_BIN_DIR)
+    print(" ")
