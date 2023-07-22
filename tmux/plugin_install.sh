@@ -40,5 +40,10 @@ fi
 if [ ! -d "$HOME"/.tmux/plugins/tmux-cluster ]
 then
   git clone https://github.com/davidscholberg/tmux-cluster.git "$HOME"/.tmux/plugins/tmux-cluster
+else
+  echo "Pulling tmux-cluster updates"
   cd "$HOME"/.tmux/plugins/tmux-cluster
+  git pull
+  echo " "
+fi
 fi
