@@ -41,7 +41,7 @@ COLOR = {
 
 # Creating ~/.vim
 HOME_DIR = os.environ['HOME']
-VIM_DIR = (HOME_DIR + '/.vim')
+VIM_DIR = HOME_DIR + '/.vim'
 if not os.path.exists(VIM_DIR):
     print('Creating ' + COLOR["cyan"] + VIM_DIR + COLOR["reset"] + '\n')
     os.mkdir(VIM_DIR)
@@ -50,13 +50,13 @@ else:
 
 # Installing the Pathogen plugn-in manager
 PATHOGEN_DIRS = ['autoload', 'bundle']
-PATHOGEN_PLUGIN_FILE = (VIM_DIR + '/autoload/pathogen.vim')
+PATHOGEN_PLUGIN_FILE = VIM_DIR + '/autoload/pathogen.vim'
 PATHOGEN_URL = ('https://raw.githubusercontent.com' +
                 '/tpope/vim-pathogen/master/autoload/pathogen.vim')
 
 print('Creating Pathogen directories')
 for i in PATHOGEN_DIRS:
-    PLUGIN_PATH = (VIM_DIR + '/' + i)
+    PLUGIN_PATH = VIM_DIR + '/' + i
     if not os.path.exists(PLUGIN_PATH):
         print('Creating ' + COLOR["cyan"] + PLUGIN_PATH + COLOR["reset"])
         os.mkdir(PLUGIN_PATH)
@@ -97,8 +97,8 @@ VIM_PLUGINS = [
     'tpope/vim-surround',
     '907th/vim-auto-save'
     ]
-BUNDLE_DIR = (VIM_DIR + '/bundle')
-START_DIR = (os.getcwd())
+BUNDLE_DIR = VIM_DIR + '/bundle'
+START_DIR = os.getcwd()
 
 print('Plugins will be installed in ' + COLOR["cyan"] +
       BUNDLE_DIR + '\n' + COLOR["reset"])
@@ -108,7 +108,7 @@ if os.path.exists(BUNDLE_DIR):
         REPO_PARTS = i.split('/')
         os.chdir(BUNDLE_DIR)
         if not os.path.exists(REPO_PARTS[1]):
-            PLUGIN_REPO = ('https://github.com/'+i+'.git')
+            PLUGIN_REPO = 'https://github.com/'+i+'.git'
             print('Checking out ' + COLOR["green"] + PLUGIN_REPO + COLOR["reset"])
             os.system('git clone --depth 1 ' + PLUGIN_REPO)
             print(" ")
@@ -121,7 +121,7 @@ if os.path.exists(BUNDLE_DIR):
     os.chdir(START_DIR)
 
 # Install colorschemes from Github
-COLOR_DIR = (VIM_DIR + '/colors')
+COLOR_DIR = VIM_DIR + '/colors'
 if not os.path.exists(COLOR_DIR):
     print('Creating ' + COLOR["cyan"] + COLOR_DIR + COLOR["reset"] + '\n')
     os.mkdir(COLOR_DIR)
@@ -141,8 +141,8 @@ COLOR_SCHEMES = [
 print(COLOR["magenta"] + 'Updating color schemes' + COLOR["reset"])
 for i in COLOR_SCHEMES:
     COLOR_FILE = os.path.basename(i)
-    COLOR_PATH = (COLOR_DIR + '/' + COLOR_FILE)
+    COLOR_PATH = COLOR_DIR + '/' + COLOR_FILE
     if not os.path.exists(COLOR_PATH):
         print('Downloading ' + COLOR["green"] + COLOR_FILE + COLOR["reset"])
-        COLOR_URL = ('https://raw.githubusercontent.com'+i)
+        COLOR_URL = 'https://raw.githubusercontent.com'+i
         urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
