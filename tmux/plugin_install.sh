@@ -4,7 +4,7 @@
 #
 # This script will:
 #
-# 1. Create a ~/.tmux/plugins directory
+# 1. Create a "$HOME"/.tmux/plugins directory
 # 2. Install tpm (TMux Plugin Manager) via github
 # 3. Install the tmc plugin for Tmux clusters
 #
@@ -17,23 +17,25 @@ set -Eeuo pipefail
 
 # Install Tmux Plugin Manager
 
-# Create ~/.tmux/plugins directory, if needed
-if [ ! -d ~/.tmux/plugins ]
+# Create "$HOME"/.tmux/plugins directory, if needed
+if [ ! -d "$HOME"/.tmux/plugins ]
 then
-  mkdir -pv ~/.tmux/plugins
+  echo "Creating $HOME/.tmux/plugins directory"
+  mkdir -pv "$HOME"/.tmux/plugins
 fi
 
 # Clone or update tpm
-if [ ! -d ~/.tmux/plugins/tpm ]
+if [ ! -d "$HOME"/.tmux/plugins/tpm ]
 then
-  git clone --depth 1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone --depth 1 https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 else
-  cd ~/.tmux/plugins/tpm
+  cd "$HOME"/.tmux/plugins/tpm
   git pull
 fi
 
 # Clone/update tmc
-if [ ! -d ~/.tmux/plugins/tmux-cluster ]
+if [ ! -d "$HOME"/.tmux/plugins/tmux-cluster ]
 then
-  git clone https://github.com/davidscholberg/tmux-cluster.git ~/.tmux/plugins/tmux-cluster
+  git clone https://github.com/davidscholberg/tmux-cluster.git "$HOME"/.tmux/plugins/tmux-cluster
+  cd "$HOME"/.tmux/plugins/tmux-cluster
 fi
