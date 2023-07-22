@@ -40,6 +40,20 @@ else:
     os.system('git pull')
     os.chdir(START_DIR)
 
+# Install/update tmux-cluster plugin
+CLUSTER_REPO_URL = 'https://github.com/davidscholberg/tmux-cluster.git'
+CLUSTER_DIR = TMUX_DIR + '/plugins/tmux-cluster'
+if not os.path.exists(CLUSTER_DIR):
+    print('Cloning tmux-cluster from GitHub\n')
+    os.system('git clone --depth 1 ' + CLUSTER_REPO_URL + ' ' + CLUSTER_DIR)
+    print(" ")
+else:
+    print('Pulling tmux-cluster updates\n')
+    os.chdir(CLUSTER_DIR)
+    os.system('git pull')
+    os.chdir(START_DIR)
+    print(" ")
+
 # Create $HOME/.local/bin
 LOCAL_BIN_DIR = HOME_DIR + '/.local/bin'
 if not os.path.exists(LOCAL_BIN_DIR):
