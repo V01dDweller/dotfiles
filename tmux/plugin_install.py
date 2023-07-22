@@ -25,20 +25,24 @@ if not os.path.exists(PLUGINS_DIR):
     print('Creating ' + TMUX_DIR + '\n')
     os.mkdir(TMUX_DIR)
     os.mkdir(PLUGINS_DIR)
+    print(" ")
 else:
     print(PLUGINS_DIR + ' already exists\n')
+    print(" ")
 
 # Clone/update Tmux plugin manager
 TPM_REPO_URL = 'https://github.com/tmux-plugins/tpm/'
 TPM_DIR = TMUX_DIR + '/plugins/tpm'
 
 if not os.path.exists(TPM_DIR):
+    print('Cloning tpm (Tmux plugin manager) from GitHub\n')
     os.system('git clone --depth 1 ' + TPM_REPO_URL + ' ' + TPM_DIR)
 else:
     print('Pulling tpm updates\n')
     os.chdir(TPM_DIR)
     os.system('git pull')
     os.chdir(START_DIR)
+    print(" ")
 
 # Install/update tmux-cluster plugin
 CLUSTER_REPO_URL = 'https://github.com/davidscholberg/tmux-cluster.git'
