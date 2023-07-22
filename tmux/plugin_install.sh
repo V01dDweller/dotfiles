@@ -33,6 +33,7 @@ if [ ! -d "$HOME"/.tmux/plugins ]
 then
   echo "Creating $HOME/.tmux/plugins directory"
   mkdir -pv "$HOME"/.tmux/plugins
+  echo " "
 else
   echo "$green""$HOME"/.tmux/plugins directory already exists"$reset"
   echo " "
@@ -43,6 +44,7 @@ if [ ! -d "$HOME"/.tmux/plugins/tpm ]
 then
   echo "Cloning tpm (Tmux plugin manager) from GitHub"
   git clone --depth 1 https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
+  echo " "
 else
   echo "Pulling tpm updates"
   cd "$HOME"/.tmux/plugins/tpm
@@ -66,6 +68,7 @@ if [ ! -d "$HOME"/.local/bin ]
 then
   echo "Creating $HOME/.local/bin directory"
   mkdir -pv "$HOME"/.local/bin
+  echo " "
 else
   echo "$green$HOME"/.local/bin directory already exists"$reset"
   echo " "
@@ -77,6 +80,7 @@ then
   echo "Downloading tmc script"
   curl -o "$HOME"/.local/bin/tmc https://raw.githubusercontent.com/davidscholberg/tmux-cluster/master/tmc
   chmod +x "$HOME"/.local/bin/tmc
+  echo " "
 else
   echo "$green"tmc script already installed"$reset"
   echo " "
