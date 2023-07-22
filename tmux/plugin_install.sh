@@ -27,10 +27,13 @@ fi
 # Clone or update tpm
 if [ ! -d "$HOME"/.tmux/plugins/tpm ]
 then
+  echo "Cloning tpm (Tmux plugin manager) from GitHub"
   git clone --depth 1 https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
 else
+  echo "Pulling tpm updates"
   cd "$HOME"/.tmux/plugins/tpm
   git pull
+  echo " "
 fi
 
 # Clone/update tmc
