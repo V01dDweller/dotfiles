@@ -31,7 +31,7 @@ reset=$(tput sgr0); export reset
 # Create "$HOME"/.tmux/plugins directory, if needed
 if [ ! -d "$HOME"/.tmux/plugins ]
 then
-  echo "Creating $HOME/.tmux/plugins directory"
+  echo "$green"Creating "$HOME"/.tmux/plugins directory"$reset"
   mkdir -pv "$HOME"/.tmux/plugins
   echo " "
 else
@@ -42,11 +42,11 @@ fi
 # Clone or update tpm
 if [ ! -d "$HOME"/.tmux/plugins/tpm ]
 then
-  echo "Cloning tpm (Tmux plugin manager) from GitHub"
+  echo "$green"Cloning Tmux plugin manager from GitHub"$reset"
   git clone --depth 1 https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
   echo " "
 else
-  echo "Pulling tpm updates"
+  echo "$green"Pulling tpm updates"$reset"
   cd "$HOME"/.tmux/plugins/tpm
   git pull
   echo " "
@@ -57,7 +57,7 @@ if [ ! -d "$HOME"/.tmux/plugins/tmux-cluster ]
 then
   git clone https://github.com/davidscholberg/tmux-cluster.git "$HOME"/.tmux/plugins/tmux-cluster
 else
-  echo "Pulling tmux-cluster updates"
+  echo "$green"Pulling tmux-cluster updates"$reset"
   cd "$HOME"/.tmux/plugins/tmux-cluster
   git pull
   echo " "
@@ -66,7 +66,7 @@ fi
 # Creating "$HOME"/.local/bin directory, if needed
 if [ ! -d "$HOME"/.local/bin ]
 then
-  echo "Creating $HOME/.local/bin directory"
+  echo "$green"Creating $HOME/.local/bin directory"$reset"
   mkdir -pv "$HOME"/.local/bin
   echo " "
 else
@@ -77,7 +77,7 @@ fi
 # Downloading tmc script
 if [ ! -f "$HOME"/.local/bin/tmc ]
 then
-  echo "Downloading tmc script"
+  echo "$green"Downloading tmc script"$reset"
   curl -o "$HOME"/.local/bin/tmc https://raw.githubusercontent.com/davidscholberg/tmux-cluster/master/tmc
   chmod +x "$HOME"/.local/bin/tmc
   echo " "
