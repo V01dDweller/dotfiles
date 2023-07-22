@@ -46,3 +46,14 @@ if not os.path.exists(LOCAL_BIN_DIR):
     print('Creating ' + LOCAL_BIN_DIR + '\n')
     os.mkdir(LOCAL_BIN_DIR)
     print(" ")
+
+# Downloading tmc script
+TMC_SCRIPT_URL = 'https://raw.githubusercontent.com/davidscholberg/tmux-cluster/master/tmc'
+TMC_SCRIPT = LOCAL_BIN_DIR + '/tmc'
+if not os.path.exists(TMC_SCRIPT):
+    print('Downloading tmc script\n')
+    os.system('wget ' + TMC_SCRIPT_URL + ' -O ' + TMC_SCRIPT)
+    os.system('chmod +x ' + TMC_SCRIPT)
+    print(" ")
+else:
+    print('tmc script already installed\n')
