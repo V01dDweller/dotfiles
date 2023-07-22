@@ -130,3 +130,13 @@ do
     curl -s -o "$HOME"/.vim/colors/"$COLOR_FILE" https://raw.githubusercontent.com"$i"
   fi
 done
+
+# Updating Coc plugin, if present
+CocDir="$HOME"/.vim/pack/coc/start/coc.nvim
+if [ -d "$CocDir" ]
+then
+  echo "Updating coc.nvim"
+  cd "$CocDir"
+  git pull
+  echo " "
+fi
