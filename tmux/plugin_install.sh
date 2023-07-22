@@ -53,4 +53,11 @@ then
   echo "Creating $HOME/.local/bin directory"
   mkdir -pv "$HOME"/.local/bin
 fi
+
+# Downloading tmc script
+if [ ! -f "$HOME"/.local/bin/tmc ]
+then
+  echo "Downloading tmc script"
+  curl -o "$HOME"/.local/bin/tmc https://raw.githubusercontent.com/davidscholberg/tmux-cluster/master/tmc
+  chmod +x "$HOME"/.local/bin/tmc
 fi
