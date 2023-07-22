@@ -140,3 +140,13 @@ then
   git pull
   echo " "
 fi
+
+# Updating Copilot plugin, if present
+CopilotDir="$HOME"/.vim/pack/github/start/copilot.vim
+if [ -d "$CopilotDir" ]
+then
+  echo "Updating copilot.vim"
+  cd "$CopilotDir"
+  git pull
+  echo " "
+fi
