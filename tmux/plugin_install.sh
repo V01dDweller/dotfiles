@@ -36,7 +36,7 @@ else
   echo " "
 fi
 
-# Clone/update tmc
+# Install/update tmux-cluster plugin
 if [ ! -d "$HOME"/.tmux/plugins/tmux-cluster ]
 then
   git clone https://github.com/davidscholberg/tmux-cluster.git "$HOME"/.tmux/plugins/tmux-cluster
