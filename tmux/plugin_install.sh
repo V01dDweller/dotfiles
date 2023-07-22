@@ -15,6 +15,17 @@
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
 set -Eeuo pipefail
 
+# Colors
+red=$(tput setaf 1); export red
+green=$(tput setaf 2); export green
+yellow=$(tput setaf 3); export yellow
+blue=$(tput setaf 4); export blue
+purple=$(tput setaf 5); export purple
+cyan=$(tput setaf 6); export cyan
+white=$(tput setaf 7); export white
+orange=$(tput setaf 208); export orange
+reset=$(tput sgr0); export reset
+
 # Install Tmux Plugin Manager
 
 # Create "$HOME"/.tmux/plugins directory, if needed
