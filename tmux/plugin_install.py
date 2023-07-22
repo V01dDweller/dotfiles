@@ -64,6 +64,9 @@ if not os.path.exists(LOCAL_BIN_DIR):
     print('Creating ' + LOCAL_BIN_DIR + '\n')
     os.mkdir(LOCAL_BIN_DIR)
     print(" ")
+else:
+    print(LOCAL_BIN_DIR + ' already exists\n')
+    print(" ")
 
 # Downloading tmc script
 TMC_SCRIPT_URL = 'https://raw.githubusercontent.com/davidscholberg/tmux-cluster/master/tmc'
