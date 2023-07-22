@@ -28,7 +28,7 @@ if not os.path.exists(PLUGINS_DIR):
 else:
     print(PLUGINS_DIR + ' already exists\n')
 
-# Clone/update tpm
+# Clone/update Tmux plugin manager
 TPM_REPO_URL = 'https://github.com/tmux-plugins/tpm/'
 TPM_DIR = TMUX_DIR + '/plugins/tpm'
 
