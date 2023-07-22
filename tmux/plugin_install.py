@@ -17,8 +17,8 @@ COLOR = {
     }
 
 HOME_DIR = os.environ['HOME']
-TMUX_DIR = (HOME_DIR + '/.tmux')
-PLUGINS_DIR = (TMUX_DIR + '/plugins')
+TMUX_DIR = HOME_DIR + '/.tmux'
+PLUGINS_DIR = TMUX_DIR + '/plugins'
 
 if not os.path.exists(PLUGINS_DIR):
     print('Creating ' + TMUX_DIR + '\n')
@@ -29,12 +29,12 @@ else:
 
 # Clone/update tpm
 TPM_REPO_URL = 'https://github.com/tmux-plugins/tpm/'
-TPM_DIR = (TMUX_DIR + '/plugins/tpm')
+TPM_DIR = TMUX_DIR + '/plugins/tpm'
 
 if not os.path.exists(TPM_DIR):
     os.system('git clone --depth 1 ' + TPM_REPO_URL + ' ' + TPM_DIR)
 else:
-    START_DIR = (os.getcwd())
+    START_DIR = os.getcwd()
     print('Repo already cloned, pulling updates\n')
     os.chdir(TPM_DIR)
     os.system('git pull')
