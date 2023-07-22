@@ -66,7 +66,7 @@ fi
 # Creating "$HOME"/.local/bin directory, if needed
 if [ ! -d "$HOME"/.local/bin ]
 then
-  echo "$green"Creating $HOME/.local/bin directory"$reset"
+  echo "$green"Creating "$HOME"/.local/bin directory"$reset"
   mkdir -pv "$HOME"/.local/bin
   echo " "
 else
