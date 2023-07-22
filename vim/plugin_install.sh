@@ -33,18 +33,18 @@ set -Eeuo pipefail
 export PATHOGEN_DIRS="autoload bundle"
 for i in $PATHOGEN_DIRS
 do
-  if [ ! -d ~/.vim/"$i" ]
+  if [ ! -d "$HOME"/.vim/"$i" ]
   then
-    export DIR=~/.vim/$i
+    export DIR="$HOME"/.vim/$i
     echo "Creating" "$DIR"
     mkdir -p "$DIR"
   fi
 done
 
-if [ ! -f ~/.vim/autoload/pathogen.vim ]
+if [ ! -f "$HOME"/.vim/autoload/pathogen.vim ]
 then
   echo "Installing pathogen"
-  cd ~/.vim/autoload
+  cd "$HOME"/.vim/autoload
   curl -O https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
   echo " "
 else
@@ -78,9 +78,9 @@ export PLUGINS="\
   907th/vim-auto-save
   "
 
-if [ -d ~/.vim/bundle ]
+if [ -d "$HOME"/.vim/bundle ]
 then
-  cd ~/.vim/bundle
+  cd "$HOME"/.vim/bundle
   for i in $PLUGINS
   do
     PLUGIN_DIR=$(echo "$i" | cut -d '/' -f 2)
@@ -103,10 +103,10 @@ then
 fi
 
 # Install colorschemes from Github
-if [ ! -d ~/.vim/colors ]
+if [ ! -d "$HOME"/.vim/colors ]
 then
-  echo "Creating ~/.vim/colors"
-  mkdir ~/.vim/colors
+  echo "Creating $HOME/.vim/colors"
+  mkdir "$HOME"/.vim/colors
 fi
 
 COLOR_SCHEMES=(
