@@ -138,7 +138,7 @@ COLOR_SCHEMES = [
     '/NLKNguyen/papercolor-theme/master/colors/PaperColor.vim'
     ]
 
-print(COLOR["magenta"] + 'Updating color schemes' + COLOR["reset"])
+print(COLOR["magenta"] + 'Installing color schemes' + COLOR["reset"])
 for i in COLOR_SCHEMES:
     COLOR_FILE = os.path.basename(i)
     COLOR_PATH = COLOR_DIR + '/' + COLOR_FILE
@@ -146,6 +146,7 @@ for i in COLOR_SCHEMES:
         print('Downloading ' + COLOR["green"] + COLOR_FILE + COLOR["reset"])
         COLOR_URL = 'https://raw.githubusercontent.com'+i
         urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
+print(" ")
 
 # Updating Coc plugin, if present
 COC_DIR = VIM_DIR + '/pack/coc/start/coc.nvim'
