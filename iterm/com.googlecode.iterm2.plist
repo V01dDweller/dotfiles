@@ -121,12 +121,16 @@
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.73333334922790527</real>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.47610602743461855</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.364044189453125</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
