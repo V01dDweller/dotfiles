@@ -7,6 +7,9 @@ set linebreak    " Visual line wrap at word end
 set hlsearch     " Highlight searches
 set incsearch    " Jump to search match as it is typed
 
+" Enable auto-increment for alphabetic sequence
+set nrformats+=alpha
+
 syntax on
 color elflord
 
