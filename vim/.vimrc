@@ -49,6 +49,9 @@ set complete+=kspell
 " Use US English for spell check
 set spelllang=en_us
 
+" Enable auto-increment for alphabetic sequence
+set nrformats+=alpha
+
 " Don't count acronyms / abbreviations as spelling errors
 " (all upper-case letters, at least three characters)
 " Also will not count acronym with 's' at the end a spelling error
