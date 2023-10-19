@@ -8,11 +8,9 @@
 #
 # 1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
 # 2. Copy any dot file it will replace into that directory
-# 3. Create a ~/.bash directory for a git-aware prompt
-# 4. Clone https://github.com/jimeh/git-aware-prompt.git into it
-# 5. Replace or create certain .bash, .vim and .tmux rc files
-# 6. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
-# 7. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
+# 3. Replace or create certain .bash, .vim and .tmux rc files
+# 4. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
+# 5. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
 #
 ########################################################################
 
@@ -33,48 +31,6 @@ cyan=$(tput setaf 6); export cyan
 white=$(tput setaf 7); export white
 orange=$(tput setaf 208); export orange
 reset=$(tput sgr0); export reset
-
-# Check for git
-gitStatus=$(command -v git)
-
-if [ -z "$gitStatus" ]
-then
-  echo "========================================================="
-  echo "   Git is not installed or is not in your $PATH"
-  echo "   Please install git or fix your $PATH and try again"
-  echo "========================================================="
-  echo ""
-  exit 0
-fi
-
-# Setup for a bash git-aware prompt
-if [ -d "$HOME/.bash" ]
-then
-  echo Found "$HOME/.bash directory, checking for $HOME/.bash/git-aware-prompt"
-  if [ -d "$HOME"/.bash/git-aware-prompt ]
-  then
-    echo "Found $HOME/.bash/git-aware-prompt, updating..."
-    cd "$HOME"/.bash/git-aware-prompt
-    git pull
-    cd "$START_PATH"
-    echo ""
-  else
-    echo "Didn't find git-aware-prompt,"
-    echo "Cloning https://github.com/jimeh/git-aware-prompt.git"
-    cd "$HOME/.bash"
-    git clone --depth 1 https://github.com/jimeh/git-aware-prompt.git
-    echo ""
-    cd "$START_PATH"
-  fi
-else
-  echo "No $HOME/.bash found, creating one..."
-  mkdir "$HOME/.bash"
-  cd "$HOME/.bash"
-  git clone --depth 1 https://github.com/jimeh/git-aware-prompt.git
-  echo ""
-  cd "$START_PATH"
-fi
-
 
 # Time-stamp
 currentDate=$(date +%Y-%m-%d_%H%M-%S)

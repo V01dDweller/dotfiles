@@ -8,11 +8,9 @@
 
     1. Create ~/dotfile_backup.YYYY-MM-DD_HHMM-SS
     2. Copy any dot file it will replace into that directory
-    3. Create a ~/.bash directory for a git-aware prompt
-    4. Clone git://github.com/jimeh/git-aware-prompt.git into it
-    5. Replace or create .bash, .vim and .tmux rc files from the lists below
-    6. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
-    7. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
+    3. Replace or create .bash, .vim and .tmux rc files from the lists below
+    4. Run ~/dotfiles/tmux/plugin_install.sh to set up Tmux plug-ins
+    5. Run ~/dotfiles/vim/plugin_install.sh to set up Vim plug-ins
 """
 
 import os
@@ -89,38 +87,6 @@ for i in BACKUP_FILES:
 print(COLOR["cyan"] + '----' + COLOR["reset"])
 print(COLOR["cyan"] + 'Bash' + COLOR["reset"])
 print(COLOR["cyan"] + '----' + COLOR["reset"])
-
-# Setup for a basic bash git-aware prompt
-BASH_PATH = (HOME_DIR + '/.bash')
-GITAWARE_PATH = (BASH_PATH + '/git-aware-prompt')
-GITAWARE_REPO = 'https://github.com/jimeh/git-aware-prompt.git'
-
-if os.path.exists(BASH_PATH):
-    print(COLOR["green"] +
-          'Found ~/.bash, checking for ~/.bash/git-aware-prompt...' +
-          COLOR["reset"])
-    if os.path.exists(GITAWARE_PATH):
-        print(COLOR["green"] + 'Found the git-aware-prompt, updating...' +
-              COLOR["reset"])
-        os.chdir(GITAWARE_PATH)
-        os.system('git pull')
-        print(' ')
-        os.chdir(START_PATH)
-    else:
-        print(COLOR["yellow"] + 'Didn\'t find git-aware-prompt,' + COLOR["reset"])
-        print('Cloning it now')
-        os.chdir(BASH_PATH)
-        os.system('git clone --depth 1 ' + GITAWARE_REPO)
-        os.chdir(START_PATH)
-        print(' ')
-else:
-    print(COLOR["yellow"] + 'Didn\'t find ~/.bash, creating it now...' +
-          COLOR["reset"])
-    os.mkdir(BASH_PATH)
-    os.chdir(BASH_PATH)
-    os.system('git clone --depth 1 ' + GITAWARE_REPO)
-    print(' ')
-    os.chdir(START_PATH)
 
 # Copying bash dot files
 print(COLOR["green"] + 'Copying bash dot files' + COLOR["reset"])

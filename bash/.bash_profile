@@ -39,10 +39,6 @@ txtgry=`tput setaf 8`
 reset=`tput sgr0`
 txtlem="$(tput setaf 190 2>/dev/null || echo '\e[0;37m')"  # Lemon yellow
 
-# Git-aware prompt
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
-
 # OS Prompt colors
 case $OSTYPE in
   aix)
@@ -99,12 +95,6 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 pathcolor=$bldblu
-
-# Non-git-aware prompt
-#PS1="[\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\w\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]]\n\$ "
-
-# Gitaware prompt
-PS1="\@ \[$usercolor\]\u\[$txtrst\]@\[$hostcolor\]\h\[$txtrst\]:\[$pathcolor\]\W\[$txtrst\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n\$ "
 
 # If promptline.vim was used then create airline prompt
 if [ -f $HOME/.bash_prompt.sh ]
