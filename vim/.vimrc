@@ -451,7 +451,7 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let g:airline_theme='minimalist'
 
   let g:tmuxline_preset = {
-      \'a'       : 'MacOS',
+      \'a'       : '#H',
       \'win'     : '#I \ue0b1 #{b:pane_current_path}',
       \'cwin'    : '#I \ue0b1 #{b:pane_current_path}',
       \'x'       : '%a %b %d',
