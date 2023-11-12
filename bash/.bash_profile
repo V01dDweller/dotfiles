@@ -14,6 +14,11 @@ if [ -d /opt/homebrew/bin ]; then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
+# Add NodeJS to PATH
+NODE_PATH=$(ls -d /opt/homebrew/Cellar/node\@18/*/bin | tail -1)
+
+if [ -d $NODE_PATH ];then
+  export PATH=$NODE_PATH:$PATH
 fi
 
 # MacOS GNU cureutils, e.g. after running 'brew install coreutils'
