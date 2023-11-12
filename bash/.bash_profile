@@ -45,3 +45,5 @@ if [ -f $HOME/.bash_prompt.sh ]
 then
   source ~/.bash_prompt.sh
 fi
+
+LANG=C.UTF-8; export LANG
