@@ -18,6 +18,8 @@ alias cleanbash="bash --noprofile --norc"
 alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias tree="tree -C  -I '.git|.svn|.pki'"
+alias pu="source ~/.bash_profile"
+alias p="source ~/.bash_profile"
 
 # Teminal color
 export TERM=xterm-256color
