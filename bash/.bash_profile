@@ -9,9 +9,11 @@ fi
 PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/lib:$PATH
 export PATH
 
-# MacOS Python stuff, e.g. ansible installed via pip install --user
-if [ -d ~/Library/Python/3.7/bin ]; then
-  export PATH=~/Library/Python/3.7/bin:$PATH
+# Add Homebrew to the PATH\
+if [ -d /opt/homebrew/bin ]; then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
+
 fi
 
 # MacOS GNU cureutils, e.g. after running 'brew install coreutils'
