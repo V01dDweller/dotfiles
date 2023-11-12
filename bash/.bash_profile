@@ -40,69 +40,6 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export TERM=xterm-256color
 umask 022
 
-# Colors
-
-txtgry=`tput setaf 8`
-reset=`tput sgr0`
-txtlem="$(tput setaf 190 2>/dev/null || echo '\e[0;37m')"  # Lemon yellow
-
-# OS Prompt colors
-case $OSTYPE in
-  aix)
-    # AIX
-    usercolor=$bldylw
-    hostcolor=$txtblu
-    ;;
-  bsd|freebsd)
-    # BSD, FreeBSD
-    usercolor=$bldylw
-    hostcolor=$txtgrn
-    ;;
-  cygwin)
-    # Cygwin
-    usercolor=$bldylw
-    hostcolor=$txtgrn
-    ;;
-  darwin19.4.0)
-    # MacOS
-    usercolor=$txtcyn
-    hostcolor=$txtpur
-    ;;
-  linux-gnu)
-    if grep -q Microsoft /proc/version
-    then
-      # WSL detected
-      usercolor=$bldylw
-      hostcolor=$bldylw
-    else
-      # Linux
-      usercolor=$bldcyn
-      hostcolor=$bldpur
-    fi
-    ;;
-  msys)
-    # MinGW/GitBash
-    usercolor=$bldylw
-    hostcolor=$bldgrn
-    ;;
-  solaris)
-    # Solaris
-    usercolor=$bldylw
-    hostcolor=$bldred
-    ;;
-  *)
-    # Anything else
-    usercolor=$bldylw
-    hostcolor=$txtgrn
-    ;;
-esac
-
-if [[ $EUID -eq 0 ]]; then
-   usercolor=$bldred
-fi
-
-pathcolor=$bldblu
-
 # If promptline.vim was used then create airline prompt
 if [ -f $HOME/.bash_prompt.sh ]
 then
