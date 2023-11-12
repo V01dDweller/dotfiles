@@ -32,6 +32,13 @@ fi
 # credit: https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# Add Linux NodeJS to PATH
+if [ -d "$HOME/.local/node" ]
+then
+  PATH=$HOME/.local/node/bin:$PATH
+  export PATH
+fi
+
 # History setttins
 export HISTTIMEFORMAT="%m/%d/%y %T "
 export HISTSIZE=10000000
