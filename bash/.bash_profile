@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
+if [ -f "$HOME/.bashrc" ]; then
+  . "$HOME/.bashrc"
 fi
 
 # User specific environment and startup programs
@@ -17,7 +17,7 @@ fi
 # Add NodeJS to PATH
 NODE_PATH=$(ls -d /opt/homebrew/Cellar/node\@18/*/bin | tail -1)
 
-if [ -d $NODE_PATH ];then
+if [ -d "$NODE_PATH" ];then
   export PATH=$NODE_PATH:$PATH
 fi
 
@@ -41,9 +41,9 @@ export TERM=xterm-256color
 umask 022
 
 # If promptline.vim was used then create airline prompt
-if [ -f $HOME/.bash_prompt.sh ]
+if [ -f "$HOME/.bash_prompt.sh" ]
 then
-  source ~/.bash_prompt.sh
+  source "$HOME/.bash_prompt.sh"
 fi
 
 LANG=C.UTF-8; export LANG
