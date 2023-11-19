@@ -10,6 +10,7 @@
 # - Autosave                       - https://github.com/907th/vim-auto-save
 # - Colorizer                      - https://github.com/chrisbra/Colorizer
 # - Delview                        - https://github.com/vim-scripts/delview
+# - Devicons                       - https://github.com/ryanoasis/vim-devicons
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
@@ -75,7 +76,8 @@ export PLUGINS="\
   edkolev/promptline.vim \
   tpope/vim-repeat \
   tpope/vim-surround \
-  907th/vim-auto-save
+  907th/vim-auto-save \
+  ryanoasis/vim-devicons
   "
 
 if [ -d "$HOME"/.vim/bundle ]
