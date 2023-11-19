@@ -14,7 +14,7 @@ Plug-ins
 1. [Autosave](https://github.com/907th/vim-auto-save) - Auto save
 1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
 1. [Delview](https://github.com/vim-scripts/delview) - Delete saved views
-1. [Devicons](https://github.com/ryanoasis/vim-devicons) - Fancy icons for NERDTree
+1. [Devicons](https://github.com/ryanoasis/vim-devicons) - Fancy icons for NERDTree (Requires a [NERDFont](https://www.nerdfonts.com/))
 1. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
 1. [Fugitive](https://github.com/tpope/vim-fugitive) - Git integration
 1. [Git-Gutter](https://github.com/airblade/vim-gitgutter) - Shows git changes in the gutter
