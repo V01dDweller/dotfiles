@@ -114,7 +114,7 @@ then
         export pony_list="-f $i $pony_list"
       done
     fi
-    fortune | ponysay -b round "$pony_list"
+    fortune | ponysay -b round $pony_list
   elif command -v cowsay > /dev/null
    then
      fortune | cowsay -f "$(ls /usr/local/share/cows/ | shuf -n1)"
