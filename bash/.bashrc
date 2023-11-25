@@ -109,7 +109,7 @@ then
                       -f tank"
     if [ -d ~/custom_ponies ]
     then
-      for i in $(ls ~/custom_ponies/*pony)
+      for i in $HOME/custom_ponies/*pony
       do
         export pony_list="-f $i $pony_list"
       done
