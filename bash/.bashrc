@@ -117,7 +117,9 @@ then
     fortune | ponysay -b round $pony_list
   elif command -v cowsay > /dev/null
    then
-     fortune | cowsay -f "$(ls /usr/local/share/cows/ | shuf -n1)"
+     COW_DIR=$(find /usr -type d -name cows)
+     export COW_DIR
+     fortune | cowsay -f "$(ls $COW_DIR | shuf -n1)"
    else
      fortune
      echo ""
