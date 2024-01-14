@@ -55,4 +55,11 @@ then
   source "$HOME/.bash_prompt.sh"
 fi
 
+# Pull my tasks from GitHub
+if [ -d "$HOME/.task" ] && [ "$TERM_PROGRAM" != "tmux" ]
+then
+  echo "Updating taskwarrior tasks..."
+  git -C "$HOME/.task" pull
+fi
+
 LANG=C.UTF-8; export LANG
