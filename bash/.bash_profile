@@ -60,6 +60,11 @@ if [ -d "$HOME/.task" ] && [ "$TERM_PROGRAM" != "tmux" ]
 then
   echo "Updating taskwarrior tasks..."
   git -C "$HOME/.task" pull
+  TODAY=$(date +%a)
+  if [ "$TODAY" = "Sat" ] || [ "$TODAY" = "Sun" ]
+  then
+      task
+  fi
 fi
 
 LANG=C.UTF-8; export LANG
