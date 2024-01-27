@@ -324,6 +324,10 @@ function! ToggleMouse()
   endif
 endfunc
 
+if has("Win32")
+  set termguicolors
+endif
+
 ".......................... NetRW ..........................."
 " Netrw tree style
 let g:netrw_liststyle = 3
