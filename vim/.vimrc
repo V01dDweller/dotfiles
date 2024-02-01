@@ -61,6 +61,11 @@ set nrformats+=alpha
 
 syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
 
+" Map CTRL-L to Fix Last Spelling Error
+" Credit: https://stackoverflow.com/questions/5312235/how-do-i-correct-vim-spelling-mistakes-quicker
+imap <C-l> <Esc>[s1z=`]a
+nmap <C-l> [s1z=1`]
+
 " Tabs and indentation
 set shiftwidth=2        " Auto indent shift-width
 set softtabstop=2       " Tabs at two spaces
