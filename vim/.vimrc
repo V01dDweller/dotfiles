@@ -114,8 +114,8 @@ if !has("gui_running") && v:version > 799
 endif
 
 " Line numbers only in active side of split window
-"autocmd WinEnter * :setlocal number
-"autocmd WinLeave * :setlocal nonumber
+autocmd WinEnter * if &ft != "nerdtree" && &ft != 'netrw' | :setlocal number relativenumber | endif
+autocmd WinLeave * if &ft != "nerdtree" && &ft != 'netrw' | :setlocal number norelativenumber | endif
 
 " Auto-create/auto-load views
 if !has("gui_running") && isdirectory("~/.vim")
