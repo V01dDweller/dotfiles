@@ -363,7 +363,7 @@ let g:netrw_list_hide=ghregex
 let g:LightsOn = 0
 if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   color PaperColor
-  " Set background to 'light' between 6am and 6pm, otherwise
+  " Set background to 'light' between 8am and 5pm, otherwise
   " set to 'dark' with " coordinated ALE colors.
   "
   " See also mapping for F6 to toggl
@@ -371,7 +371,7 @@ if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   " Thanks to Tan Wei Hao:
   " https://medium.com/@bentanweihao/switch-between-solarized-light-dark-in-vim-auto-magically-18ed5a8ff88f
   let hour = strftime("%H")
-  if 6 <= hour && hour < 18
+  if 8 <= hour && hour < 17
     set background=light
     let g:LightsOn = 1
     " Set ALE colors and highlights
