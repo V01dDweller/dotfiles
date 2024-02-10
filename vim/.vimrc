@@ -533,4 +533,4 @@ fun! CenterMe()
     let &virtualedit = ve_save
 endf
 
-" vim: nospell number
+" vim: nospell number nowrap
