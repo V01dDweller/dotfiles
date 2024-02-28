@@ -59,7 +59,10 @@ set nrformats+=alpha
 " Recognizes the following as correct:
 " Credit: http://www.panozzaj.com/blog/2016/03/21/ignore-urls-and-acroynms-while-spell-checking-vim/
 
+" Ignore 2 to 5 character acronyms
 syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
+syn match AcronymNoSpell '\<\(\u\|\d\)\{4,}s\?\>' contains=@NoSpell
+syn match AcronymNoSpell '\<\(\u\|\d\)\{5,}s\?\>' contains=@NoSpell
 
 " Map CTRL-L to Fix Last Spelling Error
 " Credit: https://stackoverflow.com/questions/5312235/how-do-i-correct-vim-spelling-mistakes-quicker
@@ -175,7 +178,7 @@ endfunction
 
 ".................... File Type Settings ...................."
 " Turn spell check on for these file types
-autocmd FileType markdown,text,html,man,manual :set spell | syn match AcronymNoSpell '\<\(\u\|\d\)\{3,}s\?\>' contains=@NoSpell
+autocmd FileType markdown,text,html,man,manual :set spell | syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
 
 " Python 3 Omnicomplete
 autocmd FileType python set omnifunc=python3complete#Complete
