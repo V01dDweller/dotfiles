@@ -460,7 +460,7 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   " Remove paths from tab names, add modification status
   let g:airline#extensions#tabline#fnamemod = ':t: %M.'
 
-  let g:airline_theme='minimalist'
+  let g:airline_theme='papercolor'
 
   let g:tmuxline_preset = {
       \'a'       : '#H',
