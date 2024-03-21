@@ -496,7 +496,7 @@ if !has('gui_running')
   " Thicker NERDTree arrows
   let g:NERDTreeDirArrowExpandable = '▷'
   let g:NERDTreeDirArrowCollapsible = '▽'
-  let NERDTreeIgnore=['\.vim$', '\.swp$', '.git*', '\~$']
+  let NERDTreeIgnore=['\.vim$', '\.swp$', '\.git$', '\.gitlab$', '\~$']
 
   " Exit Vim if NERDTree is the only window remaining in the only tab.
   autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | echo feedkeys("ZZ") | endif
