@@ -440,32 +440,22 @@ if !empty(glob("~/.vim/bundle/vim-gitgutter"))
   highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
 endif
 
-" Airline, Powerline, Tmuxline options for CLI only
-if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
-  " Vim-airline replace file encoding info with buffer number
+" Airline Settings
+if !empty(glob("~/.vim/autoload/pathogen.vim")) || !empty(glob("~/vimfiles/pack/plugins/start/vim-airline"))
   let g:airline_section_y = '♯%{bufnr("%")}'
-  let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
   let g:airline_powerline_fonts = 1
-  let g:tmuxline_powerline_separators = 1
-  let g:promptline_powerline_symbols = 1
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#tab_min_count = 2
   let g:airline#extensions#tabline#show_buffers = 0
   let g:airline#extensions#branch#format = 1
   " Remove paths from tab names, add modification status
   let g:airline#extensions#tabline#fnamemod = ':t: %M.'
-
   let g:airline_theme='papercolor'
+endif
 
-  let g:tmuxline_preset = {
-      \'a'       : '#H',
-      \'win'     : '#I \ue0b1 #{b:pane_current_path}',
-      \'cwin'    : '#I \ue0b1 #{b:pane_current_path}',
-      \'x'       : '%a %b %d',
-      \'y'       : '%I:%M %p',
-      \'z'       : '#S',
-      \'options' : {'status-justify' : 'left'}}
-
+" Promptline options for non-Windows CLI
+if !has("Win32") && !has('gui_running') && !empty(glob("~/.vim/bundle/promptline.vim"))
+  let g:promptline_powerline_symbols = 1
   " Promptline settings
   " Update ~/.bash_promptline.sh with:
   "     :PromptlineSnapshot ~/.bash_prompt.sh airline
@@ -480,6 +470,21 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
   let airline#extensions#promptline#snapshot_file = "~/.bash_prompt.sh"
 endif
 
+" Tmuxline options for CLI only
+if !has('gui_running') && !empty(glob("/home/ksimpson/.vim/bundle/tmuxline.vim"))
+  " Vim-airline replace file encoding info with buffer number
+  let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+  let g:tmuxline_powerline_separators = 1
+
+  let g:tmuxline_preset = {
+      \'a'       : '#H',
+      \'win'     : '#I \ue0b1 #{b:pane_current_path}',
+      \'cwin'    : '#I \ue0b1 #{b:pane_current_path}',
+      \'x'       : '%a %b %d',
+      \'y'       : '%I:%M %p',
+      \'z'       : '#S',
+      \'options' : {'status-justify' : 'left'}}
+endif
 " NERDTree
 if !has('gui_running')
   " Open the existing NERDTree on each new tab.
