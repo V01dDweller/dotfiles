@@ -112,9 +112,7 @@ let g:markdown_fenced_languages = [ 'ansible=yaml.ansible', 'bash=sh', 'bat=winb
 set cursorline
 
 " Vertical split separator
-if !has("gui_running") && v:version > 799
-  set fillchars=vert:│
-endif
+set fillchars=vert:│
 
 " Line numbers only in active side of split window
 autocmd WinEnter * if &ft != "nerdtree" && &ft != 'netrw' && &number == 1 | :setlocal number relativenumber | endif
