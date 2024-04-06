@@ -485,6 +485,7 @@ if !has('gui_running') && !empty(glob("/home/ksimpson/.vim/bundle/tmuxline.vim")
       \'z'       : '#S',
       \'options' : {'status-justify' : 'left'}}
 endif
+
 " NERDTree
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
