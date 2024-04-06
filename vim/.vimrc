@@ -209,10 +209,7 @@ nmap <silent> <F3> :set wrap!<CR>
 imap <silent> <F3> <Esc> :set wrap!<CR>
 
 " F4 - Toggle NERDTree
-if !has('gui_running')
-  " F4 - Toggle NERDTree
-  nnoremap <F4> :NERDTreeToggle<CR>
-endif
+nnoremap <F4> :NERDTreeToggle<CR>
 
 " F6 - Switch between light and dark background
 function! ToggleShade()
