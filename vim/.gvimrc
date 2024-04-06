@@ -33,7 +33,7 @@ if has("gui_running")
   elseif has("x11")
     set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
   elseif has("win32")
-    set guifont=DejaVu_Sans_Mono_for_Powerline:h10,Lucida_Console:h11:cDEFAUL
+    set guifont=JetBrainsMono_NFM:h10,,Lucida_Console:h11:cDEFAULT
   endif
 endif
 
