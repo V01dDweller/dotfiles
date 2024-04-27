@@ -19,6 +19,13 @@ if [ -d /opt/homebrew ]; then
   NODE_PATH=$(ls -d /opt/homebrew/Cellar/node\@18/*/bin | tail -1)
 fi
 
+# Add .local NodeJS to PATH, if it exists
+if [ -d $HOME/.local ]; then
+  NODEPATH=$(find $HOME/.local -maxdepth 1 -type d -iname "*node*"|head -n 1)
+  PATH=$NODEPATH/bin:$PATH
+  export PATH
+fi
+
 if [ -d "$NODE_PATH" ];then
   export PATH=$NODE_PATH:$PATH
 fi
@@ -53,18 +60,6 @@ umask 022
 if [ -f "$HOME/.bash_prompt.sh" ]
 then
   source "$HOME/.bash_prompt.sh"
-fi
-
-# Pull my tasks from GitHub
-if [ -d "$HOME/.task" ] && [ "$TERM_PROGRAM" != "tmux" ]
-then
-  echo "Updating taskwarrior tasks..."
-  git -C "$HOME/.task" pull
-  TODAY=$(date +%a)
-  if [ "$TODAY" = "Sat" ] || [ "$TODAY" = "Sun" ]
-  then
-      task
-  fi
 fi
 
 LANG=C.UTF-8; export LANG
