@@ -184,6 +184,14 @@ autocmd FileType python set omnifunc=python3complete#Complete
 " Vagrantfiles need ruby syntax
 au BufRead,BufNewFile Vagrantfile setfiletype ruby
 
+" Autoindent for Python
+autocmd FileType py setlocal shiftwidth=2 tabstop=2
+
+" Autoindent for PowerShell
+autocmd FileType ps1 setlocal shiftwidth=4 tabstop=4
+
+" Autoindent for Graphviz files
+autocmd FileType dot setlocal shiftwidth=8 tabstop=8
 
 "...................... Function keys ......................."
 "                                                            "
