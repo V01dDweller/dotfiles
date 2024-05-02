@@ -479,7 +479,7 @@ if !has("Win32") && !has('gui_running') && !empty(glob("~/.vim/bundle/promptline
 endif
 
 " Tmuxline options for CLI only
-if !has('gui_running') && !empty(glob("/home/ksimpson/.vim/bundle/tmuxline.vim"))
+if !has('gui_running')
   " Vim-airline replace file encoding info with buffer number
   let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
   let g:tmuxline_powerline_separators = 1
