@@ -116,7 +116,7 @@ then
         export pony_list="-f $i $pony_list"
       done
     fi
-    fortune | ponysay -b round $pony_list
+    fortune | ponysay -b round "$pony_list"
   elif command -v cowsay > /dev/null
    then
      COW_DIR=$(find /usr -type d -name cows)
