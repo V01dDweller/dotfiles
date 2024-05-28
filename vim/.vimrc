@@ -98,6 +98,9 @@ set splitright
 " Minimal number of lines above and below the cursor
 set scrolloff=2
 
+" Auto resize split windows
+autocmd VimResized * wincmd =
+
 " Speed up updates, defaults to 4000ms. Affects a few things including
 " GitGutter updates
 set updatetime=100
