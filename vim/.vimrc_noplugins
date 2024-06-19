@@ -91,6 +91,9 @@ function! ToggleNetrwVim8()
   endif
 endfunction
 
+" Vertical split separator
+set fillchars=vert:│
+
 " Cursorline colors
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 highlight CursorColumn ctermbg=darkblue
