@@ -94,6 +94,12 @@ endfunction
 " Vertical split separator
 set fillchars=vert:│
 
+" New windows to appear below
+set splitbelow
+
+" New vertical windows to appear right
+set splitright
+
 " Cursorline colors
 highlight CursorLine term=bold cterm=bold ctermbg=darkblue
 highlight CursorColumn ctermbg=darkblue
