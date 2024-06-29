@@ -68,4 +68,12 @@ then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# Set up pyenv
+if [ -d "$HOME/.pyenv" ]
+then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+fi
+
 LANG=C.UTF-8; export LANG
