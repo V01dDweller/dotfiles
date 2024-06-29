@@ -62,4 +62,10 @@ then
   source "$HOME/.bash_prompt.sh"
 fi
 
+# Set up Homebrew
+if [ -d /opt/homebrew/bin/brew ]
+then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 LANG=C.UTF-8; export LANG
