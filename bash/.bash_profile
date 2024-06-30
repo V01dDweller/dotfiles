@@ -74,6 +74,10 @@ then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init --path)"
+# Set up nodeenv
+if [ -f "$HOME/.node/bin/activate" ]
+then
+  source "$HOME/.node/bin/activate"
 fi
 
 LANG=C.UTF-8; export LANG
