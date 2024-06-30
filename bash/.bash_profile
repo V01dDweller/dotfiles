@@ -68,12 +68,12 @@ then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Set up pyenv
-if [ -d "$HOME/.pyenv" ]
+# Set up vyenv
+if [ -f "$HOME/.venv/bin/activate" ]
 then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
+  source "$HOME/.venv/bin/activate"
+fi
+
 # Set up nodeenv
 if [ -f "$HOME/.node/bin/activate" ]
 then
