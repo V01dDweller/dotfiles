@@ -35,7 +35,7 @@ then
   source "$HOME/.bash_prompt.sh"
 fi
 
-# Set up vyenv
+# Activate Python Virtual Environment
 if [ -f "$HOME/.venv/bin/activate" ]
 then
   source "$HOME/.venv/bin/activate"
