@@ -14,11 +14,6 @@ if [ -d /opt/homebrew/bin ]; then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
-# MacOS GNU cureutils, e.g. after running 'brew install coreutils'
-if [ -d /opt/homebrew/Cellar/coreutils/9.3/bin ]; then
-  export PATH=/opt/homebrew/Cellar/coreutils/9.3/bin:/opt/homebrew/Cellar/ncurses/6.4/bin/:$PATH
-fi
-
 # MacOS stop telling me about zsh
 # credit: https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -37,12 +32,6 @@ umask 022
 if [ -f "$HOME/.bash_prompt.sh" ]
 then
   source "$HOME/.bash_prompt.sh"
-fi
-
-# Set up Homebrew
-if [ -d /opt/homebrew/bin/brew ]
-then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Set up vyenv
