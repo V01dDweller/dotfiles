@@ -14,22 +14,6 @@ if [ -d /opt/homebrew/bin ]; then
   export PATH=/opt/homebrew/bin:$PATH
 fi
 
-# Add MacOS NodeJS to PATH
-if [ -d /opt/homebrew ]; then
-  NODE_PATH=$(ls -d /opt/homebrew/Cellar/node\@18/*/bin | tail -1)
-fi
-
-# Add .local NodeJS to PATH, if it exists
-if [ -d $HOME/.local ]; then
-  NODEPATH=$(find $HOME/.local -maxdepth 1 -type d -iname "*node*"|head -n 1)
-  PATH=$NODEPATH/bin:$PATH
-  export PATH
-fi
-
-if [ -d "$NODE_PATH" ];then
-  export PATH=$NODE_PATH:$PATH
-fi
-
 # MacOS GNU cureutils, e.g. after running 'brew install coreutils'
 if [ -d /opt/homebrew/Cellar/coreutils/9.3/bin ]; then
   export PATH=/opt/homebrew/Cellar/coreutils/9.3/bin:/opt/homebrew/Cellar/ncurses/6.4/bin/:$PATH
@@ -38,13 +22,6 @@ fi
 # MacOS stop telling me about zsh
 # credit: https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
 export BASH_SILENCE_DEPRECATION_WARNING=1
-
-# Add Linux NodeJS to PATH
-if [ -d "$HOME/.local/node" ]
-then
-  PATH=$HOME/.local/node/bin:$PATH
-  export PATH
-fi
 
 # History setttins
 export HISTTIMEFORMAT="%m/%d/%y %T "
@@ -74,7 +51,7 @@ then
   source "$HOME/.venv/bin/activate"
 fi
 
-# Set up nodeenv
+# Activate NodeJS via nodeenv
 if [ -f "$HOME/.node/bin/activate" ]
 then
   source "$HOME/.node/bin/activate"
