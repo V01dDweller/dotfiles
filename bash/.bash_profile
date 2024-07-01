@@ -12,6 +12,7 @@ export PATH
 # Add Homebrew to the PATH\
 if [ -d /opt/homebrew/bin ]; then
   export PATH=/opt/homebrew/bin:$PATH
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # MacOS stop telling me about zsh
