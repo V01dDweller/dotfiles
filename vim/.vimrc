@@ -122,7 +122,7 @@ autocmd WinEnter * if &ft != "nerdtree" && &ft != 'netrw' && &number == 1 | :set
 autocmd WinLeave * if &ft != "nerdtree" && &ft != 'netrw' && &number == 1 | :setlocal number norelativenumber | endif
 
 " Auto-create/auto-load views
-if !has("gui_running") && isdirectory("~/.vim")
+if !has("gui_running") && isdirectory($HOME."/.vim")
   let current_file = expand('%')
   if !empty(current_file) || stridx(current_file, "NetrwTreeListing") == -1
     autocmd BufWinLeave *.* mkview
