@@ -140,8 +140,14 @@ if [[ $GITVERSION == *"windows"* ]]; then
   echo -ne "\e]0;Git Bash\a"
 fi
 
-# Change Cygwin Window Title
+# Window Title and SSH Socker for Cygwin 
 GITVERSION=$(uname -a)
 if [[ $GITVERSION == *"CYGWIN"* ]]; then
   echo -ne "\e]0;Cygwin\a"
+  if [[ -f $HOME/.ssh/keeagent.sock ]]
+  then
+    export SSH_AUTH_SOCK=$HOME/.ssh/keeagent.sock
+  fi
+fi
+
 fi
