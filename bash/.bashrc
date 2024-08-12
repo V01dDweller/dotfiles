@@ -150,4 +150,11 @@ if [[ $GITVERSION == *"CYGWIN"* ]]; then
   fi
 fi
 
+# Set SSH_AUTH_SOCK if this is MSYS but not Git Bash
+if [[ ! $EXEPATH == *"Git"* ]] && [ -v MSYSTEM ]
+then
+  if [[ -f $HOME/.ssh/keeagent.sock ]]
+  then
+    export SSH_AUTH_SOCK=$HOME/.ssh/keeagent.sock
+  fi
 fi
