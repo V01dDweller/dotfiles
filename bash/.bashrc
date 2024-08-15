@@ -150,11 +150,21 @@ if [[ $GITVERSION == *"CYGWIN"* ]]; then
   fi
 fi
 
-# Set SSH_AUTH_SOCK if this is MSYS but not Git Bash
-if [[ ! $EXEPATH == *"Git"* ]] && [ -v MSYSTEM ]
+# Set SSH_AUTH_SOCK for MSYS2
+#
+# I use Keepass with the Keeagent plugin to load ssh-keys automatically.
+# When configured correctly, Keeagent will create a 'keeagent.sock'
+# socket file for MSYS2 in $HOME/.ssh/keegent.sock. For Git Bash, I
+# prefer to use Windows OpenSSL. Thus, if SSH_AUTH_SOCK is set with Git
+# Bash configured this way then it breaks ssh-agent in Git Bash. Thus
+# this determines if the session is in MSYS2 and if all the conditions
+# are met to set SSH_AUTH_SOCK, i.e.:
+#
+# 1. The MSYSTEM var is set, e.g., MSYSTEM=MINGW64
+# 2. There is no EXEPATH var with "Git" in the value (which means Git Bash)
+# 3. The # $HOME/.ssh/keeagen.sock file exists
+
+if [ ! -z ${MSYSTEM+x} ] && [[ ! $EXEPATH == *"Git"* ]] && [[ -S $HOME/.ssh/keeagent.sock ]]
 then
-  if [[ -f $HOME/.ssh/keeagent.sock ]]
-  then
-    export SSH_AUTH_SOCK=$HOME/.ssh/keeagent.sock
-  fi
+  export SSH_AUTH_SOCK="$HOME/.ssh/keeagent.sock"
 fi
