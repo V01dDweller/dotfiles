@@ -14,6 +14,8 @@ then
 else
   alias ls="ls --color=auto"
 fi
+
+# Misc aliases
 alias cleanbash="bash --noprofile --norc"
 alias grep="grep --color=auto --exclude=*.swp --exclude-dir=.svn"
 alias egrep="egrep --color=auto --exclude=*.swp --exclude-dir=.svn"
