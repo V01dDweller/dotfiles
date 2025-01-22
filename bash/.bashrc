@@ -8,7 +8,7 @@ export HISTTIMEFORMAT="%d/%m/%y %T "
 export EDITOR="/usr/bin/vim"
 
 # Add color to common commands
-if [ "$OSTYPE" == "darwin18" ]
+if [ "$OSTYPE" == "darwin"* ]
 then
   alias ls="ls -G"
 else
