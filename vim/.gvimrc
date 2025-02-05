@@ -97,6 +97,16 @@ if has('WIN32')
   color PaperColor
 endif
 
+" User PowerShell as shell
+if has('win32')
+  " Check if pwsh is available
+  if executable('pwsh')
+    set shell=pwsh
+  else
+    set shell=powershell
+  endif
+endif
+
 " Vim Airline for gVim
 if !empty(glob("~/vimfiles/pack/plugins/start/vim-airline"))
   " Thanks to Alexander Myshov, StachExchange: https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
