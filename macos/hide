@@ -1,0 +1,8 @@
+# vim: ft=shell
+#!/bin/bash
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  defaults write com.apple.finder CreateDesktop false
+  killall Finder
+else
+  echo "This is for MacOS only"
+fi
