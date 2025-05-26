@@ -516,9 +516,16 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | echo feedkeys("ZZ") | endif
 
 " MiniMap
-let g:minimap_git_colors = 1
-let g:minimap_highlight_search = 1
-let g:minimap_highlight_range = 1
+if !empty(glob("$HOME/.vim/bundle/minimap.vim"))
+  let g:minimap_git_colors = 1
+  let g:minimap_highlight_search = 1
+  let g:minimap_highlight_range = 1
+  let g:minimap_width = 10
+  let g:minimap_auto_start = 0
+  let g:minimap_auto_start_win_enter = 1
+  let g:minimap_auto_start_win_leave = 0
+  let g:minimap_enable_highlight_colorgroup = 1
+endif
 
 " Center a selection
 " Reference: https://stackoverflow.com/questions/26137838/vim-centering-text-within-selection
