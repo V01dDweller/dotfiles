@@ -551,7 +551,5 @@ fun! CenterMe()
     let &virtualedit = ve_save
 endf
 
-" Copilot Settings
-let g:copilot_proxy_strict_ssl = v:false
 
 " vim: nospell number nowrap
