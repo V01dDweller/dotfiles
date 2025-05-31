@@ -231,25 +231,25 @@ function! ToggleShade()
   if g:LightsOn
     set background=dark
     let g:LightsOn = 0
-    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match
+    if !empty(glob("$VIMPLUGINS/ale")) " Change ALE colors to match
       highlight ALEWarning ctermbg=Darkyellow ctermfg=Black
       highlight ALEError ctermbg=DarkRed
       highlight ALEWarningSign ctermfg=Yellow
       highlight ALEErrorSign ctermfg=Red
     endif
-    if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+    if !empty(glob("$VIMPLUGINS/vim-gitgutter"))
       highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
     endif
   else
     set background="light"
     let g:LightsOn = 1
-    if !empty(glob("~/.vim/bundle/ale")) " Change ALE colors to match
+    if !empty(glob("$VIMPLUGINS/ale")) " Change ALE colors to match
       highlight ALEWarning ctermbg=Yellow
       highlight ALEError ctermbg=Lightred
       highlight ALEWarningSign ctermfg=Darkyellow
       highlight ALEErrorSign ctermfg=Darkred
     endif
-    if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+    if !empty(glob("$VIMPLUGINS/vim-gitgutter"))
       highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
     endif
   endif
@@ -388,7 +388,7 @@ if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
     set background=light
     let g:LightsOn = 1
     " Set ALE colors and highlights
-    if !empty(glob("~/.vim/bundle/ale"))
+    if !empty(glob("$VIMPLUGINS/ale"))
       highlight ALEWarning ctermbg=Yellow
       highlight ALEError ctermbg=Lightred
       highlight ALEWarningSign ctermfg=Darkyellow
@@ -397,7 +397,7 @@ if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   else
     set background=dark
     let g:LightsOn = 0
-    if !empty(glob("~/.vim/bundle/ale"))
+    if !empty(glob("$VIMPLUGINS/ale"))
       highlight ALEWarning ctermbg=Yellow ctermfg=Black
       highlight ALEError ctermbg=Red ctermfg=Black
       highlight ALEWarningSign ctermfg=Yellow
@@ -411,7 +411,7 @@ endif
 " " Uncomment this block to default to dark background
 " color PaperColor
 " set background=dark
-" if !empty(glob("~/.vim/bundle/ale"))
+" if !empty(glob("$VIMPLUGINS/ale"))
 "   highlight ALEWarning ctermbg=Yellow ctermfg=Black
 "   highlight ALEError ctermbg=Red ctermfg=Black
 "   highlight ALEWarningSign ctermfg=Yellow
@@ -420,7 +420,7 @@ endif
 
 "......................... Plugins .........................."
 " Enable plugins
-if isdirectory("~/.vim/bundle")
+if isdirectory("$VIMPLUGINS")
   filetype plugin on
 endif
 
@@ -431,7 +431,7 @@ if !has('gui_running') && !empty(glob("~/.vim/autoload/pathogen.vim"))
 endif
 
 " ALE Icons and highlights
-if !empty(glob("~/.vim/bundle/ale"))
+if !empty(glob("$VIMPLUGINS/ale"))
   let g:ale_sign_error = '✗▐'
   let g:ale_sign_warning = '▲▐'
   let g:ale_set_highlights = 1
@@ -448,7 +448,7 @@ else
 endif
 
 " GitGutter
-if !empty(glob("~/.vim/bundle/vim-gitgutter"))
+if !empty(glob("$VIMPLUGINS/vim-gitgutter"))
   let g:gitgutter_sign_added              = '+▐'
   let g:gitgutter_sign_modified           = '~▐'
   let g:gitgutter_sign_removed            = '-▐'
