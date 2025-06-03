@@ -1,8 +1,7 @@
 Vim/gVim
 ========
 
-The plugin\_install script installs the Pathogen plug-in manager, a collection
-of plug-ins and a handful of color schemes:
+The `plugin_install` scripts install the Pathogen plug-in manager, a collection of plug-ins and a handful of color schemes to your `~/.vim` directory.
 
 Plug-ins
 --------
