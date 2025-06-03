@@ -26,6 +26,7 @@
 # - Vinegar                        - https://github.com/tpope/vim-vinegar
 
 import os
+import shutil
 import urllib.request
 
 
@@ -101,6 +102,13 @@ VIM_PLUGINS = [
     ]
 BUNDLE_DIR = VIM_DIR + '/bundle'
 START_DIR = os.getcwd()
+
+# Adding Coc and Copilot plugins if NodeJS is available
+if shutil.which('node'):
+    PLUGINS.append('neoclide/coc.nvim')
+    PLUGINS.append('github/copilot.vim')
+    print(COLOR["magenta"] + 'NodeJS found, adding Coc and Copilot plugins' +
+          COLOR["reset"])
 
 print('Plugins will be installed in ' + COLOR["cyan"] +
       BUNDLE_DIR + '\n' + COLOR["reset"])
