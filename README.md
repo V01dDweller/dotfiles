@@ -1,7 +1,8 @@
 My Dotfiles and Plug-Ins
 ========================
 
-This project contains scripts that install my dotfiles and favorite plugins for Bash, Tmux and Vim. Testing on MacOS, AlmaLinux9, Fedora 40-42 and Ubuntu 22.04+ including Windows Subsystem for Linux variants.
+This project contains scripts that install my dotfiles and favorite plugins
+for Bash, Tmux and Vim. Tested on MacOS, AlmaLinux9, Fedora 40-42 and Ubuntu 22.04+ including Windows Subsystem for Linux variants.
 
 Also included for manual install or copy/paste/append are my config file for iTerm2, a dotfile sample for `git`, as well stuff I use occasionally or not any more like `top`, `w3m` and the Cygwin variant of MinTTY. The MinTTY dotfile collection was primarily to change color schemes and windows settings, etc., via scripts (e.g., red for production or root) and are fairly east to decipher, if needed.
 
