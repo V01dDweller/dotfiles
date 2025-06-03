@@ -1,26 +1,16 @@
 My Dotfiles and Plug-Ins
 ========================
 
-This project installs a collection of dotfiles and Vim plug-ins that I've come
-to depend on over the years. It is set up to be installed in one step. The
-goal is to get my workflow going quickly on a new system whether that system
-is running MacOS, Cygwin, WSL 2 or mainstream Linux (EL or Ubuntu)
-distributions.
+This project contains scripts that install my dotfiles and favorite plugins for Bash, Tmux and Vim. Testing on MacOS, AlmaLinux9, Fedora 40-42 and Ubuntu 22.04+ including Windows Subsystem for Linux variants.
 
-![WSLtty 3-way split with Vim and bash](/screenshot_03.png?raw=true
+Also included for manual install or copy/paste/append are my config file for iTerm2, a dotfile sample for `git`, as well stuff I use occasionally or not any more like `top`, `w3m` and the Cygwin variant of MinTTY. The MinTTY dotfile collection was primarily to change color schemes and windows settings, etc., via scripts (e.g., red for production or root) and are fairly east to decipher, if needed.
+
+![WSLTTy 3-way split with Vim and bash](/screenshot_03.png?raw=true
 "Vim/bash/tmux nerdvada")
 
-The priorities are Vim, Tmux, and bash which are visually themed/coordinated
-via the Vim [Airline](https://github.com/vim-airline/vim-airline),
-[Tmuxline](https://github.com/edkolev/tmuxline.vim) and
-[Promptline](https://github.com/edkolev/promptline.vim) plugins respectively.
-Note that these plug-ins get their default settings from the `.vimrc` file.
+Vim, Tmux, and the bash prompt are visually themed/coordinated via the Vim [Airline](https://github.com/vim-airline/vim-airline), [Tmuxline](https://github.com/edkolev/tmuxline.vim) and [Promptline](https://github.com/edkolev/promptline.vim) plugins respectively.  Note that these plug-ins get their default settings from the `.vimrc` file.
 
-By default, each of these will use
-[Powerline](https://github.com/powerline/fonts) fonts which must be either
-installed separately or disabled by updating then sourcing
-`.vimrc`. Find and update the following lines and set the values to '0' to
-disable powerline fonts:
+These plugins assume a GUI terminal already configured with a [NERDFont](https://www.nerdfonts.com/font-downloads) or [Powerline](https://github.com/powerline/fonts) font which must be either installed separately or disabled by updating then sourcing `.vimrc`. Find and update the following lines and set the values to '0' to disable powerline fonts:
 
 ```
   let g:airline_powerline_fonts = 0
@@ -28,33 +18,18 @@ disable powerline fonts:
   let g:promptline_powerline_symbols = 0
 ```
 
-MacOS iTerm users can skip installing powerline fonts and enable "Draw
-Powerline Glyphs" instead.
+MacOS iTerm users can skip installing fonts and enable "Draw Powerline Glyphs" instead.
 
-The install scripts will back up existing bash, MinTTY (Cygwin only), Vim or
-Tmux dotfiles before replacing them.
+The install scripts will back up existing bash, Vim or Tmux dotfiles before replacing them (use at your own risk!).
 
-From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and
-[Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in
-managers ([pathogen](https://github.com/tpope/vim-pathogen) and
-[tpm](https://github.com/tmux-plugins/tpm) respectively) are installed along
-with vim plug-ins and color schemes. Only one Tmux plug-in is installed. See
-the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim)
-and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for
-more.
+From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in managers ([pathogen](https://github.com/tpope/vim-pathogen) and [tpm](https://github.com/tmux-plugins/tpm) respectively) are installed along with vim plug-ins and color schemes. Only one Tmux plug-in is installed. See the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for more.
 
-Plug-ins are installed directly from github, so it is a good idea to
-periodically pull this project and/or re-run the install script (or individual
-Vim or tmux plugin_install scripts) to update all the plug-ins and add new
-color schemes.
+Plug-ins are installed directly from github, so it is a good idea to periodically pull this project and/or re-run the install script (or individual Vim or tmux plugin_install scripts) to update all the plug-ins and add new color schemes.
 
-The `uninstall.sh` script was never finished and should be avoided for now,
-but backing this out/restoring original rc files is as simple as restoring the
-contents of the most recent `dotfile_backup` directory. Remove plug-ins by
-deleting `~/.vim/bundle` and `~/.tmux/plugins` directories.
+The `uninstall.sh` script was never finished and should be avoided for now, but backing this out/restoring original rc files is as simple as restoring the contents of the most recent `dotfile_backup` directory. Remove plug-ins by deleting `~/.vim/bundle` and `~/.tmux/plugins` directories.
 
-These are tested fairly often on MacOS, WSL, Cygwin, and Linux but results may
-vary, **use at your own risk.**
+These are tested fairly often on MacOS, WSL, ~~Cygwin~~, and Linux but results may
+vary, **use at your own risk!**
 
 Quick Install
 --------------
@@ -73,8 +48,7 @@ git clone https://github.com/V01dDweller/dotfiles.git
 
 Primary Apps
 ------------
-Dotfiles for the apps below are installed (and backed up) by the install
-scripts, if the apps are present.
+Dotfiles for the apps below are installed (and backed up) by the install scripts, if the apps are present.
 
 * vim
 * bash
