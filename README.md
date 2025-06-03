@@ -10,7 +10,7 @@ Also included for manual install or copy/paste/append are my config file for iTe
 
 Vim, Tmux, and the bash prompt are visually themed/coordinated via the Vim [Airline](https://github.com/vim-airline/vim-airline), [Tmuxline](https://github.com/edkolev/tmuxline.vim) and [Promptline](https://github.com/edkolev/promptline.vim) plugins respectively.  Note that these plug-ins get their default settings from the `.vimrc` file.
 
-These plugins assume a GUI terminal already configured with a [NERDFont](https://www.nerdfonts.com/font-downloads) or [Powerline](https://github.com/powerline/fonts) font which must be either installed separately or disabled by updating then sourcing `.vimrc`. Find and update the following lines and set the values to '0' to disable powerline fonts:
+These plugins assume a GUI terminal already configured with a [NERDFont](https://www.nerdfonts.com/font-downloads) or [Powerline](https://github.com/powerline/fonts) font which must be either installed separately or disabled by updating then sourcing `.vimrc`. Find and update the following lines and set the values to '0' to disable Powerline fonts:
 
 ```
   let g:airline_powerline_fonts = 0
@@ -24,7 +24,7 @@ The install scripts will back up existing bash, Vim or Tmux dotfiles before repl
 
 From there, [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) plug-in managers ([pathogen](https://github.com/tpope/vim-pathogen) and [tpm](https://github.com/tmux-plugins/tpm) respectively) are installed along with vim plug-ins and color schemes. Only one Tmux plug-in is installed. See the [Vim](https://github.com/V01dDweller/dotfiles/tree/master/vim) and [Tmux](https://github.com/V01dDweller/dotfiles/tree/master/tmux) READMEs for more.
 
-Plug-ins are installed directly from github, so it is a good idea to periodically pull this project and/or re-run the install script (or individual Vim or tmux plugin_install scripts) to update all the plug-ins and add new color schemes.
+Plug-ins are installed directly from GitHub, so it is a good idea to periodically pull this project and/or re-run the install script (or individual Vim or Tmux plugin_install scripts) to update all the plug-ins and add new color schemes.
 
 The `uninstall.sh` script was never finished and should be avoided for now, but backing this out/restoring original rc files is as simple as restoring the contents of the most recent `dotfile_backup` directory. Remove plug-ins by deleting `~/.vim/bundle` and `~/.tmux/plugins` directories.
 
