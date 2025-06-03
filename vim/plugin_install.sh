@@ -83,6 +83,12 @@ export PLUGINS="\
   ryanoasis/vim-devicons
   "
 
+# Add Coc and Copilt plugins if NodeJS is available
+if command -v node > /dev/null 2>&1
+then
+  export PLUGINS="$PLUGINS neoclide/coc.nvim github/copilot.vim"
+fi
+
 if [ -d "$VIMPLUGINS" ]
 then
   cd "$VIMPLUGINS"
@@ -135,23 +141,3 @@ do
     curl -s -o "$VIMCOLORS/$COLOR_FILE" https://raw.githubusercontent.com"$i"
   fi
 done
-
-# Updating Coc plugin, if present
-CocDir="$HOME"/.vim/pack/coc/start/coc.nvim
-if [ -d "$CocDir" ]
-then
-  echo "Updating coc.nvim"
-  cd "$CocDir"
-  git pull
-  echo " "
-fi
-
-# Updating Copilot plugin, if present
-CopilotDir="$HOME"/.vim/pack/github/start/copilot.vim
-if [ -d "$CopilotDir" ]
-then
-  echo "Updating copilot.vim"
-  cd "$CopilotDir"
-  git pull
-  echo " "
-fi
