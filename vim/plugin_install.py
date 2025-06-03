@@ -75,7 +75,7 @@ else:
           ' already downloaded\n' + COLOR["reset"])
 
 # Installing/Updating plug-ins
-VIM_PLUGINS = [
+PLUGINS = [
     'dense-analysis/ale',
     'vim-scripts/AnsiEsc.vim',
     'pearofducks/ansible-vim',
@@ -114,7 +114,7 @@ print('Plugins will be installed in ' + COLOR["cyan"] +
       BUNDLE_DIR + '\n' + COLOR["reset"])
 
 if os.path.exists(BUNDLE_DIR):
-    for i in VIM_PLUGINS:
+    for i in PLUGINS:
         REPO_PARTS = i.split('/')
         os.chdir(BUNDLE_DIR)
         if not os.path.exists(REPO_PARTS[1]):
