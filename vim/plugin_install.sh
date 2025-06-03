@@ -26,13 +26,16 @@
 # - Tmuxline                       - https://github.com/edkolev/tmuxline.vim
 # - Vinegar                        - https://github.com/tpope/vim-vinegar
 
+export PATHOGEN_DIR="$HOME/.vim/autoload"
+export VIMPLUGINS="$HOME/.vim/bundle"
+export VIMCOLORS="$HOME/.vim/colors"
+
 # Bash scripting tweaks credit:
 #   https://vaneyckt.io/posts/safer_bash_scripts_with_set_euxo_pipefail
 set -Eeuo pipefail
 
 # Install the Pathogen plug-in manager
-export PATHOGEN_DIRS="autoload bundle"
-for i in $PATHOGEN_DIRS
+for i in $VIMPLUGINS $PATHOGEN_DIR
 do
   if [ ! -d "$HOME"/.vim/"$i" ]
   then
@@ -42,10 +45,10 @@ do
   fi
 done
 
-if [ ! -f "$HOME"/.vim/autoload/pathogen.vim ]
+if [ ! -f "$PATHOGEN_DIR/pathogen.vim" ]
 then
   echo "Installing pathogen"
-  cd "$HOME"/.vim/autoload
+  cd $PATHOGEN_DIR
   curl -O https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
   echo " "
 else
@@ -80,9 +83,9 @@ export PLUGINS="\
   ryanoasis/vim-devicons
   "
 
-if [ -d "$HOME"/.vim/bundle ]
+if [ -d "$VIMPLUGINS" ]
 then
-  cd "$HOME"/.vim/bundle
+  cd "$VIMPLUGINS"
   for i in $PLUGINS
   do
     PLUGIN_DIR=$(echo "$i" | cut -d '/' -f 2)
@@ -105,10 +108,10 @@ then
 fi
 
 # Install colorschemes from Github
-if [ ! -d "$HOME"/.vim/colors ]
+if [ ! -d "$VIMCOLORS" ]
 then
-  echo "Creating $HOME/.vim/colors"
-  mkdir "$HOME"/.vim/colors
+  echo "Creating $VIMCOLORS"
+  mkdir "$VIMCOLORS"
 fi
 
 COLOR_SCHEMES=(
@@ -126,10 +129,10 @@ COLOR_SCHEMES=(
 for i in "${COLOR_SCHEMES[@]}"
 do
   COLOR_FILE=$(basename "$i")
-  if [ ! -f "$HOME"/.vim/colors/"$COLOR_FILE" ]
+  if [ ! -f "$VIMCOLORS/$COLOR_FILE" ]
   then
     echo "Retrieving $COLOR_FILE"
-    curl -s -o "$HOME"/.vim/colors/"$COLOR_FILE" https://raw.githubusercontent.com"$i"
+    curl -s -o "$VIMCOLORS/$COLOR_FILE" https://raw.githubusercontent.com"$i"
   fi
 done
 
