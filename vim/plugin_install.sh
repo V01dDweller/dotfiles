@@ -119,6 +119,15 @@ then
   mkdir "$VIMCOLORS"
 fi
 
+# Initializing Coc, if needed
+if [ ! -d "$HOME/.config/coc" ]
+then
+  echo "Initializing Coc"
+  cd "$VIMPLUGINS/coc.nvim"
+  npm ci
+  vim -c "helptags doc/ | q"
+fi
+
 COLOR_SCHEMES=(
   "/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim"
   "/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim"
