@@ -44,6 +44,7 @@ COLOR = {
 # Creating ~/.vim
 HOME_DIR = os.environ['HOME']
 VIM_DIR = HOME_DIR + '/.vim'
+VIM_PLUGIN_DIR = VIM_DIR + '/bundle'
 if not os.path.exists(VIM_DIR):
     print('Creating ' + COLOR["cyan"] + VIM_DIR + COLOR["reset"] + '\n')
     os.mkdir(VIM_DIR)
