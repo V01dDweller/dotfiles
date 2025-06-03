@@ -9,17 +9,21 @@ Plug-ins
 
 1. [ALE](https://github.com/dense-analysis/ale) - Asynchronous Linting Engine
 1. [Airline](https://github.com/vim-airline/vim-airline) - Enhanced always on-status line
+1. [Airline Themes](https://github.com/vim-airline/vim-airline-themes) - Extra themes for Airline
 1. [AnsiEsc](https://github.com/vim-scripts/AnsiEsc.vim) - Convert ASCII escapes to color
 1. [Ansible](https://github.com/pearofducks/ansible-vim) - Ansible syntax highlighting
 1. [Autosave](https://github.com/907th/vim-auto-save) - Auto save
 1. [Colorizer](https://github.com/chrisbra/Colorizer) - Colorize HTML/CSS color codes
+1. ✲ [Conqueror of Completion (CoC)](https://github.com/neoclide/coc.nvim) - Autocompletion engine for Vim
 1. [Delview](https://github.com/vim-scripts/delview) - Delete saved views
 1. [Devicons](https://github.com/ryanoasis/vim-devicons) - Fancy icons for NERDTree (Requires a [NERDFont](https://www.nerdfonts.com/))
 1. [Dracula](https://github.com/dracula/vim) - Dracula color scheme
 1. [Fugitive](https://github.com/tpope/vim-fugitive) - Git integration
 1. [Git-Gutter](https://github.com/airblade/vim-gitgutter) - Shows git changes in the gutter
+1. ✲ [GitHub Copilot](https://github.com/github/copilot.vim") - GitHub Copilot integration for Vim
+1. [HCL](https://github.com/jvirtanen/vim-hcl) - HashiCorp Configuration Language syntax highlighting
+1. [Jenkinsfile syntax](https://github.com/martinda/Jenkinsfile-vim-syntax) - Jenkinsfile syntax highlighting
 1. [Lion](https://github.com/tommcdo/vim-lion.git) - Aligning text by a character
-1. [Loupe](https://github.com/wincent/loupe) - Search enhancement
 1. [NERDTree](https://github.com/preservim/nerdtree) - Filesystem Explorer
 1. [Nginx.vim](https://github.com/chr4/nginx.vim) - Nginx conf file syntax
 1. [PS1](https://github.com/PProvost/vim-ps1) - PowerShell syntax highlighting
