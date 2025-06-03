@@ -167,21 +167,3 @@ for i in COLOR_SCHEMES:
         COLOR_URL = 'https://raw.githubusercontent.com'+i
         urllib.request.urlretrieve(COLOR_URL, COLOR_PATH)
 print(" ")
-
-# Updating Coc plugin, if present
-COC_DIR = VIM_DIR + '/pack/coc/start/coc.nvim'
-if os.path.exists(COC_DIR):
-    print(COLOR["magenta"] + 'Updating Coc plugin' + COLOR["reset"])
-    os.chdir(COC_DIR)
-    os.system('git pull')
-    print(" ")
-    os.chdir(START_DIR)
-
-# Updating Copilot plugin, if present
-COC_DIR = VIM_DIR + '/pack/github/start/copilot.vim'
-if os.path.exists(COC_DIR):
-    print(COLOR["magenta"] + 'Updating GitHub Copilot plugin' + COLOR["reset"])
-    os.chdir(COC_DIR)
-    os.system('git pull')
-    print(" ")
-    os.chdir(START_DIR)
