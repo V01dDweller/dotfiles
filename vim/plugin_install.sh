@@ -46,7 +46,7 @@ done
 
 if [ ! -f "$PATHOGEN_DIR/pathogen.vim" ]
 then
-  echo "Installing pathogen"
+  echo "Installing Pathogen, by Tim Pope"
   cd $PATHOGEN_DIR
   curl -O https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
   echo " "
