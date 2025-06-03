@@ -32,6 +32,8 @@ Plug-ins
 1. [Tmuxline](https://github.com/edkolev/tmuxline.vim) - Tmux theme sync with Airline
 1. [Vinegar](https://github.com/tpope/vim-vinegar) - Better netrw?
 
+✲ NodeJS v22.x(LTS) is required for CoC and GitHub Copilot. These will be skipped if NodeJS is not installed or in the `PATH`.
+
 Color Schemes
 -------------
 
