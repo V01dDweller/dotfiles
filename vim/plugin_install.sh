@@ -37,11 +37,10 @@ set -Eeuo pipefail
 # Install the Pathogen plug-in manager
 for i in $VIMPLUGINS $PATHOGEN_DIR
 do
-  if [ ! -d "$HOME"/.vim/"$i" ]
+  if [ ! -d "$i" ]
   then
-    export DIR="$HOME"/.vim/$i
-    echo "Creating" "$DIR"
-    mkdir -p "$DIR"
+    echo "Creating" "$i"
+    mkdir -p "$i"
   fi
 done
 
