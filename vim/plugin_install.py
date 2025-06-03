@@ -136,6 +136,15 @@ if not os.path.exists(COLOR_DIR):
     print('Creating ' + COLOR["cyan"] + COLOR_DIR + COLOR["reset"] + '\n')
     os.mkdir(COLOR_DIR)
 
+# Initializing Coc, if needed
+COC_DIR = VIM_PLUGIN_DIR + '/coc.nvim'
+COC_CONFIG = HOME_DIR + '/.config/coc'
+if not os.path.exists(COC_CONFIG):
+  os.chdir(COC_DIR)
+  os.system('npm ci')
+  os.system('vim -c "helptags doc/ | q"')
+  os.chdir(START_DIR)
+
 COLOR_SCHEMES = [
     '/gosukiwi/vim-atom-dark/master/colors/atom-dark-256.vim',
     '/baskerville/bubblegum/master/colors/bubblegum-256-dark.vim',
