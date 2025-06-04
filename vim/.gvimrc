@@ -97,7 +97,7 @@ if has('WIN32')
   color PaperColor
 endif
 
-" Use PowerShell as shell
+" Use PowerShell as the shell
 if has('win32')
   " Check if pwsh is available
   if executable('pwsh')
