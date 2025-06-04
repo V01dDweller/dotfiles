@@ -119,8 +119,8 @@ then
   mkdir "$VIMCOLORS"
 fi
 
-# Initializing Coc, if needed
-if [ ! -d "$HOME/.config/coc" ]
+# Initializing Coc, if needed, and if NodeJS is available
+if [ ! -d "$HOME/.config/coc" ] && command -v node > /dev/null 2>&1
 then
   echo "Initializing Coc"
   cd "$VIMPLUGINS/coc.nvim"

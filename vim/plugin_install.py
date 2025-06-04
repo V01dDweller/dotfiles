@@ -137,10 +137,10 @@ if not os.path.exists(COLOR_DIR):
     print('Creating ' + COLOR["cyan"] + COLOR_DIR + COLOR["reset"] + '\n')
     os.mkdir(COLOR_DIR)
 
-# Initializing Coc, if needed
+# Initializing Coc, if needed, and if NodeJS is available
 COC_DIR = VIM_PLUGIN_DIR + '/coc.nvim'
 COC_CONFIG = HOME_DIR + '/.config/coc'
-if not os.path.exists(COC_CONFIG):
+if not os.path.exists(COC_CONFIG) and shutil.which('node'):
   os.chdir(COC_DIR)
   os.system('npm ci')
   os.system('vim -c "helptags doc/ | q"')
