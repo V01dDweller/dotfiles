@@ -109,7 +109,7 @@ endif
 
 " Vim Airline for gVim
 if !empty(glob("~/vimfiles/pack/plugins/start/vim-airline"))
-  " Thanks to Alexander Myshov, StachExchange: https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
+  " Thanks to Alexander Myshov, StackExchange: https://vi.stackexchange.com/questions/3359/how-do-i-fix-the-status-bar-symbols-in-the-airline-plugin
   " Use a powerline-patched font to see these symbols, e.g.
   "  - https://github.com/powerline/fonts
   "  - https://github.com/powerline/fonts/tree/master/DejaVuSansMono
