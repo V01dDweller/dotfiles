@@ -102,7 +102,7 @@ The install script will back up then replace the files below, if they exist:
 12. .tmux.clipboard.conf
 13. .tmux-status.conf
 
-Backups will be created in `~/dotfile_backup_<date_time>`
+Backups will be created in `~/dotfile_backup_<date_time
 
 ```
 ├── .config
@@ -114,7 +114,6 @@ Backups will be created in `~/dotfile_backup_<date_time>`
 │   ├── .gitignore
 │   └── config
 ├── README.md
-├── Vagrantfile
 ├── bash
 │   ├── .LESS_TERMCAP
 │   ├── .bash_mintty_colors
