@@ -200,6 +200,9 @@ autocmd FileType ps1 setlocal shiftwidth=4 tabstop=4
 " Autoindent for Graphviz files
 autocmd FileType dot setlocal shiftwidth=8 tabstop=8
 
+" Autoindent for xml files
+autocmd FileType xml setlocal shiftwidth=2 tabstop=2
+
 "...................... Function keys ......................."
 "                                                            "
 "    F2 - Toggle line numbers                                "
