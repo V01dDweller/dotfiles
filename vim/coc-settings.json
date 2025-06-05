@@ -1,0 +1,24 @@
+{
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    }
+  },
+
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/v1.32.0-standalone-strict/all.json": [
+      "/*.k8s.yaml",
+      "*/k8s/*.yaml",
+      "*/kubernetes/*.yaml",
+      "*/manifests/*.yaml"
+    ],
+    "https://raw.githubusercontent.com/ansible/ansible-lint/refs/heads/main/src/ansiblelint/schemas/ansible.json": [
+      "*/ansible/*.yml",
+      "*/playbooks/*.yml",
+      "*/roles/**/*.yml"
+    ]
+  },
+  "yaml.validate": true
+}
