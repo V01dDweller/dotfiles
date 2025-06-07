@@ -546,7 +546,7 @@ function! GetVisual()
     endtry
 endfunction
 
-fun! CenterMe()
+function! CenterMe()
     let v = GetVisual()
     "let l = getline('.')
     let lre = '^\zs\s*\ze\S'
@@ -563,6 +563,6 @@ fun! CenterMe()
     normal! gvx"vP
     let @v = v_save
     let &virtualedit = ve_save
-endf
+endfunction
 
 " vim: nospell number nowrap
