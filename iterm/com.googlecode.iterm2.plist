@@ -721,7 +721,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>1</integer>
+	<integer>3</integer>
 	<key>TerminalMargin</key>
 	<integer>0</integer>
 	<key>TerminalVMargin</key>
