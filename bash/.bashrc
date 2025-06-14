@@ -94,7 +94,7 @@ then
     fortune | ponysay -b round
   elif command -v cowsay > /dev/null
    then
-     COW_DIR=$(find /usr -type d -name cows)
+     COW_DIR=$(find /opt/homebrew/Cellar -type d -name cows)
      export COW_DIR
      fortune | cowsay -f "$(ls $COW_DIR | shuf -n1)"
    else
