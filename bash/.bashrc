@@ -91,39 +91,7 @@ if command -v fortune > /dev/null
 then
   if command -v ponysay > /dev/null
   then
-    export pony_list="-f ahuizotl\
-                      -f angel\
-                      -f basil\
-                      -f bear\
-                      -f cerberus\
-                      -f chrysalis\
-                      -f cow\
-                      -f discord\
-                      -f fido\
-                      -f gildastand\
-                      -f greta\
-                      -f homer\
-                      -f kevin\
-                      -f ironwillwalk\
-                      -f manticore\
-                      -f mantishy\
-                      -f orangebird\
-                      -f orangefrog\
-                      -f owl\
-                      -f owlowiscious\
-                      -f parasprite\
-                      -f raccoon\
-                      -f rover\
-                      -f stevemagnet\
-                      -f tank"
-    if [ -d ~/custom_ponies ]
-    then
-      for i in $HOME/custom_ponies/*pony
-      do
-        export pony_list="-f $i $pony_list"
-      done
-    fi
-    fortune | ponysay -b round "$pony_list"
+    fortune | ponysay -b round
   elif command -v cowsay > /dev/null
    then
      COW_DIR=$(find /usr -type d -name cows)
