@@ -116,7 +116,7 @@ if [[ $GITVERSION == *"windows"* ]]; then
   echo -ne "\e]0;Git Bash\a"
 fi
 
-# Window Title and SSH Socket for Cygwin 
+# Window Title and SSH Socket for Cygwin
 GITVERSION=$(uname -a)
 if [[ $GITVERSION == *"CYGWIN"* ]]; then
   echo -ne "\e]0;Cygwin\a"
