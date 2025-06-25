@@ -30,6 +30,7 @@ if  command -v img2sixel > /dev/null
 then
   alias img2sixel="img2sixel -w 1024"
 fi
+
 # Teminal color
 export TERM=xterm-256color
 
