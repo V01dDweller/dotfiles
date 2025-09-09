@@ -565,4 +565,9 @@ function! CenterMe()
     let &virtualedit = ve_save
 endfunction
 
+" If Fuzzy Finder is installed, add to runtime path
+if !empty(glob("/opt/homebrew/bin/fzf"))
+  set rtp+=/opt/homebrew/opt/fzf
+endif
+
 " vim: nospell number nowrap
