@@ -489,6 +489,8 @@ if !has("Win32") && !has('gui_running') && !empty(glob("~/.vim/bundle/promptline
 endif
 
 " Tmuxline options for CLI only
+" Nerfont icons: https://www.nerdfonts.com/cheat-sheet
+" Nerdfont OS favorites:      󰌽 
 if !has('gui_running')
   " Vim-airline replace file encoding info with buffer number
   let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
