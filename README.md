@@ -3,7 +3,7 @@ My Dotfiles and Plug-Ins
 
 This project contains scripts that install my dotfiles and favorite plugins for Bash, Tmux and Vim. Tested on MacOS, AlmaLinux9, Fedora 40+ and Ubuntu 22.04+ including Windows Subsystem for Linux variants. This project is old and support for CentOS 7 was recently removed, but compatible dotfiles from Vim 7 and Tmux 2.8 are still in here somewhere, should they be needed.
 
-Also included for manual install or copy/paste/append are my config file for iTerm2, a dotfile sample for `git`, as well stuff I use occasionally or not any more like `top`, `w3m` and the Cygwin variant of MinTTY. The MinTTY dotfile collection was primarily to change color schemes and windows settings, etc., via scripts (e.g., red for production or root) and are  easy to decipher, if needed.
+Also included for manual install or copy/paste/append are my config file for iTerm2, a dotfile sample for `git`, as well stuff I use occasionally or not any more like `top`, `w3m` and the Cygwin variant of MinTTY. The MinTTY dotfile collection was primarily to change color schemes and windows settings, etc., via scripts (e.g., red for production or root) and are easy to decipher, if needed.
 
 **NOTE:** The Coc (Conqueror of Completion) and GitHub Copilot plugins require
 NodeJS v22.x (LTS). If NodeJS is not found in the `PATH`, these plugins will be skipped.
@@ -11,7 +11,7 @@ NodeJS v22.x (LTS). If NodeJS is not found in the `PATH`, these plugins will be 
 ![WSLTTy 3-way split with Vim and bash](/screenshot_04.png?raw=true
 "Vim/bash/tmux nerdvada")
 
-Vim, Tmux, and the bash prompt are visually themed/coordinated via the Vim [Airline](https://github.com/vim-airline/vim-airline), [Tmuxline](https://github.com/edkolev/tmuxline.vim) and [Promptline](https://github.com/edkolev/promptline.vim) plugins respectively.  Note that these plug-ins get their default settings from the `.vimrc` file.
+Vim, Tmux, and the bash prompt are visually themed/coordinated via the Vim [Airline](https://github.com/vim-airline/vim-airline), [Tmuxline](https://github.com/edkolev/tmuxline.vim) and [Promptline](https://github.com/edkolev/promptline.vim) plugins respectively. Note that these plug-ins get their default settings from the `.vimrc` file.
 
 These plugins assume a GUI terminal already configured with a [NERDFont](https://www.nerdfonts.com/font-downloads) or [Powerline](https://github.com/powerline/fonts) font which must be either installed separately or disabled by updating then sourcing `.vimrc`. Find and update the following lines and set the values to '0' to disable Powerline fonts:
 
@@ -249,7 +249,7 @@ Desktop GUI. Note that Cygwin requires both lines:
 Vim
 ---
 
-This installs my .vimrc and .gvimrc files, the  pathogen plug-in manager and a
+This installs my .vimrc and .gvimrc files, the pathogen plug-in manager and a
 list of plugins.
 
 [modeline]: # ( vi: set number colorcolumn=80: )
