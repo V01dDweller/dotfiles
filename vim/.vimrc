@@ -422,22 +422,9 @@ if !has('gui_running') && !empty(glob("~/.vim/colors/PaperColor.vim"))
   if 8 <= hour && hour < 17
     set background=light
     let g:LightsOn = 1
-    " Set ALE colors and highlights
-    if !empty(glob("$VIMPLUGINS/ale"))
-      highlight ALEWarning ctermbg=Yellow
-      highlight ALEError ctermbg=Lightred
-      highlight ALEWarningSign ctermfg=Darkyellow
-      highlight ALEErrorSign ctermfg=Darkred
-    endif
   else
     set background=dark
     let g:LightsOn = 0
-    if !empty(glob("$VIMPLUGINS/ale"))
-      highlight ALEWarning ctermbg=Yellow ctermfg=Black
-      highlight ALEError ctermbg=Red ctermfg=Black
-      highlight ALEWarningSign ctermfg=Yellow
-      highlight ALEErrorSign ctermfg=Red
-    endif
   endif
 else
   color elflord
