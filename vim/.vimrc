@@ -213,7 +213,6 @@ function! AutoHighlightToggle()
  endif
 endfunction
 
-
 ".................... File Type Settings ...................."
 " Turn spell check on for these file types
 autocmd FileType markdown,text,html,man,manual :set spell | syn match AcronymNoSpell '\<\(\u\|\d\)\{2,}s\?\>' contains=@NoSpell
