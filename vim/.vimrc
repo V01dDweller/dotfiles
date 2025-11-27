@@ -66,6 +66,9 @@ set ruler
 " Show commands as they are typed
 set showcmd
 
+" Turn on termguicolors for 24-bit color support
+set termguicolors
+
 " Use tab for path auto-complete like bash
 " Credit: https://sanctum.geek.nz/arabesque/vim-filename-completion/
 if has("wildmenu")
