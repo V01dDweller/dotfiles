@@ -11,6 +11,36 @@
 "                                                            "
 "_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/"
 
+" Function Keys!
+" ---------------------------------------------------------"
+"    F2 - Toggle line numbers                              "
+"    F3 - Toggle line wrapping                             "
+"    F4 - Toggle NERDTree plugin                           "
+"    F5 - Toggle netrw left-navigation                     "
+"    F6 - Toggle dark/light background                     "
+"    F7 - Toggle scrollbind/cursorbind                     "
+"    F8 - Disable all auto-indenting                       "
+"    F9 - Toggle cursorline                                "
+"   F10 - Toggle cursorcolumn                              "
+"   F11 - Toggle colorcolumns 2, 4, 6 and 80               "
+"   F12 - Toggle mouse                                     "
+" ---------------------------------------------------------"
+
+" Favorite plugin commands
+" ---------------------------------------------------------"
+"   :Git                   - Fugitive - Best Git plugin ever!
+"   :AutoSaveToggle        - Self-explanatory
+"   :ColorToggle           - Colors and color codes get, uh, colorful
+"   :MinimapToggle         - Toggle minimap plugin
+"   :AnsiEsc               - Great for ssh logs with ANSI color codes
+"   :<count>gl<move><char> - Align text to a char, say ':','-', etc.
+"---------------------------------------------------------"
+
+" Favorite functions
+" ---------------------------------------------------------"
+"   z/               - Toggle auto-highlight all occurences
+"   :call CenterMe() - Center a visual selection
+" ---------------------------------------------------------"
 
 "...................... Variables .........................."
 let $VIMPLUGINS = $HOME."/.vim/bundle"
