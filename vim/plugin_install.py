@@ -21,7 +21,9 @@
 # - PS1 syntax for PowerShell      - https://github.com/PProvost/vim-ps1
 # - Promptline                     - https://github.com/edkolev/promptline.vim
 # - Repeat                         - https://github.com/tpope/vim-repeat
+# - Solarized color scheme         - https://github.com/lifepillar/vim-solarized8
 # - Surround.vim                   - https://github.com/tpope/vim-surround
+# - Tokyo night color scheme       - https://github.com/ghifarit53/tokyonight-vim
 # - Tmuxline                       - https://github.com/edkolev/tmuxline.vim
 # - Vinegar                        - https://github.com/tpope/vim-vinegar
 
@@ -99,7 +101,9 @@ PLUGINS = [
     'tpope/vim-repeat',
     'tpope/vim-surround',
     '907th/vim-auto-save',
-    'ryanoasis/vim-devicons'
+    'ryanoasis/vim-devicons',
+    'ghifarit53/tokyonight-vim',
+    'lifepillar/vim-solarized8'
     ]
 BUNDLE_DIR = VIM_DIR + '/bundle'
 START_DIR = os.getcwd()
