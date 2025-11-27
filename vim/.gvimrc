@@ -20,7 +20,6 @@
 "     CTRL-Shift-Tab - Cycle backwards through tabs        "
 " ---------------------------------------------------------"
 
-
 " gVim fonts thanks to Tony Mechelynck via http://vim.wikia.com/wiki/Setting_the_font_in_the_GUI
 " and romainl via StachOverflow: https://stackoverflow.com/questions/12295692/gvim-find-out-if-guifont-is-available
 if has("gui_running")
