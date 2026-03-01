@@ -510,6 +510,7 @@ endif
 " Tmuxline options for CLI only
 " Nerfont icons: https://www.nerdfonts.com/cheat-sheet
 " Nerdfont OS favorites:      󰌽 
+" If you don't see the icons, then install a nerdfont
 if !has('gui_running')
   " Vim-airline replace file encoding info with buffer number
   let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
