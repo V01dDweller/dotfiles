@@ -556,6 +556,10 @@ if !empty(glob("$HOME/.vim/bundle/minimap.vim"))
   let g:minimap_enable_highlight_colorgroup = 1
 endif
 
+" RltvNmbr preserve color scheme
+autocmd OptionSet background hi! link HL_RltvNmbr_Minus Comment
+autocmd OptionSet background hi! link HL_RltvNmbr_Positive Identifier
+
 " Center a selection
 " Reference: https://stackoverflow.com/questions/26137838/vim-centering-text-within-selection
 function! GetVisual()
