@@ -136,7 +136,7 @@ set splitright
 set scrolloff=2
 
 " Auto resize split windows
-autocmd VimResized * wincmd =
+autocmd VimResized * if buftype != 'quickfix' | wincmd = | endif
 
 " Speed up updates, defaults to 4000ms. Affects a few things including
 " GitGutter updates
@@ -221,19 +221,19 @@ autocmd FileType markdown,text,html,man,manual :set spell | syn match AcronymNoS
 autocmd FileType python set omnifunc=python3complete#Complete
 
 " Vagrantfiles need ruby syntax
-au BufRead,BufNewFile Vagrantfile setfiletype ruby
+autocmd BufRead,BufNewFile Vagrantfile if &buftype != 'quickfix' | setfiletype ruby | endif
 
 " Autoindent for Python
-autocmd FileType py setlocal shiftwidth=2 tabstop=2
+autocmd FileType py if &buftype != 'quickfix' | setlocal shiftwidth=2 tabstop=2 | endif
 
 " Autoindent for PowerShell
-autocmd FileType ps1 setlocal shiftwidth=4 tabstop=4
+autocmd FileType ps1 if &buftype != 'quickfix' | setlocal shiftwidth=4 tabstop=4 | endif
 
 " Autoindent for Graphviz files
-autocmd FileType dot setlocal shiftwidth=8 tabstop=8
+autocmd FileType dot if &buftype != 'quickfix' | setlocal shiftwidth=8 tabstop=8 | endif
 
 " Autoindent for xml files
-autocmd FileType xml setlocal shiftwidth=2 tabstop=2
+autocmd FileType xml if &buftype != 'quickfix' | setlocal shiftwidth=2 tabstop=2 | endif
 
 "...................... Function keys ......................."
 "                                                            "
@@ -376,7 +376,7 @@ let g:netrw_list_hide = "*NTUSER*,ntuser*,.svn,.git,.*.swo,.*.swp,.DS_Store,.CFU
 " Netrw, stop complaining about unsaved hidden buffers
 " Thanks Brian Tiffin @ StackExchange:
 " https://stackoverflow.com/questions/49165624/netrw-modifying-directories-always-complains
-autocmd FileType netrw setlocal bufhidden=delete
+autocmd FileType netrw if &buftype != 'quickfix' | setlocal bufhidden=delete | endif
 
 " Netrw confined to 30 columns
 let g:netrw_winsize = -30
@@ -510,7 +510,7 @@ endif
 
 " NERDTree
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+autocmd BufWinEnter * if &buftype != 'quickfix' | if getcmdwintype() == '' | silent NERDTreeMirror | endif | endif
 
 " NERDTree minimal UI
 let NERDTreeMinimalUI=1
@@ -521,10 +521,10 @@ let g:NERDTreeDirArrowCollapsible = '▽'
 let NERDTreeIgnore=['\.vim$', '\.swp$', '\.git$', '\.gitlab$', '\~$', '\c^ntuser\..*']
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | echo feedkeys("ZZ") | endif
+autocmd BufEnter * if &buftype != 'quickfix' | if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | echo feedkeys("ZZ") | endif | endif
 
 " Exit Vim if NERDTree is the only window remaining in the only window.
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | echo feedkeys("ZZ") | endif
+autocmd BufEnter * if &buftype != 'quickfix' | if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | echo feedkeys("ZZ") | endif | endif
 
 " MiniMap
 if !empty(glob("$HOME/.vim/bundle/minimap.vim"))
