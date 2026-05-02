@@ -411,11 +411,6 @@ endif
 " " Uncomment this block to default to dark background
 " color PaperColor
 " set background=dark
-" if !empty(glob("$VIMPLUGINS/ale"))
-"   highlight ALEWarning ctermbg=Yellow ctermfg=Black
-"   highlight ALEError ctermbg=Red ctermfg=Black
-"   highlight ALEWarningSign ctermfg=Yellow
-"   highlight ALEErrorSign ctermfg=Red
 " endif
 
 "......................... Plugins .........................."
