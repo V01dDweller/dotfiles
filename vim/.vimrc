@@ -459,6 +459,11 @@ if !empty(glob("$VIMPLUGINS/vim-gitgutter"))
   highlight GitGutterChange guifg=#bbbb00 ctermfg=6 " cyan ~
 endif
 
+" ColorToggle
+let g:colorizer_auto_filetype='css,html,markdown'
+let g:colorizer_skip_comments = 1
+let g:colorizer_disable_bufleave = 1
+
 " Airline Settings
 if !empty(glob("~/.vim/autoload/pathogen.vim")) || !empty(glob("~/vimfiles/pack/plugins/start/vim-airline"))
   let g:airline_section_y = '♯%{bufnr("%")}'
