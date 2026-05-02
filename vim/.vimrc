@@ -138,10 +138,6 @@ set scrolloff=2
 " Auto resize split windows
 autocmd VimResized * if buftype != 'quickfix' | wincmd = | endif
 
-" Speed up updates, defaults to 4000ms. Affects a few things including
-" GitGutter updates
-set updatetime=100
-
 " Syntax highlighting
 syntax enable
 
