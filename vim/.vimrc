@@ -155,13 +155,13 @@ set fillchars=vert:│
 "autocmd WinLeave * if &ft != "nerdtree" && &ft != 'netrw' && &number == 1 | :setlocal number norelativenumber | endif
 
 " Auto-create/auto-load views
-if !has("gui_running") && isdirectory($HOME."/.vim")
-  let current_file = expand('%')
-  if !empty(current_file) || stridx(current_file, "NetrwTreeListing") == -1
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent loadview
-  endif
-endif
+"if !has("gui_running") && isdirectory($HOME."/.vim")
+"  let current_file = expand('%')
+"  if !empty(current_file) || stridx(current_file, "NetrwTreeListing") == -1
+"    autocmd BufWinLeave *.* mkview
+"    autocmd BufWinEnter *.* silent loadview
+"  endif
+"endif
 
 " Always-on IP address highlighting
 syntax match ipaddr /\(\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)\.\)\{3\}\(25\_[0-5]\|2\_[0-4]\_[0-9]\|\_[01]\?\_[0-9]\_[0-9]\?\)/
