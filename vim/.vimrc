@@ -506,7 +506,9 @@ endif
 
 " NERDTree
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if &buftype != 'quickfix' | if getcmdwintype() == '' | silent NERDTreeMirror | endif | endif
+if exists(':NERDTree')
+  autocmd BufWinEnter * if &buftype != 'quickfix' | if getcmdwintype() == '' | silent NERDTreeMirror | endif | endif
+endif
 
 let NERDTreeCascadeSingleChildDir=0
 
