@@ -512,6 +512,8 @@ endif
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if &buftype != 'quickfix' | if getcmdwintype() == '' | silent NERDTreeMirror | endif | endif
 
+let NERDTreeCascadeSingleChildDir=0
+
 " NERDTree minimal UI
 let NERDTreeMinimalUI=1
 
