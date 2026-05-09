@@ -447,7 +447,7 @@ else
 endif
 
 " GitGutter
-if !empty(glob("$HOME/.vim/bundle/vim-gitgutter"))
+if !empty(glob($VIMPLUGINS."/vim-gitgutter"))
   let g:gitgutter_sign_added              = '+▐'
   let g:gitgutter_sign_modified           = '~▐'
   let g:gitgutter_sign_removed            = '-▐'
