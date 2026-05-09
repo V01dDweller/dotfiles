@@ -582,4 +582,16 @@ if !empty(glob("/opt/homebrew/bin/fzf"))
   set rtp+=/opt/homebrew/opt/fzf
 endif
 
+" autocmd for Markdown files
+augroup RltvNmbrFiles
+  autocmd!
+  if !empty(glob("$VIMPLUGINS/ale"))
+    autocmd BufRead,BufNewFile *.md,*.txt ALEDisable
+  endif
+  if !empty(glob("$HOME/.vim/after/plugin/RltvNmbr.vim"))
+    autocmd BufRead,BufNewFile *.md,*.txt RltvNmbr
+  endif
+  autocmd BufRead,BufNewFile *.md,*.txt setlocal nu cursorcolumn
+augroup END
+
 " vim: nospell number nowrap
