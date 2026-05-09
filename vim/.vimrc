@@ -140,7 +140,7 @@ autocmd VimResized * if buftype != 'quickfix' | wincmd = | endif
 
 " Speed up updates, defaults to 4000ms. Affects a few things including
 " GitGutter updates
-set updatetime=100
+set updatetime=50
 
 " Syntax highlighting
 syntax enable
