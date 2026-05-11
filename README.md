@@ -6,7 +6,7 @@ This project contains scripts that install my dotfiles and favorite plugins for 
 Also included for manual install or copy/paste/append are my config file for iTerm2, a dotfile sample for `git`, as well stuff I use occasionally or not any more like `top`, `w3m` and the Cygwin variant of MinTTY. The MinTTY dotfile collection was primarily to change color schemes and windows settings, etc., via scripts (e.g., red for production or root) and are easy to decipher, if needed.
 
 **NOTE:** The Coc (Conqueror of Completion) and GitHub Copilot plugins require
-NodeJS v22.x (LTS). If NodeJS is not found in the `PATH`, these plugins will be skipped.
+NodeJS v22.x (LTS). If NodeJS is not in the `PATH`, these plugins will be skipped.
 
 ![WSLTTy 3-way split with Vim and bash](/screenshot_04.png?raw=true
 "Vim/bash/tmux nerdvada")
@@ -85,7 +85,7 @@ git clone https://github.com/V01dDweller/dotfiles.git
 ./dotfiles/install.sh
 ```
 
-The install script will back up then replace the files below, if they exist:
+The install script will replace the files below, backups will be saved in `~/dotfile_backup_<date_time>`:
 
 **bash**
 01. .bashrc
@@ -102,7 +102,7 @@ The install script will back up then replace the files below, if they exist:
 12. .tmux.clipboard.conf
 13. .tmux-status.conf
 
-Backups will be created in `~/dotfile_backup_<date_time
+Backups will be saved in `~/dotfile_backup_<date_time
 
 ```
 ├── .config
@@ -249,7 +249,6 @@ Desktop GUI. Note that Cygwin requires both lines:
 Vim
 ---
 
-This installs my .vimrc and .gvimrc files, the pathogen plugin manager and a
-list of plugins.
+This installs my `.vimrc` and `.gvimrc` files, the pathogen plugin manager, and a list of plugins.
 
 [modeline]: # ( vi: set number colorcolumn=80: )
