@@ -75,13 +75,13 @@ Installation
 
 1. Clone this repo
 
-```
+```bash
 git clone https://github.com/V01dDweller/dotfiles.git
 ```
 
 2. Run the install shell (or Python) script
 
-```
+```bash
 ./dotfiles/install.sh
 ```
 
