@@ -86,6 +86,11 @@ set complete+=kspell
 " Use US English for spell check
 set spelllang=en_us
 
+" Add dirtytalk 'programming' words to spell check dictionary
+if !empty(glob("$VIMPLUGINS/vim-dirtytalk"))
+  set spelllang+=programming
+endif
+
 " Enable auto-increment for alphabetic sequence
 set nrformats+=alpha
 
