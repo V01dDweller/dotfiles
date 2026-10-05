@@ -10,6 +10,7 @@
 # - Colorizer                      - https://github.com/chrisbra/Colorizer
 # - Delview                        - https://github.com/vim-scripts/delview
 # - Devicons                       - https://github.com/ryanoasis/vim-devicons
+# - Dirtytalk                      - https://github.com/psliwka/vim-dirtytalk
 # - Dracula color scheme           - https://github.com/dracula/vim
 # - Fugitive                       - https://github.com/tpope/vim-fugitive
 # - Git Gutter                     - https://github.com/airblade/vim-gitgutter
@@ -95,6 +96,7 @@ PLUGINS = [
     'vim-scripts/delview',
     'tommcdo/vim-lion',
     'dracula/vim',
+    'psliwka/vim-dirtytalk',
     'preservim/nerdtree',
     'edkolev/tmuxline.vim',
     'edkolev/promptline.vim',
