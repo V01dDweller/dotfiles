@@ -515,7 +515,7 @@ endif
 
 " NERDTree
 " Open the existing NERDTree on each new tab.
-if exists(':NERDTree')
+if !empty(glob("$VIMPLUGINS/nerdtree"))
   autocmd BufWinEnter * if &buftype != 'quickfix' | if getcmdwintype() == '' | silent NERDTreeMirror | endif | endif
 endif
 
